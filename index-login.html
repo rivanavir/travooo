@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Travooo - login</title>
+</head>
+<body>
+
+  <div class="main-wrapper">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+      Launch signup
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createAccount">
+      Launch createAccount
+    </button>
+  </div>
+  <!-- <footer class="footer"></footer> -->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sign-up-style" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <div class="top-layer">
+            <a href="#" class="logo-wrap">
+              <img src="./assets/image/main-logo.png" alt="">
+            </a>
+            <h4 class="title">Login to your account</h4>
+            <p class="sub-ttl">and write a text here</p>
+            <p class="sub-ttl error-message">The password is incorrect!</p>
+          </div>
+          <form class="login-form">
+            <div class="form-group">
+              <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Email address">
+            </div>
+            <!-- <div class="form-group">
+              <input type="password" class="form-control" id="password" aria-describedby="pass" placeholder="Password">
+            </div> -->
+            <div class="form-group has-danger">
+              <input type="password" class="form-control" id="password" aria-describedby="pass" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <a href="#" class="forget-password-link">Forget your password?</a>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-success">Log In</button>
+            </div>
+            <div class="form-group">
+              <p class="simple-txt">Or</p>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary">
+                <i class="fa fa-facebook side-icon"></i>
+                Continue with Facebook</button>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-info">
+                <i class="fa fa-twitter side-icon"></i>
+                Continue with Twitter</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="foot-txt">You are not a member yet?</p>
+          <button type="button" class="btn btn-grey">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- create an account -->
+  <div class="modal fade" id="createAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sign-up-style" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body body-create">
+          <div class="top-layer">
+            <a href="#" class="logo-wrap">
+              <img src="./assets/image/main-logo.png" alt="">
+            </a>
+            <h4 class="title">Create a free account</h4>
+            <!-- <p class="sub-ttl">and write a text here</p> -->
+            <!-- <p class="sub-ttl error-message">Your password is too weak</p> -->
+            <p class="sub-ttl error-message">Please fill the required fields</p>
+          </div>
+          <form class="login-form">
+            <div class="step-1 hidden-xs-up">
+              <div class="form-group">
+                <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Email address">
+              </div>
+              <div class="form-group has-danger">
+                <input type="password" class="form-control" id="password" aria-describedby="pass" placeholder="Password">
+              </div>
+              <div class="form-margin"></div>
+              <div class="form-group">
+                <button type="button" class="btn btn-success">Continue</button>
+              </div>
+              <div class="form-group">
+                <p class="simple-txt">Or</p>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary">
+                  <i class="fa fa-facebook side-icon"></i>
+                  Continue with Facebook</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info">
+                  <i class="fa fa-twitter side-icon"></i>
+                  Continue with Twitter</button>
+              </div>
+            </div>
+            <div class="step-2">
+              <div class="form-group">
+                <p class="email-field">emailhere@gmail.com</p>
+              </div>
+              <div class="form-group flex-custom has-danger">
+                <input type="text" class="form-control flex-input" id="fullName" aria-describedby="full name" placeholder="Full Name">
+                <select class="custom-select" id="ageSelect">
+                  <option selected>Age</option>
+                  <option value="1">26</option>
+                  <option value="2">27</option>
+                  <option value="3">28</option>
+                </select>
+              </div>
+              <div class="form-check flex-custom">
+                <div class="custom-check-label">
+                  <input type="radio" class="custom-check-input" name="gender" id="male" value="male">
+                  <label for="male">Male</label>
+                </div>
+                <div class="custom-check-label">
+                  <input type="radio" class="custom-check-input" name="gender" id="female" value="female">
+                  <label for="female">Female</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-info">Sign Up</button>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-transp"><i class="fa fa-angle-left"></i> <span>Back</span></button>
+              </div>
+            </div>
+            <div class="form-group bottom-txt-group">
+              <p class="bottom-txt">Creating an account means you're okay with</p>
+              <ul class="link-list">
+                <li><b>Travooo's</b></li>
+                <li>
+                  <a href="#"> Terms of Service,</a>
+                </li>
+                <li>
+                  <a href="#"> Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="foot-txt">Already a member?</p>
+          <button type="button" class="btn btn-grey">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
