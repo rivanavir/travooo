@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Travooo - login</title>
 </head>
-<body>
+<body class="modal-open">
 
   <div class="main-wrapper">
     <header class="main-header">
@@ -38,7 +38,7 @@
   <!-- <footer class="footer"></footer> -->
 
   <!-- Modal -->
-  <div class="modal fade show" id="signUpStep1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block; padding-left: 15px;">
+  <div class="modal fade" id="signUpStep1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog sign-up-step" role="document">
       <div class="modal-content">
         <div class="modal-body">
@@ -135,6 +135,426 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-grey">Select 3 More</button>
           <p class="sub-info">(Next Step: Favorite Places)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="signUpStep2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sign-up-step" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="title-layer">
+            <h3 class="step-ttl">Select 3 <span>favorite places</span> around the world</h3>
+            <div class="step-info">
+              Step 2 <span>of 6</span>
+            </div>
+          </div>
+          <div class="search-block-wrap">
+            <div class="search-block">
+              <a class="search-btn" href="#"><i class="fa fa-search"></i></a>
+              <input type="text" class="" placeholder="Place name...">
+            </div>
+          </div>
+          <div class="check-block-wrap mCustomScrollbar">
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Eiffel Tower</h4>
+                <p>Paris, France</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Seine River</h4>
+                <p>France</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Ouzoud Falls</h4>
+                <p>Morocco</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Hassan Tower</h4>
+                <p>Rabat, Morocco</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Marrakech Museum</h4>
+                <p>Marrakesh, Morocco</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Walt Disney World</h4>
+                <p>Florida, United States</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Central Park</h4>
+                <p>New York, United States</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Fushimi Inari-taisha</h4>
+                <p>Kyoto, Japan</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Walt Disney World</h4>
+                <p>Florida, United States</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Central Park</h4>
+                <p>New York, United States</p>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Fushimi Inari-taisha</h4>
+                <p>Kyoto, Japan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey">Select 3 More</button>
+          <p class="sub-info">(Next Step: Favorite Travel Styles)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="signUpStep3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sign-up-step" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="title-layer">
+            <h3 class="step-ttl">Select your preferred <span>travel styles</span></h3>
+            <div class="step-info">
+              Step 3 <span>of 6</span>
+            </div>
+          </div>
+          <div class="search-block-wrap">
+            <div class="search-block">
+              <a class="search-btn" href="#"><i class="fa fa-search"></i></a>
+              <input type="text" class="" placeholder="Travel style...">
+            </div>
+          </div>
+          <div class="check-block-wrap mCustomScrollbar">
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Adventurous</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Holiday-themed</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Spiritual</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Solo Travel</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Event-based</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Group Travel</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Nightlife</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Long Tours</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Group Travel</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Nightlife</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Long Tours</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey">Select 3 More</button>
+          <p class="sub-info">(Next Step: Favorite Activities)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="signUpStep4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sign-up-step" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="title-layer">
+            <h3 class="step-ttl">Select your favorite <span>activities</span></h3>
+            <div class="step-info">
+              Step 4 <span>of 6</span>
+            </div>
+          </div>
+          <div class="search-block-wrap">
+            <div class="search-block">
+              <a class="search-btn" href="#"><i class="fa fa-search"></i></a>
+              <input type="text" class="" placeholder="Activities...">
+            </div>
+          </div>
+          <div class="check-block-wrap mCustomScrollbar">
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Climbing</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Archery</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Hunting</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Hiking</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Fishing</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Cooking</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Swimming</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Photography</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Cooking</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Swimming</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Photography</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey">Select 3 More</button>
+          <p class="sub-info">(Next Step: Favorite Sports)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="signUpStep5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog sign-up-step" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="title-layer">
+            <h3 class="step-ttl">Select your favorite <span>sports</span></h3>
+            <div class="step-info">
+              Step 5 <span>of 6</span>
+            </div>
+          </div>
+          <div class="search-block-wrap">
+            <div class="search-block">
+              <a class="search-btn" href="#"><i class="fa fa-search"></i></a>
+              <input type="text" class="" placeholder="Sports...">
+            </div>
+          </div>
+          <div class="check-block-wrap mCustomScrollbar">
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Baseball</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Basketball</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Golf</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Cricket</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Tennis</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Volleyball</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>American Football</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Formula One</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Volleyball</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>American Football</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Formula One</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey">Select 3 More</button>
+          <p class="sub-info">(Next Step: Favorite General Places)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade show" id="signUpStep6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block; padding-left: 15px;">
+    <div class="modal-dialog sign-up-step" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="title-layer">
+            <h3 class="step-ttl">Select your favorite <span>general places</span></h3>
+            <div class="step-info">
+              Step 6 <span>of 6</span>
+            </div>
+          </div>
+          <div class="search-block-wrap">
+            <div class="search-block">
+              <a class="search-btn" href="#"><i class="fa fa-search"></i></a>
+              <input type="text" class="" placeholder="General places...">
+            </div>
+          </div>
+          <div class="check-block-wrap mCustomScrollbar">
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Beaches</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Mountains</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Hills</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Rivers</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Lakes</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Deserts</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Museums</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Malls</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Deserts</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Museums</h4>
+              </div>
+            </div>
+            <div class="check-block" style="background-image:url(http://placehold.it/181x181)">
+              <div class="check-ttl">
+                <h4>Malls</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey">Select 3 More</button>
         </div>
       </div>
     </div>
