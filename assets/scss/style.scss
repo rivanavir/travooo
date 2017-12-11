@@ -171,6 +171,10 @@ header.main-header{
 
 // sign up (modals)
 
+.modal-backdrop.show{
+  opacity: .7;
+}
+
 .sign-up-style{
   max-width: 472px;
   .modal-content{
