@@ -83,10 +83,22 @@
   }
 }
 
+body{
+  background: #f5f5f5;
+}
+
 .main-wrapper{
-  background: url(../image/main-bg.jpg) top center no-repeat;
   min-height: 100vh;
   width: 100vw;
+  &.login-layer{
+    background: url(../image/main-bg.jpg) top center no-repeat;
+    .navbar-collapse{
+      justify-content: flex-end;
+    }
+  }
+  .navbar-collapse{
+    justify-content: space-between;
+  }
 }
 .container{
   @media(min-width:1140px){
@@ -98,24 +110,32 @@ header.main-header{
   background: white;
   position: relative;
   z-index: 1100;
-  .header-inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 11px 0 8px;
-    @media(max-width:414px){
-      flex-direction: column;
-    }
-    h1.logo-wrap{
-      margin: 0;
-      padding-top: 2px;
-      a.logo{
-        display: inline-block;
-        height: 32px;
-        img{
-          vertical-align: top;
-        }
-      }
+  box-shadow: 0 0 6px rgba(0,0,0,.1);
+  // .header-inner{
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   padding: 11px 0 8px;
+  //   @media(max-width:414px){
+  //     flex-direction: column;
+  //   }
+  //   h1.logo-wrap{
+  //     margin: 0;
+  //     padding-top: 2px;
+  //     a.logo{
+  //       display: inline-block;
+  //       height: 32px;
+  //       img{
+  //         vertical-align: top;
+  //       }
+  //     }
+  //   }
+  // }
+  nav.navbar{
+    background: transparent;
+    padding: 15px 0;
+    .navbar-toggler-right{
+      right: 0;
     }
   }
   .progress-wrapper{
@@ -124,10 +144,11 @@ header.main-header{
     align-items: center;
     flex-basis:56.35%;
     max-width: 56.35%;
-    @media(max-width:414px){
+    @media(max-width:992px){
       width: 100%;
       max-width: 100%;
       flex-basis:inherit;
+      padding: 10px 0 5px;
     }
     .progress-point{
       font-family: 'Circular Std Book';
