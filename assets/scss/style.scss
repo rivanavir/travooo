@@ -29,6 +29,18 @@
   }
 }
 
+@mixin avatarImgStyle($width, $borderColor){
+  @if $borderColor {
+    border: 1px solid $borderColor;
+  }
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+// *{outline: 1px solid red;}
+
 .btn{
   cursor: pointer;
   border-radius: 2px;
@@ -44,6 +56,9 @@
     @include btnWithHoverIcon(#ededed);
     font-family: 'Circular Std Med';
     color: #808080;
+    &.btn-bordered{
+      border-color: #cfcfcf;
+    }
   }
   &.btn-success{
     font-family: 'Circular Std Bold';
@@ -65,6 +80,9 @@
         background: #e6e6e6;
         border-color: #e6e6e6;
       }
+    }
+    &.btn-bordered{
+      border-color: #2a62d2;
     }
   }
   &.btn-info{
@@ -90,13 +108,25 @@
     background: #ebebeb;
     text-align: center;
     padding: 0;
+    &.btn-drop-transparent{
+      background: transparent;
+    }
     &:focus{
       box-shadow: none;
     }
     i.fa{
       color: #808080;
       line-height: 31px;
+      font-size: 24px;
     }
+  }
+  &.btn-bordered{
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 3px;
+    font-family: 'Circular Std Book';
+    padding: 11px 16px;
+    line-height: 1;
   }
 }
 
@@ -138,7 +168,7 @@ body{
 
 .main-wrapper{
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   &.login-layer{
     background: url(../image/main-bg.jpg) top center no-repeat;
     .navbar-collapse{
@@ -258,9 +288,8 @@ header.main-header{
             padding: 9px 24px;
           }
           &.profile-link{
-            
             img{
-              border-radius: 50%;
+              @include avatarImgStyle(36px, null);
               vertical-align: top;
             }
           }
@@ -322,8 +351,10 @@ header.main-header{
 // main content
 .content-wrap{
   position: relative;
+  padding-top: 35px;
 
   .left-outside-menu-wrap{
+    position: absolute;
     .left-outside-menu{
       li{
         a{}
@@ -337,7 +368,7 @@ header.main-header{
 aside.sidebar{
 
   .post-block{
-    padding: 18px 28px;
+    // padding: 18px 28px;
   }
 }
 
@@ -361,7 +392,17 @@ aside.sidebar{
       .post-top-avatar-wrap{
         padding-right: 14px;
         img{
-          border-radius: 50%;
+          // border-radius: 50%;
+          @include avatarImgStyle(45px, null);
+        }
+      }
+      .post-top-round-icon-wrap{
+        background: #4080ff;
+        @include avatarImgStyle(50px, null);
+        margin-right: 14px;
+        text-align: center;
+        line-height: 45px;
+        img{
         }
       }
       .post-top-info-txt{
@@ -382,11 +423,27 @@ aside.sidebar{
           line-height: 18px;
           b{
             font-family: 'Circular Std Book';
+            font-weight: normal;
           }
           i.fa{
             color: #4080ff;
             margin-left: 19px;
             font-size: 18px;
+          }
+        }
+        .post-event-info{
+          font-size: 14px;
+          color: #1a1a1a;
+          line-height: 26px;
+          span.event-badge{
+            display: inline-block;
+            padding: 3px 6px;
+            border-radius: 2px;
+            background: rgba(0,0,0,.1);
+          }
+          a.event-place{
+            font-family: 'CircularAirPro Light';
+            color: #4080ff;
           }
         }
       }
@@ -401,8 +458,7 @@ aside.sidebar{
   .post-image-container{
     ul.post-image-list{
       display: flex;
-      margin-right: -4px;
-      margin-left: -4px;
+      margin: -4px -4px 0;
       li{
         padding: 4px;
         img{
@@ -410,22 +466,90 @@ aside.sidebar{
         }
       }
     }
+    &.post-follow-container{
+      border:1px solid #e6e6e6;
+    }
+    .post-follow-block{
+      padding: 15px 20px 17px;
+      display: flex;
+      align-items: flex-start;
+      .follow-txt-wrap{
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        .date-block{
+          padding-right: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          span{
+            color: #3f3f3f;
+            line-height: 1.3;
+            &.month{
+              font-size: 14px;
+              text-transform: uppercase;
+              font-family: 'CircularAirPro Light';
+            }
+            &.count-day{
+              font-size: 21px;
+              font-family: 'Circular Std Book';
+            }
+          }
+        }
+        .follow-txt{
+          flex-grow: 1;
+          min-width: 0;
+          
+          p{
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #1a1a1a;
+            font-family: 'CircularAirPro Light';
+            line-height: 1.7;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            &.follow-posted{
+              a{
+                color: #4080ff;
+                
+              }
+            }
+            &.follow-description{}
+          }
+        }
+      }
+      .follow-btn-wrap{
+        padding-left: 30px;
+        .btn{
+          padding: 14px 21px;
+        }
+      }
+    }
   }
   .post-footer-info{
     display: flex;
     align-items: center;
+    padding: 20px 0 15px;
     .post-reaction{
       line-height: 20px;
       margin-right: 30px;
       &.p-react-with-icon{
-        background: url(../image/reaction-icon.png) left center no-repeat;
-        padding-left: 39px;
+        &.p-smile-dis{
+          background: url(../image/reaction-icon-smile-dis.png) left center no-repeat;
+          padding-left: 39px;
+        }
+        &.p-smile-only{
+          background: url(../image/reaction-icon-smile-only.png) left center no-repeat;
+          padding-left: 29px;
+        }
       }
       span{
         b{}
       }
     }
-    .post-comment{
+    .post-comment-info{
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -442,14 +566,140 @@ aside.sidebar{
             margin-left: -4px;
           }
           img{
-            border-radius: 50%;
-            border: 1px solid #e5e5e5;
+            @include avatarImgStyle(20px, #e5e5e5);
           }
         }
       }
       span{
         font-size: 14px;
         color: #1a1a1a;
+      }
+    }
+  }
+
+  .post-comment-layer{
+    border-top: 1px solid #e6e6e6;
+    padding-top: 15px;
+    .post-comment-top-info{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      ul.comment-filter{
+        li{
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 14px;
+          color: #b2b2b2;
+          font-family: 'CircularAirPro Light';
+          cursor: pointer;
+          &:not(:last-child){
+            margin-right: 15px;
+          }
+          &:hover{
+            color: #1a1a1a;
+          }
+          &.active{
+            color: #1a1a1a;
+            font-family: 'Circular Std Book';
+          }
+        }
+      }
+      .comm-count-info{
+        font-size: 14px;
+        color: #b2b2b2;
+        font-family: 'CircularAirPro Light';
+      }
+    }
+    .post-comment-wrapper{
+      padding-bottom: 19px;
+      .post-comment-row{
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 15px;
+        .post-com-avatar-wrap{
+          padding-right: 18px;
+          padding-top: 5px;
+          img{
+            @include avatarImgStyle(45px, #ebebeb);
+          }
+        }
+        .post-comment-text{
+          flex-grow: 1;
+          .post-com-name-layer{
+            a{
+              line-height: 1.7;
+              &.comment-name{
+                font-family: 'Circular Std Book';
+                font-size: 16px;
+                color: #4080ff;
+              }
+              &.comment-nickname{
+                font-family: 'CircularAirPro Light';
+                font-size: 14px;
+                color: #999999;
+              }
+            }
+          }
+          .comment-txt{
+            p{
+              font-family: 'Circular Std Book';
+              font-size: 16px;
+              color: #000000;
+              line-height: 1.5;
+              margin-bottom: 10px;
+            }
+          }
+          .comment-bottom-info{
+            display: flex;
+            align-items: center;
+            .com-reaction{
+              margin-right: 18px;
+              display: flex;
+              align-items: center;
+              img{
+                margin-right: 8px;
+              }
+              span{
+                font-size: 12px;
+                color: #000000;
+                font-family: 'CircularAirPro Light';
+              }
+            }
+            .com-time{
+              font-family: 'CircularAirPro Light';
+              font-size: 14px;
+              color: #999999;
+              line-height: 19px;
+            }
+          }
+        }
+      }
+      a.load-more-link{
+        font-family: 'CircularAirPro Light';
+        font-size: 14px;
+        color: #b2b2b2;
+      }
+    }
+    .post-add-comment-block{
+      display: flex;
+      align-items: center;
+      .avatar-wrap{
+        padding-right: 19px;
+        img{
+          @include avatarImgStyle(45px, null);
+        }
+      }
+      .post-add-com-input{
+        background: #f5f5f5;
+        border-radius: 3px;
+        flex-grow: 1;
+        padding: 10px 20px;
+        input{
+          background: transparent;
+          font-size: 16px;
+          font-family: 'CircularAirPro Light';
+          @include inputPlacehoderColor(#999999);
+        }
       }
     }
   }
@@ -544,9 +794,8 @@ aside.sidebar{
             .side-pane-avatar-wrap{
               padding-right: 8px;
               img{
-                border-radius: 50%;
-                box-sizing: border-box;
-                border: 1px solid rgba(0,0,0,.1);
+                // border-radius: 50%;
+                @include avatarImgStyle(45px, rgba(0,0,0,.1));
               }
             }
             .side-pane-txt{
@@ -583,16 +832,10 @@ aside.sidebar{
     padding: 0;
     .post-side-top{
       padding: 17px 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       border-bottom: 1px solid #e5e5e5;
       h3.side-ttl{
-        font-family: 'Circular Std Book';
         font-size: 16px;
         color: #1a1a1a;
-        text-transform: capitalize;
-        margin-bottom: 0;
       }
       .side-right-control{
         a.see-more-link{
@@ -657,7 +900,8 @@ aside.sidebar{
           .side-place-avatar-wrap{
             padding-right: 10px;
             img{
-              border-radius: 50%;
+              // border-radius: 50%;
+              @include avatarImgStyle(45px, null);
             }
           }
           .side-place-txt{
@@ -713,57 +957,108 @@ aside.sidebar{
             }
           }
           .btn-bordered{
-            text-transform: uppercase;
             font-size: 12px;
-            border-radius: 3px;
+          }
+        }
+      }
+
+    }
+  }
+
+  .post-side-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0 22px;
+    h3.side-ttl{
+      font-family: 'Circular Std Book';
+      font-size: 20px;
+      color: #000;
+      text-transform: capitalize;
+      margin-bottom: 0;
+      i.fa{
+        color: #4080ff;
+        font-size: 18px;
+        margin-right: 5px;
+      }
+      span.count{
+        font-family: 'CircularAirPro Light';
+        font-size: 14px;
+        color: #999999;
+        margin-left: 5px;
+      }
+    }
+    .side-right-control{
+      a.see-more-link{
+        font-family: 'Circular Std Book';
+        font-size: 14px;
+        color: #4080ff;
+      }
+      a.slide-link{
+        color: #666666;
+        font-size: 20px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .post-slide-wrap{
+    padding-bottom: 11px;
+    ul.post-slider{
+      li{
+        position: relative;
+        img{
+          max-width: 100%;
+        }
+        .post-slider-caption{
+          flex: 1;
+          min-width: 0;
+          padding-top: 10px;
+          .post-slide-name{
+            color: #4080ff;
+            font-size: 16px;
             font-family: 'Circular Std Book';
-            padding: 11px 16px;
-            line-height: 1;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 1.5;
           }
-          .btn-light-grey{
-            &.btn-bordered{
-              border-color: #cfcfcf;
+          .post-slide-description{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: #1a1a1a;
+            font-size: 14px;
+            font-family: 'CircularAirPro Light';
+            line-height: 1.5;
+          }
+          &.transparent-caption{
+            position: absolute;
+            background: transparent;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 10px 10px;
+            p.post-slide-name{
+              color: white;
+              text-transform: capitalize;
+              margin-bottom: 0;
+              line-height: 2;
+            }
+            .post-slide-description{
+              color: white;
+              span.tag{
+                text-transform: uppercase;
+                display: inline-block;
+                border-radius: 2px;
+                background: rgba(0,0,0,.5);
+                padding: 5px;
+                line-height: 1;
+                margin-right: 5px;
+                font-size: 12px;
+              }
             }
           }
-          .btn-light-primary{
-            &.btn-bordered{
-              border-color: #2a62d2;
-            }
-          }
-        }
-      }
-
-      .post-slide-wrap{
-        padding-bottom: 10px;
-        ul.post-slider{
-          li{
-            img{
-              max-width: 100%;
-            }
-          }
-        }
-      }
-
-      .post-side-bottom-txt{
-        flex: 1;
-        min-width: 0;
-        a.post-side-name{
-          color: #4080ff;
-          font-size: 16px;
-          font-family: 'Circular Std Book';
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          line-height: 1.5;
-        }
-        .post-side-description{
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          color: #1a1a1a;
-          font-size: 14px;
-          font-family: 'CircularAirPro Light';
-          line-height: 1.5;
         }
       }
     }
@@ -776,8 +1071,35 @@ aside.sidebar{
   border: 0;
   box-shadow: 0 3px 12px rgba(0,0,0,.3);
   min-width: 205px;
+  .dropdown-item{
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    .icon-wrap{
+      padding-right: 18px;
+      i.fa{
+        color: #808080;
+        font-size: 20px;
+      }
+    }
+    .drop-txt{
+      flex-grow: 1;
+      p{
+        margin-bottom: 0;
+        font-family: 'CircularAirPro Light';
+        font-size: 14px;
+        color: #808080;
+        line-height: 1.5;
+        b{
+          font-family: 'Circular Std Book';
+          color: #1a1a1a;
+          font-weight: normal;
+        }
+      }
+    }
+  }
   &.dropdown-menu-right{
-    right: -13px;
+    right: -12px;
   }
   &.dropdown-arrow{
     margin-top: 10px;
@@ -789,7 +1111,7 @@ aside.sidebar{
       width: 0;
       height: 0;
       border: 4px solid transparent;
-      box-shadow: -3px -3px 5px rgba(0,0,0,.1);
+      box-shadow: -3px -3px 4px rgba(0,0,0,.05);
       top: -4px;
       border-top-color: white;
       border-left-color: white;

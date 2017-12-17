@@ -4,19 +4,29 @@ $(document).ready(function(){
     $(this).toggleClass('checked-block');
   });
 
-  let slider = $("#lightSlider").lightSlider({
-    item:1,
-    pager: false,
-    controls: false,
-    loop: true
-  });
+  var customSliderObject = {
+    storySlider: $("#storySlider").lightSlider({
+      item:1,
+      pager: false,
+      controls: false,
+      loop: true
+    }),
+    trendingDescription: $("#trendingDescription").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 20,
+      loop: true
+    })
+  };
 
   $('.side-right-control .slide-link').on('click', function(e){
     e.preventDefault();
+    let slideBlockId = $(this).parents('.post-block').find('.post-slider').attr('id');
     if($(this).hasClass('slide-prev')){
-      slider.goToPrevSlide();
+      customSliderObject[slideBlockId].goToPrevSlide();
     } else if($(this).hasClass('slide-next')){
-      slider.goToNextSlide();
+      customSliderObject[slideBlockId].goToNextSlide();
     }
   })
 

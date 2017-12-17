@@ -65,6 +65,7 @@
 
       <div class="container">
         <div class="custom-row">
+          <!-- MAIN-CONTENT -->
           <div class="main-content-layer">
             <div class="post-block post-create-block">
               <div class="post-create-input">
@@ -82,11 +83,12 @@
                 <button class="btn btn-light-primary btn-disabled">Post</button>
               </div>
             </div>
+
             <div class="post-block">
               <div class="post-top-info-layer">
                 <div class="post-top-info-wrap">
                   <div class="post-top-avatar-wrap">
-                    <img src="http://placehold.it/45x45" alt="" class="mCS_img_loaded">
+                    <img src="http://placehold.it/45x45" alt="">
                   </div>
                   <div class="post-top-info-txt">
                     <div class="post-top-name">
@@ -108,18 +110,28 @@
                         <span class="icon-wrap">
                           <i class="fa fa-share-alt"></i>
                         </span>
-                        <b>Share</b>
-                        <p>Spread the word</p>
+                        <div class="drop-txt">
+                          <p><b>Share</b></p>
+                          <p>Spread the word</p>
+                        </div>
                       </a>
                       <a class="dropdown-item" href="#">
-                        <i class="fa fa-heart-o"></i>
-                        <b>Add to favorites</b>
-                        <p>Save it for later</p>
+                        <span class="icon-wrap">
+                          <i class="fa fa-heart-o"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Add to favorites</b></p>
+                          <p>Save it for later</p>
+                        </div>
                       </a>
                       <a class="dropdown-item" href="#">
-                        <i class="fa fa-flag-o"></i>
-                        <b>Report</b>
-                        <p>Help us understand</p>
+                        <span class="icon-wrap">
+                          <i class="fa fa-flag-o"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Report</b></p>
+                          <p>Help us understand</p>
+                        </div>
                       </a>
                     </div>
                   </div>
@@ -136,10 +148,10 @@
                 </ul>
               </div>
               <div class="post-footer-info">
-                <div class="post-reaction p-react-with-icon">
+                <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment p-comm-with-icon">
+                <div class="post-comment-info p-comm-with-icon">
                   <ul class="foot-avatar-list">
                     <li><img src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -148,9 +160,308 @@
                   <span>20 Comments</span>
                 </div>
               </div>
+              <div class="post-comment-block">
+                
+              </div>
+            </div>
+
+            <div class="post-block">
+              <div class="post-side-top">
+                <h3 class="side-ttl"><i class="fa fa-line-chart"></i> Trending destinations <span class="count">20</span></h3>
+                <div class="side-right-control">
+                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                </div>
+              </div>
+              <div class="post-side-inner">
+                <div class="post-slide-wrap">
+                  <ul id="trendingDescription" class="post-slider">
+                    <li>
+                      <img src="http://placehold.it/230x300" alt="">
+                      <div class="post-slider-caption transparent-caption">
+                        <p class="post-slide-name" href="#">Central park</p> 
+                        <div class="post-slide-description">
+                          <span class="tag">Park</span> in New York City
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/230x300" alt="">
+                      <div class="post-slider-caption transparent-caption">
+                        <p class="post-slide-name" href="#">Niagara falls</p> 
+                        <div class="post-slide-description">
+                          <span class="tag">Waterfalls</span> in New York
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/230x300" alt="">
+                      <div class="post-slider-caption transparent-caption">
+                        <p class="post-slide-name" href="#">Grand canyon national park</p> 
+                        <div class="post-slide-description">
+                          <span class="tag">Park</span> in Arizona
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-block">
+              <div class="post-top-info-layer">
+                <div class="post-top-info-wrap">
+                  <div class="post-top-avatar-wrap">
+                    <img src="http://placehold.it/45x45" alt="">
+                  </div>
+                  <div class="post-top-info-txt">
+                    <div class="post-top-name">
+                      <a class="post-name-link" href="#">Richard hylton</a> 
+                    </div>
+                    <div class="post-info">
+                      Uploaded a <b>photo</b> yesterday at 10:33am
+                    </div>
+                  </div>
+                </div>
+                <div class="post-top-info-action">
+                  <div class="dropdown">
+                    <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-angle-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
+                      <a class="dropdown-item" href="#">
+                        <span class="icon-wrap">
+                          <i class="fa fa-share-alt"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Share</b></p>
+                          <p>Spread the word</p>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon-wrap">
+                          <i class="fa fa-heart-o"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Add to favorites</b></p>
+                          <p>Save it for later</p>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon-wrap">
+                          <i class="fa fa-flag-o"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Report</b></p>
+                          <p>Help us understand</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-image-container">
+                <ul class="post-image-list">
+                  <li>
+                    <img src="http://placehold.it/595x624" alt="">
+                  </li>
+                </ul>
+              </div>
+              <div class="post-footer-info">
+                <div class="post-reaction p-react-with-icon p-smile-only">
+                  <span><b>12</b> Reactions</span>
+                </div>
+                <div class="post-comment-info p-comm-with-icon">
+                  <ul class="foot-avatar-list">
+                    <li><img src="http://placehold.it/20x20" alt="ava"></li><!--
+                    --><li><img src="http://placehold.it/20x20" alt="ava"></li><!--
+                    --><li><img src="http://placehold.it/20x20" alt="ava"></li>
+                  </ul>
+                  <span>189 Comments</span>
+                </div>
+              </div>
+              <div class="post-comment-layer">
+                <div class="post-comment-top-info">
+                  <ul class="comment-filter">
+                    <li class="active">Top</li>
+                    <li>New</li>
+                  </ul>
+                  <div class="comm-count-info">
+                    3 / 20
+                  </div>
+                </div>
+                <div class="post-comment-wrapper">
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http:placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>21</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http:placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Amine</a>
+                        <a href="#" class="comment-nickname">@ak0117</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-like.png" alt="">
+                          <span>19</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http:placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>15</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="load-more-link">Load more...</a>
+                </div>
+                <div class="post-add-comment-block">
+                  <div class="avatar-wrap">
+                    <img src="http://placehold.it/45x45" alt="">
+                  </div>
+                  <div class="post-add-com-input">
+                    <input type="text" placeholder="Write a comment">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-block">
+              <div class="post-top-info-layer">
+                <div class="post-top-info-wrap">
+                  <div class="post-top-round-icon-wrap">
+                    <img src="./assets/image/icon-calc.png" alt="">
+                  </div>
+                  <div class="post-top-info-txt">
+                    <div class="post-top-name">
+                      <a class="post-name-link" href="#">Quick Chek New Jersey Festival of Ballooning</a> 
+                    </div>
+                    <div class="post-event-info">
+                      <span class="event-badge">Event</span>
+                      in <a class="event-place" href="#">New York City</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-top-info-action">
+                  <div class="dropdown">
+                    <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-angle-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
+                      <a class="dropdown-item" href="#">
+                        <span class="icon-wrap">
+                          <i class="fa fa-share-alt"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Share</b></p>
+                          <p>Spread the word</p>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon-wrap">
+                          <i class="fa fa-heart-o"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Add to favorites</b></p>
+                          <p>Save it for later</p>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon-wrap">
+                          <i class="fa fa-flag-o"></i>
+                        </span>
+                        <div class="drop-txt">
+                          <p><b>Report</b></p>
+                          <p>Help us understand</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-image-container post-follow-container">
+                <ul class="post-image-list">
+                  <li>
+                    <img src="http://placehold.it/595x250" alt="">
+                  </li>
+                </ul>
+                <div class="post-follow-block">
+                  <div class="follow-txt-wrap">
+                    <div class="date-block">
+                      <span class="month">jul</span>
+                      <span class="count-day">15</span>
+                    </div>
+                    <div class="follow-txt">
+                      <p class="follow-posted">Posted by <a href="#">Donec Ultrices Nunc</a></p>
+                      <p class="follow-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, veritatis.</p>
+                    </div>
+                  </div>
+                  <div class="follow-btn-wrap">
+                    <button type="button" class="btn btn-light-grey btn-bordered">Follow</button>
+                  </div>
+                </div>
+              </div>
+              <div class="post-footer-info">
+                <div class="post-reaction p-react-with-icon p-smile-dis">
+                  <span><b>6</b> Reactions</span>
+                </div>
+                <div class="post-comment-info p-comm-with-icon">
+                  <ul class="foot-avatar-list">
+                    <li><img src="http://placehold.it/20x20" alt="ava"></li><!--
+                    --><li><img src="http://placehold.it/20x20" alt="ava"></li><!--
+                    --><li><img src="http://placehold.it/20x20" alt="ava"></li>
+                  </ul>
+                  <span>20 Comments</span>
+                </div>
+              </div>
+              <div class="post-comment-block">
+                
+              </div>
             </div>
           </div>
 
+          <!-- SIDEBAR -->
           <div class="sidebar-layer">
             <aside class="sidebar">
 
@@ -395,20 +706,26 @@
                 </div>
                 <div class="post-side-inner">
                   <div class="post-slide-wrap">
-                    <ul id="lightSlider" class="post-slider">
+                    <ul id="storySlider" class="post-slider">
                       <li>
                         <img src="http://placehold.it/325x174" alt="">
+                        <div class="post-slider-caption">
+                          <a class="post-slide-name" href="#">4 Days from Morocco to Japan</a> 
+                          <div class="post-slide-description">
+                            When I get the idea of going to japan I was thinking
+                          </div>
+                        </div>
                       </li>
                       <li>
                         <img src="http://placehold.it/325x174" alt="">
+                        <div class="post-slider-caption">
+                          <a class="post-slide-name" href="#">4 Days from Morocco to Japan</a> 
+                          <div class="post-slide-description">
+                            When I get the idea of going to japan I was thinking
+                          </div>
+                        </div>
                       </li>
                     </ul>
-                  </div>
-                  <div class="post-side-bottom-txt">
-                    <a class="post-side-name" href="#">4 Days from Morocco to Japan</a> 
-                    <div class="post-side-description">
-                      When I get the idea of going to japan I was thinking
-                    </div>
                   </div>
                 </div>
               </div>
