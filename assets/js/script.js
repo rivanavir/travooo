@@ -17,6 +17,20 @@ $(document).ready(function(){
       controls: false,
       slideMargin: 20,
       loop: true
+    }),
+    placeYouMightLike: $("#placeYouMightLike").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 20,
+      loop: true
+    }),
+    placeYouMightLikePostCard: $("#placeYouMightLikePostCard").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 20,
+      loop: true
     })
   };
 

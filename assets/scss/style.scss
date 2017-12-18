@@ -392,7 +392,6 @@ aside.sidebar{
       .post-top-avatar-wrap{
         padding-right: 14px;
         img{
-          // border-radius: 50%;
           @include avatarImgStyle(45px, null);
         }
       }
@@ -416,20 +415,36 @@ aside.sidebar{
             font-family: 'Circular Std Book';
             line-height: 22px;
           }
+          &.profile-name{
+            font-size: 14px;
+            a{
+              font-size: 14px;
+            }
+          }
         }
         .post-info{
           font-size: 14px;
           color: #1a1a1a;
-          line-height: 18px;
+          line-height: 20px;
           b{
             font-family: 'Circular Std Book';
             font-weight: normal;
           }
           i.fa{
             color: #4080ff;
-            margin-left: 19px;
+            margin-left: 5px;
+            margin-right: 5px;
             font-size: 18px;
           }
+          a.link-place{
+            font-family: 'CircularAirPro Light';
+            color: #4080ff;
+          }
+        }
+        .post-info-date{
+          font-size: 14px;
+          color: #999999;
+          font-family: 'CircularAirPro Light';
         }
         .post-event-info{
           font-size: 14px;
@@ -464,10 +479,49 @@ aside.sidebar{
         img{
           max-width: 100%;
         }
+        &.more-photos-wrap{
+          position: relative;
+          a.more-photos-link{
+            position: absolute;
+            display: inline-block;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            background: rgba(0,0,0,.5);
+            text-decoration: none;
+            text-align: center;
+            span{
+              display: inline-block;
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              font-size: 14px;
+              color: white;
+              font-family: 'CircularAirPro Light';
+            }
+          }
+        }
       }
     }
     &.post-follow-container{
       border:1px solid #e6e6e6;
+    }
+    .post-txt-wrap{
+      padding-bottom: 10px;
+      p{
+        color: #1a1a1a;
+        font-family: 'CircularAirPro Light';
+        line-height: 1.5;
+        &.post-txt{
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+        &.post-txt-lg{
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+      }
     }
     .post-follow-block{
       padding: 15px 20px 17px;
@@ -531,7 +585,10 @@ aside.sidebar{
   .post-footer-info{
     display: flex;
     align-items: center;
-    padding: 20px 0 15px;
+    padding: 15px 0 16px;
+    &:last-child{
+      padding-bottom: 0;
+    }
     .post-reaction{
       line-height: 20px;
       margin-right: 30px;
@@ -543,6 +600,10 @@ aside.sidebar{
         &.p-smile-only{
           background: url(../image/reaction-icon-smile-only.png) left center no-repeat;
           padding-left: 29px;
+        }
+        &.p-disabled{
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
         }
       }
       span{
@@ -562,10 +623,12 @@ aside.sidebar{
         margin-right: 8px;
         li{
           display: inline-block;
+          cursor: pointer;
           &:not(:first-child){
             margin-left: -4px;
           }
-          img{
+          img.small-ava{
+            vertical-align: top;
             @include avatarImgStyle(20px, #e5e5e5);
           }
         }
@@ -611,7 +674,7 @@ aside.sidebar{
       }
     }
     .post-comment-wrapper{
-      padding-bottom: 19px;
+      padding-bottom: 5px;
       .post-comment-row{
         display: flex;
         align-items: flex-start;
@@ -683,6 +746,7 @@ aside.sidebar{
     .post-add-comment-block{
       display: flex;
       align-items: center;
+      padding-top: 14px;
       .avatar-wrap{
         padding-right: 19px;
         img{
@@ -697,6 +761,7 @@ aside.sidebar{
         input{
           background: transparent;
           font-size: 16px;
+          width: 100%;
           font-family: 'CircularAirPro Light';
           @include inputPlacehoderColor(#999999);
         }
@@ -965,6 +1030,25 @@ aside.sidebar{
     }
   }
 
+  &.post-top-bordered{
+    padding: 0;
+    .post-top-info-layer{
+      padding: 10px 30px;
+      border-bottom: 1px solid #e6e6e6;
+      .post-top-info-wrap{
+        .post-top-avatar-wrap{
+          padding-right: 10px;
+          img{
+            @include avatarImgStyle(30px, null);
+          }
+        }
+      }
+    }
+    .post-content-inner{
+      padding: 27px 30px 14px;
+    }
+  }
+
   .post-side-top{
     display: flex;
     justify-content: space-between;
@@ -1039,6 +1123,7 @@ aside.sidebar{
             left: 0;
             right: 0;
             padding: 0 10px 10px;
+            z-index: 100;
             p.post-slide-name{
               color: white;
               text-transform: capitalize;
@@ -1059,6 +1144,171 @@ aside.sidebar{
               }
             }
           }
+        }
+        &.post-card{
+          .image-wrap{
+            border: 1px solid #e5e5e5;
+            position: relative;
+            a.place-location{
+              position: absolute;
+              right: 12px;
+              bottom: 12px;
+              display: inline-block;
+              @include avatarImgStyle(30px, null);
+              text-align: center;
+              background:rgba(0,0,0,.7);
+              i.fa{
+                color: white;
+                font-size: 18px;
+                line-height: 30px;
+              }
+            }
+          }
+          .post-slider-caption{
+            border: 1px solid #e5e5e5;
+            border-top: 0;
+            padding: 10px;
+            p{
+              margin-bottom: 0;
+              line-height: 1.8;
+              &.post-card-name{
+                font-size: 16px;
+                color: #1a1a1a;
+                font-family: 'Circular Std Book';
+              }
+              &.post-card-placement{
+                font-size: 14px;
+                color: #666666;
+                font-family: 'CircularAirPro Light';
+                b{
+                  font-weight: normal;
+                  font-family: 'Circular Std Book';
+                }
+              }
+            }
+            .post-footer-info{
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+      &.post-slider-active{
+        li{
+          .image-wrap{
+            position: relative;
+            border: 1px solid #e5e5e5;
+            &:after{
+              position: absolute;
+              content: '';
+              display: block;
+              top: 0px;
+              left: 0px;
+              width: 100%;
+              height: 100%;
+              right: 0px;
+              bottom: 0px;
+              background: rgba(0,0,0,0);
+              background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.7) 100%);
+              background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,.7)));
+              background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.7) 100%);
+              background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.7) 100%);
+              background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.7) 100%);
+              background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.7) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+            }
+          }
+          .post-slider-caption{
+            p.post-slide-name{
+              line-height: 1.5;
+            }
+          }
+          &.active{
+            .image-wrap{
+              border-color: #4080ff;
+            }
+            // box-shadow: 0 2px 4px rgba(0,0,0,.29);
+          }
+        }
+      }
+    }
+  }
+  .post-map-wrap{
+    position: relative;
+    padding: 9px 0 13px;
+    .post-map-info-caption{
+      position: absolute;
+      left: 20px;
+      bottom: 33px;
+      background: rgba(0,0,0,.7);
+      padding: 5px 16px 5px 5px;
+      display: flex;
+      align-items: center;
+      border-radius:30px;
+      .map-avatar{
+        padding-right: 10px;
+        img{
+          @include avatarImgStyle(25px, null);
+        }
+      }
+      .map-question{
+        color: white;
+        font-size: 16px;
+        font-family: 'CircularAirPro Light';
+      }
+    }
+  }
+
+  .post-profile-wrap{
+  }
+  .post-profile-block{
+    width: 285px;
+    border: 1px solid #e5e5e5;
+    .post-prof-image{
+      width: 100%;
+      height: 150px;
+    }
+    .post-prof-main{
+      padding: 0 10px;
+      text-align: center;
+      .avatar-wrap{
+        text-align: center;
+        margin-top: -35px;
+        padding-bottom: 10px;
+        img{
+          @include avatarImgStyle(70px, null);
+        }
+      }
+      .post-person-info{
+        .prof-name{
+          font-size: 16px;
+          color: #1a1a1a;
+          font-family: 'Circular Std Book';
+          line-height: 2;
+          text-transform: capitalize;
+        }
+        .prof-location{
+          line-height: 2;
+          font-size: 14px;
+          color: #666;
+          font-family: 'CircularAirPro Light';
+        }
+      }
+      .post-person-photo-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+          img{}
+        }
+      }
+      .drop-bottom-link{
+        padding: 12px 0;
+        border-top: 1px solid #e6e6e6;
+        text-align: center;
+        a.profile-link{
+          text-transform: capitalize;
+          font-size: 14px;
+          color: #4080ff;
         }
       }
     }
@@ -1116,6 +1366,52 @@ aside.sidebar{
       border-top-color: white;
       border-left-color: white;
       transform: rotate(45deg);
+    }
+  }
+
+  &.dropdown-info-style{
+    margin-top: 10px;
+    padding: 0;
+    width: 225px;
+    right: -103px;
+    .drop-top-image{
+      width: 100%;
+      height: 117px;
+    }
+    .drop-prof-main{
+      padding: 0 19px;
+      text-align: center;
+      .avatar-wrap{
+        text-align: center;
+        margin-top: -35px;
+        padding-bottom: 10px;
+        img{
+          @include avatarImgStyle(70px, null);
+        }
+      }
+      .prof-name{
+        font-size: 16px;
+        color: #1a1a1a;
+        font-family: 'Circular Std Book';
+        margin-bottom: 8px;
+        text-transform: capitalize;
+      }
+      .prof-location{
+        font-size: 14px;
+        color: #808080;
+        font-family: 'CircularAirPro Light';
+        margin-bottom: 16px;
+      }
+      .drop-bottom-link{
+        padding: 12px 0;
+        border-top: 1px solid #e6e6e6;
+        text-align: center;
+        a.profile-link{
+          text-transform: capitalize;
+          font-size: 14px;
+          color: #4080ff;
+        }
+      }
     }
   }
 }
@@ -1317,18 +1613,6 @@ aside.sidebar{
     font-family: 'Segoe UI';
     font-weight: normal;
     @include inputPlacehoderColor (#b2b2b2);
-    // &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    //   color: #b2b2b2;
-    // }
-    // &::-moz-placeholder { /* Firefox 19+ */
-    //   color: #b2b2b2;
-    // }
-    // &:-ms-input-placeholder { /* IE 10+ */
-    //   color: #b2b2b2;
-    // }
-    // &:-moz-placeholder { /* Firefox 18- */
-    //   color: #b2b2b2;
-    // }
   }
   &.has-danger{
     .form-control{
