@@ -128,6 +128,31 @@
     padding: 11px 16px;
     line-height: 1;
   }
+  &.btn-icon-side{
+    position: relative;
+    .icon-wrap{
+      position: absolute;
+      top: 0;
+      height: 100%;
+      bottom: 0;
+      width: 45px;
+      text-align: center;
+      i.fa{
+        color: #808080;
+        font-size: 18px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &.btn-icon-right{
+      padding-right: 64px !important;
+      .icon-wrap{
+        right: 0;
+        border-left: 1px solid #cfcfcf;
+      }
+    }
+  }
 }
 
 .custom-check-label{
@@ -450,7 +475,7 @@ aside.sidebar{
           font-size: 14px;
           color: #1a1a1a;
           line-height: 26px;
-          span.event-badge{
+          span.event-tag{
             display: inline-block;
             padding: 3px 6px;
             border-radius: 2px;
@@ -524,9 +549,11 @@ aside.sidebar{
       }
     }
     .post-follow-block{
-      padding: 15px 20px 17px;
+      margin-top: -5px;
+      padding: 17px 20px;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: space-between;
       .follow-txt-wrap{
         display: flex;
         align-items: center;
@@ -544,6 +571,9 @@ aside.sidebar{
               font-size: 14px;
               text-transform: uppercase;
               font-family: 'CircularAirPro Light';
+              &.blue{
+                color: #4080ff;
+              }
             }
             &.count-day{
               font-size: 21px;
@@ -570,7 +600,26 @@ aside.sidebar{
                 
               }
             }
-            &.follow-description{}
+            &.follow-destination{
+              font-size: 20px;
+              line-height: 1;
+              margin-bottom: 9px;
+              color: #1a1a1a;
+              font-family: 'Circular Std Book';
+            }
+          }
+          .follow-tag-wrap{
+            span.follow-tag{
+              display: inline-block;
+              border-radius: 2px;
+              background: #e5e5e5;
+              font-family: 'Circular Std Book';
+              color: #666666;
+              font-size: 12px;
+              line-height: 20px;
+              text-transform: uppercase;
+              padding: 0 10px;
+            }
           }
         }
       }
@@ -578,6 +627,82 @@ aside.sidebar{
         padding-left: 30px;
         .btn{
           padding: 14px 21px;
+        }
+      }
+    }
+    .post-destination-block{
+      padding: 19px;
+      &:hover{
+        .lSAction{
+          a{
+            opacity: 1;
+          }
+        }
+      }
+      .lSAction{
+        a{
+          background-image: none;
+          width: 30px;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          background-color: white;
+          margin-top: 0;
+          opacity: 0;
+          text-align: center;
+          i.fa{
+            font-size: 24px;
+            color: #666666;
+            line-height: 70px;
+          }
+          &:before{
+            // position: absolute;
+            // content: '';
+            // display: block;
+            // width: 100%;
+            // height: 100%;
+          }
+          &.lSPrev{
+            box-shadow: 15px 0 20px white;
+            left: 0;
+          }
+          &.lSNext{
+            box-shadow: -15px 0 20px white;
+            right: 0;
+          }
+        }
+      }
+      .post-dest-slider{
+        .post-dest-card{
+          width: 200px;
+          height: 70px;
+          .post-dest-card-inner{
+            display: flex;
+            align-items: center;
+            border: 1px solid #e6e6e6;
+          }
+          &.active{
+            .post-dest-card-inner{
+              border-color: #4080ff;
+            }
+          }
+          .dest-image{
+            width: 68px;
+            height: 68px;
+            object-fit: cover;
+          }
+          .dest-info{
+            font-size: 14px;
+            color: #1a1a1a;
+            font-family: 'Circular Std Book';
+            padding: 10px 13px;
+            .dest-name{
+              line-height: 1.5;
+            }
+            .dest-place{
+              line-height: 1.5;
+            }
+          }
         }
       }
     }
@@ -1071,6 +1196,9 @@ aside.sidebar{
         color: #999999;
         margin-left: 5px;
       }
+      .event-place{
+        color: #4080ff;
+      }
     }
     .side-right-control{
       a.see-more-link{
@@ -1191,6 +1319,48 @@ aside.sidebar{
             }
           }
         }
+        &.post-follow-card{
+          width: 136px;
+          .follow-card-inner{
+            border-radius: 3px;
+            border: 1px solid #e6e6e6;
+            text-align: center;
+            padding: 5px 5px 6px;
+          }
+          .image-wrap{
+            padding: 12px 0 10px;
+            img{
+              @include avatarImgStyle(42px, null);
+            }
+          }
+          .post-slider-caption{
+            padding-top: 0;
+            p{
+              font-size: 14px;
+              color: #808080;
+              font-family: 'CircularAirPro Light';
+              line-height: 1.5;
+              margin-bottom: 0;
+              &.post-card-name{
+                color: #1a1a1a;
+                font-family: 'Circular Std Book';
+                text-transform: capitalize;
+              }
+              &.post-card-spec{
+                margin-bottom: 13px;
+              }
+              &.post-card-follow-count{
+                font-size: 12px;
+                padding: 9px 0 5px;
+              }
+            }
+            .btn-bordered{
+              padding: 6px 14px;
+              text-transform: inherit;
+              font-family: 'CircularAirPro Light';
+            }
+          }
+        }
       }
       &.post-slider-active{
         li{
@@ -1259,35 +1429,94 @@ aside.sidebar{
   }
 
   .post-profile-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .post-profile-block-slider-wrap{
+    position: relative;
+    z-index: 50;
+    &:before,
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: white;
+      border: 1px solid #e5e5e5;
+      box-shadow: 2px 2px 3px rgba(0,0,0,.05);
+    }
+    &:before{
+      top: 6px;
+      left: 6px;
+    }
+    &:after{
+      top: 3px;
+      left: 3px;
+    }
+    .lSAction{
+      a{
+        background-image: none;
+        width: 9px;
+        height: 24px;
+        margin-top: -12px;
+        i.fa{
+          font-size: 24px;
+        }
+      }
+    }
   }
   .post-profile-block{
-    width: 285px;
+    width: 287px;
     border: 1px solid #e5e5e5;
+    overflow: hidden;
+    background: white;
+    .post-profile-slide{
+      height: 371px;
+    }
     .post-prof-image{
       width: 100%;
       height: 150px;
+      position: relative;
+      img.prof-cover{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      a.btn.btn-follow{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px 9px 6px;
+      }
     }
     .post-prof-main{
       padding: 0 10px;
       text-align: center;
+      border-top: 1px solid #e5e5e5;
       .avatar-wrap{
         text-align: center;
         margin-top: -35px;
         padding-bottom: 10px;
+        position: relative;
+        z-index: 200;
         img{
           @include avatarImgStyle(70px, null);
         }
       }
       .post-person-info{
+        padding-bottom: 10px;
         .prof-name{
           font-size: 16px;
           color: #1a1a1a;
           font-family: 'Circular Std Book';
-          line-height: 2;
+          line-height: 1.5;
           text-transform: capitalize;
         }
         .prof-location{
-          line-height: 2;
+          line-height: 1.5;
           font-size: 14px;
           color: #666;
           font-family: 'CircularAirPro Light';
@@ -1297,19 +1526,19 @@ aside.sidebar{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 0;
         li{
           img{}
         }
       }
-      .drop-bottom-link{
-        padding: 12px 0;
-        border-top: 1px solid #e6e6e6;
-        text-align: center;
-        a.profile-link{
-          text-transform: capitalize;
-          font-size: 14px;
-          color: #4080ff;
-        }
+    }
+    .drop-bottom-link{
+      padding: 12px 0;
+      text-align: center;
+      a.profile-link{
+        text-transform: capitalize;
+        font-size: 14px;
+        color: #4080ff;
       }
     }
   }
@@ -1372,44 +1601,101 @@ aside.sidebar{
   &.dropdown-info-style{
     margin-top: 10px;
     padding: 0;
-    width: 225px;
-    right: -103px;
-    .drop-top-image{
-      width: 100%;
-      height: 117px;
-    }
-    .drop-prof-main{
-      padding: 0 19px;
-      text-align: center;
-      .avatar-wrap{
-        text-align: center;
-        margin-top: -35px;
-        padding-bottom: 10px;
-        img{
-          @include avatarImgStyle(70px, null);
-        }
+    &.post-profile-block{
+      width: 225px;
+      border: 0;
+      left: 50%;
+      transform:translateX(-50%);
+      .post-prof-image{
+        height: 117px;
       }
-      .prof-name{
-        font-size: 16px;
-        color: #1a1a1a;
-        font-family: 'Circular Std Book';
-        margin-bottom: 8px;
-        text-transform: capitalize;
-      }
-      .prof-location{
-        font-size: 14px;
-        color: #808080;
-        font-family: 'CircularAirPro Light';
-        margin-bottom: 16px;
+      .post-prof-main{
+        padding: 0 19px;
+        border-top: 0;
       }
       .drop-bottom-link{
-        padding: 12px 0;
         border-top: 1px solid #e6e6e6;
-        text-align: center;
-        a.profile-link{
-          text-transform: capitalize;
-          font-size: 14px;
-          color: #4080ff;
+      }
+      &.location-block{
+        width: 305px;
+        .post-prof-main{
+          padding: 0 28px;
+          .flag-wrap{
+            margin-bottom: -9px;
+            img{
+              box-shadow: 0 1px 5px rgba(128,128,128,.6);
+              transform: translateY(-50%);
+            }
+          }
+          .post-person-info{
+            padding-bottom: 20px;
+            .prof-name{}
+            .prof-location{
+              color: #808080;
+            }
+            .prof-follow-count{
+              font-size: 12px;
+              color: #b2b2b2;
+              font-family: 'Circular Std Book';
+            }
+            .prof-button-wrap{
+              padding: 15px 0;
+            }
+            .btn-bordered{
+              padding: 10px 25px;
+            }
+          }
+        }
+        .drop-bottom-link{
+          padding: 13px 0 14px;
+        }
+      }
+    }
+    &.dropdown-people-list{
+      width: 335px;
+      border: 0;
+      left: 50%;
+      transform:translateX(-50%);
+      &.dropdown-arrow{
+        &:after{
+          right: 50%;
+          transform: translateX(50%), rotate(45deg);
+        }
+      }
+      ul.people-list{
+        padding: 10px 20px;
+        margin-bottom: 0;
+        li.people-row{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0;
+          .avatar-wrap{
+            padding-right: 13px;
+            img{
+              @include avatarImgStyle(45px, null);
+            }
+          }
+          .people-txt{
+            flex: 1;
+            flex-grow: 1;
+            .people-name{
+              font-size: 16px;
+              color: #1a1a1a;
+              font-family: 'Circular Std Book';
+              line-height: 1.5;
+              text-transform: capitalize;
+            }
+            .people-location{
+              color: #808080;
+              font-size: 14px;
+              font-family: 'CircularAirPro Light';
+              line-height: 1.5;
+            }
+          }
+          .btn-bordered{
+            padding: 10px;
+          }
         }
       }
     }
