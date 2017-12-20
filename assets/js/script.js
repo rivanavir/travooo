@@ -18,7 +18,21 @@ $(document).ready(function(){
       slideMargin: 20,
       loop: true
     }),
+    discoverNewDestination: $("#discoverNewDestination").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 20,
+      loop: true
+    }),
     trendingActivity: $("#trendingActivity").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 20,
+      loop: true
+    }),
+    trendingActivity2: $("#trendingActivity2").lightSlider({
       autoWidth:true,
       pager: false,
       controls: false,
@@ -39,6 +53,13 @@ $(document).ready(function(){
       slideMargin: 20,
       loop: true
     }),
+    videoYouMightLikePostCard: $("#videoYouMightLikePostCard").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 20,
+      loop: true
+    }),
     placeInfoPostCard: $("#placeInfoPostCard").lightSlider({
       autoWidth:true,
       pager: false,
@@ -47,6 +68,13 @@ $(document).ready(function(){
       loop: true
     }),
     newPeopleDiscover: $("#newPeopleDiscover").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 9,
+      loop: true
+    }),
+    newTravelerDiscover: $("#newTravelerDiscover").lightSlider({
       autoWidth:true,
       pager: false,
       controls: false,
