@@ -4,6 +4,26 @@ $(document).ready(function(){
     $(this).toggleClass('checked-block');
   });
 
+  $('#filterToggler').on('click', function(e){
+    e.preventDefault();
+    $('.left-outside-menu-wrap').toggleClass('filter-open');
+  });
+
+  $('header.main-header, .custom-row').on('click', function(){
+    if($('.left-outside-menu-wrap').hasClass('filter-open')){
+      $('.left-outside-menu-wrap').removeClass('filter-open');
+    }
+  });
+
+  $(window).scroll(function() {    
+    let scroll = $(window).scrollTop();    
+    if (scroll >= 70) {
+      $(".left-outside-menu-wrap").css('top', 0);
+    } else{
+      $(".left-outside-menu-wrap").removeAttr('style');
+    }
+  });
+
   var customSliderObject = {
     storySlider: $("#storySlider").lightSlider({
       item:1,
@@ -97,32 +117,32 @@ $(document).ready(function(){
     item:1,
     pager: false,
     slideMargin: 0,
-    prevHtml: '<i class="fa fa-angle-left"></i>',
-    nextHtml: '<i class="fa fa-angle-right"></i>',
+    prevHtml: '<i class="trav-angle-left"></i>',
+    nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-profile-block'
   });
   $("#postDestSlider").lightSlider({
     pager: false,
     autoWidth:true,
     slideMargin: 8,
-    prevHtml: '<i class="fa fa-angle-left"></i>',
-    nextHtml: '<i class="fa fa-angle-right"></i>',
+    prevHtml: '<i class="trav-angle-left"></i>',
+    nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-dest-slider-wrap'
   });
   $("#postFollowSlider").lightSlider({
     item:1,
     pager: false,
     slideMargin: 0,
-    prevHtml: '<i class="fa fa-angle-left"></i>',
-    nextHtml: '<i class="fa fa-angle-right"></i>',
+    prevHtml: '<i class="trav-angle-left"></i>',
+    nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-follow-slider-wrap'
   });
   $("#postDestSliderInner1, #postDestSliderInner2, #postDestSliderInner3").lightSlider({
     pager: false,
     autoWidth:true,
     slideMargin: 8,
-    prevHtml: '<i class="fa fa-angle-left"></i>',
-    nextHtml: '<i class="fa fa-angle-right"></i>',
+    prevHtml: '<i class="trav-angle-left"></i>',
+    nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-dest-slider-wrap'
   });
   

@@ -16,7 +16,7 @@
 
   <div class="main-wrapper">
     <header class="main-header">
-      <div class="container">
+      <div class="container-fluid">
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="header-search-block">
-              <a class="search-btn" href="#"><i class="fa fa-search"></i></a>
+              <a class="search-btn" href="#"><i class="trav-search-icon"></i></a>
               <input type="text" class="" placeholder="Search...">
             </div>
             <ul class="navbar-nav">
@@ -53,28 +53,35 @@
     
     <div class="content-wrap">
       <!-- left outside menu -->
+
+      <button class="btn btn-mobile-side sidebar-toggler">
+        <i class="trav-bars"></i>
+      </button>
       
-      <div class="container">
+      <div class="container-fluid">
         <div class="left-outside-menu-wrap">
+          <button class="btn btn-mobile-side left-outside-btn" id="filterToggler">
+            <i class="trav-filter"></i>
+          </button>
           <ul class="left-outside-menu">
             <li class="active"><a href="#">
-              <img src="./assets/image/left-menu-home.png" alt="icon">
+              <i class="trav-home-icon"></i>
               <span>Home</span>
             </a></li>
             <li><a href="#">
-              <img src="./assets/image/left-menu-travel-mate.png" alt="icon">
+              <i class="trav-travel-mates-icon"></i>
               <span>Travel Mates</span>
             </a></li>
             <li><a href="#">
-              <img src="./assets/image/left-menu-trip-plan.png" alt="icon">
+              <i class="trav-trip-plans-icon"></i>
               <span>Trip Plans</span>
             </a></li>
             <li><a href="#">
-              <img src="./assets/image/left-menu-trending.png" alt="icon">
+              <i class="trav-trending-icon"></i>
               <span>Trending</span>
             </a></li>
             <li><a href="#">
-              <img src="./assets/image/left-menu-map.png" alt="icon">
+              <i class="trav-map-o"></i>
               <span>Map</span>
             </a></li>
           </ul>
@@ -82,7 +89,6 @@
         <div class="custom-row">
           <!-- MAIN-CONTENT -->
           <div class="main-content-layer">
-
             <div class="post-block post-create-block">
               <div class="post-create-input">
                 <input type="text" id="createPostTxt" placeholder="Write something...">
@@ -90,10 +96,10 @@
               <div class="post-create-controls">
                 <ul class="create-link-list">
                   <li>
-                    <i class="fa fa-camera"></i>
+                    <i class="trav-camera"></i>
                   </li><!--
                   --><li>
-                    <i class="fa fa-map-marker"></i>
+                    <i class="trav-set-location-icon"></i>
                   </li>
                 </ul>
                 <button class="btn btn-light-primary btn-disabled">Post</button>
@@ -112,19 +118,20 @@
                     </div>
                     <div class="post-info">
                       Uploaded <b>2 photos</b> yesterday at 10:33pm
-                      <i class="fa fa-map-marker"></i>
+                      <i class="trav-set-location-icon"></i>
                     </div>
                   </div>
                 </div>
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <!-- <i class="trav-angle-down"></i> -->
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -133,7 +140,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -142,7 +149,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -167,7 +174,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -180,10 +188,10 @@
 
             <div class="post-block">
               <div class="post-side-top">
-                <h3 class="side-ttl"><i class="fa fa-line-chart"></i> Trending destinations <span class="count">20</span></h3>
+                <h3 class="side-ttl"><i class="trav-trending-destination-icon"></i> Trending destinations <span class="count">20</span></h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -239,12 +247,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -253,7 +261,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -262,7 +270,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -284,7 +292,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-only">
                   <span><b>12</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -384,7 +393,7 @@
               <div class="post-top-info-layer">
                 <div class="post-top-info-wrap">
                   <div class="post-top-round-icon-wrap">
-                    <img src="./assets/image/icon-calc.png" alt="">
+                    <i class="trav-event-icon"></i>
                   </div>
                   <div class="post-top-info-txt">
                     <div class="post-top-name">
@@ -399,12 +408,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -413,7 +422,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -422,7 +431,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -459,7 +468,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -481,19 +491,19 @@
                       <a class="post-name-link" href="#">Stephen Bugno</a> 
                     </div>
                     <div class="post-info">
-                      Checked in at <i class="fa fa-map-marker"></i> <a class="link-place" href="#">Central Park</a> yesterday - 10:33am
+                      Checked in at <i class="trav-set-location-icon"></i> <a class="link-place" href="#">Central Park</a> yesterday - 10:33am
                     </div>
                   </div>
                 </div>
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -502,7 +512,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -511,7 +521,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -545,7 +555,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-only p-disabled">
                   <span>React</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
                   </ul>
@@ -558,8 +569,8 @@
               <div class="post-side-top">
                 <h3 class="side-ttl">Places you might like <span class="count">20</span></h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -601,9 +612,9 @@
                   </ul>
                 </div>
                 <div class="post-map-wrap">
-                  <!-- <img src="http://placehold.it/597x400" alt="map"> -->
+                  <img src="http://placehold.it/597x400" alt="map">
 
-                  <iframe width="600" height="400" src="https://www.mapsdirections.info/en/custom-google-maps/map.php?width=600&height=400&hl=ru&q=New%20York%20City+(Your%20Business%20Name)&ie=UTF8&t=p&z=4&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Embed Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe>
+                  <!-- <iframe width="600" height="400" src="https://www.mapsdirections.info/en/custom-google-maps/map.php?width=600&height=400&hl=ru&q=New%20York%20City+(Your%20Business%20Name)&ie=UTF8&t=p&z=4&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Embed Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe> -->
                   
                   <div class="post-map-info-caption map-black">
                     <div class="map-avatar">
@@ -619,8 +630,8 @@
               <div class="post-side-top">
                 <h3 class="side-ttl">Places you might like <span class="count">20</span></h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -629,7 +640,7 @@
                     <li class="post-card">
                       <div class="image-wrap">
                         <img src="http://placehold.it/274x234" alt="">
-                        <a href="#" class="place-location"><i class="fa fa-map-marker"></i></a>
+                        <a href="#" class="place-location"><i class="trav-set-location-icon"></i></a>
                       </div>
                       <div class="post-slider-caption">
                         <p class="post-card-name" href="#">Walt Disney World</p> 
@@ -651,7 +662,7 @@
                     <li class="post-card">
                       <div class="image-wrap">
                         <img src="http://placehold.it/274x234" alt="">
-                        <a href="#" class="place-location"><i class="fa fa-map-marker"></i></a>
+                        <a href="#" class="place-location"><i class="trav-set-location-icon"></i></a>
                       </div>
                       <div class="post-slider-caption">
                         <p class="post-card-name" href="#">Niagara Falls</p> 
@@ -673,7 +684,7 @@
                     <li class="post-card">
                       <div class="image-wrap">
                         <img src="http://placehold.it/274x234" alt="">
-                        <a href="#" class="place-location"><i class="fa fa-map-marker"></i></a>
+                        <a href="#" class="place-location"><i class="trav-set-location-icon"></i></a>
                       </div>
                       <div class="post-slider-caption">
                         <p class="post-card-name" href="#">Grand Canyon National Park</p> 
@@ -708,19 +719,19 @@
                       <a class="post-name-link" href="#">Richard hylton</a> 
                     </div>
                     <div class="post-info">
-                      Added a <b>photo</b> yesterday at 10:33am <i class="fa fa-map-marker"></i> <b>21 Km</b> from <a class="link-place" href="#">Arizona</a>
+                      Added a <b>photo</b> yesterday at 10:33am <i class="trav-set-location-icon"></i> <b>21 Km</b> from <a class="link-place" href="#">Arizona</a>
                     </div>
                   </div>
                 </div>
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -729,7 +740,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -738,7 +749,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -760,7 +771,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -887,12 +899,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -901,7 +913,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -910,7 +922,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -930,7 +942,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -961,12 +974,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -975,7 +988,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -984,7 +997,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -1001,7 +1014,7 @@
                     <div class="post-prof-image">
                       <img class="prof-cover" src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1450820945/Godafoss-Iceland-waterfall-winter-SPIRIT1215.jpg?itok=hvUl-l-S" alt="photo">
                       <a href="#" class="btn btn-light-primary btn-follow">
-                        <i class="fa fa-user-plus"></i>
+                        <i class="trav-user-plus-icon"></i>
                       </a>
                     </div>
                     <div class="post-prof-main">
@@ -1026,7 +1039,7 @@
                     <div class="post-prof-image">
                       <img class="prof-cover" src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1450820945/Godafoss-Iceland-waterfall-winter-SPIRIT1215.jpg?itok=hvUl-l-S" alt="photo">
                       <a href="#" class="btn btn-light-primary btn-follow btn-disabled">
-                        <i class="fa fa-user-plus"></i>
+                        <i class="trav-user-plus-icon"></i>
                       </a>
                     </div>
                     <div class="post-prof-main">
@@ -1052,7 +1065,8 @@
                   <div class="post-reaction p-react-with-icon p-smile-only">
                     <span><b>3</b> Reactions</span>
                   </div>
-                  <div class="post-comment-info p-comm-with-icon">
+                  <div class="post-comment-info">
+                    <i class="trav-comment-icon"></i>
                     <ul class="foot-avatar-list">
                       <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                       --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -1082,12 +1096,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -1096,7 +1110,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -1105,7 +1119,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -1135,7 +1149,7 @@
                   <div class="follow-btn-wrap">
                     <button type="button" class="btn btn-light-grey btn-bordered btn-icon-side btn-icon-right">
                       View plan
-                      <span class="icon-wrap"><i class="fa fa-align-right"></i></span>
+                      <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
                     </button>
                   </div>
                 </div>
@@ -1144,7 +1158,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -1159,8 +1174,8 @@
               <div class="post-side-top">
                 <h3 class="side-ttl">Discover new people</h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -1240,7 +1255,7 @@
               <div class="post-top-info-layer">
                 <div class="post-top-info-wrap">
                   <div class="post-top-round-icon-wrap">
-                    <img src="./assets/image/icon-calc.png" alt="">
+                    <i class="trav-event-icon"></i>
                   </div>
                   <div class="post-top-info-txt">
                     <div class="post-top-name">
@@ -1279,12 +1294,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -1293,7 +1308,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -1302,7 +1317,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -1333,7 +1348,7 @@
                   <div class="follow-btn-wrap">
                     <button type="button" class="btn btn-light-grey btn-bordered btn-icon-side btn-icon-right">
                       Follow
-                      <span class="icon-wrap"><i class="fa fa-align-right"></i></span>
+                      <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
                     </button>
                   </div>
                 </div>
@@ -1342,7 +1357,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-only">
                   <span><b>12</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -1431,12 +1447,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -1445,7 +1461,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -1454,7 +1470,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -1471,7 +1487,7 @@
                     <div class="post-prof-image">
                       <img class="prof-cover" src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1450820945/Godafoss-Iceland-waterfall-winter-SPIRIT1215.jpg?itok=hvUl-l-S" alt="photo">
                       <a href="#" class="btn btn-light-primary btn-follow">
-                        <i class="fa fa-user-plus"></i>
+                        <i class="trav-user-plus-icon"></i>
                       </a>
                     </div>
                     <div class="post-prof-main">
@@ -1499,7 +1515,7 @@
                         <div class="post-prof-image">
                           <img class="prof-cover" src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1450820945/Godafoss-Iceland-waterfall-winter-SPIRIT1215.jpg?itok=hvUl-l-S" alt="photo">
                           <a href="#" class="btn btn-light-primary btn-follow btn-disabled">
-                            <i class="fa fa-user-plus"></i>
+                            <i class="trav-user-plus-icon"></i>
                           </a>
                         </div>
                         <div class="post-prof-main">
@@ -1524,7 +1540,7 @@
                         <div class="post-prof-image">
                           <img class="prof-cover" src="http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1450820945/Godafoss-Iceland-waterfall-winter-SPIRIT1215.jpg?itok=hvUl-l-S" alt="photo">
                           <a href="#" class="btn btn-light-primary btn-follow btn-disabled">
-                            <i class="fa fa-user-plus"></i>
+                            <i class="trav-user-plus-icon"></i>
                           </a>
                         </div>
                         <div class="post-prof-main">
@@ -1552,7 +1568,8 @@
                   <div class="post-reaction p-react-with-icon p-smile-only">
                     <span><b>3</b> Reactions</span>
                   </div>
-                  <div class="post-comment-info p-comm-with-icon">
+                  <div class="post-comment-info">
+                    <i class="trav-comment-icon"></i>
                     <ul class="foot-avatar-list">
                       <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                       --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -1566,9 +1583,9 @@
 
             <div class="post-block">
               <div class="post-side-top">
-                <h3 class="side-ttl"><i class="fa fa-line-chart"></i> Trending activities
+                <h3 class="side-ttl"><i class="trav-trending-destination-icon"></i> Trending activities
                   <span class="dropdown">
-                    <a class="event-place" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#Morocco <i class="fa fa-caret-down"></i></a>
+                    <a class="event-place" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#Morocco</a> <i class="trav-caret-down"></i>
                     <div class="dropdown-menu dropdown-info-style post-profile-block location-block">
                       <div class="post-prof-image">
                         <img class="prof-cover" src="http://www.midtownhotelnyc.com/resourcefiles/homeimages/hilton-garden-inn-new-york-manhattan-midtown-east-home1-top.jpg" alt="photo">
@@ -1593,8 +1610,8 @@
                   </span>
                 </h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -1654,12 +1671,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -1668,7 +1685,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -1677,7 +1694,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -1744,7 +1761,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -1773,12 +1791,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -1787,7 +1805,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -1796,7 +1814,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -1826,7 +1844,7 @@
                           --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                           --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
                         </ul>
-                        <img class="icon-grey-comment" src="./assets/image/icon-comment-grey.png" alt="comment">
+                        <i class="trav-talk-icon icon-grey-comment"></i>
                         <span>64K Talking about this</span>
                       </div>
                     </div>
@@ -1842,7 +1860,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -1875,12 +1894,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -1889,7 +1908,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -1898,7 +1917,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2051,7 +2070,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -2073,19 +2093,19 @@
                       <a class="post-name-link" href="#">Mariel</a> 
                     </div>
                     <div class="post-info">
-                      Started following <a href="#" class="link-place"><i class="fa fa-map-marker"></i> Los Angeles</a> today at 5:29pm
+                      Started following <a href="#" class="link-place"><i class="trav-set-location-icon"></i> Los Angeles</a> today at 5:29pm
                     </div>
                   </div>
                 </div>
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2094,7 +2114,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2103,7 +2123,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2133,7 +2153,7 @@
                           --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                           --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
                         </ul>
-                        <img class="icon-grey-comment" src="./assets/image/icon-comment-grey.png" alt="comment">
+                        <i class="trav-talk-icon icon-grey-comment"></i>
                         <span>64K Talking about this</span>
                       </div>
                     </div>
@@ -2149,7 +2169,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -2171,19 +2192,19 @@
                       <a class="post-name-link" href="#">Cheryl cornett</a> 
                     </div>
                     <div class="post-info">
-                      Started following <a href="#" class="link-place"><i class="fa fa-map-marker"></i> Disneyland</a> today at 5:29pm
+                      Started following <a href="#" class="link-place"><i class="trav-set-location-icon"></i> Disneyland</a> today at 5:29pm
                     </div>
                   </div>
                 </div>
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2192,7 +2213,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2201,7 +2222,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2239,7 +2260,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -2274,15 +2296,15 @@
                           <a class="post-name-link" href="#">Mariel</a> 
                         </div>
                         <div class="post-info">
-                          Started following <i class="fa fa-map-marker"></i> 
+                          Started following <i class="trav-set-location-icon"></i> 
                           <a href="#" class="link-place">Los Angeles</a> 
                           today at 5:29 pm
                         </div>
                       </div>
                     </div>
                     <div class="post-top-info-action">
-                      <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                      <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                      <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                      <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                     </div>
                   </div>
                   <div class="post-slide-wrap slide-hide-right-margin">
@@ -2364,7 +2386,8 @@
                   <div class="post-reaction p-react-with-icon p-smile-dis">
                     <span><b>6</b> Reactions</span>
                   </div>
-                  <div class="post-comment-info p-comm-with-icon">
+                  <div class="post-comment-info">
+                    <i class="trav-comment-icon"></i>
                     <ul class="foot-avatar-list">
                       <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                       --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -2395,12 +2418,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2409,7 +2432,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2418,7 +2441,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2435,7 +2458,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/socket-plugin-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-socket-plugin-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -2510,12 +2533,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2524,7 +2547,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2533,7 +2556,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2553,7 +2576,7 @@
                         New York City
                       </div>
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/weather-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-weather-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -2567,7 +2590,7 @@
                             --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                             --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
                           </ul>
-                          <img class="icon-grey-comment" src="./assets/image/icon-comment-grey.png" alt="comment">
+                          <i class="trav-talk-icon icon-grey-comment"></i>
                           <span>60 Comments</span>
                         </div>
                       </div>
@@ -2626,12 +2649,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2640,7 +2663,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2649,7 +2672,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2666,7 +2689,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/holidays-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-national-holiday-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -2742,12 +2765,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2756,7 +2779,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2765,7 +2788,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2782,7 +2805,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/emergency-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-emergency-number-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -2857,12 +2880,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2871,7 +2894,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2880,7 +2903,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -2897,7 +2920,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/visa-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-visa-requirement-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -2972,12 +2995,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -2986,7 +3009,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -2995,7 +3018,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -3012,7 +3035,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/flights-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-average-flight-price-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -3087,12 +3110,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -3101,7 +3124,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -3110,7 +3133,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -3127,7 +3150,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/safety-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-safety-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -3200,12 +3223,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -3214,7 +3237,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -3223,7 +3246,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -3240,7 +3263,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/about-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-about-city-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -3313,12 +3336,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -3327,7 +3350,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -3336,7 +3359,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -3353,7 +3376,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/event-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-public-event-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -3416,8 +3439,8 @@
               <div class="post-side-top">
                 <h3 class="side-ttl">Videos you might like <span class="count">20</span></h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -3504,12 +3527,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -3518,7 +3541,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -3527,7 +3550,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -3544,7 +3567,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/event-program-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-event-program-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -3605,9 +3628,9 @@
 
             <div class="post-block">
               <div class="post-side-top">
-                <h3 class="side-ttl"><i class="fa fa-line-chart"></i> Trending activities
+                <h3 class="side-ttl"><i class="trav-trending-destination-icon"></i> Trending activities
                   <span class="dropdown">
-                    <a class="event-place" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#United States <i class="fa fa-caret-down"></i></a>
+                    <a class="event-place" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#United States</a> <i class="trav-caret-down"></i>
                     <div class="dropdown-menu dropdown-info-style post-profile-block location-block">
                       <div class="post-prof-image">
                         <img class="prof-cover" src="http://www.midtownhotelnyc.com/resourcefiles/homeimages/hilton-garden-inn-new-york-manhattan-midtown-east-home1-top.jpg" alt="photo">
@@ -3632,8 +3655,8 @@
                   </span>
                 </h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -3688,12 +3711,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -3702,7 +3725,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -3711,7 +3734,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -3728,7 +3751,7 @@
                     <li>
                       <img src="http://placehold.it/595x210" alt="">
                       <div class="post-image-mark-icon">
-                        <img src="./assets/image/about-icon.png" alt="icon" class="mark-icon">
+                        <i class="trav-about-city-icon"></i>
                       </div>
                     </li>
                   </ul>
@@ -3736,7 +3759,7 @@
                     <div class="follow-txt-wrap">
                       <div class="date-block">
                         <div class="follow-round">
-                          <i class="fa fa-map-marker"></i>
+                          <i class="trav-map-marker-icon"></i>
                         </div>
                       </div>
                       <div class="follow-txt">
@@ -3790,8 +3813,8 @@
               <div class="post-side-top">
                 <h3 class="side-ttl">Discover new travelers</h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -3871,8 +3894,8 @@
               <div class="post-side-top">
                 <h3 class="side-ttl">Discover New destinations</h3>
                 <div class="side-right-control">
-                  <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                  <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                  <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                  <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                 </div>
               </div>
               <div class="post-side-inner">
@@ -3912,17 +3935,17 @@
 
             <div class="post-block">
               <div class="post-side-top">
-                <h3 class="side-ttl">Upcoming event in <a class="event-place" href="#">New York City <i class="fa fa-caret-down"></i></a>
+                <h3 class="side-ttl">Upcoming event in <a class="event-place" href="#">New York City</a> <i class="trav-caret-down"></i>
                 </h3>
                 <div class="side-right-control">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -3931,7 +3954,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -3940,7 +3963,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -4009,12 +4032,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -4023,7 +4046,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -4032,7 +4055,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -4057,8 +4080,8 @@
                     </div>
                   </div>
                   <div class="follow-btn-wrap">
-                    <button type="button" class="btn btn-light-grey btn-bordered">
-                      <img src="./assets/image/rectangel-icon.png" alt="icon">
+                    <button type="button" class="btn btn-light-grey btn-bordered btn-open-window">
+                      <i class="trav-open-video-in-window"></i>
                     </button>
                   </div>
                 </div>
@@ -4067,7 +4090,8 @@
                 <div class="post-reaction p-react-with-icon p-smile-dis">
                   <span><b>6</b> Reactions</span>
                 </div>
-                <div class="post-comment-info p-comm-with-icon">
+                <div class="post-comment-info">
+                  <i class="trav-comment-icon"></i>
                   <ul class="foot-avatar-list">
                     <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                     --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -4097,12 +4121,12 @@
                 <div class="post-top-info-action">
                   <div class="dropdown">
                     <button class="btn btn-drop-round-grey btn-drop-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-angle-down"></i>
+                      <i class="trav-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-arrow">
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-share-alt"></i>
+                          <i class="trav-share-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Share</b></p>
@@ -4111,7 +4135,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-heart-o"></i>
+                          <i class="trav-heart-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Add to favorites</b></p>
@@ -4120,7 +4144,7 @@
                       </a>
                       <a class="dropdown-item" href="#">
                         <span class="icon-wrap">
-                          <i class="fa fa-flag-o"></i>
+                          <i class="trav-flag-icon"></i>
                         </span>
                         <div class="drop-txt">
                           <p><b>Report</b></p>
@@ -4142,7 +4166,8 @@
                     <div class="post-reaction p-react-with-icon p-smile-dis">
                       <span><b>6</b> Reactions</span>
                     </div>
-                    <div class="post-comment-info p-comm-with-icon">
+                    <div class="post-comment-info">
+                      <i class="trav-comment-icon"></i>
                       <ul class="foot-avatar-list">
                         <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
                         --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
@@ -4423,8 +4448,8 @@
                 <div class="post-side-top">
                   <h3 class="side-ttl">Stories</h3>
                   <div class="side-right-control">
-                    <a href="#" class="slide-link slide-prev"><i class="fa fa-angle-left"></i></a>
-                    <a href="#" class="slide-link slide-next"><i class="fa fa-angle-right"></i></a>
+                    <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                    <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
                   </div>
                 </div>
                 <div class="post-side-inner">

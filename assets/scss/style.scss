@@ -33,7 +33,7 @@
   @if $borderColor {
     border: 1px solid $borderColor;
   }
-  width: $width;
+  width: $width !important;
   height: $width;
   border-radius: 50%;
   object-fit: cover;
@@ -93,7 +93,7 @@
     font-family: 'Circular Std Med';
     @include btnWithHoverIcon(transparent);
     color: #666666;
-    i.fa{
+    i[class^=trav]{
       font-size: 20px;
       margin-right: 5px;
     }
@@ -111,7 +111,7 @@
     &:focus{
       box-shadow: none;
     }
-    i.fa{
+    i[class^=trav]{
       color: #808080;
       line-height: 31px;
       font-size: 24px;
@@ -133,13 +133,12 @@
       height: 100%;
       bottom: 0;
       width: 45px;
-      text-align: center;
-      i.fa{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i[class^=trav]{
         color: #808080;
-        font-size: 18px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        font-size: 20px;
       }
     }
     &.btn-icon-right{
@@ -148,6 +147,12 @@
         right: 0;
         border-left: 1px solid #cfcfcf;
       }
+    }
+  }
+  &.btn-open-window{
+    i[class^=trav]{
+      color: #999999;
+      font-size: 16px;
     }
   }
 }
@@ -201,13 +206,14 @@ body{
     justify-content: space-between;
   }
 }
-.container{
+.container-fluid{
   @media(min-width:1130px){
     width: 1100px;
   }
   .custom-row{
     margin-right: -13px;
     margin-left: -13px;
+    padding-top: 35px;
     display: flex;
     flex-wrap: wrap;
     >[class$="-layer"]{
@@ -217,19 +223,18 @@ body{
     .main-content-layer{
       max-width: 62.5%;
       flex: 0 0 62.5%;
-      @media (max-width: 768px){
+      @media(max-width:991px){
         max-width: 100%;
         flex: 0 0 100%;
-        order: 2;
       }
     }
     .sidebar-layer{
       max-width: 37.5%;
       flex: 0 0 37.5%;
-      @media (max-width: 768px){
-        max-width: 100%;
-        flex: 0 0 100%;
-        order: 2;
+      @media(max-width:991px){
+        position: fixed;
+        width: 386px;
+        left: -386px;
       }
     }
   }
@@ -271,7 +276,7 @@ header.main-header{
       font-size: 20px;
       text-align: center;
       color: #b2b2b2;
-      i.fa{
+      i[class^=trav]{
         line-height: 40px;
       }
     }
@@ -316,6 +321,7 @@ header.main-header{
           text-transform: capitalize;
           color: #4c4c4c;
           display: inline-block;
+          font-family: 'Circular Std Book';
           &.btn{
             color: white;
             padding: 9px 24px;
@@ -384,17 +390,65 @@ header.main-header{
 // main content
 .content-wrap{
   position: relative;
-  padding-top: 35px;
+  // padding-top: 35px;
+
+  button.btn-mobile-side{
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    background-color: rgba(255,255,255,.7);
+    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    z-index: 350;
+    @media (min-width:992px){
+      display: none;
+    }
+    i[class^=trav]{
+      font-size: 20px;
+    }
+    &.sidebar-toggler{
+      border-radius: 3px;
+      right: 0;
+    }
+    &.left-outside-btn{
+      left: 100%;
+      border-radius:0 3px 3px 0;
+    }
+  }
 
   .left-outside-menu-wrap{
-    position: absolute;
-    right: 100%;
-    top: 5px;
-    padding-right: 30px;
+    position: fixed;
+    top: 70px;
+    left: -110px;
+    transition: left .3s ease-in;
+    z-index: 300;
+    padding: 15px;
+    &.filter-open{
+      left: 0;
+      box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+      button.left-outside-btn{
+        display: none;
+      }
+    }
+    @media (min-width:992px){
+      position: absolute;
+      left: auto;
+      right: 100%;
+      // top: 5px;
+      padding-right: 30px;
+      padding-left: 0;
+    }
+    @media (max-width: 991px){
+      background-color: rgba(255,255,255,.7);
+      border-radius:0 0 3px 0;
+    }
     .left-outside-menu{
+      margin-bottom: 0;
       li{
         text-align: right;
         padding: 0 0 30px;
+        &:last-child{
+          padding-bottom: 0;
+        }
         a{
           font-family: 'Circular Std Book';
           font-size: 14px;
@@ -403,8 +457,12 @@ header.main-header{
           flex-direction: column;
           text-decoration: none;
           opacity: 0.6;
-          img{
+          @media (max-width: 991px){
+            // text-shadow: 0 1px 3px rgba(0,0,0,.5);
+          }
+          i[class^=trav]{
             align-self: flex-end;
+            font-size: 27px;
           }
           span{
             line-height: 2;
@@ -435,7 +493,7 @@ aside.sidebar{
   .lightSlider{
     .lslide{
       img{
-        &:not(.flag-image){
+        &:not(.flag-image):not(.small-ava){
           width: 100%;
         }
       }
@@ -474,7 +532,10 @@ aside.sidebar{
         margin-right: 14px;
         text-align: center;
         line-height: 45px;
-        img{
+        i[class^=trav]{
+          color: white;
+          line-height: 47px;
+          font-size: 24px;
         }
       }
       .post-top-info-txt{
@@ -508,11 +569,12 @@ aside.sidebar{
             font-family: 'Circular Std Book';
             font-weight: normal;
           }
-          i.fa{
+          i[class^=trav]{
             color: #4080ff;
-            margin-left: 5px;
-            margin-right: 5px;
-            font-size: 18px;
+            margin-left: 2px;
+            margin-right: 2px;
+            position: relative;
+            top: 2px;
           }
           a.link-place{
             font-family: 'CircularAirPro Light';
@@ -556,9 +618,10 @@ aside.sidebar{
         }
       }
       a.slide-link{
+        text-decoration: none;
         color: #666666;
         font-size: 20px;
-        margin-left: 15px;
+        margin: 0 -7px 0 10px;
       }
     }
   }
@@ -569,8 +632,10 @@ aside.sidebar{
       li{
         padding: 4px;
         position: relative;
-        img{
+        flex-grow: 1;
+        >img{
           max-width: 100%;
+          width: 100%;
         }
         &.more-photos-wrap{
           a.more-photos-link{
@@ -613,6 +678,11 @@ aside.sidebar{
           right: 19px;
           line-height: 45px;
           img.mark-image{}
+          i[class^=trav]{
+            color: white;
+            font-size: 36px;
+            line-height: 48px;
+          }
         }
       }
     }
@@ -688,7 +758,7 @@ aside.sidebar{
             span{
               color: white !important;
             }
-            i.fa{
+            i[class^=trav]{
               font-size: 28px;
               color: white;
             }
@@ -743,8 +813,10 @@ aside.sidebar{
           .follow-foot-info{
             display: flex;
             align-items: center;
-            img.icon-grey-comment{
+            i.icon-grey-comment{
               margin-right: 5px;
+              color: #ccc;
+              font-size: 12px;
             }
             span{
               color: #1a1a1a;
@@ -774,6 +846,9 @@ aside.sidebar{
         }
         .btn{
           padding: 14px 21px;
+        }
+        .btn-open-window{
+          padding: 15px;
         }
       }
     }
@@ -842,7 +917,7 @@ aside.sidebar{
           margin-top: 0;
           opacity: 0;
           text-align: center;
-          i.fa{
+          i[class^=trav]{
             font-size: 24px;
             color: #666666;
             line-height: 70px;
@@ -917,6 +992,9 @@ aside.sidebar{
             text-align: center;
             opacity: 1;
             margin-top:-76px;
+            i[class^=trav]{
+              line-height: 38px;
+            }
             &.lSPrev{
               left: -1px;
             }
@@ -975,10 +1053,11 @@ aside.sidebar{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding-bottom: 5px;
-      &.p-comm-with-icon{
-        padding-left: 22px;
-        background: url(../image/comment-icon.png) left center no-repeat;
+      flex-wrap: nowrap;
+      i.trav-comment-icon{
+        margin-right: 9px;
+        color: #4080ff;
+        font-size: 14px;
       }
       span{
         font-size: 14px;
@@ -1165,7 +1244,7 @@ aside.sidebar{
           &:hover{
             color: darken(#ccc, 5%);
           }
-          i.fa{
+          i[class^=trav]{
             font-size: 20px;
           }
         }
@@ -1273,11 +1352,13 @@ aside.sidebar{
           font-family: 'Circular Std Book';
           font-size: 14px;
           color: #4080ff;
+          white-space: nowrap;
         }
         a.slide-link{
+          text-decoration: none;
           color: #666666;
           font-size: 20px;
-          margin-left: 15px;
+          margin: 0 -7px 0 10px;
         }
       }
     }
@@ -1289,6 +1370,7 @@ aside.sidebar{
         margin-right: -6px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         .side-dest-block{
           margin: 6px;
           width: 156px;
@@ -1342,6 +1424,8 @@ aside.sidebar{
               white-space: nowrap;
               text-overflow: ellipsis;
               overflow: hidden;
+              display: inline-block;
+              width: 100%;
               font-size: 16px;
               color: #4080ff;
               font-family: 'Circular Std Book';
@@ -1369,6 +1453,7 @@ aside.sidebar{
           margin-bottom: 10px;
           white-space: nowrap;
           display: flex;
+          flex-wrap:wrap;
           justify-content: center;
           flex-wrap: wrap;
           li{
@@ -1455,10 +1540,11 @@ aside.sidebar{
       color: #000;
       text-transform: capitalize;
       margin-bottom: 0;
-      i.fa{
+      i[class^=trav]{
         color: #4080ff;
-        font-size: 18px;
+        // font-size: 20px;
         margin-right: 5px;
+        vertical-align: middle;
       }
       span.count{
         font-family: 'CircularAirPro Light';
@@ -1478,9 +1564,10 @@ aside.sidebar{
         color: #4080ff;
       }
       a.slide-link{
+        text-decoration: none;
         color: #666666;
         font-size: 20px;
-        margin-left: 15px;
+        margin: 0 -7px 0 10px;
       }
       .dropdown{
         position: relative;
@@ -1573,9 +1660,9 @@ aside.sidebar{
               @include avatarImgStyle(30px, null);
               text-align: center;
               background:rgba(0,0,0,.7);
-              i.fa{
+              i[class^=trav]{
                 color: white;
-                font-size: 18px;
+                font-size: 14px;
                 line-height: 30px;
               }
             }
@@ -1835,7 +1922,7 @@ aside.sidebar{
   }
   .post-map-wrap{
     position: relative;
-    padding-bottom: 75%;
+    // padding-bottom: 75%;
     &:last-child{
       margin-top: 20px;
     }
@@ -1885,10 +1972,14 @@ aside.sidebar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   .post-profile-block-slider-wrap{
     position: relative;
     z-index: 50;
+    @media(max-width:991px){
+      margin: 0 auto;
+    }
     &:before,
     &:after{
       position: absolute;
@@ -1915,7 +2006,7 @@ aside.sidebar{
         width: 9px;
         height: 24px;
         margin-top: -12px;
-        i.fa{
+        i[class^=trav]{
           font-size: 24px;
         }
       }
@@ -1926,6 +2017,11 @@ aside.sidebar{
     border: 1px solid #e5e5e5;
     overflow: hidden;
     background: white;
+    &:not(.lSSlideOuter){
+      flex-basis: 287px;
+      margin: 0 auto;
+      width: auto;
+    }
     .post-profile-slide{
       height: 371px;
     }
@@ -1942,7 +2038,10 @@ aside.sidebar{
         position: absolute;
         top: 10px;
         right: 10px;
-        padding: 5px 9px 6px;
+        padding: 4px 7px 2px;
+        i[class^=trav]{
+          font-size: 22px;
+        }
       }
     }
     .post-prof-main{
@@ -2098,12 +2197,13 @@ aside.sidebar{
   box-shadow: 0 3px 12px rgba(0,0,0,.3);
   min-width: 205px;
   .dropdown-item{
-    padding: 10px 18px;
+    padding: 10px 18px 10px 0;
     display: flex;
     align-items: center;
     .icon-wrap{
-      padding-right: 18px;
-      i.fa{
+      min-width: 54px;
+      text-align: center;
+      i[class^=trav]{
         color: #808080;
         font-size: 20px;
       }
@@ -2220,6 +2320,7 @@ aside.sidebar{
           .avatar-wrap{
             padding-right: 13px;
             img{
+              width: auto;
               @include avatarImgStyle(45px, null);
             }
           }
@@ -2575,7 +2676,7 @@ aside.sidebar{
           width: 61px;
           text-align: center;
           padding-left: 4px;
-          i.fa{
+          i[class^=trav]{
             font-size: 26px;
             color: #cccccc;
           }
