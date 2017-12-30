@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-heart-icon:before {
+  content: "\e90d";
+}
 .trav-caret-down:before {
   content: "\e929";
 }
@@ -83,9 +86,6 @@
 }
 .trav-gallery-icon:before {
   content: "\e90c";
-}
-.trav-heart-icon:before {
-  content: "\e90d";
 }
 .trav-home-icon:before {
   content: "\e90e";
@@ -155,6 +155,12 @@
 }
 .trav-map-o:before {
   content: "\e94c";
+}
+.trav-cog:before {
+  content: "\e994";
+}
+.trav-tree:before {
+  content: "\e9bc";
 }
 .trav-filter:before {
   content: "\ea5b";
