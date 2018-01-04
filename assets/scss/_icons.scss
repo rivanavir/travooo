@@ -24,6 +24,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-get-direction-icon:before {
+  content: "\e92c";
+}
+.trav-bookmark-icon:before {
+  content: "\e92d";
+}
+.trav-light-icon:before {
+  content: "\e92e";
+}
+.trav-share-fill-icon:before {
+  content: "\e92f";
+}
+.trav-chevron-up:before {
+  content: "\e930";
+}
+.trav-full-clock-icon:before {
+  content: "\e931";
+}
+.trav-flag-icon:before {
+  content: "\e92b";
+}
+.trav-close-icon:before {
+  content: "\e92a";
+}
 .trav-heart-icon:before {
   content: "\e90d";
 }
@@ -81,7 +105,7 @@
 .trav-event-program-icon:before {
   content: "\e90a";
 }
-.trav-flag-icon:before {
+.trav-flag-icon-o:before {
   content: "\e90b";
 }
 .trav-gallery-icon:before {
@@ -150,6 +174,9 @@
 .trav-weather-icon:before {
   content: "\e922";
 }
+.trav-phone:before {
+  content: "\e942";
+}
 .trav-map:before {
   content: "\e94b";
 }
@@ -161,6 +188,9 @@
 }
 .trav-tree:before {
   content: "\e9bc";
+}
+.trav-earth:before {
+  content: "\e9ca";
 }
 .trav-filter:before {
   content: "\ea5b";

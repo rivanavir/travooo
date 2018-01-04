@@ -1,5 +1,23 @@
 $(document).ready(function(){
+  
+  $('#createPostTxt').on('keyup', function(){
+    let inputVal = $(this).val();
+    let postBtn = $(this).parents('.post-create-block').find('.btn-light-primary');
+    if(inputVal.length >= 3){
+      $('body').addClass('postWritted');
+      $(postBtn).removeClass('btn-disabled');
+    } else{
+      $('body').removeClass('postWritted');
+      $(postBtn).addClass('btn-disabled');
+    }
+  });
 
+  // $('.story-style').on('click', function () {
+  //   $(this).modal('hide');
+  // }).children('.modal-dialog').on('click', function (e) {
+  //   return true;
+  // });
+  
   $('.check-block').click(function(){
     $(this).toggleClass('checked-block');
   });
