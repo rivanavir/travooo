@@ -87,11 +87,11 @@ $(document).ready(function(){
       $("#filterToggler, #sidebarToggler").removeAttr('style');
     }
     if (scroll >= scrollVar) {
-      $('.head-trip-plan').addClass('scrolled');
-      $('.head-trip-plan_trip-line').show();
+      $('#headerTripPlan').addClass('scrolled');
+      $('#headerTripPlan .head-trip-plan_trip-line').show();
     } else{
-      $('.head-trip-plan').removeClass('scrolled');
-      $('.head-trip-plan_trip-line').hide();
+      $('#headerTripPlan').removeClass('scrolled');
+      $('#headerTripPlan .head-trip-plan_trip-line').hide();
     }
   });
 
@@ -242,7 +242,7 @@ $(document).ready(function(){
     nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'trip-line-slider-wrap',
     onSliderLoad: function(){
-      $('.head-trip-plan_trip-line').hide();
+      $('#headerTripPlan .head-trip-plan_trip-line').hide();
     }
   });
 
@@ -304,60 +304,84 @@ $(document).ready(function(){
       $(parentBlock).css('left', -calcCount);
     });
 
-    let moreStorySlider = $("#moreStorySlider").lightSlider({
-      autoWidth:true,
-      pager: false,
-      controls: false,
-      slideMargin: 10,
-      loop: true,
-      addClass: 'more-story-slider',
-      onSliderLoad: function(el){
-        let sliderEl = $(el);
-        sliderEl.parents('.post-block').find('.slide-link').on('click', function(e){
-          e.preventDefault();
-          let slideBlockId = $(this).parents('.post-block').find('.post-slider').attr('id');
-          if($(this).hasClass('slide-prev')){
-            moreStorySlider.goToPrevSlide();
-          } else if($(this).hasClass('slide-next')){
-            moreStorySlider.goToNextSlide();
-          }
-        });
-      }
-    });
+    if(!$("#moreStorySlider").hasClass('lightSlider')){
+      $("#moreStorySlider").lightSlider({
+        autoWidth:true,
+        pager: false,
+        controls: false,
+        slideMargin: 10,
+        loop: true,
+        addClass: 'more-story-slider',
+        onSliderLoad: function(el){
+          $(el).parents('.post-block').find('.slide-link').on('click', function(e){
+            e.preventDefault();
+            let slideBlockId = $(this).parents('.post-block').find('.post-slider').attr('id');
+            if($(this).hasClass('slide-prev')){
+              el.goToPrevSlide();
+            } else if($(this).hasClass('slide-next')){
+              el.goToNextSlide();
+            }
+          });
+        }
+      });
+    }
+    
+    if(!$("#calendarSlider").hasClass('lightSlider')){
+      $("#calendarSlider").lightSlider({
+        item:3,
+        pager: false,
+        controls: false,
+        loop:false,
+        slideMove:1,
+        slideMargin: 0,
+        centerSlider: true,
+        addClass: 'head-calendar-slider',
+        onSliderLoad: function(el){
+          $('.day-slider a.prevDay').on('click', function(e){
+            e.preventDefault();
+            el.goToPrevSlide();
+          });
+          $('.day-slider a.nextDay').on('click', function(e){
+            e.preventDefault();
+            el.goToNextSlide();
+          });
+        }
+      });
+    }
+    
+    if(!$("#tripLineSliderModal").hasClass('lightSlider')){
+      $("#tripLineSliderModal").lightSlider({
+        autoWidth:true,
+        pager: false,
+        slideMargin: 10,
+        prevHtml: '<i class="trav-angle-left"></i>',
+        nextHtml: '<i class="trav-angle-right"></i>',
+        addClass: 'trip-line-slider-wrap',
+        onSliderLoad: function(el){
+          $(el).parents('#modalHeadTripPlan').hide();
+        }
+      });
+    }
 
-    $("#calendarSlider").lightSlider({
-      item:3,
-      pager: false,
-      controls: false,
-      loop:false,
-      slideMove:1,
-      slideMargin: 0,
-      centerSlider: true,
-      addClass: 'head-calendar-slider',
-      onSliderLoad: function(el){
-        $('.day-slider a.prevDay').on('click', function(e){
-          e.preventDefault();
-          el.goToPrevSlide();
-        });
-        $('.day-slider a.nextDay').on('click', function(e){
-          e.preventDefault();
-          el.goToNextSlide();
-        });
+    $(this).scroll(function() {    
+      let scroll = $(this).scrollTop();
+      let scrollVar = 50;
+      if($(window).width() >= 576){
+        scrollVar = 140;
       }
-    });
-
-    $("#tripLineSliderModal").lightSlider({
-      autoWidth:true,
-      pager: false,
-      slideMargin: 10,
-      prevHtml: '<i class="trav-angle-left"></i>',
-      nextHtml: '<i class="trav-angle-right"></i>',
-      addClass: 'trip-line-slider-wrap',
-      onSliderLoad: function(el){
-        // $(el).parents('.head-trip-plan_trip-line').hide();
+      if (scroll >= scrollVar) {
+        $('#storyModePopup .modal-close').css('top', '17px');
+        $('#modalHeadTripPlan').addClass('scrolled').show();
+      } else{
+        $('#storyModePopup .modal-close').css('top', '30px');
+        $('#modalHeadTripPlan').removeClass('scrolled').hide();
       }
-    });
+    })
     
   });
+  $('#storyModePopup').on('hidden.bs.modal', function(){
+    $('#storyModePopup .modal-close').css('top', '30px');
+    $('#modalHeadTripPlan').removeClass('scrolled').hide();
+  })
   
 });

@@ -54,7 +54,7 @@
         </nav>
 
       </div>
-      <div class="head-trip-plan">
+      <div class="head-trip-plan" id="headerTripPlan">
         <div class="head-trip-plan_wrapper">
           <div class="container-fluid">
             <div class="head-trip-plan_inner">
@@ -978,11 +978,11 @@
   <!-- map mode popup -->
   <div class="modal fade white-style" data-backdrop="false" id="storyModePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-    <div class="head-trip-plan">
-      <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
-        <i class="trav-close-icon"></i>
-      </button>
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
       
+    <div class="head-trip-plan" id="modalHeadTripPlan">
       <div class="head-trip-plan_wrapper">
         <div class="container-fluid">
           <div class="head-trip-plan_inner">
@@ -991,171 +991,156 @@
                 <img src="http://placehold.it/36x36" alt="avatar">
               </div>
             </div>
+            <div class="head-trip-timeline">
+              <div class="timeline-layer">
+                <img src="http://placehold.it/800x50?text=timeline+place:https://timeline.knightlab.com" alt="timeline">
+              </div>
+              <div class="day-slider">
+                <ul class="calendar-slider" id="calendarSlider">
+                  <li>
+                    <div class="number-day">16</div>
+                    <div class="month">jun</div>
+                  </li>
+                  <li>
+                    <div class="number-day">17</div>
+                    <div class="month">jun</div>
+                  </li>
+                  <li class="active">
+                    <div class="number-day">18</div>
+                    <div class="month">jun</div>
+                  </li>
+                  <li>
+                    <div class="number-day">19</div>
+                    <div class="month">jun</div>
+                  </li>
+                  <li>
+                    <div class="number-day">20</div>
+                    <div class="month">jun</div>
+                  </li>
+                  <li>
+                    <div class="number-day">21</div>
+                    <div class="month">jun</div>
+                  </li>
+                </ul>
+                <ul class="calendar-link-list">
+                  <li>
+                    <a href="#" class="prevDay"><i class="trav-angle-left"></i></a>
+                  </li>
+                  <li>
+                    <span class="dot"></span>
+                  </li>
+                  <li>
+                    <a href="#" class="nextDay"><i class="trav-angle-right"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="head-trip-plan_trip-line">
-        <div class="head-trip-plan">
-          <div class="head-trip-plan_wrapper">
-            <div class="container-fluid">
-              <div class="head-trip-plan_inner">
-                <div class="plan-by-name">
-                  <div class="ava-by-wrap">
-                    <img src="http://placehold.it/36x36" alt="avatar">
-                  </div>
+        <div class="container-fluid">
+          <div class="trip-line" id="tripLineSliderModal">
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon">
+                  <img src="./assets/image/flag-img-1.png" alt="flag-icon">
                 </div>
-                <div class="head-trip-timeline">
-                  <div class="timeline-layer">
-                    <img src="http://placehold.it/800x50?text=timeline+place:https://timeline.knightlab.com" alt="timeline">
-                  </div>
-                  <div class="day-slider">
-                    <ul class="calendar-slider" id="calendarSlider">
-                      <li>
-                        <div class="number-day">16</div>
-                        <div class="month">jun</div>
-                      </li>
-                      <li>
-                        <div class="number-day">17</div>
-                        <div class="month">jun</div>
-                      </li>
-                      <li class="active">
-                        <div class="number-day">18</div>
-                        <div class="month">jun</div>
-                      </li>
-                      <li>
-                        <div class="number-day">19</div>
-                        <div class="month">jun</div>
-                      </li>
-                      <li>
-                        <div class="number-day">20</div>
-                        <div class="month">jun</div>
-                      </li>
-                      <li>
-                        <div class="number-day">21</div>
-                        <div class="month">jun</div>
-                      </li>
-                    </ul>
-                    <ul class="calendar-link-list">
-                      <li>
-                        <a href="#" class="prevDay"><i class="trav-angle-left"></i></a>
-                      </li>
-                      <li>
-                        <span class="dot"></span>
-                      </li>
-                      <li>
-                        <a href="#" class="nextDay"><i class="trav-angle-right"></i></a>
-                      </li>
-                    </ul>
+                <div class="trip-content">
+                  <div class="trip-line-name">Morocco</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">1 City</span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="head-trip-plan_trip-line">
-            <div class="container-fluid">
-              <div class="trip-line" id="tripLineSliderModal">
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon">
-                      <img src="./assets/image/flag-img-1.png" alt="flag-icon">
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name">Morocco</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">1 City</span>
-                      </div>
-                    </div>
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon blue-icon">
+                  <i class="trav-set-location-icon"></i>
+                </div>
+                <div class="trip-content">
+                  <div class="trip-line-name blue">Rabat-Sale</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">1 Place</span>
                   </div>
                 </div>
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon blue-icon">
-                      <i class="trav-set-location-icon"></i>
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name blue">Rabat-Sale</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">1 Place</span>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon">
+                  <img src="http://placehold.it/32x32" alt="flag-icon">
+                </div>
+                <div class="trip-content">
+                  <div class="trip-line-name">United arab emirates</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">1 City</span>
                   </div>
                 </div>
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon">
-                      <img src="http://placehold.it/32x32" alt="flag-icon">
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name">United arab emirates</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">1 City</span>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon disabled-icon">
+                  <i class="trav-radio-checked2"></i>
+                </div>
+                <div class="trip-content">
+                  <div class="trip-line-name">Dubai</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">1 Place</span>
                   </div>
                 </div>
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon disabled-icon">
-                      <i class="trav-radio-checked2"></i>
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name">Dubai</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">1 Place</span>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon">
+                  <img src="http://placehold.it/32x32" alt="flag-icon">
+                </div>
+                <div class="trip-content">
+                  <div class="trip-line-name">Japan</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">3 Citis</span>
                   </div>
                 </div>
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon">
-                      <img src="http://placehold.it/32x32" alt="flag-icon">
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name">Japan</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">3 Citis</span>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon disabled-icon">
+                  <i class="trav-radio-checked2"></i>
+                </div>
+                <div class="trip-content">
+                  <div class="trip-line-name">Tokyo</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">8 Places</span>
                   </div>
                 </div>
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon disabled-icon">
-                      <i class="trav-radio-checked2"></i>
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name">Tokyo</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">8 Places</span>
-                      </div>
-                    </div>
+              </div>
+            </div>
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon disabled-icon">
+                  <i class="trav-radio-checked2"></i>
+                </div>
+                <div class="trip-content">
+                  <div class="trip-line-name">Nagoya</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">3 Places</span>
                   </div>
                 </div>
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon disabled-icon">
-                      <i class="trav-radio-checked2"></i>
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name">Nagoya</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">3 Places</span>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="trip-line_slide">
+              <div class="trip-line_slide__inner">
+                <div class="trip-icon disabled-icon">
+                  <i class="trav-radio-checked2"></i>
                 </div>
-                <div class="trip-line_slide">
-                  <div class="trip-line_slide__inner">
-                    <div class="trip-icon disabled-icon">
-                      <i class="trav-radio-checked2"></i>
-                    </div>
-                    <div class="trip-content">
-                      <div class="trip-line-name">Osaka</div>
-                      <div class="trip-line-tag">
-                        <span class="place-tag">5 Places</span>
-                      </div>
-                    </div>
+                <div class="trip-content">
+                  <div class="trip-line-name">Osaka</div>
+                  <div class="trip-line-tag">
+                    <span class="place-tag">5 Places</span>
                   </div>
                 </div>
               </div>
