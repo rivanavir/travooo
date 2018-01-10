@@ -12,7 +12,7 @@ $(document).ready(function(){
     }
   });
 
-  // $('.story-style').on('click', function () {
+  // $('.white-style').on('click', function () {
   //   $(this).modal('hide');
   // }).children('.modal-dialog').on('click', function (e) {
   //   return true;
@@ -85,6 +85,13 @@ $(document).ready(function(){
     } else{
       $("#leftOutsideMenu, #sidebarLayer").removeClass('scrolled');
       $("#filterToggler, #sidebarToggler").removeAttr('style');
+    }
+    if (scroll >= scrollVar) {
+      $('.head-trip-plan').addClass('scrolled');
+      $('.head-trip-plan_trip-line').show();
+    } else{
+      $('.head-trip-plan').removeClass('scrolled');
+      $('.head-trip-plan_trip-line').hide();
     }
   });
 
@@ -201,6 +208,13 @@ $(document).ready(function(){
     nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-dest-slider-wrap'
   });
+  $("#tripDestSlider").lightSlider({
+    pager: false,
+    controls: false,
+    autoWidth:true,
+    slideMargin: 0,
+    addClass: 'trip-destination-slider-block'
+  });
   $("#postFollowSlider").lightSlider({
     item:1,
     pager: false,
@@ -217,6 +231,87 @@ $(document).ready(function(){
     prevHtml: '<i class="trav-angle-left"></i>',
     nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-dest-slider-wrap'
+  });
+  $("#tripLineSlider").lightSlider({
+    autoWidth:true,
+    pager: false,
+    slideMargin: 10,
+    prevHtml: '<i class="trav-angle-left"></i>',
+    nextHtml: '<i class="trav-angle-right"></i>',
+    addClass: 'trip-line-slider-wrap',
+    onSliderLoad: function(){
+      $('.head-trip-plan_trip-line').hide();
+    }
+  });
+
+  $('#mapModePopup').on('shown.bs.modal', function(){
+    $("#tripDestSliderMapMode").lightSlider({
+      pager: false,
+      controls: true,
+      autoWidth:true,
+      slideMargin: 0,
+      prevHtml: '<i class="trav-angle-left"></i>',
+      nextHtml: '<i class="trav-angle-right"></i>',
+      addClass: 'trip-destination-slider-map-mode'
+    });
+  })
+  $('#mapPopup').on('shown.bs.modal', function(){
+    $("#modalMapSlider").lightSlider({
+      item:1,
+      pager: false,
+      controls: false,
+      enableDrag: false,
+      addClass: 'post-map-slider',
+      onSliderLoad: function(el){
+        let sliderController = $(el).find('.lslide.active .dest-slide-vector');
+        let leftDirect, rightDirect;
+        if(sliderController.data('direct') == 'left'){
+          leftDirect = sliderController;
+        }
+        if(sliderController.data('direct') == 'right'){
+          rightDirect = sliderController;
+        }
+        $(leftDirect).on('click', function(){
+          el.goToPrevSlide();
+        });
+        $(rightDirect).on('click', function(){
+          el.goToNextSlide();
+        });
+      },
+      onAfterSlide: function(el){
+        let sliderController = $(el).find('.lslide.active .dest-slide-vector');
+        let leftDirect, rightDirect;
+        if(sliderController.data('direct') == 'left'){
+          leftDirect = sliderController;
+        }
+        if(sliderController.data('direct') == 'right'){
+          rightDirect = sliderController;
+        }
+        $(leftDirect).on('click', function(){
+          el.goToPrevSlide();
+        });
+        $(rightDirect).on('click', function(){
+          el.goToNextSlide();
+        });
+      }
+    });
+  });
+
+  $('#storyModePopup').on('shown.bs.modal', function(){
+    let placeNameList = $(this).find('.place-name-list');
+    let currentItem = $(placeNameList).find('.current');
+    $.each(currentItem, function(){
+      let itemWidth = $(this).outerWidth()/2;
+      let parentBlock = $(this).parent();
+      let parentBlockWidth = $(this).parent().width();
+      let itemOffsetToParent = $(this).offset().left - parentBlock.offset().left;
+
+      let calcCount = itemWidth + itemOffsetToParent;
+
+      $(parentBlock).css('left', -calcCount);
+      // console.log($(this).offset().left);
+      // console.log(parentBlock);
+    })
   });
   
 });

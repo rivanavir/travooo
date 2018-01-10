@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'travooo';
-  src:  url('../fonts/travooo.eot?l4b8fz');
+  src:  url('../fonts/travooo.eot?');
   src:  url('../fonts/travooo.eot?l4b8fz#iefix') format('embedded-opentype'),
-    url('../fonts/travooo.ttf?l4b8fz') format('truetype'),
-    url('../fonts/travooo.woff?l4b8fz') format('woff'),
-    url('../fonts/travooo.svg?l4b8fz#travooo') format('svg');
+    url('../fonts/travooo.ttf') format('truetype'),
+    url('../fonts/travooo.woff') format('woff'),
+    url('../fonts/travooo.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-weather-cloud-icon:before {
+  content: "\e93b";
+}
+.trav-subway-icon:before {
+  content: "\e939";
+}
+.trav-walk-icon:before {
+  content: "\e93a";
+}
+.trav-long-arrow-left:before {
+  content: "\e937";
+}
+.trav-long-arrow-right:before {
+  content: "\e938";
+}
+.trav-half-star-icon:before {
+  content: "\e935";
+}
+.trav-star-icon:before {
+  content: "\e936";
+}
+.trav-comment-icon:before {
+  content: "\e906";
+}
+.trav-fullscreen-icon:before {
+  content: "\e934";
+}
+.trav-heart-fill-icon:before {
+  content: "\e933";
+}
+.trav-bell-icon:before {
+  content: "\e932";
+}
 .trav-get-direction-icon:before {
   content: "\e92c";
 }
@@ -89,9 +122,6 @@
 }
 .trav-clock-icon:before {
   content: "\e905";
-}
-.trav-comment-icon:before {
-  content: "\e906";
 }
 .trav-distance-icon:before {
   content: "\e907";
@@ -191,6 +221,9 @@
 }
 .trav-earth:before {
   content: "\e9ca";
+}
+.trav-radio-checked2:before {
+  content: "\ea55";
 }
 .trav-filter:before {
   content: "\ea5b";

@@ -1,0 +1,2805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Travooo - trip plan</title>
+</head>
+<body>
+
+  <div class="main-wrapper">
+    <header class="main-header trip-plan-class">
+      <div class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="trav-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="./assets/image/main-circle-logo.png" alt="">
+          </a>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="header-search-block">
+              <a class="search-btn" href="#"><i class="trav-search-icon"></i></a>
+              <input type="text" class="" placeholder="Search...">
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Messages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Trips</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+              <li class="nav-item p-0">
+                <a class="bell-link" href="#">
+                  <i class="trav-bell-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="profile-link" href="#">
+                  <img src="http://placehold.it/36x36" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+      <div class="head-trip-plan">
+        <div class="head-trip-plan_wrapper">
+          <div class="container-fluid">
+            <div class="head-trip-plan_inner">
+              <div class="plan-by-name">
+                <div class="ava-by-wrap">
+                  <img src="http://placehold.it/36x36" alt="avatar">
+                </div>
+                <div class="plan-name">By <a href="#" class="name-link">Suzanne</a></div>
+              </div>
+              <div class="plan-title">
+                From Morocco to Japan in 7 Days
+              </div>
+              <div class="plan-btn-wrap">
+                <a class="nav-link btn btn-light-primary" href="#">Use plan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="head-trip-plan_trip-line">
+          <div class="container-fluid">
+            <div class="trip-line" id="tripLineSlider">
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon">
+                    <img src="./assets/image/flag-img-1.png" alt="flag-icon">
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name">Morocco</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">1 City</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon blue-icon">
+                    <i class="trav-set-location-icon"></i>
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name blue">Rabat-Sale</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">1 Place</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon">
+                    <img src="http://placehold.it/32x32" alt="flag-icon">
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name">United arab emirates</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">1 City</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon disabled-icon">
+                    <i class="trav-radio-checked2"></i>
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name">Dubai</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">1 Place</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon">
+                    <img src="http://placehold.it/32x32" alt="flag-icon">
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name">Japan</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">3 Citis</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon disabled-icon">
+                    <i class="trav-radio-checked2"></i>
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name">Tokyo</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">8 Places</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon disabled-icon">
+                    <i class="trav-radio-checked2"></i>
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name">Nagoya</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">3 Places</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="trip-line_slide">
+                <div class="trip-line_slide__inner">
+                  <div class="trip-icon disabled-icon">
+                    <i class="trav-radio-checked2"></i>
+                  </div>
+                  <div class="trip-content">
+                    <div class="trip-line-name">Osaka</div>
+                    <div class="trip-line-tag">
+                      <span class="place-tag">5 Places</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="content-wrap">
+      <div class="container-fluid">
+
+        <div class="trip-map">
+          <div class="trip-map_wrapper">
+            <img src="./assets/image/trip-map.jpg" alt="map">
+          </div>
+          <div class="trip-map_top-layer">
+            <div class="trip-map-left">
+              <div class="trip-map-info">
+                <div class="trip-map-info_block">
+                  <div class="trip-icon-wrap">
+                    <i class="trav-clock-icon"></i>
+                  </div>
+                  <div class="trip-info-txt">
+                    <p class="label-txt">7 Days</p>
+                    <p class="info-txt">Duration</p>
+                  </div>
+                </div>
+                <div class="trip-map-info_block">
+                  <div class="trip-icon-wrap">
+                    <i class="trav-budget-icon"></i>
+                  </div>
+                  <div class="trip-info-txt">
+                    <p class="label-txt">$ 5000</p>
+                    <p class="info-txt">Budget</p>
+                  </div>
+                </div>
+                <div class="trip-map-info_block">
+                  <div class="trip-icon-wrap">
+                    <i class="trav-distance-icon"></i>
+                  </div>
+                  <div class="trip-info-txt">
+                    <p class="label-txt">2.3 km</p>
+                    <p class="info-txt">Distance</p>
+                  </div>
+                </div>
+                <div class="trip-map-info_block">
+                  <div class="trip-icon-wrap">
+                    <i class="trav-map-marker-icon"></i>
+                  </div>
+                  <div class="trip-info-txt">
+                    <p class="label-txt">12</p>
+                    <p class="info-txt">Places</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="trip-map-right">
+              <div class="trip-map-right-inner">
+                <span class="right-txt">
+                  <i class="trav-ok-icon"></i>
+                  34 Used this plan
+                </span>
+                <ul class="trip-avatar-list">
+                  <li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li><!--
+                  --><li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li><!--
+                  --><li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="trip-destination-slider" id="tripDestSlider">
+            <div class="trip-dest-slide">
+              <div class="trip-dest-slide_inner">
+                <div class="trip-dest-flag">
+                  <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                </div>
+                <div class="trip-dest-info">
+                  <p class="trip-dest-name">Morocco</p>
+                  <p class="trip-dest-count">1 Destination</p>
+                </div>
+                <div class="trip-plane-info">
+                  <i class="trav-plane-icon"></i>
+                  <span>Fly - 5,250 km</span>
+                </div>
+              </div>
+            </div>
+            <div class="trip-dest-slide">
+              <div class="trip-dest-slide_inner">
+                <div class="trip-dest-flag">
+                  <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                </div>
+                <div class="trip-dest-info">
+                  <p class="trip-dest-name">United Arab Emirates</p>
+                  <p class="trip-dest-count">2 Destination</p>
+                </div>
+                <div class="trip-plane-info">
+                  <i class="trav-plane-icon"></i>
+                  <span>Fly - 7,280 km</span>
+                </div>
+              </div>
+            </div>
+            <div class="trip-dest-slide">
+              <div class="trip-dest-slide_inner">
+                <div class="trip-dest-flag">
+                  <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                </div>
+                <div class="trip-dest-info">
+                  <p class="trip-dest-name">Japan</p>
+                  <p class="trip-dest-count">10 Destination</p>
+                </div>
+                <div class="trip-plane-info">
+                  <i class="trav-subway-icon"></i>
+                  <span>Fly - 5,250 km</span>
+                </div>
+              </div>
+            </div>
+            <div class="trip-dest-slide">
+              <div class="trip-dest-slide_inner">
+                <div class="trip-dest-flag">
+                  <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                </div>
+                <div class="trip-dest-info">
+                  <p class="trip-dest-name">Morocco</p>
+                  <p class="trip-dest-count">1 Destination</p>
+                </div>
+                <div class="trip-plane-info">
+                  <i class="trav-walk-icon"></i>
+                  <span>Fly - 7,280 km</span>
+                </div>
+              </div>
+            </div>
+            <div class="trip-dest-slide">
+              <div class="trip-dest-slide_inner">
+                <div class="trip-dest-flag">
+                  <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                </div>
+                <div class="trip-dest-info">
+                  <p class="trip-dest-name">Morocco</p>
+                  <p class="trip-dest-count">1 Destination</p>
+                </div>
+                <div class="trip-plane-info">
+                  <i class="trav-car-icon"></i>
+                  <span>Fly - 7,280 km</span>
+                </div>
+              </div>
+            </div>
+            <div class="trip-dest-slide">
+              <div class="trip-dest-slide_inner">
+                <div class="trip-dest-flag">
+                  <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                </div>
+                <div class="trip-dest-info">
+                  <p class="trip-dest-name">Morocco</p>
+                  <p class="trip-dest-count">1 Destination</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-row">
+
+          <!-- MAIN-CONTENT -->
+          <div class="main-content-layer">
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentPopup">
+              Comments popup
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#placePopup">
+              Place popup
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mapPopup">
+              Map popup
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mapModePopup">
+              Map Mode popup
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#storyModePopup">
+              Story Mode popup
+            </button>
+            
+            <div class="post-block post-top-bordered post-view-block">
+              <div class="post-top-info-layer">
+                <ul class="view-link">
+                  <li class="active">
+                    <a href="#">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#">Preview</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="post-view-inner">
+                <div class="post-view-wrap">
+                  <div class="story-date-layer">
+                    <div class="s-date-line">
+                      <div class="s-date-badge">Day 1 / 7</div>
+                    </div>
+                    <div class="s-date-line">
+                      <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                    </div>
+                  </div>
+                  
+                  <div class="view-img-layer airplane">
+                    <div class="view-img">
+                      <img src="http://placehold.it/50x50" alt="view">
+                      <span class="round-count">1</span>
+                    </div>
+                  </div>
+                  <div class="view-content">
+                    <div class="view-txt-line">
+                      <div class="line-txt place-info">
+                        <a href="#" class="dest-link">Rabat sale airport</a>
+                        <span class="block-tag">Airport</span>
+                        <i class="trav-set-location-icon"></i>
+                        <span class="place-name">Rabat</span>
+                        <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                        <span class="place-name">Morocco</span>
+                      </div>
+                      <div class="line-time">
+                        @ 10:00am
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        Will spend <b>$240</b>
+                        <span class="dot">·</span>
+                        Planning to stay <b>40 min</b>
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        <b>Have something to tell Suzanne?</b>
+                        Discussed by 
+                        <ul class="foot-avatar-list">
+                          <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                        </ul>
+                        128 users
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-view-wrap">
+                  <div class="view-img-layer airplane">
+                    <div class="view-img">
+                      <img src="http://placehold.it/50x50" alt="view">
+                      <span class="round-count">2</span>
+                    </div>
+                  </div>
+                  <div class="view-content">
+                    <div class="view-txt-line">
+                      <div class="line-txt place-info">
+                        <a href="#" class="dest-link">Dubai international airport</a>
+                        <span class="block-tag">Airport</span>
+                        <i class="trav-set-location-icon"></i>
+                        <span class="place-name">Dubai</span>
+                        <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                        <span class="place-name">United arab emirates</span>
+                      </div>
+                      <div class="line-time">
+                        @ 3:00pm
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        Will spend <b>$510</b>
+                        <span class="dot">·</span>
+                        Planning to stay <b>2 hours</b>
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        <b>Have something to tell Suzanne?</b>
+                        Discussed by 
+                        <ul class="foot-avatar-list">
+                          <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                        </ul>
+                        128 users
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-view-wrap">
+                  <div class="story-date-layer">
+                    <div class="s-date-line">
+                      <div class="s-date-badge">Day 2 / 7</div>
+                    </div>
+                    <div class="s-date-line">
+                      <div class="s-date-badge">Mon, 19 Jun 2017</div>
+                    </div>
+                  </div>
+                  
+                  <div class="view-img-layer overland-trip">
+                    <div class="view-img">
+                      <img src="http://placehold.it/50x50" alt="view">
+                      <span class="round-count">3</span>
+                    </div>
+                  </div>
+                  <div class="view-content">
+                    <div class="view-txt-line">
+                      <div class="line-txt place-info">
+                        <a href="#" class="dest-link">Haneda airport</a>
+                        <span class="block-tag">Airport</span>
+                        <i class="trav-set-location-icon"></i>
+                        <span class="place-name">Tokyo</span>
+                        <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                        <span class="place-name">Japan</span>
+                      </div>
+                      <div class="line-time">
+                        @ 12:00am
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        Will spend <b>$240</b>
+                        <span class="dot">·</span>
+                        Planning to stay <b>40 min</b>
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        <b>Have something to tell Suzanne?</b>
+                        Discussed by 
+                        <ul class="foot-avatar-list">
+                          <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                        </ul>
+                        128 users
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-view-wrap">
+                  <div class="view-img-layer airplane">
+                    <div class="view-img">
+                      <img src="http://placehold.it/50x50" alt="view">
+                      <span class="round-count">4</span>
+                    </div>
+                  </div>
+                  <div class="view-content">
+                    <div class="view-txt-line">
+                      <div class="line-txt place-info">
+                        <a href="#" class="dest-link">Bunka</a>
+                        <span class="block-tag">Hotel</span>
+                        <i class="trav-set-location-icon"></i>
+                        <span class="place-name">Tokyo</span>
+                        <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                        <span class="place-name">Japan</span>
+                      </div>
+                      <div class="line-time">
+                        @ 10:00am
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        Will spend <b>$510</b>
+                        <span class="dot">·</span>
+                        Planning to stay <b>2 hours</b>
+                      </div>
+                    </div>
+                    <div class="view-txt-line">
+                      <div class="line-txt">
+                        <b>Have something to tell Suzanne?</b>
+                        Discussed by 
+                        <ul class="foot-avatar-list">
+                          <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                        </ul>
+                        128 users
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-preview-wrap">
+
+              <div class="post-block post-preview-mode airplane">
+                <div class="story-date-layer">
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Day 1 / 7</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">@ 10:00am</div>
+                  </div>
+                </div>
+                
+                <div class="post-top-info-layer">
+                  <div class="post-top-info-wrap">
+                    <div class="post-top-avatar-wrap">
+                      <img src="http://placehold.it/50x50" alt="">
+                    </div>
+                    <div class="post-top-info-txt">
+                      <div class="post-preview-txt">
+                        <a class="dest-link" href="#">Rabat sale airport</a> 
+                        <span class="block-tag">Airport</span>
+                        <div class="line-txt">
+                          Spend <b>$240</b>,
+                          Stayed <b>40 min</b>
+                        </div>
+                        <a href="#" class="place-name underline">Rabat, Morocco</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-image-container">
+                  <div class="post-txt-wrap">
+                    <p class="post-txt"><span class="txt-name">Suzanne: </span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit nunc porta eu leo a porttitor integer lectus ligula, egestas non vitae, dignissim placerat purus volutpat varius blandit...” <a href="#" class="read-more-link">Read more</a></p>
+                  </div>
+                  <ul class="post-image-list">
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div class="post-footer-info">
+                  <div class="post-foot-block post-reaction">
+                    <i class="trav-heart-fill-icon"></i>
+                    <span><b>6</b> Reactions</span>
+                  </div>
+                  <div class="post-foot-block">
+                    <i class="trav-comment-icon"></i>
+                    <span><b>20</b> Comments</span>
+                  </div>
+                  <div class="post-foot-block">
+                    <i class="trav-light-icon"></i>
+                    <span><b>7</b> Tips</span>
+                  </div>
+                </div>
+
+                <div class="post-comment-layer">
+                  <div class="post-comment-top-info">
+                    <ul class="comment-filter">
+                      <li class="active">Top</li>
+                      <li>New</li>
+                    </ul>
+                    <div class="comm-count-info">
+                      3 / 20
+                    </div>
+                  </div>
+                  <div class="post-comment-wrapper">
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Katherin</a>
+                          <a href="#" class="comment-nickname">@katherin</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-smile.png" alt="">
+                            <span>21</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-block post-preview-mode overland-trip">
+                <div class="story-date-layer">
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Day 1 / 7</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">@ 10:00am</div>
+                  </div>
+                </div>
+                
+                <div class="post-top-info-layer">
+                  <div class="post-top-info-wrap">
+                    <div class="post-top-avatar-wrap">
+                      <img src="http://placehold.it/50x50" alt="">
+                    </div>
+                    <div class="post-top-info-txt">
+                      <div class="post-preview-txt">
+                        <a class="dest-link" href="#">Dubai international airport</a> 
+                        <span class="block-tag">Airport</span>
+                        <div class="line-txt">
+                          Spend <b>$240</b>,
+                          Stayed <b>40 min</b>
+                        </div>
+                        <a href="#" class="place-name underline">Dubai, United arab emirates</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-image-container">
+                  <div class="post-txt-wrap">
+                    <p class="post-txt"><span class="txt-name">Suzanne: </span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit nunc porta eu leo a porttitor integer lectus ligula, egestas non vitae, dignissim placerat purus volutpat varius blandit...” <a href="#" class="read-more-link">Read more</a></p>
+                  </div>
+                  <ul class="post-image-list">
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div class="post-footer-info">
+                  <div class="post-foot-block post-reaction">
+                    <i class="trav-heart-fill-icon"></i>
+                    <span><b>6</b> Reactions</span>
+                  </div>
+                  <div class="post-foot-block">
+                    <i class="trav-comment-icon"></i>
+                    <span><b>20</b> Comments</span>
+                  </div>
+                  <div class="post-foot-block">
+                    <i class="trav-light-icon"></i>
+                    <span><b>7</b> Tips</span>
+                  </div>
+                </div>
+
+                <div class="post-comment-layer">
+                  <div class="post-comment-top-info">
+                    <ul class="comment-filter">
+                      <li class="active">Top</li>
+                      <li>New</li>
+                    </ul>
+                    <div class="comm-count-info">
+                      3 / 20
+                    </div>
+                  </div>
+                  <div class="post-comment-wrapper">
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Katherin</a>
+                          <a href="#" class="comment-nickname">@katherin</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-smile.png" alt="">
+                            <span>21</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-block post-preview-mode">
+                <div class="story-date-layer">
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Day 1 / 7</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">@ 10:00am</div>
+                  </div>
+                </div>
+                
+                <div class="post-top-info-layer">
+                  <div class="post-top-info-wrap">
+                    <div class="post-top-avatar-wrap">
+                      <img src="http://placehold.it/50x50" alt="">
+                    </div>
+                    <div class="post-top-info-txt">
+                      <div class="post-preview-txt">
+                        <a class="dest-link" href="#">Dubai international airport</a> 
+                        <span class="block-tag">Airport</span>
+                        <div class="line-txt">
+                          Spend <b>$240</b>,
+                          Stayed <b>40 min</b>
+                        </div>
+                        <a href="#" class="place-name underline">Dubai, United arab emirates</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-image-container">
+                  <div class="post-txt-wrap">
+                    <p class="post-txt"><span class="txt-name">Suzanne: </span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit nunc porta eu leo a porttitor integer lectus ligula, egestas non vitae, dignissim placerat purus volutpat varius blandit...” <a href="#" class="read-more-link">Read more</a></p>
+                  </div>
+                  <ul class="post-image-list">
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                    <li>
+                      <img src="http://placehold.it/188x183" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div class="post-footer-info">
+                  <div class="post-foot-block post-reaction">
+                    <i class="trav-heart-fill-icon"></i>
+                    <span><b>6</b> Reactions</span>
+                  </div>
+                  <div class="post-foot-block">
+                    <i class="trav-comment-icon"></i>
+                    <span><b>20</b> Comments</span>
+                  </div>
+                  <div class="post-foot-block">
+                    <i class="trav-light-icon"></i>
+                    <span><b>7</b> Tips</span>
+                  </div>
+                </div>
+
+                <div class="post-comment-layer">
+                  <div class="post-comment-top-info">
+                    <ul class="comment-filter">
+                      <li class="active">Top</li>
+                      <li>New</li>
+                    </ul>
+                    <div class="comm-count-info">
+                      3 / 20
+                    </div>
+                  </div>
+                  <div class="post-comment-wrapper">
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Katherin</a>
+                          <a href="#" class="comment-nickname">@katherin</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-smile.png" alt="">
+                            <span>21</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <!-- SIDEBAR -->
+          <div class="sidebar-layer" id="sidebarLayer">
+            <aside class="sidebar">
+
+              <div class="post-block post-side-block">
+                <div class="post-side-top calendar-top">
+                  <h3 class="side-ttl">Calendar</h3>
+                  <div class="side-right-control">
+                    <a href="#" class="slide-link slide-prev"><i class="trav-angle-left"></i></a>
+                    <span class="month-name">Jun</span>
+                    <a href="#" class="slide-link slide-next"><i class="trav-angle-right"></i></a>
+                  </div>
+                </div>
+                <div class="post-calendar-inner">
+                  <div class="post-calendar">
+                    <h5 class="calendar-title">Jun 2017</h5>
+                    <div class="post-calendar_wrap">
+                      <ul class="cal-day-list">
+                        <li class="disabled">28</li>
+                        <li class="disabled">29</li>
+                        <li class="disabled">30</li>
+                        <li class="disabled">31</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li class="selected">18</li>
+                        <li class="selected">19</li>
+                        <li class="selected">20</li>
+                        <li class="selected">21</li>
+                        <li class="selected">22</li>
+                        <li class="selected">23</li>
+                        <li class="selected">24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li class="disabled">1</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="post-block post-side-preview">
+                <div class="post-side-top">
+                  <h3 class="side-ttl">Rabat-Sale airport</h3>
+                </div>
+                <div class="post-map-inner">
+                  <img src="http://placehold.it/360x215?text=map_layer" alt="map">
+                  <button class="btn btn-light-primary fullscreen-btn">
+                    <i class="trav-fullscreen-icon"></i>
+                  </button>
+                </div>
+              </div>
+
+              <ul class="sidebar-btn-list">
+                <li>
+                  <a href="#">
+                    <div class="round-icon">
+                      <i class="trav-story-icon"></i>
+                    </div>
+                    <span>Story</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="round-icon">
+                      <i class="trav-map"></i>
+                    </div>
+                    <span>Map</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="round-icon">
+                      <i class="trav-gallery-icon"></i>
+                    </div>
+                    <span>Gallery</span>
+                  </a>
+                </li>
+              </ul>
+              
+              <div class="aside-footer">
+                <ul class="aside-foot-menu">
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Advertising</a></li>
+                  <li><a href="#">Cookies</a></li>
+                  <li><a href="#">More</a></li>
+                </ul>
+                <p class="copyright">Travooo © 2017</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modals -->
+
+  <!-- map mode popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="storyModePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+    <div class="modal-dialog modal-custom-style modal-1070" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-story-block">
+          <div class="story-header-map start-map-layer">
+            <img src="http://placehold.it/1070x420?text=map+layer" alt="">
+            <button class="btn btn-light-primary btn-use-plan">use plan</button>
+          </div>
+          <div class="story-info-block">
+            <div class="story-by">
+              <div class="avatar-wrap">
+                <img src="http://placehold.it/64x64" alt="avatar">
+              </div>
+              <div class="by-info">
+                <span>By</span>
+                <span class="name">Suzanne</span>
+                <span class="posted">&nbsp;·&nbsp; Posted on 15 July 2017</span>
+              </div>
+            </div>
+            <div class="story-info-head">
+              <h2 class="start-ttl">From Morocco to Japan in 7 Days</h2>
+              <div class="story-head-bottom">
+                <div class="story-avatar-block">
+                  <ul class="avatar-list">
+                    <li><img class="small-ava" src="http://placehold.it/34x34" alt="ava"></li><!--
+                    --><li><img class="small-ava" src="http://placehold.it/34x34" alt="ava"></li><!--
+                    --><li><img class="small-ava" src="http://placehold.it/34x34" alt="ava"></li>
+                  </ul>
+                  <span><b>23</b><br>Used this trip plan</span>
+                </div>
+                <div class="map-info-list">
+                  <div class="trip-map-info_block">
+                    <div class="trip-icon-wrap">
+                      <i class="trav-clock-icon"></i>
+                    </div>
+                    <div class="trip-info-txt">
+                      <p class="label-txt">7 Days</p>
+                      <p class="info-txt">Duration</p>
+                    </div>
+                  </div>
+                  <div class="trip-map-info_block">
+                    <div class="trip-icon-wrap">
+                      <i class="trav-budget-icon"></i>
+                    </div>
+                    <div class="trip-info-txt">
+                      <p class="label-txt">$ 5000</p>
+                      <p class="info-txt">Budget</p>
+                    </div>
+                  </div>
+                  <div class="trip-map-info_block">
+                    <div class="trip-icon-wrap">
+                      <i class="trav-distance-icon"></i>
+                    </div>
+                    <div class="trip-info-txt">
+                      <p class="label-txt">2.3 km</p>
+                      <p class="info-txt">Distance</p>
+                    </div>
+                  </div>
+                  <div class="trip-map-info_block">
+                    <div class="trip-icon-wrap">
+                      <i class="trav-map-marker-icon"></i>
+                    </div>
+                    <div class="trip-info-txt">
+                      <p class="label-txt">12</p>
+                      <p class="info-txt">Places</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-between-block">
+            <span class="arrow"></span>
+            <div class="trip-info">
+              <i class="trav-flag-icon"></i>
+              <span>
+                <b>Start</b>
+              </span>
+            </div>
+            <div class="flag-wrap">
+              <img src="http://placehold.it/50x50" alt="flag">
+            </div>
+          </div>
+        </div>
+
+        <div class="post-block post-story-block">
+          <div class="story-header-map">
+            <img src="http://placehold.it/1070x365?text=map+layer" alt="">
+            <div class="caption-inner">
+              <div class="post-map-info-caption map-black">
+                <div class="map-avatar">
+                  <img src="http://placehold.it/25x25" alt="ava">
+                </div>
+                <div class="map-label-txt">Stayed <b>2 hours</b> in <b>Morocco</b>, spent arround <b>$250</b> and have visited <b>1 place</b> in <b>Rabat-Salé</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="story-place-layer">
+            <div class="story-place">
+              <div class="place-name">
+                <ul class="place-name-list">
+                  <li class="current">Rabat-sale</li>
+                </ul>
+              </div>
+              <div class="story-arrow-block">
+                <span class="arrow"></span>
+                <div class="block-tag">Day 1</div>
+                <h2 class="info-ttl">Monday 18 Jun 2017 at 10:00 am</h2>
+              </div>
+            </div>
+          </div>
+          <div class="story-content-block">
+            <div class="place-over">
+              <div class="place-over_top">
+                <div class="place-over-txt">
+                  <b>Rabat-Salé Airport</b>
+                  <i class="trav-set-location-icon"></i>
+                  <span class="place-txt">Airport in Rabat-Salé, Moroco</span>
+                </div>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-white-bordered">Follow</button>
+                </div>
+              </div>
+              <div class="trip-photos">
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365/f5f5f5" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <a href="#" class="see-more-link">See more photos</a>
+              </div>
+            </div>
+            <div class="story-content-inner">
+              <div class="story-date-layer">
+                <div class="follow-avatar">
+                  <img src="http://placehold.it/68x68" alt="avatar">
+                </div>
+                <div class="follow-by">
+                  <span>By</span>
+                  <b>Suzanne</b>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Day 1 / 7</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">@ 10:00am</div>
+                </div>
+              </div>
+              <div class="post-block post-side-preview">
+                <div class="post-side-top">
+                  <h3 class="side-ttl">Rabat-Sale airport</h3>
+                </div>
+                <div class="post-map-inner">
+                  <img src="http://placehold.it/234x175?text=map_layer" alt="map">
+                  <button class="btn btn-light-primary fullscreen-btn">
+                    <i class="trav-fullscreen-icon"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-top-layer">
+                  <ul class="info-list">
+                    <li>
+                      <i class="trav-clock-icon"></i><span class="info-txt"> Stayed <b>1.2 Hours</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-budget-icon"></i><span class="info-txt"> Spent <b>$310</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-weather-cloud-icon"></i><span class="info-txt"> Weather <b>12° C</b></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-content">
+                  <span class="good-label">Good for:</span>
+                  <ul class="block-tag-list">
+                    <li><span class="block-tag">food</span></li>
+                    <li><span class="block-tag">relaxation</span></li>
+                    <li><span class="block-tag">shopping</span></li>
+                    <li><span class="block-tag">photography</span></li>
+                  </ul>
+                </div>
+                <div class="info-bottom-layer">
+                  <p>“It was an amazing experience, I’m happy I selected this place to be in my trip”</p>
+                </div>
+              </div>
+              <div class="info-main-layer">
+                <p>Cras ac tortor orci a liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <h3>Headline Here</h3>
+                <p>Consectetur adipiscing elit nam consequat ligula non mi rutrum suscipit cras ac tortor orci.</p>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/700x460" alt="image"></li>
+                </ul>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/405x360" alt="image"></li>
+                  <li><img src="http://placehold.it/290x360" alt="image"></li>
+                </ul>
+              </div>
+              <div class="post-tips">
+                <div class="post-tips-top">
+                  <h4 class="post-tips_ttl">Tips about Rabat Sale Airport</h4>
+                  <a href="#" class="see-all-tip">See all tips(7)</a>
+                </div>
+                <div class="post-tips_block-wrap">
+                  <div class="post-tips_block">
+                    <div class="tips-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eveniet, architecto vel magnam accusamus nemo odio unde autem, provident eos itaque quas at, vitae ducimus. Earum magnam quod a tempore.</p>
+                    </div>
+                    <div class="tips-footer">
+                      <div class="tip-by-info">
+                        <div class="tip-by-img">
+                          <img src="http://placehold.it/25x25" alt="">
+                        </div>
+                        <div class="tip-by-txt">
+                          By <span class="tag blue">Suzanne</span> <span class="date-info">5 days ago</span>
+                        </div>
+                      </div>
+                      <ul class="tip-right-info-list">
+                        <li class="round">
+                          <i class="trav-bookmark-icon"></i>
+                        </li>
+                        <li class="round">
+                          <i class="trav-flag-icon"></i>
+                        </li>
+                        <li class="round blue">
+                          <i class="trav-chevron-up"></i>
+                        </li>
+                        <li class="count">
+                          <span>6</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="foot-reaction">
+                <ul class="post-round-info-list">
+                  <li>
+                    <div class="map-reaction">
+                      <span class="dropdown">
+                        <i class="trav-heart-fill-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                        <div class="dropdown-menu dropdown-menu-middle-right dropdown-arrow dropdown-emoji-wrap">
+                          <ul class="dropdown-emoji-list">
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap like-icon"></div>
+                                <span class="emoji-name">Like</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap haha-icon"></div>
+                                <span class="emoji-name">Haha</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap wow-icon"></div>
+                                <span class="emoji-name">Wow</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap sad-icon"></div>
+                                <span class="emoji-name">Sad</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap angry-icon"></div>
+                                <span class="emoji-name">Angry</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </span>
+                      <span class="count">6</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-comment-icon"></i>
+                    </div>
+                    <span class="count">3</span>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-light-icon"></i>
+                    </div>
+                    <span class="count">37</span>
+                  </li>
+                  <li>
+                    <a href="#" class="info-link">
+                      <div class="round-icon">
+                        <i class="trav-share-fill-icon"></i>
+                      </div>
+                      <span>Share</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="post-comment-layer-wrap">
+              <div class="post-comment-layer">
+                <div class="post-comment-top-info">
+                  <ul class="comment-filter">
+                    <li class="active">Top</li>
+                    <li>New</li>
+                  </ul>
+                  <div class="comm-count-info">
+                    3 / 20
+                  </div>
+                </div>
+                <div class="post-comment-wrapper">
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>21</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Amine</a>
+                        <a href="#" class="comment-nickname">@ak0117</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-like.png" alt="">
+                          <span>19</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>15</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="load-more-link">Load more...</a>
+                </div>
+                <div class="post-add-comment-block">
+                  <div class="avatar-wrap">
+                    <img src="http://placehold.it/45x45" alt="">
+                  </div>
+                  <div class="post-add-com-input">
+                    <input type="text" placeholder="Write a comment">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-between-block">
+            <span class="arrow"></span>
+            <div class="trip-info">
+              <i class="trav-plane-icon"></i>
+              <span>
+                Flying to
+                <b>Japan</b>
+              </span>
+            </div>
+            <div class="flag-wrap">
+              <img src="http://placehold.it/50x50" alt="flag">
+            </div>
+          </div>
+        </div>
+
+        <div class="post-block post-story-block">
+          <div class="story-header-map">
+            <img src="http://placehold.it/1070x365?text=map+layer" alt="">
+            <div class="caption-inner">
+              <div class="post-map-info-caption map-black">
+                <div class="map-avatar">
+                  <img src="http://placehold.it/25x25" alt="ava">
+                </div>
+                <div class="map-label-txt">Stayed <b>4 days</b> in <b>Japan</b>, spent arround <b>$840</b> and have visited <b>5 places</b> in <b>Tokyo</b>, <b>Nagoya</b> and <b>+1 more city</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="story-place-layer">
+            <div class="story-place">
+              <div class="place-name">
+                <ul class="place-name-list">
+                  <li class="current">Tokyo</li>
+                  <li>Nagoya</li>
+                  <li>Niigata</li>
+                </ul>
+              </div>
+              <div class="story-arrow-block">
+                <span class="arrow"></span>
+                <div class="block-tag">Day 2</div>
+                <h2 class="info-ttl">Tuesday 19 Jun 2017 at 10:00 am</h2>
+              </div>
+            </div>
+          </div>
+          <div class="story-content-block">
+            <div class="place-over">
+              <div class="place-over_top">
+                <div class="place-over-txt">
+                  <b>Haneda Airport</b>
+                  <i class="trav-set-location-icon"></i>
+                  <span class="place-txt">Airport in Tokyo, Japan</span>
+                </div>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-white-bordered">Follow</button>
+                </div>
+              </div>
+              <div class="trip-photos">
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365/f5f5f5" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <a href="#" class="see-more-link">See more photos</a>
+              </div>
+            </div>
+            <div class="story-content-inner">
+              <div class="story-date-layer">
+                <div class="follow-avatar">
+                  <img src="http://placehold.it/68x68" alt="avatar">
+                </div>
+                <div class="follow-by">
+                  <span>By</span>
+                  <b>Suzanne</b>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Day 1 / 7</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">@ 10:00am</div>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-top-layer">
+                  <ul class="info-list">
+                    <li>
+                      <i class="trav-clock-icon"></i><span class="info-txt"> Stayed <b>1.2 Hours</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-budget-icon"></i><span class="info-txt"> Spent <b>$310</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-weather-cloud-icon"></i><span class="info-txt"> Weather <b>12° C</b></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-content">
+                  <span class="good-label">Good for:</span>
+                  <ul class="block-tag-list">
+                    <li><span class="block-tag">food</span></li>
+                    <li><span class="block-tag">relaxation</span></li>
+                    <li><span class="block-tag">shopping</span></li>
+                    <li><span class="block-tag">photography</span></li>
+                  </ul>
+                </div>
+                <div class="info-bottom-layer">
+                  <p>“It was an amazing experience, I’m happy I selected this place to be in my trip”</p>
+                </div>
+              </div>
+              <div class="info-main-layer">
+                <p>Cras ac tortor orci a liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <h3>Headline Here</h3>
+                <p>Consectetur adipiscing elit nam consequat ligula non mi rutrum suscipit cras ac tortor orci.</p>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/700x460" alt="image"></li>
+                </ul>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/405x360" alt="image"></li>
+                  <li><img src="http://placehold.it/290x360" alt="image"></li>
+                </ul>
+              </div>
+              <div class="post-tips">
+                <div class="post-tips-top">
+                  <h4 class="post-tips_ttl">Tips about Haneda Airport</h4>
+                  <a href="#" class="see-all-tip">See all tips(7)</a>
+                </div>
+                <div class="post-tips_block-wrap">
+                  <div class="post-tips_block">
+                    <div class="tips-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eveniet, architecto vel magnam accusamus nemo odio unde autem, provident eos itaque quas at, vitae ducimus. Earum magnam quod a tempore.</p>
+                    </div>
+                    <div class="tips-footer">
+                      <div class="tip-by-info">
+                        <div class="tip-by-img">
+                          <img src="http://placehold.it/25x25" alt="">
+                        </div>
+                        <div class="tip-by-txt">
+                          By <span class="tag blue">Suzanne</span> <span class="date-info">5 days ago</span>
+                        </div>
+                      </div>
+                      <ul class="tip-right-info-list">
+                        <li class="round">
+                          <i class="trav-bookmark-icon"></i>
+                        </li>
+                        <li class="round">
+                          <i class="trav-flag-icon"></i>
+                        </li>
+                        <li class="round blue">
+                          <i class="trav-chevron-up"></i>
+                        </li>
+                        <li class="count">
+                          <span>6</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="foot-reaction">
+                <ul class="post-round-info-list">
+                  <li>
+                    <div class="map-reaction">
+                      <span class="dropdown">
+                        <i class="trav-heart-fill-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                        <div class="dropdown-menu dropdown-menu-middle-right dropdown-arrow dropdown-emoji-wrap">
+                          <ul class="dropdown-emoji-list">
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap like-icon"></div>
+                                <span class="emoji-name">Like</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap haha-icon"></div>
+                                <span class="emoji-name">Haha</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap wow-icon"></div>
+                                <span class="emoji-name">Wow</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap sad-icon"></div>
+                                <span class="emoji-name">Sad</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap angry-icon"></div>
+                                <span class="emoji-name">Angry</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </span>
+                      <span class="count">6</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-comment-icon"></i>
+                    </div>
+                    <span class="count">3</span>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-light-icon"></i>
+                    </div>
+                    <span class="count">37</span>
+                  </li>
+                  <li>
+                    <a href="#" class="info-link">
+                      <div class="round-icon">
+                        <i class="trav-share-fill-icon"></i>
+                      </div>
+                      <span>Share</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="post-comment-layer-wrap">
+              <div class="post-comment-layer">
+                <div class="post-comment-top-info">
+                  <ul class="comment-filter">
+                    <li class="active">Top</li>
+                    <li>New</li>
+                  </ul>
+                  <div class="comm-count-info">
+                    3 / 20
+                  </div>
+                </div>
+                <div class="post-comment-wrapper">
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>21</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Amine</a>
+                        <a href="#" class="comment-nickname">@ak0117</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-like.png" alt="">
+                          <span>19</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>15</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="load-more-link">Load more...</a>
+                </div>
+                <div class="post-add-comment-block">
+                  <div class="avatar-wrap">
+                    <img src="http://placehold.it/45x45" alt="">
+                  </div>
+                  <div class="post-add-com-input">
+                    <input type="text" placeholder="Write a comment">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="story-place-layer">
+            <div class="story-place">
+              <div class="place-name">
+                <ul class="place-name-list">
+                  <li class="current">Tokyo</li>
+                  <li>Nagoya</li>
+                  <li>Niigata</li>
+                </ul>
+              </div>
+              <div class="story-arrow-block">
+                <span class="arrow"></span>
+                <div class="block-tag">Day 2</div>
+                <h2 class="info-ttl">Tuesday 19 Jun 2017 at 10:00 am</h2>
+              </div>
+            </div>
+          </div>
+          <div class="story-content-block">
+            <div class="place-over">
+              <div class="place-over_top">
+                <div class="place-over-txt">
+                  <b>Bunka</b>
+                  <i class="trav-set-location-icon"></i>
+                  <span class="place-txt">Hotel in Tokyo, Japan</span>
+                </div>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-white-bordered">Follow</button>
+                </div>
+              </div>
+              <div class="trip-photos">
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365/f5f5f5" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <a href="#" class="see-more-link">See more photos</a>
+              </div>
+            </div>
+            <div class="story-content-inner">
+              <div class="story-date-layer">
+                <div class="follow-avatar">
+                  <img src="http://placehold.it/68x68" alt="avatar">
+                </div>
+                <div class="follow-by">
+                  <span>By</span>
+                  <b>Suzanne</b>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Day 1 / 7</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">@ 10:00am</div>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-top-layer">
+                  <ul class="info-list">
+                    <li>
+                      <i class="trav-clock-icon"></i><span class="info-txt"> Stayed <b>1.2 Hours</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-budget-icon"></i><span class="info-txt"> Spent <b>$310</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-weather-cloud-icon"></i><span class="info-txt"> Weather <b>12° C</b></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-content">
+                  <span class="good-label">Good for:</span>
+                  <ul class="block-tag-list">
+                    <li><span class="block-tag">food</span></li>
+                    <li><span class="block-tag">relaxation</span></li>
+                    <li><span class="block-tag">shopping</span></li>
+                    <li><span class="block-tag">photography</span></li>
+                  </ul>
+                </div>
+                <div class="info-bottom-layer">
+                  <p>“It was an amazing experience, I’m happy I selected this place to be in my trip”</p>
+                </div>
+              </div>
+              <div class="info-main-layer">
+                <p>Cras ac tortor orci a liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <h3>Headline Here</h3>
+                <p>Consectetur adipiscing elit nam consequat ligula non mi rutrum suscipit cras ac tortor orci.</p>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/700x460" alt="image"></li>
+                </ul>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/405x360" alt="image"></li>
+                  <li><img src="http://placehold.it/290x360" alt="image"></li>
+                </ul>
+              </div>
+              <div class="post-tips">
+                <div class="post-tips-top">
+                  <h4 class="post-tips_ttl">Tips about Bunka Hotel</h4>
+                  <a href="#" class="see-all-tip">See all tips(7)</a>
+                </div>
+                <div class="post-tips_block-wrap">
+                  <div class="post-tips_block">
+                    <div class="tips-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eveniet, architecto vel magnam accusamus nemo odio unde autem, provident eos itaque quas at, vitae ducimus. Earum magnam quod a tempore.</p>
+                    </div>
+                    <div class="tips-footer">
+                      <div class="tip-by-info">
+                        <div class="tip-by-img">
+                          <img src="http://placehold.it/25x25" alt="">
+                        </div>
+                        <div class="tip-by-txt">
+                          By <span class="tag blue">Suzanne</span> <span class="date-info">5 days ago</span>
+                        </div>
+                      </div>
+                      <ul class="tip-right-info-list">
+                        <li class="round">
+                          <i class="trav-bookmark-icon"></i>
+                        </li>
+                        <li class="round">
+                          <i class="trav-flag-icon"></i>
+                        </li>
+                        <li class="round blue">
+                          <i class="trav-chevron-up"></i>
+                        </li>
+                        <li class="count">
+                          <span>6</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="foot-reaction">
+                <ul class="post-round-info-list">
+                  <li>
+                    <div class="map-reaction">
+                      <span class="dropdown">
+                        <i class="trav-heart-fill-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                        <div class="dropdown-menu dropdown-menu-middle-right dropdown-arrow dropdown-emoji-wrap">
+                          <ul class="dropdown-emoji-list">
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap like-icon"></div>
+                                <span class="emoji-name">Like</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap haha-icon"></div>
+                                <span class="emoji-name">Haha</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap wow-icon"></div>
+                                <span class="emoji-name">Wow</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap sad-icon"></div>
+                                <span class="emoji-name">Sad</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap angry-icon"></div>
+                                <span class="emoji-name">Angry</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </span>
+                      <span class="count">6</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-comment-icon"></i>
+                    </div>
+                    <span class="count">3</span>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-light-icon"></i>
+                    </div>
+                    <span class="count">37</span>
+                  </li>
+                  <li>
+                    <a href="#" class="info-link">
+                      <div class="round-icon">
+                        <i class="trav-share-fill-icon"></i>
+                      </div>
+                      <span>Share</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="post-comment-layer-wrap">
+              <div class="post-comment-layer">
+                <div class="post-comment-top-info">
+                  <ul class="comment-filter">
+                    <li class="active">Top</li>
+                    <li>New</li>
+                  </ul>
+                  <div class="comm-count-info">
+                    3 / 20
+                  </div>
+                </div>
+                <div class="post-comment-wrapper">
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>21</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Amine</a>
+                        <a href="#" class="comment-nickname">@ak0117</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-like.png" alt="">
+                          <span>19</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>15</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="load-more-link">Load more...</a>
+                </div>
+                <div class="post-add-comment-block">
+                  <div class="avatar-wrap">
+                    <img src="http://placehold.it/45x45" alt="">
+                  </div>
+                  <div class="post-add-com-input">
+                    <input type="text" placeholder="Write a comment">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="story-place-layer">
+            <div class="story-place">
+              <div class="place-name">
+                <ul class="place-name-list">
+                  <li class="current">Tokyo</li>
+                  <li>Nagoya</li>
+                  <li>Niigata</li>
+                </ul>
+              </div>
+              <div class="story-arrow-block">
+                <span class="arrow"></span>
+                <div class="block-tag">Day 2</div>
+                <h2 class="info-ttl">Tuesday 19 Jun 2017 at 10:00 am</h2>
+              </div>
+            </div>
+          </div>
+          <div class="story-content-block">
+            <div class="place-over">
+              <div class="place-over_top">
+                <div class="place-over-txt">
+                  <b>Tokyo Sushi</b>
+                  <i class="trav-set-location-icon"></i>
+                  <span class="place-txt">Restaurant in Tokyo, Japan</span>
+                </div>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-white-bordered">Follow</button>
+                </div>
+              </div>
+              <div class="trip-photos">
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365/f5f5f5" alt="photo">
+                </div>
+                <div class="photo-wrap">
+                  <img src="http://placehold.it/356x365" alt="photo">
+                </div>
+                <a href="#" class="see-more-link">See more photos</a>
+              </div>
+            </div>
+            <div class="story-content-inner">
+              <div class="story-date-layer">
+                <div class="follow-avatar">
+                  <img src="http://placehold.it/68x68" alt="avatar">
+                </div>
+                <div class="follow-by">
+                  <span>By</span>
+                  <b>Suzanne</b>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Day 1 / 7</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                </div>
+                <div class="s-date-line">
+                  <div class="s-date-badge">@ 10:00am</div>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-top-layer">
+                  <ul class="info-list">
+                    <li>
+                      <i class="trav-clock-icon"></i><span class="info-txt"> Stayed <b>1.2 Hours</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-budget-icon"></i><span class="info-txt"> Spent <b>$310</b></span>
+                    </li>
+                    <li>
+                      <i class="trav-weather-cloud-icon"></i><span class="info-txt"> Weather <b>12° C</b></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-content">
+                  <span class="good-label">Good for:</span>
+                  <ul class="block-tag-list">
+                    <li><span class="block-tag">food</span></li>
+                    <li><span class="block-tag">relaxation</span></li>
+                    <li><span class="block-tag">shopping</span></li>
+                    <li><span class="block-tag">photography</span></li>
+                  </ul>
+                </div>
+                <div class="info-bottom-layer">
+                  <p>“It was an amazing experience, I’m happy I selected this place to be in my trip”</p>
+                </div>
+              </div>
+              <div class="info-main-layer">
+                <p>Cras ac tortor orci a liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <h3>Headline Here</h3>
+                <p>Consectetur adipiscing elit nam consequat ligula non mi rutrum suscipit cras ac tortor orci.</p>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/700x460" alt="image"></li>
+                </ul>
+                <p>Liquam fermentum leo faucibus tellus blandit dapibus ras convallis placerat est, tempor volutpat urna sempernec.</p>
+                <ul class="img-list">
+                  <li><img src="http://placehold.it/405x360" alt="image"></li>
+                  <li><img src="http://placehold.it/290x360" alt="image"></li>
+                </ul>
+              </div>
+              <div class="post-tips">
+                <div class="post-tips-top">
+                  <h4 class="post-tips_ttl">Tips about Bunka Hotel</h4>
+                  <a href="#" class="see-all-tip">See all tips(7)</a>
+                </div>
+                <div class="post-tips_block-wrap">
+                  <div class="post-tips_block">
+                    <div class="tips-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eveniet, architecto vel magnam accusamus nemo odio unde autem, provident eos itaque quas at, vitae ducimus. Earum magnam quod a tempore.</p>
+                    </div>
+                    <div class="tips-footer">
+                      <div class="tip-by-info">
+                        <div class="tip-by-img">
+                          <img src="http://placehold.it/25x25" alt="">
+                        </div>
+                        <div class="tip-by-txt">
+                          By <span class="tag blue">Suzanne</span> <span class="date-info">5 days ago</span>
+                        </div>
+                      </div>
+                      <ul class="tip-right-info-list">
+                        <li class="round">
+                          <i class="trav-bookmark-icon"></i>
+                        </li>
+                        <li class="round">
+                          <i class="trav-flag-icon"></i>
+                        </li>
+                        <li class="round blue">
+                          <i class="trav-chevron-up"></i>
+                        </li>
+                        <li class="count">
+                          <span>6</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="foot-reaction">
+                <ul class="post-round-info-list">
+                  <li>
+                    <div class="map-reaction">
+                      <span class="dropdown">
+                        <i class="trav-heart-fill-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                        <div class="dropdown-menu dropdown-menu-middle-right dropdown-arrow dropdown-emoji-wrap">
+                          <ul class="dropdown-emoji-list">
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap like-icon"></div>
+                                <span class="emoji-name">Like</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap haha-icon"></div>
+                                <span class="emoji-name">Haha</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap wow-icon"></div>
+                                <span class="emoji-name">Wow</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap sad-icon"></div>
+                                <span class="emoji-name">Sad</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="emoji-link">
+                                <div class="emoji-wrap angry-icon"></div>
+                                <span class="emoji-name">Angry</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </span>
+                      <span class="count">6</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-comment-icon"></i>
+                    </div>
+                    <span class="count">3</span>
+                  </li>
+                  <li>
+                    <div class="round-icon">
+                      <i class="trav-light-icon"></i>
+                    </div>
+                    <span class="count">37</span>
+                  </li>
+                  <li>
+                    <a href="#" class="info-link">
+                      <div class="round-icon">
+                        <i class="trav-share-fill-icon"></i>
+                      </div>
+                      <span>Share</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="post-comment-layer-wrap">
+              <div class="post-comment-layer">
+                <div class="post-comment-top-info">
+                  <ul class="comment-filter">
+                    <li class="active">Top</li>
+                    <li>New</li>
+                  </ul>
+                  <div class="comm-count-info">
+                    3 / 20
+                  </div>
+                </div>
+                <div class="post-comment-wrapper">
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>21</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Amine</a>
+                        <a href="#" class="comment-nickname">@ak0117</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-like.png" alt="">
+                          <span>19</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-comment-row">
+                    <div class="post-com-avatar-wrap">
+                      <img src="http://placehold.it/45x45" alt="">
+                    </div>
+                    <div class="post-comment-text">
+                      <div class="post-com-name-layer">
+                        <a href="#" class="comment-name">Katherin</a>
+                        <a href="#" class="comment-nickname">@katherin</a>
+                      </div>
+                      <div class="comment-txt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                      </div>
+                      <div class="comment-bottom-info">
+                        <div class="com-reaction">
+                          <img src="./assets/image/icon-smile.png" alt="">
+                          <span>15</span>
+                        </div>
+                        <div class="com-time">6 hours ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="load-more-link">Load more...</a>
+                </div>
+                <div class="post-add-comment-block">
+                  <div class="avatar-wrap">
+                    <img src="http://placehold.it/45x45" alt="">
+                  </div>
+                  <div class="post-add-com-input">
+                    <input type="text" placeholder="Write a comment">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- map mode popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="mapModePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+    <div class="modal-dialog modal-custom-style modal-1080" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-mode-map">
+
+          <div class="map-mode-slide-wrap" id="mapModeSlider">
+            <div class="map-mode-layer">
+
+              <div class="trip-map">
+                <div class="trip-map_wrapper">
+                  <img src="./assets/image/trip-map.jpg" alt="map">
+                </div>
+                <div class="trip-map_top-layer">
+                  <div class="trip-map-left">
+                    <div class="trip-map-info">
+                      <div class="trip-map-info_block">
+                        <div class="trip-icon-wrap">
+                          <i class="trav-clock-icon"></i>
+                        </div>
+                        <div class="trip-info-txt">
+                          <p class="label-txt">7 Days</p>
+                          <p class="info-txt">Duration</p>
+                        </div>
+                      </div>
+                      <div class="trip-map-info_block">
+                        <div class="trip-icon-wrap">
+                          <i class="trav-budget-icon"></i>
+                        </div>
+                        <div class="trip-info-txt">
+                          <p class="label-txt">$ 5000</p>
+                          <p class="info-txt">Budget</p>
+                        </div>
+                      </div>
+                      <div class="trip-map-info_block">
+                        <div class="trip-icon-wrap">
+                          <i class="trav-distance-icon"></i>
+                        </div>
+                        <div class="trip-info-txt">
+                          <p class="label-txt">2.3 km</p>
+                          <p class="info-txt">Distance</p>
+                        </div>
+                      </div>
+                      <div class="trip-map-info_block">
+                        <div class="trip-icon-wrap">
+                          <i class="trav-map-marker-icon"></i>
+                        </div>
+                        <div class="trip-info-txt">
+                          <p class="label-txt">12</p>
+                          <p class="info-txt">Places</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-map-right">
+                    <div class="trip-map-right-inner">
+                      <span class="right-txt">
+                        <i class="trav-ok-icon"></i>
+                        34 Used this plan
+                      </span>
+                      <ul class="trip-avatar-list">
+                        <li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="trip-destination-slider" id="tripDestSliderMapMode">
+                  <div class="trip-dest-slide">
+                    <div class="trip-dest-slide_inner">
+                      <div class="trip-dest-flag">
+                        <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                      </div>
+                      <div class="trip-dest-info">
+                        <p class="trip-dest-name">Morocco</p>
+                        <p class="trip-dest-count">1 Destination</p>
+                      </div>
+                      <div class="trip-plane-info">
+                        <i class="trav-plane-icon"></i>
+                        <span>Fly - 5,250 km</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-dest-slide">
+                    <div class="trip-dest-slide_inner">
+                      <div class="trip-dest-flag">
+                        <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                      </div>
+                      <div class="trip-dest-info">
+                        <p class="trip-dest-name">United Arab Emirates</p>
+                        <p class="trip-dest-count">2 Destination</p>
+                      </div>
+                      <div class="trip-plane-info">
+                        <i class="trav-plane-icon"></i>
+                        <span>Fly - 7,280 km</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-dest-slide">
+                    <div class="trip-dest-slide_inner">
+                      <div class="trip-dest-flag">
+                        <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                      </div>
+                      <div class="trip-dest-info">
+                        <p class="trip-dest-name">Japan</p>
+                        <p class="trip-dest-count">10 Destination</p>
+                      </div>
+                      <div class="trip-plane-info">
+                        <i class="trav-subway-icon"></i>
+                        <span>Fly - 5,250 km</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-dest-slide">
+                    <div class="trip-dest-slide_inner">
+                      <div class="trip-dest-flag">
+                        <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                      </div>
+                      <div class="trip-dest-info">
+                        <p class="trip-dest-name">Morocco</p>
+                        <p class="trip-dest-count">1 Destination</p>
+                      </div>
+                      <div class="trip-plane-info">
+                        <i class="trav-walk-icon"></i>
+                        <span>Fly - 7,280 km</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-dest-slide">
+                    <div class="trip-dest-slide_inner">
+                      <div class="trip-dest-flag">
+                        <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                      </div>
+                      <div class="trip-dest-info">
+                        <p class="trip-dest-name">Morocco</p>
+                        <p class="trip-dest-count">1 Destination</p>
+                      </div>
+                      <div class="trip-plane-info">
+                        <i class="trav-car-icon"></i>
+                        <span>Fly - 7,280 km</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trip-dest-slide">
+                    <div class="trip-dest-slide_inner">
+                      <div class="trip-dest-flag">
+                        <img src="http://placehold.it/67x68?text=flag" alt="flag">
+                      </div>
+                      <div class="trip-dest-info">
+                        <p class="trip-dest-name">Morocco</p>
+                        <p class="trip-dest-count">1 Destination</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+          
+  <!-- map popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="mapPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-custom-style modal-1080" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-map-modal">
+          <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="trav-close-icon"></i>
+          </button>
+
+          <div class="post-MM-block">
+            <div class="post-MM-map" id="modalMapSlider">
+              <div class="post-MM-layer">
+                <div class="map-wrap">
+                  <img src="http://placehold.it/1070x690/f2f2f2?text=map_layer" alt="map">
+                  <div class="map-info-block">
+                    <div class="dest-flag">
+                      <img src="http://placehold.it/51x40" alt="">
+                    </div>
+                    <div class="dest-info">
+                      <div class="dest-name">Morocco <i class="trav-set-location-icon"></i> Rabat-sale</div>
+                      <div class="dest-place">Country in North Africa</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-MM-caption">
+                  <div class="dest-side">
+                    <div class="side-ttl">Previous destination</div>
+                    <div class="dest-slide-info">
+                      <p class="dest-home-pos">
+                        <span>Home</span>
+                        <img src="./assets/image/home-flag.svg" alt="flag">
+                      </p>
+                    </div>
+                  </div>
+                  <div class="post-dest-info">
+                    <div class="dest-img">
+                      <img src="http://placehold.it/51x51" alt="dest-image">
+                    </div>
+                    <div class="dest-name">
+                      Rabat-Sale Airport
+                    </div>
+                    <div class="dest-date">
+                      <span class="block-tag">Day 1</span>
+                      <span>Sunday 18 Jun 2017 at 3:00 PM</span>
+                    </div>
+                  </div>
+                  <div class="dest-side">
+                    <div class="side-ttl">Next destination</div>
+                    <div class="dest-slide-info">
+                      <a href="#" class="dest-slide-vector" data-direct="right">
+                        <span>Dubai international airport</span>
+                        <i class="trav-long-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-MM-layer">
+                <div class="map-wrap">
+                  <img src="http://placehold.it/1070x690/f2f2f2?text=map_layer" alt="map">
+                  <div class="map-info-block">
+                    <div class="dest-flag">
+                      <img src="http://placehold.it/51x40" alt="">
+                    </div>
+                    <div class="dest-info">
+                      <div class="dest-name">Japan <i class="trav-set-location-icon"></i> tokyo</div>
+                      <div class="dest-place">Country in East Asia</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-MM-caption">
+                  <div class="dest-side">
+                    <div class="side-ttl">Previous destination</div>
+                    <div class="dest-slide-info">
+                      <a href="#" class="dest-slide-vector" data-direct="left">
+                        <i class="trav-long-arrow-left"></i>
+                        <span>Tokyo tower</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="post-dest-info">
+                    <div class="dest-img">
+                      <img src="http://placehold.it/51x51" alt="dest-image">
+                    </div>
+                    <div class="dest-name">
+                      Han no Daidokoro Kadochika
+                      <span class="kind">Restaurant</span>
+                    </div>
+                    <div class="dest-date">
+                      <span class="block-tag">Day 5</span>
+                      <span>Sunday 18 Jun 2017 at 3:00 PM</span>
+                    </div>
+                  </div>
+                  <div class="dest-side">
+                    <div class="side-ttl">Next destination</div>
+                    <div class="dest-slide-info">
+                      <a href="#" class="dest-slide-vector" data-direct="right">
+                        <span>Hilton tokyo</span>
+                        <i class="trav-long-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- place popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="placePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+    <div class="modal-dialog modal-custom-style modal-615" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-modal-place">
+          <div class="top-place-img">
+            <img src="http://placehold.it/615x250" alt="place image">
+          </div>
+          <div class="place-general-block">
+            <div class="place-review-block">
+              <div class="place-info">
+                <div class="place-name">Rabat-sale airport</div>
+                <div class="place-dist">Airport in Sale, Morocco</div>
+              </div>
+              <div class="place-review-layer">
+                <ul class="star-list">
+                  <li><i class="trav-star-icon"></i></li>
+                  <li><i class="trav-star-icon"></i></li>
+                  <li><i class="trav-star-icon"></i></li>
+                  <li><i class="trav-star-icon"></i></li>
+                  <li><i class="trav-half-star-icon"></i></li>
+                </ul>
+                &nbsp;
+                <span class="review-count">547</span>
+                &nbsp;
+                <span>reviews</span>
+              </div>
+            </div>
+            <div class="place-review-info-main">
+              <div class="review-info-block half-block">
+                <div class="info-ttl">Short description</div>
+                <div class="info-txt">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, commodi nobis quaerat nam impedit deleniti?</p>
+                </div>
+              </div>
+              <div class="review-info-block half-block">
+                <div class="info-ttl">Short description</div>
+                <div class="info-txt">
+                  <address>2145 Hamilton Avenue, San Jose CA 95125</address>
+                </div>
+              </div>
+              <div class="review-info-block half-block">
+                <div class="info-ttl">Working times</div>
+                <div class="info-txt">
+                  <p>All Week, <b>8:30AM</b> – <b>4PM</b></p>
+                </div>
+              </div>
+              <div class="review-info-block half-block">
+                <div class="info-ttl">Website</div>
+                <div class="info-txt">
+                  <a href="www.disneyland.com" target="blank" class="web-site">www.disneyland.com</a>
+                </div>
+              </div>
+              <div class="review-info-block">
+                <div class="info-ttl">Popular times</div>
+                <div class="info-txt">
+                  <div class="chart-layer">
+                    <img src="http://placehold.it/585x105?text=chart_of_popular_times" alt="chart">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post-footer-info foot-btn-wrap">
+              <div class="btn-layer">
+                <button class="nav-link btn btn-white-bordered">book a tour</button>
+              </div>
+              <div class="btn-layer">
+                <button class="nav-link btn btn-light-primary">follow</button>
+                <div class="post-foot-block">
+                  <ul class="foot-avatar-list">
+                    <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                    --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                    --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                  </ul>
+                  <span>642 Followers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- comment popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="commentPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+    <div class="modal-dialog modal-custom-style modal-650" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-modal-comment">
+          <div class="post-comment-head">
+            <div class="c-head-txt-wrap">
+              <div class="c-head-txt">
+                <div class="dest-name">
+                  <span>Rabat-sale airport</span>
+                  <span class="block-tag">Airport</span></div>
+                <div class="dest-story">
+                  <b>Day 1</b> / 7 <span class="dot">&nbsp;·&nbsp;</span> 
+                  Mon, 18 Jun 2017<span class="dot">&nbsp;·&nbsp;</span>@ 10:00 PM
+                </div>
+              </div>
+            </div>
+            <div class="c-head-btn-wrap">
+              <button type="button" class="btn btn-light-primary">
+                Follow
+              </button>
+            </div>
+          </div>
+          <div class="post-comment-main">
+            <div class="dest-pic">
+              <img src="http://placehold.it/590x320" alt="">
+            </div>
+            <div class="desc-info">
+              <i class="trav-clock-icon"></i><span class="info-block"> Will spend <b>$240</b></span>
+              <i class="trav-budget-icon"></i><span class="info-block"> Planning to stay <b>40 min</b></span>
+            </div>
+            <div class="discussion-block">
+              <span class="disc-ttl">Discussion</span>
+              <span class="disc-count">129</span>
+              <ul class="disc-ava-list">
+                <li><a href="#"><img src="http://placehold.it/32x32" alt="avatar"></a></li>
+                <li><a href="#"><img src="http://placehold.it/32x32" alt="avatar"></a></li>
+                <li><a href="#"><img src="http://placehold.it/32x32" alt="avatar"></a></li>
+                <li><a href="#"><img src="http://placehold.it/32x32" alt="avatar"></a></li>
+                <li><a href="#"><img src="http://placehold.it/32x32" alt="avatar"></a></li>
+                <li><a href="#"><img src="http://placehold.it/32x32" alt="avatar"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="post-add-comment-block">
+            <div class="avatar-wrap">
+              <img src="http://placehold.it/45x45" alt="">
+            </div>
+            <div class="post-add-com-input">
+              <input type="text" placeholder="Write a comment">
+            </div>
+          </div>
+          <div class="post-comment-layer">
+            <div class="post-comment-top-info">
+              <ul class="comment-filter">
+                <li class="active">Top</li>
+                <li>New</li>
+              </ul>
+              <div class="comm-count-info">
+                3 / 20
+              </div>
+            </div>
+            <div class="post-comment-wrapper">
+              <div class="post-comment-row">
+                <div class="post-com-avatar-wrap">
+                  <img src="http://placehold.it/45x45" alt="">
+                </div>
+                <div class="post-comment-text">
+                  <div class="post-com-name-layer">
+                    <a href="#" class="comment-name">Katherin</a>
+                    <a href="#" class="comment-nickname">@katherin</a>
+                  </div>
+                  <div class="comment-txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                  </div>
+                  <div class="comment-bottom-info">
+                    <div class="com-reaction">
+                      <img src="./assets/image/icon-smile.png" alt="">
+                      <span>21</span>
+                    </div>
+                    <div class="com-time">6 hours ago</div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-comment-row">
+                <div class="post-com-avatar-wrap">
+                  <img src="http://placehold.it/45x45" alt="">
+                </div>
+                <div class="post-comment-text">
+                  <div class="post-com-name-layer">
+                    <a href="#" class="comment-name">Amine</a>
+                    <a href="#" class="comment-nickname">@ak0117</a>
+                  </div>
+                  <div class="comment-txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                  </div>
+                  <div class="comment-bottom-info">
+                    <div class="com-reaction">
+                      <img src="./assets/image/icon-like.png" alt="">
+                      <span>19</span>
+                    </div>
+                    <div class="com-time">6 hours ago</div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-comment-row">
+                <div class="post-com-avatar-wrap">
+                  <img src="http://placehold.it/45x45" alt="">
+                </div>
+                <div class="post-comment-text">
+                  <div class="post-com-name-layer">
+                    <a href="#" class="comment-name">Katherin</a>
+                    <a href="#" class="comment-nickname">@katherin</a>
+                  </div>
+                  <div class="comment-txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                  </div>
+                  <div class="comment-bottom-info">
+                    <div class="com-reaction">
+                      <img src="./assets/image/icon-smile.png" alt="">
+                      <span>15</span>
+                    </div>
+                    <div class="com-time">6 hours ago</div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="load-more-link">Load more...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
