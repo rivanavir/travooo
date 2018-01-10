@@ -184,11 +184,13 @@ $(document).ready(function(){
 
   $('.post-block .slide-link').on('click', function(e){
     e.preventDefault();
-    let slideBlockId = $(this).parents('.post-block').find('.post-slider').attr('id');
-    if($(this).hasClass('slide-prev')){
-      customSliderObject[slideBlockId].goToPrevSlide();
-    } else if($(this).hasClass('slide-next')){
-      customSliderObject[slideBlockId].goToNextSlide();
+    if(!$(this).parents('.post-block').hasClass('modal-post-slider')){
+      let slideBlockId = $(this).parents('.post-block').find('.post-slider').attr('id');
+      if($(this).hasClass('slide-prev')){
+        customSliderObject[slideBlockId].goToPrevSlide();
+      } else if($(this).hasClass('slide-next')){
+        customSliderObject[slideBlockId].goToNextSlide();
+      }
     }
   });
 
@@ -256,6 +258,23 @@ $(document).ready(function(){
     });
   })
   $('#mapPopup').on('shown.bs.modal', function(){
+    let getTheDirect = function(elem){
+      let sliderController = $(elem).find('.lslide.active .dest-slide-vector');
+      let leftDirect, rightDirect;
+      if(sliderController.data('direct') == 'left'){
+        leftDirect = sliderController;
+      }
+      if(sliderController.data('direct') == 'right'){
+        rightDirect = sliderController;
+      }
+      $(leftDirect).on('click', function(){
+        elem.goToPrevSlide();
+      });
+      $(rightDirect).on('click', function(){
+        elem.goToNextSlide();
+      });
+    }
+    
     $("#modalMapSlider").lightSlider({
       item:1,
       pager: false,
@@ -263,36 +282,10 @@ $(document).ready(function(){
       enableDrag: false,
       addClass: 'post-map-slider',
       onSliderLoad: function(el){
-        let sliderController = $(el).find('.lslide.active .dest-slide-vector');
-        let leftDirect, rightDirect;
-        if(sliderController.data('direct') == 'left'){
-          leftDirect = sliderController;
-        }
-        if(sliderController.data('direct') == 'right'){
-          rightDirect = sliderController;
-        }
-        $(leftDirect).on('click', function(){
-          el.goToPrevSlide();
-        });
-        $(rightDirect).on('click', function(){
-          el.goToNextSlide();
-        });
+        getTheDirect(el);
       },
       onAfterSlide: function(el){
-        let sliderController = $(el).find('.lslide.active .dest-slide-vector');
-        let leftDirect, rightDirect;
-        if(sliderController.data('direct') == 'left'){
-          leftDirect = sliderController;
-        }
-        if(sliderController.data('direct') == 'right'){
-          rightDirect = sliderController;
-        }
-        $(leftDirect).on('click', function(){
-          el.goToPrevSlide();
-        });
-        $(rightDirect).on('click', function(){
-          el.goToNextSlide();
-        });
+        getTheDirect(el);
       }
     });
   });
@@ -309,9 +302,62 @@ $(document).ready(function(){
       let calcCount = itemWidth + itemOffsetToParent;
 
       $(parentBlock).css('left', -calcCount);
-      // console.log($(this).offset().left);
-      // console.log(parentBlock);
-    })
+    });
+
+    let moreStorySlider = $("#moreStorySlider").lightSlider({
+      autoWidth:true,
+      pager: false,
+      controls: false,
+      slideMargin: 10,
+      loop: true,
+      addClass: 'more-story-slider',
+      onSliderLoad: function(el){
+        let sliderEl = $(el);
+        sliderEl.parents('.post-block').find('.slide-link').on('click', function(e){
+          e.preventDefault();
+          let slideBlockId = $(this).parents('.post-block').find('.post-slider').attr('id');
+          if($(this).hasClass('slide-prev')){
+            moreStorySlider.goToPrevSlide();
+          } else if($(this).hasClass('slide-next')){
+            moreStorySlider.goToNextSlide();
+          }
+        });
+      }
+    });
+
+    $("#calendarSlider").lightSlider({
+      item:3,
+      pager: false,
+      controls: false,
+      loop:false,
+      slideMove:1,
+      slideMargin: 0,
+      centerSlider: true,
+      addClass: 'head-calendar-slider',
+      onSliderLoad: function(el){
+        $('.day-slider a.prevDay').on('click', function(e){
+          e.preventDefault();
+          el.goToPrevSlide();
+        });
+        $('.day-slider a.nextDay').on('click', function(e){
+          e.preventDefault();
+          el.goToNextSlide();
+        });
+      }
+    });
+
+    $("#tripLineSliderModal").lightSlider({
+      autoWidth:true,
+      pager: false,
+      slideMargin: 10,
+      prevHtml: '<i class="trav-angle-left"></i>',
+      nextHtml: '<i class="trav-angle-right"></i>',
+      addClass: 'trip-line-slider-wrap',
+      onSliderLoad: function(el){
+        // $(el).parents('.head-trip-plan_trip-line').hide();
+      }
+    });
+    
   });
   
 });
