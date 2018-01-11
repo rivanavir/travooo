@@ -4751,6 +4751,9 @@ aside.sidebar{
 }
 .modal-custom-style{
   margin: 30px auto;
+  &.modal-full{
+    max-width: 100%;
+  }
   &.modal-1080{
     max-width: 1080px;
   }
