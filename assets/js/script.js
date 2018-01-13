@@ -246,6 +246,10 @@ $(document).ready(function(){
     }
   });
 
+  $('.modal-child').on('hidden.bs.modal', function () {
+    $('body').addClass('modal-open').css('padding-right', '15px');
+  });
+
   $('#mapModePopup').on('shown.bs.modal', function(){
     if(!$("#tripMapSlider").hasClass('lightSlider')){
       $("#tripMapSlider").lightSlider({
