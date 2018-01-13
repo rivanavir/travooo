@@ -247,24 +247,36 @@ $(document).ready(function(){
   });
 
   $('#mapModePopup').on('shown.bs.modal', function(){
-    $("#postFollowSliderPopup").lightSlider({
-      item:1,
-      pager: false,
-      slideMargin: 20,
-      enableDrag: false,
-      prevHtml: '<i class="trav-angle-left"></i>',
-      nextHtml: '<i class="trav-angle-right"></i>',
-      addClass: 'post-follow-slider-wrap'
-    });
-    $("#postDestSliderInnerPopup1, #postDestSliderInnerPopup2, #postDestSliderInnerPopup3").lightSlider({
-      pager: false,
-      autoWidth:true,
-      slideMargin: 8,
-      prevHtml: '<i class="trav-angle-left"></i>',
-      nextHtml: '<i class="trav-angle-right"></i>',
-      addClass: 'post-dest-slider-wrap'
-    });
+    if(!$("#tripMapSlider").hasClass('lightSlider')){
+      $("#tripMapSlider").lightSlider({
+        item:1,
+        pager: false,
+        slideMargin: 20,
+        enableDrag: false,
+        prevHtml: '<i class="trav-angle-left"></i>',
+        nextHtml: '<i class="trav-angle-right"></i>',
+        addClass: 'post-modal-follow-slider-wrap'
+      });
+    }
+    if(!$("#tripDestSlider1, #tripDestSlider2, #tripDestSlider3").hasClass('lightSlider')){
+      $("#tripDestSlider1, #tripDestSlider2, #tripDestSlider3").lightSlider({
+        pager: false,
+        autoWidth:true,
+        slideMargin: 0,
+        prevHtml: '<i class="trav-angle-left"></i>',
+        nextHtml: '<i class="trav-angle-right"></i>',
+        addClass: 'trip-destination-slider-block',
+        onSliderLoad: function(el){
+          $(el).css('opacity', 1);
+        }
+      });
+    }
+  });
+
+  $('.trip-map_wrapper .destination-point').on('click', function(){
+    $(this).toggleClass('selected');
   })
+
   $('#mapPopup').on('shown.bs.modal', function(){
     let getTheDirect = function(elem){
       let sliderController = $(elem).find('.lslide.active .dest-slide-vector');

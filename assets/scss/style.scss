@@ -898,8 +898,35 @@ button.btn-mobile-side{
   background: white;
   margin-bottom: 35px;
   &_wrapper{
+    position: relative;
     img{
       width: 100%;
+    }
+    .destination-point{
+      position: absolute;
+      z-index: 1200;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      img{
+        &.map-marker{
+          width: 16px !important;
+        }
+        &.dest-img{
+          display: none;
+          @include avatarImgStyle(31px, white);
+          box-shadow: 0 1px 6px rgba(0,0,0,.5);
+        }
+      }
+      &.selected{
+        img{
+          &.map-marker{
+            display: none;
+          }
+          &.dest-img{
+            display: inline-block;
+          }
+        }
+      }
     }
   }
   &_top-layer{
@@ -1020,11 +1047,29 @@ button.btn-mobile-side{
       box-shadow: 0 1px 5px rgba(0,0,0,.12);
       background: white;
       margin: 0 5px;
+      border: 1px solid white;
       .trip-dest-flag{
         border-right:1px solid #e5e5e5;
         min-width: 68px;
+        position: relative;
         img{
           width: 100%;
+        }
+        .show-place-info{
+          display: block;
+          position: absolute;
+          top: 14px;
+          left: 14px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: rgba(0,0,0,.7);
+          text-align: center;
+          i[class^=trav]{
+            color: white;
+            line-height: 40px;
+            font-size: 14px;
+          }
         }
       }
       .trip-dest-info{
@@ -1045,6 +1090,14 @@ button.btn-mobile-side{
           &.trip-dest-count{
             font-family: 'CircularAirPro Light';
             color: #4c4c4c;
+          }
+        }
+      }
+      &.checked-item{
+        border: 1px solid #4080ff;
+        .trip-dest-info{
+          p{
+            color: #4080ff !important;
           }
         }
       }
@@ -1824,22 +1877,6 @@ aside.sidebar{
           height: 68px;
           object-fit: cover;
           position: relative;
-          .show-place-info{
-            display: block;
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(0,0,0,.7);
-            text-align: center;
-            i[class^=trav]{
-              color: white;
-              line-height: 40px;
-              font-size: 14px;
-            }
-          }
         }
         .dest-info{
           font-size: 14px;
@@ -3493,12 +3530,29 @@ aside.sidebar{
           }
         }
         .follow-btn-wrap{
+          display: flex;
+          align-items: center;
           .btn.btn-white-bordered{
             font-size: 14px;
             color: #4080ff;
             text-transform: uppercase;
             padding: 13px 32px;
             line-height: 1;
+          }
+          .modal-close{
+            position: relative;
+            top: auto;
+            right: auto;
+            width: 23px;
+            height: 23px;
+            background: #3c60a7;
+            margin-left: 15px;
+            margin-right: 3px;
+            i[class^=trav]{
+              color: #4080ff;
+              line-height: 23px;
+              font-size: 16px;
+            }
           }
         }
       }
@@ -4228,6 +4282,9 @@ aside.sidebar{
       font-size: 22px;
     }
   }
+  &.modal-child{
+    z-index: 1100;
+  }
   .head-trip-plan{
     position: fixed;
     bottom: auto;
@@ -4790,6 +4847,9 @@ aside.sidebar{
   }
   &.modal-1420{
     max-width: 1420px;
+    @media(max-width:1420px){
+      max-width: 100%;
+    }
   }
   &.modal-1080{
     max-width: 1080px;
@@ -5751,8 +5811,9 @@ aside.sidebar{
       .map-mode-layer{
         .post-map-breadcrumb{
           background: #fff;
-          padding: 10px 0;
+          border-radius: 3px 3px 0 0;
           ul.breadcrumb-list{
+            padding: 13px 0;
             margin-bottom: 0;
             display: inline-flex;
             align-items: center;
@@ -5760,8 +5821,30 @@ aside.sidebar{
               color: #666666;
               font-family: 'CircularAirPro Light';
               position: relative;
-              padding: 0 25px 0 20px;
-              &:not(:last-child){}
+              padding: 0 35px 0 20px;
+              font-size: 14px;
+              &:not(:last-child){
+                &:after{
+                  position: absolute;
+                  right: 0;
+                  // top: 1px;
+                  content: "\e926";
+                  font-size: 16px;
+                  color: #b3b3b3;
+                  display: inline-block;
+                  font-family: 'travooo' !important;
+                  speak: none;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-variant: normal;
+                  text-transform: none;
+                  line-height: 1;
+
+                  /* Better Font Rendering =========== */
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                }
+              }
               a{
                 color: #4080ff;
                 font-family: 'Circular Std Book';
@@ -5774,28 +5857,134 @@ aside.sidebar{
             }
           }
         }
-      }
-      .post-destination-block{
-        position: relative;
-        bottom: 108px;
-        .post-dest-slider{
-          .post-dest-card{
-            .post-dest-card-inner{
-              background: #fff;
+        ul.post-time-trip{
+          margin-bottom: 0;
+          position: absolute;
+          top: 60px;
+          left: 20px;
+          display: flex;
+          align-items: center;
+          z-index: 500;
+          li{
+            display: inline-block;
+            font-size: 14px;
+            font-family: 'Circular Std Med';
+            border-radius: 15px;
+            background: #d6d6d6;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 25px;
+            &:not(:last-child){
+              margin-right: 6px;
+            }
+            &.day{
+              font-family: 'Circular Std Book';
+              color: #000000;
+              padding: 0 11px;
+            }
+            &.count{
+              color: white;
+              background: #4080ff;
+              border: 1px solid #225ac9;
+              width: 25px;
+              height: 25px;
+              line-height: 23px;
+            }
+            &.all{
+              color: #808080;
+              border: 1px solid #b2b2b2;
+              width: 25px;
+              height: 25px;
+              line-height: 23px;
             }
           }
         }
+        .post-modal-follow-slider-wrap{
+          >.lSSlideWrapper{
+            >.lSAction{
+              a{
+                background-image: none;
+                width: 50px;
+                height: 50px;
+                color: #666666;
+                margin-top:-90px;
+                i[class^=trav]{
+                  font-size: 50px;
+                }
+                &.lSPrev{
+                  left: -1px;
+                }
+                &.lSNext{
+                  right: -1px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .trip-map{
+        position: relative;
+        border-radius: 3px;
+        &_wrapper{
+          .post-map-info-caption{
+            bottom: 108px;
+          }
+        }
+        .trip-destination-slider{
+          opacity: 0;
+          .trip-dest-slide_inner{
+            .trip-plane-info{
+              i[class^=trav]{
+                color: #4080ff;
+              }
+            }
+            &.checked-item{
+              .trip-dest-flag{
+                .show-place-info{}
+              }
+            }
+          }
+        }
+      }
+      .trip-destination-slider-block{
+        &:after{
+          background: #4080ff;
+        }
         .lSAction{
           a{
+            background: white;
+            background-image: none;
             width: 37px;
             height: 42px;
             border: 1px solid #e0e0e0;
-            top: 50%;
-            margin-top: -21px;
+            top: 20px;
+            margin-top: 0;
             box-shadow: none !important;
+            text-align: center;
+            z-index: 200;
+            opacity: 1;
             i[class^=trav]{
               line-height: 40px;
+              font-size: 24px;
+              color: #666666;
             }
+            &.lSPrev{
+              left: 0;
+            }
+            &.lSNext{
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    &.post-mode-map-place{
+      border: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,.1);
+      .story-content-block{
+        .place-over{
+          .place-over_top{
+            border-radius: 3px 3px 0 0;
           }
         }
       }
