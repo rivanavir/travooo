@@ -3735,6 +3735,60 @@ aside.sidebar{
           }
         }
       }
+      .flex-image-wrap{
+        display: flex;
+        width: 100%;
+        &.fh-460{
+          height: 460px;
+        }
+        &.fh-365{
+          height: 365px;
+        }
+        .image-column{
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto;
+          &.col-66{
+            flex: 66 1 auto;
+          }
+          &.col-60{
+            flex: 6 1 auto;
+          }
+          &.col-40{
+            flex: 4 1 auto;
+          }
+          &.col-33{
+            flex: 33 1 auto;
+          }
+          .image-inner{
+            border: 1px solid white;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex: 1 1 auto;
+            &.img-h-66{
+              flex: 66 1 auto;
+            }
+            &.img-h-60{
+              flex: 60 1 auto;
+            }
+            &.img-h-55{
+              flex: 55 1 auto;
+            }
+            &.img-h-45{
+              flex: 45 1 auto;
+            }
+            &.img-h-40{
+              flex: 40 1 auto;
+            }
+            &.img-h-33{
+              flex: 33 1 auto;
+            }
+          }
+        }
+      }
       .post-tips{
         padding-bottom: 15px;
         .post-tips-top{
