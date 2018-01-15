@@ -576,7 +576,7 @@ header.main-header{
                 font-size: 12px;
                 text-transform: uppercase;
               }
-              &.active{
+              &.active + .lslide{
                 color: #1a1a1a;
                 .number-day{
                   font-family: 'Circular Std Book';
