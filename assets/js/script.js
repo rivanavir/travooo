@@ -406,6 +406,22 @@ $(document).ready(function(){
   $('#storyModePopup').on('hidden.bs.modal', function(){
     $('#storyModePopup .modal-close').css('top', '30px');
     $('#modalHeadTripPlan').removeClass('scrolled').hide();
-  })
+  });
+
+  let $lg = $('#lightgallery').lightGallery({
+    pager: false,
+    thumbnail:true,
+    toogleThumb: false,
+    prevHtml: '<i class="trav-angle-left"></i>',
+    nextHtml: '<i class="trav-angle-right"></i>',
+    hideBarsDelay: 100000000
+    // onSliderLoad: function(el){
+      // }
+  });
+    
+  $('#lightGalleryTrigger').on('click', function(){
+    $("#lightgallery").find('li:first-child').trigger('click');
+  });
+
   
 });

@@ -6144,3 +6144,38 @@ aside.sidebar{
     }
   }
 }
+
+/* light gallery styles */
+.light-gallery-block{
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+}
+.lg-backdrop{
+  background: white;
+  &.in{
+    opacity: 0.8;
+  }
+}
+.lg-toolbar{
+  background-color: transparent;
+  .lg-icon{
+    &:hover{
+      color: inherit;
+    }
+  }
+  .lg-icon{
+    color: black;
+    text-shadow: 0 0 5px white;
+  }
+  .lg-close{}
+  
+}
+.lg-actions{
+  &.lg-prev,
+  &.lg-next{
+    &:after{
+      display: none;
+    }
+  }
+}
