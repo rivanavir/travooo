@@ -1949,213 +1949,213 @@ aside.sidebar{
       }
     }
   }
-  .post-footer-info{
-    display: flex;
-    align-items: center;
-    padding: 15px 0;
-    // padding: 15px 0 16px;
-    flex-wrap: wrap;
-    @media(max-width:375px){
-      padding: 10px 0;
-    }
-    span{
-      white-space: nowrap;
-    }
-    &:last-child{
-      // padding-bottom: 0;
-      // margin-bottom: -18px;
-      margin-bottom: -30px;
-      @media(max-width:375px){
-        margin-bottom: -15px;
-      }
-    }
-    .post-foot-block{
-      display: flex;
-      align-items: center;
-      flex-wrap: nowrap;
-      &:not(:last-child){
-        margin-right: 25px;
-      }
-      i[class^=trav]{
-        margin-right: 9px;
-        color: #4080ff;
-        font-size: 18px;
-      }
-      span{
-        font-size: 14px;
-        color: #1a1a1a;
-        white-space: nowrap;
-        font-family: 'CircularAirPro Light';
-        b{
-          font-family: 'Montserrat Reg';
-          font-weight: normal;
-        }
-      }
-    }
-    .post-reaction{
-      i[class^=trav]{
-        color: #ff5a79;
-      }
-      &.p-disabled{
-        >img{
-          -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-        }
-      }
-      >img{
-        width: auto !important;
-        margin-right: 9px;
-      }
-    }
-    .post-comment-info{}
-  }
-  ul.foot-avatar-list{
-    margin-bottom: 0;
-    margin-right: 8px;
-    white-space: nowrap;
-    li{
-      display: inline-block;
-      cursor: pointer;
-      &:not(:first-child){
-        margin-left: -4px;
-      }
-      img.small-ava{
-        vertical-align: top;
-        @include avatarImgStyle(20px, #e5e5e5);
-      }
-    }
-  }
+  // .post-footer-info{
+  //   display: flex;
+  //   align-items: center;
+  //   padding: 15px 0;
+  //   // padding: 15px 0 16px;
+  //   flex-wrap: wrap;
+  //   @media(max-width:375px){
+  //     padding: 10px 0;
+  //   }
+  //   span{
+  //     white-space: nowrap;
+  //   }
+  //   &:last-child{
+  //     // padding-bottom: 0;
+  //     // margin-bottom: -18px;
+  //     margin-bottom: -30px;
+  //     @media(max-width:375px){
+  //       margin-bottom: -15px;
+  //     }
+  //   }
+  //   .post-foot-block{
+  //     display: flex;
+  //     align-items: center;
+  //     flex-wrap: nowrap;
+  //     &:not(:last-child){
+  //       margin-right: 25px;
+  //     }
+  //     i[class^=trav]{
+  //       margin-right: 9px;
+  //       color: #4080ff;
+  //       font-size: 18px;
+  //     }
+  //     span{
+  //       font-size: 14px;
+  //       color: #1a1a1a;
+  //       white-space: nowrap;
+  //       font-family: 'CircularAirPro Light';
+  //       b{
+  //         font-family: 'Montserrat Reg';
+  //         font-weight: normal;
+  //       }
+  //     }
+  //   }
+  //   .post-reaction{
+  //     i[class^=trav]{
+  //       color: #ff5a79;
+  //     }
+  //     &.p-disabled{
+  //       >img{
+  //         -webkit-filter: grayscale(1);
+  //         filter: grayscale(1);
+  //       }
+  //     }
+  //     >img{
+  //       width: auto !important;
+  //       margin-right: 9px;
+  //     }
+  //   }
+  //   .post-comment-info{}
+  // }
+  // ul.foot-avatar-list{
+  //   margin-bottom: 0;
+  //   margin-right: 8px;
+  //   white-space: nowrap;
+  //   li{
+  //     display: inline-block;
+  //     cursor: pointer;
+  //     &:not(:first-child){
+  //       margin-left: -4px;
+  //     }
+  //     img.small-ava{
+  //       vertical-align: top;
+  //       @include avatarImgStyle(20px, #e5e5e5);
+  //     }
+  //   }
+  // }
 
-  .post-comment-layer{
-    border-top: 1px solid #e6e6e6;
-    padding-top: 15px;
-    margin-bottom: -14px;
-  }
-  .post-comment-top-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    ul.comment-filter{
-      li{
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 14px;
-        color: #b2b2b2;
-        font-family: 'CircularAirPro Light';
-        cursor: pointer;
-        &:not(:last-child){
-          margin-right: 15px;
-        }
-        &:hover{
-          color: #1a1a1a;
-        }
-        &.active{
-          color: #1a1a1a;
-          font-family: 'Circular Std Book';
-        }
-      }
-    }
-    .comm-count-info{
-      font-size: 14px;
-      color: #b2b2b2;
-      font-family: 'CircularAirPro Light';
-    }
-  }
-  .post-comment-wrapper{
-    padding-bottom: 5px;
-    .post-comment-row{
-      display: flex;
-      align-items: flex-start;
-      padding-bottom: 15px;
-      .post-com-avatar-wrap{
-        padding-right: 18px;
-        padding-top: 5px;
-        img{
-          @include avatarImgStyle(45px, #ebebeb);
-        }
-      }
-      .post-comment-text{
-        flex-grow: 1;
-        .post-com-name-layer{
-          a{
-            line-height: 1.6;
-            &.comment-name{
-              font-family: 'Circular Std Book';
-              font-size: 16px;
-              color: #4080ff;
-            }
-            &.comment-nickname{
-              font-family: 'CircularAirPro Light';
-              font-size: 14px;
-              color: #999999;
-            }
-          }
-        }
-        .comment-txt{
-          p{
-            font-family: 'CircularAirPro Light';
-            font-size: 16px;
-            color: #000000;
-            line-height: 1.5;
-            margin-bottom: 10px;
-          }
-        }
-        .comment-bottom-info{
-          display: flex;
-          align-items: center;
-          .com-reaction{
-            margin-right: 18px;
-            display: flex;
-            align-items: center;
-            img{
-              margin-right: 8px;
-            }
-            span{
-              font-size: 12px;
-              color: #000000;
-              font-family: 'CircularAirPro Light';
-            }
-          }
-          .com-time{
-            font-family: 'CircularAirPro Light';
-            font-size: 14px;
-            color: #999999;
-            line-height: 19px;
-          }
-        }
-      }
-    }
-    a.load-more-link{
-      font-family: 'CircularAirPro Light';
-      font-size: 14px;
-      color: #b2b2b2;
-    }
-  }
-  .post-add-comment-block{
-    display: flex;
-    align-items: center;
-    padding-top: 14px;
-    .avatar-wrap{
-      padding-right: 19px;
-      img{
-        @include avatarImgStyle(45px, null);
-      }
-    }
-    .post-add-com-input{
-      background: #f5f5f5;
-      border-radius: 3px;
-      flex-grow: 1;
-      padding: 15px 20px;
-      input{
-        background: transparent;
-        font-size: 16px;
-        padding: 0;
-        width: 100%;
-        font-family: 'CircularAirPro Light';
-        @include inputPlacehoderColor(#999999);
-      }
-    }
-  }
+  // .post-comment-layer{
+  //   border-top: 1px solid #e6e6e6;
+  //   padding-top: 15px;
+  //   margin-bottom: -14px;
+  // }
+  // .post-comment-top-info{
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   ul.comment-filter{
+  //     li{
+  //       display: inline-block;
+  //       vertical-align: middle;
+  //       font-size: 14px;
+  //       color: #b2b2b2;
+  //       font-family: 'CircularAirPro Light';
+  //       cursor: pointer;
+  //       &:not(:last-child){
+  //         margin-right: 15px;
+  //       }
+  //       &:hover{
+  //         color: #1a1a1a;
+  //       }
+  //       &.active{
+  //         color: #1a1a1a;
+  //         font-family: 'Circular Std Book';
+  //       }
+  //     }
+  //   }
+  //   .comm-count-info{
+  //     font-size: 14px;
+  //     color: #b2b2b2;
+  //     font-family: 'CircularAirPro Light';
+  //   }
+  // }
+  // .post-comment-wrapper{
+  //   padding-bottom: 5px;
+  //   .post-comment-row{
+  //     display: flex;
+  //     align-items: flex-start;
+  //     padding-bottom: 15px;
+  //     .post-com-avatar-wrap{
+  //       padding-right: 18px;
+  //       padding-top: 5px;
+  //       img{
+  //         @include avatarImgStyle(45px, #ebebeb);
+  //       }
+  //     }
+  //     .post-comment-text{
+  //       flex-grow: 1;
+  //       .post-com-name-layer{
+  //         a{
+  //           line-height: 1.6;
+  //           &.comment-name{
+  //             font-family: 'Circular Std Book';
+  //             font-size: 16px;
+  //             color: #4080ff;
+  //           }
+  //           &.comment-nickname{
+  //             font-family: 'CircularAirPro Light';
+  //             font-size: 14px;
+  //             color: #999999;
+  //           }
+  //         }
+  //       }
+  //       .comment-txt{
+  //         p{
+  //           font-family: 'CircularAirPro Light';
+  //           font-size: 16px;
+  //           color: #000000;
+  //           line-height: 1.5;
+  //           margin-bottom: 10px;
+  //         }
+  //       }
+  //       .comment-bottom-info{
+  //         display: flex;
+  //         align-items: center;
+  //         .com-reaction{
+  //           margin-right: 18px;
+  //           display: flex;
+  //           align-items: center;
+  //           img{
+  //             margin-right: 8px;
+  //           }
+  //           span{
+  //             font-size: 12px;
+  //             color: #000000;
+  //             font-family: 'CircularAirPro Light';
+  //           }
+  //         }
+  //         .com-time{
+  //           font-family: 'CircularAirPro Light';
+  //           font-size: 14px;
+  //           color: #999999;
+  //           line-height: 19px;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   a.load-more-link{
+  //     font-family: 'CircularAirPro Light';
+  //     font-size: 14px;
+  //     color: #b2b2b2;
+  //   }
+  // }
+  // .post-add-comment-block{
+  //   display: flex;
+  //   align-items: center;
+  //   padding-top: 14px;
+  //   .avatar-wrap{
+  //     padding-right: 19px;
+  //     img{
+  //       @include avatarImgStyle(45px, null);
+  //     }
+  //   }
+  //   .post-add-com-input{
+  //     background: #f5f5f5;
+  //     border-radius: 3px;
+  //     flex-grow: 1;
+  //     padding: 15px 20px;
+  //     input{
+  //       background: transparent;
+  //       font-size: 16px;
+  //       padding: 0;
+  //       width: 100%;
+  //       font-family: 'CircularAirPro Light';
+  //       @include inputPlacehoderColor(#999999);
+  //     }
+  //   }
+  // }
 
   &.post-create-block{
     .post-create-input{
@@ -3863,6 +3863,217 @@ aside.sidebar{
           }
         }
       }
+    }
+  }
+}
+
+.post-comment-layer{
+  border-top: 1px solid #e6e6e6;
+  padding-top: 15px;
+  margin-bottom: -14px;
+}
+.post-comment-top-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  ul.comment-filter{
+    margin-bottom: 0;
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      color: #b2b2b2;
+      font-family: 'CircularAirPro Light';
+      cursor: pointer;
+      &:not(:last-child){
+        margin-right: 15px;
+      }
+      &:hover{
+        color: #1a1a1a;
+      }
+      &.active{
+        color: #1a1a1a;
+        font-family: 'Circular Std Book';
+      }
+    }
+  }
+  .comm-count-info{
+    font-size: 14px;
+    color: #b2b2b2;
+    font-family: 'CircularAirPro Light';
+  }
+}
+.post-comment-wrapper{
+  padding-bottom: 5px;
+  .post-comment-row{
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 15px;
+    .post-com-avatar-wrap{
+      padding-right: 18px;
+      padding-top: 5px;
+      img{
+        @include avatarImgStyle(45px, #ebebeb);
+      }
+    }
+    .post-comment-text{
+      flex-grow: 1;
+      .post-com-name-layer{
+        a{
+          line-height: 1.6;
+          &.comment-name{
+            font-family: 'Circular Std Book';
+            font-size: 16px;
+            color: #4080ff;
+          }
+          &.comment-nickname{
+            font-family: 'CircularAirPro Light';
+            font-size: 14px;
+            color: #999999;
+          }
+        }
+      }
+      .comment-txt{
+        p{
+          font-family: 'CircularAirPro Light';
+          font-size: 16px;
+          color: #000000;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
+      }
+      .comment-bottom-info{
+        display: flex;
+        align-items: center;
+        .com-reaction{
+          margin-right: 18px;
+          display: flex;
+          align-items: center;
+          img{
+            margin-right: 8px;
+          }
+          span{
+            font-size: 12px;
+            color: #000000;
+            font-family: 'CircularAirPro Light';
+          }
+        }
+        .com-time{
+          font-family: 'CircularAirPro Light';
+          font-size: 14px;
+          color: #999999;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+  a.load-more-link{
+    font-family: 'CircularAirPro Light';
+    font-size: 14px;
+    color: #b2b2b2;
+  }
+}
+.post-add-comment-block{
+  display: flex;
+  align-items: center;
+  padding-top: 14px;
+  .avatar-wrap{
+    padding-right: 19px;
+    img{
+      @include avatarImgStyle(45px, null);
+    }
+  }
+  .post-add-com-input{
+    background: #f5f5f5;
+    border-radius: 3px;
+    flex-grow: 1;
+    padding: 15px 20px;
+    input{
+      background: transparent;
+      font-size: 16px;
+      padding: 0;
+      width: 100%;
+      font-family: 'CircularAirPro Light';
+      @include inputPlacehoderColor(#999999);
+    }
+  }
+}
+
+.post-footer-info{
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  // padding: 15px 0 16px;
+  flex-wrap: wrap;
+  @media(max-width:375px){
+    padding: 10px 0;
+  }
+  span{
+    white-space: nowrap;
+  }
+  &:last-child{
+    // padding-bottom: 0;
+    // margin-bottom: -18px;
+    margin-bottom: -30px;
+    @media(max-width:375px){
+      margin-bottom: -15px;
+    }
+  }
+  .post-foot-block{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    &:not(:last-child){
+      margin-right: 25px;
+    }
+    i[class^=trav]{
+      margin-right: 9px;
+      color: #4080ff;
+      font-size: 18px;
+    }
+    span{
+      font-size: 14px;
+      color: #1a1a1a;
+      white-space: nowrap;
+      font-family: 'CircularAirPro Light';
+      b{
+        font-family: 'Montserrat Reg';
+        font-weight: normal;
+      }
+    }
+  }
+  .post-reaction{
+    i[class^=trav]{
+      color: #ff5a79;
+    }
+    &.p-disabled{
+      >img{
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+      }
+    }
+    >img{
+      width: auto !important;
+      margin-right: 9px;
+    }
+  }
+  .post-comment-info{}
+}
+
+ul.foot-avatar-list{
+  margin-bottom: 0;
+  margin-right: 8px;
+  white-space: nowrap;
+  li{
+    display: inline-block;
+    cursor: pointer;
+    &:not(:first-child){
+      margin-left: -4px;
+    }
+    img.small-ava{
+      vertical-align: top;
+      @include avatarImgStyle(20px, #e5e5e5);
     }
   }
 }
@@ -6203,6 +6414,7 @@ aside.sidebar{
     }
     .lg-thumb{
       padding: 35px 0;
+      margin: 0 auto;
       .lg-thumb-item{
         opacity: 0.5;
         &:hover,
@@ -6213,7 +6425,7 @@ aside.sidebar{
       }
     }
     .lg-item{
-      padding-bottom: 180px;
+      padding-bottom: 0;
       .lg-img-wrap{
         bottom: 180px;
         img{
@@ -6237,15 +6449,54 @@ aside.sidebar{
           display: block;
           margin: 0 auto;
           height: 100%;
+          white-space: initial;
+          box-shadow: 0 0 10px rgba(0,0,0,.2);
+        }
+        
+        .gallery-comment-wrap{
+          width: 390px;
+          background: #fff;
+          text-align: left;
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          height: 100%;
+          .gallery-comment-inner{
+            max-height: 100%;
+            &.mCustomScrollbar{
+              .mCSB_container{
+                margin-right: 0;
+              }
+              .mCSB_scrollTools{
+                right: 2px;
+                .mCSB_draggerContainer{
+                  .mCSB_draggerRail{
+                    background: transparent;
+                  }
+                }
+              }
+            }
+          }
+          .post-comment-layer{
+            background: #f5f5f5;
+            padding: 20px;
+            border-top:0;
+            .post-add-comment-block{
+              .post-add-com-input{
+                background: #fff;
+              }
+            }
+          }
         }
 
         .top-gallery-content{
-          padding: 0 22px;
+          padding: 0 20px;
           .top-info-layer{
             display: flex;
             align-items: center;
-            padding: 22px 0 17px;
-            border-bottom: 1px solid #999999;
+            padding: 20px 0 18px;
+            border-bottom: 1px solid #999;
             .top-avatar-wrap{
               padding-right: 15px;
               img{
@@ -6261,6 +6512,7 @@ aside.sidebar{
                   font-size: 18px;
                   font-family: 'Circular Std Book';
                   color: white;
+                  text-transform: capitalize;
                 }
                 &.dest-place{
                   font-size: 14px;
@@ -6269,9 +6521,53 @@ aside.sidebar{
                   span{
                     font-family: 'Circular Std Book';
                     color: white;
+                    text-transform: capitalize;
                   }
                 }
               }
+            }
+          }
+          &.gallery-comment-top{
+            .top-info-layer{
+              border-bottom-color: #e6e6e6;
+            }
+            .top-info-txt{
+              p{
+                &.dest-name{
+                  color: #4080ff;
+                }
+                &.dest-place{
+                  color: #1a1a1a;
+                  span{
+                    color: #4080ff;
+                  }
+                }
+              }
+            }
+            .gallery-comment-top-line{
+              border-bottom: 1px solid #e6e6e6;
+              p{
+                margin-bottom: 0;
+                padding: 8px 0;
+                color: #999999;
+                font-family: 'CircularAirPro Light';
+                font-size: 14px;
+                a.gallery-link{
+                  font-family: 'Circular Std Book';
+                  color: #4080ff;
+                }
+                span.dot{
+                  font-family: 'Circular Std Med';
+                }
+                img{
+                  @include avatarImgStyle(22px, null);
+                }
+              }
+            }
+            .gal-com-footer-info{
+              @extend .post-footer-info;
+              margin-bottom: 0 !important;
+              padding: 10px 0;
             }
           }
           .sub-post-info{
@@ -6367,6 +6663,9 @@ aside.sidebar{
         opacity: 1;
         color: #999999;
         font-size: 40px;
+      }
+      &.disabled {
+        display:none;
       }
     }
   }
