@@ -479,7 +479,7 @@ $(document).ready(function(){
         'subHtml': `<div class='cover-block' style='display:none;'>
           <div class='cover-block-inner'>
             <div class='gallery-comment-wrap'>
-              <div class='gallery-comment-inner mCustomScrollbar'>
+              <div class='gallery-comment-inner'>
                 <div class="top-gallery-content gallery-comment-top">
                   <div class="top-info-layer">
                     <div class="top-avatar-wrap">
@@ -826,16 +826,20 @@ $(document).ready(function(){
         </div>`;
     
     $lg.on('onBeforeOpen.lg',function(e){
-      let slide = $(e.currentTarget).children();
+      let slide = $('.main-gallery-block .lg-thumb-item');
       slide.each(function(i, val){
         if(i%2 == 0){
-          console.log(i);
+          // console.log(i);
         }
         // $(val).attr('data-sub-html', coverBlockTxt);
       });
     });
     $lg.on('onSlideItemLoad.lg',function(e){
+      
       setWidth();
+      $(window).on('resize', function(){
+        setWidth();
+      })
     });
     $lg.on('onAfterSlide.lg',function(){
       setWidth();
