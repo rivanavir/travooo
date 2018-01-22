@@ -77,7 +77,7 @@
   &.btn-white-bordered{
     font-family: 'Circular Std Book';
     @include btnWithHoverIcon(white);
-    color: #4080ff;
+    color: #4080ff; 
     border-color: #4080ff !important;
   }
   &.btn-light-primary{
@@ -4849,8 +4849,8 @@ ul.foot-avatar-list{
         &:before{
           right: 6px;
           bottom: 6px;
-          content: "\e900";
-          font-family: 'travooo-icons' !important;
+          content: "\e911";
+          font-family: 'travooo' !important;
           line-height: 1;
           color: white;
           font-size: 36px;
@@ -6451,6 +6451,11 @@ ul.foot-avatar-list{
           height: 100%;
           white-space: initial;
           box-shadow: 0 0 10px rgba(0,0,0,.2);
+          &.comment-block{
+            .map-preview{
+              right: 410px;
+            }
+          }
         }
         
         .gallery-comment-wrap{
