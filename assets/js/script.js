@@ -12,12 +12,6 @@ $(document).ready(function(){
     }
   });
 
-  // $('.white-style').on('click', function () {
-  //   $(this).modal('hide');
-  // }).children('.modal-dialog').on('click', function (e) {
-  //   return true;
-  // });
-  
   $('.check-block').click(function(){
     $(this).toggleClass('checked-block');
   });
@@ -477,7 +471,10 @@ $(document).ready(function(){
         "src": 'https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg',
         'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
         'subHtml': `<div class='cover-block' style='display:none;'>
-          <div class='cover-block-inner'>
+          <div class='cover-block-inner comment-block'>
+            <div class="map-preview">
+              <img src="./assets/image/map-preview.jpg" alt="map">
+            </div>
             <div class='gallery-comment-wrap'>
               <div class='gallery-comment-inner'>
                 <div class="top-gallery-content gallery-comment-top">
@@ -749,6 +746,28 @@ $(document).ready(function(){
 
     $lg.on('onAfterOpen.lg',function(){
       $('body').css('overflow','hidden');
+      let itemArr = [], thumbArr = [];
+      let galleryBlock = $('.main-gallery-block');
+      let galleryItem = $(galleryBlock).find('.lg-item');
+      let galleryThumb = $(galleryBlock).find('.lg-thumb-item');
+      $.each(galleryItem, function(i, val){
+        // itemArr.push(val);
+      });
+      $.each(galleryThumb, function(i, val){
+        // thumbArr.push(val);
+        let startCnt = `<div class="thumb-txt"><i class="trav-flag-icon"></i> start</div>`;
+        let startCntEmpty = `<div class="thumb-txt">&nbsp;</div>`;
+        let placetxt = 'rabar-sale airport'
+        let placeName = `<div class="thumb-txt">${placetxt}</div>`;
+        if(i == 0){
+          $(val).addClass('place-thumb');
+          $(val).append(placeName).prepend(startCnt);
+        }
+        if(i == 2){
+          $(val).addClass('place-thumb');
+          $(val).append(placeName).prepend(startCntEmpty);
+        }
+      });
     });
     $lg.on('onBeforeClose.lg',function(){
       $('body').removeAttr('style');
@@ -827,9 +846,9 @@ $(document).ready(function(){
     
     $lg.on('onBeforeOpen.lg',function(e){
       let slide = $('.main-gallery-block .lg-thumb-item');
+      console.log(slide);
       slide.each(function(i, val){
         if(i%2 == 0){
-          // console.log(i);
         }
         // $(val).attr('data-sub-html', coverBlockTxt);
       });

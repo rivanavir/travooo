@@ -6415,12 +6415,61 @@ ul.foot-avatar-list{
     .lg-thumb{
       padding: 35px 0;
       margin: 0 auto;
+      width: auto !important;
+      display: flex;
+      justify-content: center;
       .lg-thumb-item{
-        opacity: 0.5;
+        opacity: 0.7;
+        float: none;
         &:hover,
         &.active{
           opacity: 1;
           border-color: white;
+        }
+        &.place-thumb{
+          border: 1px solid #dbdbdb;
+          position: relative;
+          background: #fff;
+          overflow: visible;
+          display: flex;
+          width: 124px !important;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &:before,
+          &:after{
+            position: absolute;
+            content: '';
+            display: block;
+            top: 50%;
+            margin-top: -8px;
+            border: 8px solid transparent;
+          }
+          &:before{
+            border-left-color: #ccc;
+            right: -16px;
+          }
+          &:after{
+            border-left-color: white;
+            right: -15px;
+          }
+          .thumb-txt{
+            font-size: 12px;
+            color: #4c4c4c;
+            font-family: 'Circular Std Book';
+            text-transform: capitalize;
+            line-height: 1.5;
+            padding: 5px;
+            i[class^=trav]{
+              color: #4080ff;
+
+            }
+          }
+          img{
+            width: 46px;
+            height: 46px;
+            @include avatarImgStyle(46px, null);
+          }
         }
       }
     }
