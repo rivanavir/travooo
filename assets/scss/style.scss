@@ -4061,6 +4061,49 @@ aside.sidebar{
   .post-comment-info{}
 }
 
+.top-board-wrap{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.post-board{
+  display: inline-block;
+  padding: 10px 10px 4px;
+  width: 200px;
+  .post-side-top{
+    padding: 7px 0 12px;
+    h3.side-ttl{
+      font-size: 16px;
+      text-transform: capitalize;
+    }
+    .side-count{
+      font-size: 14px;
+      color: #666666;
+      text-transform: uppercase;
+    }
+  }
+  .board-photo-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -5px;
+    margin-left: -5px;
+    .board-image{
+      padding: 6px 5px;
+      &.full-image{
+        flex-basis: 100%;
+      }
+      &.half-image{
+        flex-basis: 50%;
+      }
+      img{
+        width: 100%;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
 ul.foot-avatar-list{
   margin-bottom: 0;
   margin-right: 8px;
@@ -4074,6 +4117,152 @@ ul.foot-avatar-list{
     img.small-ava{
       vertical-align: top;
       @include avatarImgStyle(20px, #e5e5e5);
+    }
+  }
+}
+
+// top banner style
+
+.top-banner-wrap{
+}
+.top-banner-block{
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 1px 3px rgba(178,178,178,.6);
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  height: 485px;
+  width: 100%;
+  margin-bottom: 30px;
+  &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    border-radius: 0 0 3px 3px;
+    z-index: 5;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.02);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.5) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.02)), color-stop(100%, rgba(0,0,0,0.5)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.5) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.5) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+  }
+  .top-banner-text{
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 40px;
+    .place-info-block{
+      .place-title{
+        font-size: 46px;
+        color: white;
+        font-family: 'Circular Std Book';
+        margin-bottom: 20px;
+        span{
+          font-size: 26px;
+          font-family: 'CircularAirPro Light';
+        }
+      }
+      .place-placement{
+        font-family: 'CircularAirPro Light';
+        color: white;
+        font-size: 16px;
+        margin-bottom: 25px;
+        span.event-tag{
+          font-size: 14px;
+          display: inline-block;
+          border-radius: 3px;
+          background: rgba(255,255,255,.8);
+          padding: 3px 8px;
+          color: black;
+          margin-right: 5px;
+        }
+      }
+      .follow-foot-info{
+        display: flex;
+        align-items: center;
+        .foot-avatar-list{
+          display: inline-block;
+          margin-right: 10px;
+          li{
+            margin-left: -5px;
+            img.small-ava{
+              @include avatarImgStyle(29px, white);
+            }
+          }
+        }
+        i.icon-grey-comment{
+          color: #ccc;
+          padding-right: 10px;
+          font-size: 14px;
+        }
+        span{
+          font-size: 14px;
+          color: white;
+          font-family: 'CircularAirPro Light';
+        }
+      }
+    }
+    .banner-comment{
+      align-self: stretch;
+      position: relative;
+      text-align: right;
+      .comment-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .comment-alert{
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          border-radius: 9px;
+          padding: 12px 10px 12px 20px;
+          background: rgba(0,0,0,.2);
+          &:not(:last-child){
+            margin-bottom: 20px;
+          }
+          .comment-txt-wrap{
+            text-align: left;
+            .comment-name{
+              font-size: 16px;
+              color: #8cb3ff;
+              font-family: 'Circular Std Book';
+              line-height: 1.5;
+            }
+            .comment-txt{
+              font-size: 14px;
+              color: white;
+              font-family: 'CircularAirPro Light';
+              line-height: 1.5;
+            }
+          }
+          .comment-avatar-wrap{
+            padding-left: 20px;
+            img{
+              @include avatarImgStyle(27px, null);
+            }
+          }
+        }
+      }
+      a.btn{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 12px 32px;
+      }
     }
   }
 }

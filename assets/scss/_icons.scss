@@ -24,6 +24,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-about-icon:before {
+  content: "\e93f";
+}
+.trav-comment-plus-icon:before {
+  content: "\e940";
+}
+.trav-day-duration-icon:before {
+  content: "\e941";
+}
+.trav-gallery-o-icon:before {
+  content: "\e943";
+}
+.trav-photos-icon:before {
+  content: "\e944";
+}
+.trav-QA-icon:before {
+  content: "\e945";
+}
+.trav-review-icon:before {
+  content: "\e946";
+}
+.trav-star-circle-icon:before {
+  content: "\e947";
+}
+.trav-today-icon:before {
+  content: "\e948";
+}
 .trav-popularity-icon:before {
   content: "\e93c";
 }
