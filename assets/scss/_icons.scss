@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-circle-star-icon:before {
+  content: "\e949";
+}
+.trav-circle-question-icon:before {
+  content: "\e94a";
+}
 .trav-about-icon:before {
   content: "\e93f";
 }

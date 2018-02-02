@@ -402,6 +402,23 @@ $(document).ready(function(){
     $('#modalHeadTripPlan').removeClass('scrolled').hide();
   });
 
+  $('.modal').on('shown.bs.modal', function(){
+    let headComment = $(this).find('.post-comment-head');
+    let headHeight = $(headComment).outerHeight();
+    let scrollVar = 30;
+    $(this).scroll(function() {    
+      let scroll = $(this).scrollTop();
+      let headTop = scroll - scrollVar - 1;
+      if (scroll >= scrollVar) {
+        $(this).find('.post-modal-comment').addClass('head-fixed').css('padding-top',headHeight);
+        $(headComment).css('top',headTop);
+      } else{
+        $(this).find('.post-modal-comment').removeClass('head-fixed').removeAttr('style');
+        $(headComment).removeAttr('style');
+      }
+    });
+  });
+
 
   $('#lightGalleryTrigger').on('click', function(){
     
