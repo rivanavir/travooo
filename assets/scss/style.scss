@@ -7571,10 +7571,14 @@ ul.top-avatar-list{
     .lg-item{
       padding-bottom: 0;
       .lg-img-wrap{
-        bottom: 180px;
+        // bottom: 180px;
+        padding: 0;
+        position: relative;
+        top: auto;
         img{
           height: calc(100vh - 180px);
           border-radius: 3px;
+          max-width: 750px;
         }
       }
       .cover-block{
