@@ -402,6 +402,17 @@ $(document).ready(function(){
     $('#modalHeadTripPlan').removeClass('scrolled').hide();
   });
 
+  $('#storiesModePopup').on('shown.bs.modal', function(){
+    $("#storiesModeSlider").lightSlider({
+      item: 5,
+      pager: false,
+      hideControlOnEnd: true,
+      slideMargin: 15,
+      prevHtml: '<i class="trav-angle-left"></i>',
+      nextHtml: '<i class="trav-angle-right"></i>'
+    });
+  });
+
   $('.modal').on('shown.bs.modal', function(){
     let headComment = $(this).find('.post-comment-head');
     let headHeight = $(headComment).outerHeight();
@@ -804,7 +815,7 @@ $(document).ready(function(){
         let commentWidth = $('.main-gallery-block .lg-current .gallery-comment-wrap').width();
         let currentWidth = $(mainBlock).find('.lg-current .lg-object').width();
         if(currentCommentIs){
-          console.log('yes');
+          // console.log('yes');
           $(currentImgWrap).css('padding-right', commentWidth);
           $(subTtl).css('width', currentWidth + commentWidth);
         } else{
