@@ -916,6 +916,18 @@ button.btn-mobile-side{
   }
 }
 
+.destination-point{
+  position: absolute;
+  z-index: 1200;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  img{
+    &.map-marker{
+      width: 16px !important;
+    }
+  }
+}
+
 .trip-map{
   position: relative;
   box-shadow: 0 1px 3px rgba(178,178,178,.6);
@@ -1836,6 +1848,7 @@ aside.sidebar{
 
   .post-destination-block{
     padding: 19px;
+    max-width: 100%;
     @media(max-width:575px){
       padding: 10px;
     }
@@ -1883,6 +1896,7 @@ aside.sidebar{
       }
     }
     .post-dest-slider{
+      display: flex;
       .post-dest-card{
         width: 200px;
         height: 70px;
@@ -3118,7 +3132,7 @@ aside.sidebar{
     &:last-child{
       margin-top: 20px;
     }
-    img{
+    img:not([class]){
       width: 100%;
     }
     iframe{
@@ -3956,6 +3970,42 @@ aside.sidebar{
     }
     .post-comment-layer{
       padding-top: 25px;
+    }
+  }
+
+  &.post-place-plan-block{
+    display: flex;
+    border: 0;
+    height: 100%;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    .post-image-container{
+      flex-grow: 1;
+      padding: 15px;
+      border: 0;
+      max-height: 100%;
+      overflow: auto;
+      .post-image-inner{
+        border: 1px solid #e6e6e6;
+        .post-map-wrap{
+          margin-top: 0;
+          .post-place-top-info{
+            padding: 12px 20px;
+            a{
+              color: #4080ff;
+              font-size: 14px;
+              font-family: 'Circular Std Book';
+            }
+            span{
+              font-family: 'CircularAirPro Light';
+              font-size: 14px;
+              color: #1a1a1a;
+            }
+          }
+        }
+      }
+    }
+    .gallery-comment-wrap{
+      border-left: 1px solid #e6e6e6;
     }
   }
 }
@@ -5448,6 +5498,110 @@ ul.top-avatar-list{
   }
 }
 
+.gallery-comment-wrap{
+  width: 390px;
+  min-width: 390px;
+  background: #fff;
+  text-align: left;
+  height: 100%;
+  overflow: auto;
+  .gallery-comment-inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // &.mCustomScrollbar{
+    //   .mCSB_container{
+    //     margin-right: 0;
+    //     display: flex;
+    //     flex-direction: column;
+    //     height: 100%;
+    //   }
+    //   .mCSB_scrollTools{
+    //     right: 2px;
+    //     .mCSB_draggerContainer{
+    //       .mCSB_draggerRail{
+    //         background: transparent;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+  .gallery-comment-top{
+    padding: 0 20px;
+    flex-grow: 1;
+    .top-info-layer{
+      display: flex;
+      align-items: center;
+      padding: 20px 0 18px;
+      border-bottom: 1px solid #e6e6e6;
+      .top-avatar-wrap{
+        padding-right: 15px;
+        img{
+          @include avatarImgStyle(50px, null);
+        }
+      }
+      .top-info-txt{
+        text-align: left;
+        p{
+          margin-bottom: 0;
+          line-height: 1.3;
+          &.dest-name{
+            font-size: 18px;
+            font-family: 'Circular Std Book';
+            color: #4080ff;
+            text-transform: capitalize;
+          }
+          &.dest-place{
+            font-size: 14px;
+            color: #1a1a1a;
+            font-family: 'CircularAirPro Light';
+            span{
+              font-family: 'Circular Std Book';
+              color: #4080ff;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+    .gallery-comment-top-line{
+      border-bottom: 1px solid #e6e6e6;
+      p{
+        margin-bottom: 0;
+        padding: 8px 0;
+        color: #999999;
+        font-family: 'CircularAirPro Light';
+        font-size: 14px;
+        a.gallery-link{
+          font-family: 'Circular Std Book';
+          color: #4080ff;
+        }
+        span.dot{
+          font-family: 'Circular Std Med';
+        }
+        img{
+          @include avatarImgStyle(22px, null);
+        }
+      }
+    }
+    .gal-com-footer-info{
+      @extend .post-footer-info;
+      margin-bottom: 0 !important;
+      padding: 10px 0;
+    }
+  }
+  .post-comment-layer{
+    background: #f5f5f5;
+    padding: 20px;
+    border-top:0;
+    .post-add-comment-block{
+      .post-add-com-input{
+        background: #fff;
+      }
+    }
+  }
+}
+
 .sign-up-style{
   max-width: 472px;
   .modal-content{
@@ -5947,6 +6101,9 @@ ul.top-avatar-list{
       max-width: 100%;
     }
   }
+  &.modal-1140{
+    max-width: 1140px;
+  }
   &.modal-1080{
     max-width: 1080px;
   }
@@ -5964,6 +6121,9 @@ ul.top-avatar-list{
   }
   &.modal-615{
     max-width: 615px;
+  }
+  .modal-custom-block{
+    height: 100%;
   }
   .post-block{
     border-color: #e5e5e5;
@@ -7725,8 +7885,6 @@ ul.top-avatar-list{
         }
         
         .gallery-comment-wrap{
-          width: 390px;
-          background: #fff;
           text-align: left;
           position: absolute;
           right: 0;
@@ -7736,36 +7894,12 @@ ul.top-avatar-list{
           overflow: auto;
           border-radius: 0 3px 3px 0;
           .gallery-comment-top{
-            flex-grow: 1;
           }
           .gallery-comment-inner{
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            // &.mCustomScrollbar{
-            //   .mCSB_container{
-            //     margin-right: 0;
-            //     display: flex;
-            //     flex-direction: column;
-            //     height: 100%;
-            //   }
-            //   .mCSB_scrollTools{
-            //     right: 2px;
-            //     .mCSB_draggerContainer{
-            //       .mCSB_draggerRail{
-            //         background: transparent;
-            //       }
-            //     }
-            //   }
-            // }
           }
           .post-comment-layer{
-            background: #f5f5f5;
-            padding: 20px;
-            border-top:0;
             .post-add-comment-block{
               .post-add-com-input{
-                background: #fff;
               }
             }
           }

@@ -196,7 +196,7 @@ $(document).ready(function(){
     nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-profile-block'
   });
-  $("#postDestSlider").lightSlider({
+  $("#postDestSlider, #postDestSliderInner1, #postDestSliderInner2, #postDestSliderInner3").lightSlider({
     pager: false,
     autoWidth:true,
     slideMargin: 8,
@@ -219,14 +219,6 @@ $(document).ready(function(){
     prevHtml: '<i class="trav-angle-left"></i>',
     nextHtml: '<i class="trav-angle-right"></i>',
     addClass: 'post-follow-slider-wrap'
-  });
-  $("#postDestSliderInner1, #postDestSliderInner2, #postDestSliderInner3").lightSlider({
-    pager: false,
-    autoWidth:true,
-    slideMargin: 8,
-    prevHtml: '<i class="trav-angle-left"></i>',
-    nextHtml: '<i class="trav-angle-right"></i>',
-    addClass: 'post-dest-slider-wrap'
   });
   $("#tripLineSlider").lightSlider({
     autoWidth:true,
@@ -402,14 +394,21 @@ $(document).ready(function(){
     $('#modalHeadTripPlan').removeClass('scrolled').hide();
   });
 
-  $('#storiesModePopup').on('shown.bs.modal', function(){
-    $("#storiesModeSlider").lightSlider({
+  $('#storiesModePopup, #placeOneDayPopup').on('show.bs.modal', function(){
+    $(this).find("#storiesModeSlider").lightSlider({
       item: 5,
       pager: false,
-      hideControlOnEnd: true,
       slideMargin: 15,
       prevHtml: '<i class="trav-angle-left"></i>',
       nextHtml: '<i class="trav-angle-right"></i>'
+    });
+    $(this).find("#postDestSliderInner4").lightSlider({
+      pager: false,
+      autoWidth:true,
+      slideMargin: 8,
+      prevHtml: '<i class="trav-angle-left"></i>',
+      nextHtml: '<i class="trav-angle-right"></i>',
+      addClass: 'post-dest-slider-wrap'
     });
   });
 
