@@ -5413,12 +5413,17 @@ ul.top-avatar-list{
     box-shadow: 0 0 10px rgba(0,0,0,.1);
     padding: 20px;
     .bottom-slider{
+      display: flex;
+      align-items: center;
       .story-slide{
-        display: flex;
-        align-items: center;
-        padding: 12px;
-        border: 1px solid transparent;
         border-radius: 3px;
+        width: 350px;
+        border: 1px solid transparent;
+        .story-slide-inner{
+          display: flex;
+          align-items: center;
+          padding: 12px;
+        }
         .img-wrap{
           padding-right: 20px;
           opacity: 0.7;
@@ -5443,6 +5448,7 @@ ul.top-avatar-list{
               padding: 0 15px;
               color: #999;
               line-height: 1.3;
+              white-space: nowrap;
               &:not(:last-child){
                 border-right: 1px solid #333333;
               }
@@ -5504,9 +5510,11 @@ ul.top-avatar-list{
   background: #fff;
   text-align: left;
   height: 100%;
-  overflow: auto;
+  position: relative;
+  padding-bottom: 90px;
   .gallery-comment-inner{
     height: 100%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     // &.mCustomScrollbar{
@@ -5542,15 +5550,16 @@ ul.top-avatar-list{
       }
       .top-info-txt{
         text-align: left;
+        a.dest-name{
+          font-size: 16px;
+          font-family: 'Circular Std Book';
+          color: #4080ff;
+          text-transform: capitalize;
+          line-height: 1.3;
+        }
         p{
           margin-bottom: 0;
           line-height: 1.3;
-          &.dest-name{
-            font-size: 18px;
-            font-family: 'Circular Std Book';
-            color: #4080ff;
-            text-transform: capitalize;
-          }
           &.dest-place{
             font-size: 14px;
             color: #1a1a1a;
@@ -5560,6 +5569,11 @@ ul.top-avatar-list{
               color: #4080ff;
               text-transform: capitalize;
             }
+          }
+          &.dest-date{
+            font-size: 14px;
+            color: #999999;
+            font-family: 'CircularAirPro Light';
           }
         }
       }
@@ -5595,6 +5609,13 @@ ul.top-avatar-list{
     padding: 20px;
     border-top:0;
     .post-add-comment-block{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+      background: #f5f5f5;
       .post-add-com-input{
         background: #fff;
       }
@@ -6092,6 +6113,12 @@ ul.top-avatar-list{
 }
 .modal-custom-style{
   margin: 30px auto;
+  &.bottom-slider-height{
+    height: calc(100vh - 170px);
+  }
+  &.modal-bottom-slider{
+    margin: 30px auto 138px;
+  }
   &.modal-full{
     max-width: 100%;
   }

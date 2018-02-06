@@ -396,7 +396,7 @@ $(document).ready(function(){
 
   $('#storiesModePopup, #placeOneDayPopup').on('show.bs.modal', function(){
     $(this).find("#storiesModeSlider").lightSlider({
-      item: 5,
+      autoWidth: true,
       pager: false,
       slideMargin: 15,
       prevHtml: '<i class="trav-angle-left"></i>',
