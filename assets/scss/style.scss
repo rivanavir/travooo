@@ -7654,6 +7654,18 @@ ul.top-avatar-list{
       }
     }
   }
+  &.white-bg{
+    li{
+      a{
+        .round-icon{
+          background: rgba(0,0,0,.4);
+        }
+      }
+    }
+    span{
+      color: black;
+    }
+  }
 }
 
 .form-group{
