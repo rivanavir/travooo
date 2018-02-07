@@ -181,6 +181,14 @@
         border-left: 1px solid #cfcfcf;
       }
     }
+    &.btn-light-primary{
+      .icon-wrap{
+        border-left-color: #4473d2;
+        i[class^=trav]{
+          color: white;
+        }
+      }
+    }
   }
   &.btn-open-window{
     i[class^=trav]{
@@ -1268,19 +1276,6 @@ aside.sidebar{
         padding-right: 14px;
         img{
           @include avatarImgStyle(45px, null);
-        }
-      }
-      .post-top-round-icon-wrap{
-        background: #4080ff;
-        @include avatarImgStyle(50px, null);
-        min-width: 50px;
-        margin-right: 14px;
-        text-align: center;
-        line-height: 45px;
-        i[class^=trav]{
-          color: white;
-          line-height: 47px;
-          font-size: 24px;
         }
       }
       .post-top-info-txt{
@@ -4580,6 +4575,20 @@ aside.sidebar{
   }
 }
 
+.post-top-round-icon-wrap{
+  background: #4080ff;
+  @include avatarImgStyle(50px, null);
+  min-width: 50px;
+  margin-right: 14px;
+  text-align: center;
+  line-height: 45px;
+  i[class^=trav]{
+    color: white;
+    line-height: 47px;
+    font-size: 24px;
+  }
+}
+
 /* flex image style */
 .flex-image-wrap{
   display: flex;
@@ -5550,12 +5559,18 @@ ul.top-avatar-list{
       }
       .top-info-txt{
         text-align: left;
-        a.dest-name{
-          font-size: 16px;
+        a{
+          line-height: 1.3;
           font-family: 'Circular Std Book';
           color: #4080ff;
-          text-transform: capitalize;
-          line-height: 1.3;
+          &.dest-name{
+            font-size: 16px;
+            text-transform: capitalize;
+          }
+          &.post-name-link{
+            font-size: 14px;
+            text-decoration: none;
+          }
         }
         p{
           margin-bottom: 0;
@@ -5574,6 +5589,14 @@ ul.top-avatar-list{
             font-size: 14px;
             color: #999999;
             font-family: 'CircularAirPro Light';
+          }
+        }
+        span{
+          font-family: 'CircularAirPro Light';
+          font-size: 14px;
+          color: #b2b2b2;
+          &.dot{
+            padding: 0 5px;
           }
         }
       }
@@ -7637,6 +7660,10 @@ ul.top-avatar-list{
         margin: 0 auto;
         i[class^=trav]{
           color: white;
+          font-size: 18px;
+          &.trav-angle-left{
+            font-size: 28px;
+          }
         }
       }
       span{
@@ -7817,8 +7844,10 @@ ul.top-avatar-list{
   &.lg-outer{
     .lg-inner{
       width: auto;
-      height: calc(100% - 180px);
+      // height: 640px;
+      max-height: calc(100% - 180px);
       position: relative;
+      display: flex;
     }
     .lg-thumb-outer{
       background-color: transparent;
@@ -7873,7 +7902,6 @@ ul.top-avatar-list{
             padding: 5px;
             i[class^=trav]{
               color: #4080ff;
-
             }
           }
           img{
@@ -7887,13 +7915,24 @@ ul.top-avatar-list{
     .lg-item{
       padding-bottom: 0;
       background: #000;
+      // position: relative;
+      height: 640px;
+      width: auto;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) !important;
+      border-radius: 3px;
+      // overflow: hidden;
       .lg-img-wrap{
         // bottom: 180px;
         padding: 0;
         position: relative;
         top: auto;
         img{
-          height: calc(100vh - 180px);
+          // height: calc(100vh - 180px);
+          height: 100% !important;
+          // width: 100% !important;
+          object-fit: cover;
           border-radius: 3px;
           max-width: 750px;
         }
@@ -7917,6 +7956,14 @@ ul.top-avatar-list{
           white-space: initial;
           box-shadow: 0 0 10px rgba(0,0,0,.2);
           &.comment-block{
+            .top-gallery-content{
+              &:not(.gallery-comment-top){
+                padding-right: 410px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              }
+            }
             .map-preview{
               right: 410px;
             }
@@ -7932,16 +7979,6 @@ ul.top-avatar-list{
           height: 100%;
           overflow: auto;
           border-radius: 0 3px 3px 0;
-          .gallery-comment-top{
-          }
-          .gallery-comment-inner{
-          }
-          .post-comment-layer{
-            .post-add-comment-block{
-              .post-add-com-input{
-              }
-            }
-          }
         }
 
         .top-gallery-content{
@@ -8022,6 +8059,12 @@ ul.top-avatar-list{
               @extend .post-footer-info;
               margin-bottom: 0 !important;
               padding: 10px 0;
+              .post-comment-place{
+                color: #999999;
+                i[class^=trav]{
+                  color: #999999;
+                }
+              }
             }
           }
           .sub-post-info{
@@ -8029,6 +8072,7 @@ ul.top-avatar-list{
             ul.sub-list{
               display: flex;
               align-items: center;
+              margin-bottom: 0;
               li{
                 display: flex;
                 align-items: center;
@@ -8051,6 +8095,7 @@ ul.top-avatar-list{
                   .sub-txt{
                     font-family: 'CircularAirPro Light';
                     line-height: 1.3;
+                    text-transform: capitalize;
                   }
                 }
               }
