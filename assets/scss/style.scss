@@ -5643,6 +5643,22 @@ ul.top-avatar-list{
         background: #fff;
       }
     }
+    .post-comment-top-info{
+      padding-bottom: 10px;
+    }
+    .post-comment-wrapper{
+      margin-right: -20px;
+      margin-left: -20px;
+      .post-comment-row{
+        padding: 5px 20px;
+        &.happen-event{
+          background: #e8f0ff;
+        }
+      }
+      a.load-more-link{
+        padding: 0 20px;
+      }
+    }
   }
 }
 
@@ -7917,6 +7933,7 @@ ul.top-avatar-list{
       background: #000;
       // position: relative;
       height: 640px;
+      max-height: 100%;
       width: auto;
       left: 50%;
       top: 50%;
@@ -7979,6 +7996,17 @@ ul.top-avatar-list{
           height: 100%;
           overflow: auto;
           border-radius: 0 3px 3px 0;
+          // .gallery-comment-inner{
+          //   .post-comment-layer{
+          //     .post-comment-wrapper{
+          //       margin-right: -20px;
+          //       margin-left: -20px;
+          //       .post-comment-row{
+          //         padding: 0 20px;
+          //       }
+          //     }
+          //   }
+          // }
         }
 
         .top-gallery-content{
@@ -8020,7 +8048,11 @@ ul.top-avatar-list{
           }
           &.gallery-comment-top{
             .top-info-layer{
-              border-bottom-color: #e6e6e6;
+              border-bottom: 0;
+              &+.gallery-comment-top-line,
+              &+.gal-com-footer-info{
+                border-top: 1px solid #e6e6e6;
+              }
             }
             .top-info-txt{
               p{
@@ -8031,8 +8063,20 @@ ul.top-avatar-list{
                   color: #1a1a1a;
                   span{
                     color: #4080ff;
+                    &.date{
+                      color: #999999;
+                    }
                   }
                 }
+              }
+            }
+            .gallery-comment-txt{
+              p{
+                font-size: 16px;
+                color: #1a1a1a;
+                font-family: 'CircularAirPro Light';
+                line-height: 1.5;
+                margin-bottom: 0;
               }
             }
             .gallery-comment-top-line{
