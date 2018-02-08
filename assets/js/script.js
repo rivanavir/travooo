@@ -882,7 +882,7 @@ $(document).ready(function(){
                       <span><b>2</b> Reactions</span>
                     </div>
                     <div class="post-foot-block post-comment-place">
-                      <i class="trav-set-location-icon"></i>
+                      <i class="trav-location"></i>
                       <span class="place-name">New York City</span>
                     </div>
                   </div>
@@ -1063,7 +1063,7 @@ $(document).ready(function(){
                       <span><b>185</b></span>
                     </div>
                     <div class="post-foot-block post-comment-place">
-                      <i class="trav-set-location-icon"></i>
+                      <i class="trav-location"></i>
                       <span class="place-name">510 LaGuardia Pl, Paris, France</span>
                     </div>
                   </div>
