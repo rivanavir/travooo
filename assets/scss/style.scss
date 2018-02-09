@@ -2208,6 +2208,9 @@ aside.sidebar{
             line-height: 1.5;
             font-family: 'CircularAirPro Light';
             color: #4c4c4c;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis
           }
         }
       }
@@ -2988,6 +2991,36 @@ aside.sidebar{
         &.show{
           .btn-drop-round-grey{
             background: #ebebeb;
+          }
+        }
+      }
+      .sort-by-select{
+        display: flex;
+        align-items: center;
+        label{
+          margin-bottom: 0;
+          font-size: 16px;
+          color: #808080;
+          font-family: 'CircularAirPro Light';
+          padding-right: 5px;
+        }
+        .sort-select-wrap{
+          padding-right: 10px;
+          position: relative;
+          select{
+            font-family: 'CircularAirPro Light';
+            appearance: none;
+            padding: 0;
+            color: #1a1a1a;
+            border: 0;
+            min-width: 80px;
+          }
+          i[class^=trav]{
+            position: absolute;
+            top: 50%;
+            margin-top: -7px;
+            right: 0;
+            font-size: 16px;
           }
         }
       }
@@ -4019,6 +4052,177 @@ aside.sidebar{
           }
         }
       }
+    }
+  }
+
+  .trip-plan-inner{
+    padding: 5px 20px;
+    .trip-plan-row{
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 15px 0;
+    }
+    .trip-plan-inside-block{
+      .trip-plan-map-img{
+        border: 1px solid #e6e6e6;
+        position: relative;
+        &:hover{
+          .dropdown{
+            display: block;
+          }
+        }
+        img{
+          max-width: 100%;
+        }
+        .dropdown{
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          display: none;
+          &.show{
+            display: block;
+          }
+          button.btn{
+            padding: 5px;
+            i[class^=trav]{
+              line-height: 1;
+            }
+            &:focus{
+              box-shadow: none;
+            }
+          }
+          .dropdown-menu{
+            min-width: 170px;
+            right: 0;
+            padding: 0;
+            &:after{
+              right: 9px;
+            }
+            a.dropdown-item{
+              padding: 0 10px;
+              .drop-txt{
+                padding: 10px 15px;
+              }
+              &:not(:last-child){
+                .drop-txt{
+                  border-bottom: 1px solid #e6e6e6;
+                }
+              }
+              &:last-child{
+                background: #f5f5f5;
+                border-radius: 0 0 3px 3px;
+              }
+            }
+          }
+        }
+      }
+      &.trip-plan-txt{
+        flex-grow: 1;
+        padding: 5px 25px;
+        .trip-plan-txt-inner{
+          .trip-txt-ttl-layer{
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 20px;
+            h2.trip-ttl{
+              font-size: 18px;
+              color: #4080ff;
+              font-family: 'Circular Std Book';
+              margin-bottom: 0;
+              text-transform: capitalize;
+              line-height: 2;
+            }
+            p.trip-date{
+              font-size: 14px;
+              color: #1a1a1a;
+              font-family: 'CircularAirPro Light';
+              margin-bottom: 0;
+            }
+          }
+          .trip-txt-info{
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            .trip-info{
+              display: flex; 
+              align-items: center;
+              min-width: 50%;
+              .icon-wrap{
+                padding-right: 20px;
+                i[class^=trav]{
+                  color: #cccccc;
+                  font-size: 22px;
+                }
+              }
+              .trip-info-inner{
+                p{
+                  margin-bottom: 0;
+                  line-height: 1.3;
+                  color: #4c4c4c;
+                  font-family: 'CircularAirPro Light';
+                  font-size: 14px;
+                  b{
+                    font-weight: normal;
+                    font-family: 'Circular Std Book';
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .dest-trip-plan{
+        max-width: 165px;
+        h3.dest-ttl{
+          color: #4c4c4c;
+          font-size: 14px;
+          font-family: 'Circular Std Book';
+          span{
+            font-family: 'CircularAirPro Light';
+            color: #999999;
+          }
+        }
+        ul.dest-image-list{
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          margin-right: -1px;
+          margin-left: -2px;
+          li{
+            padding: 2px 1px 1px 2px;
+            min-width: 55px;
+            img{
+              max-width: 100%;
+            }
+            &.more-photo-link{
+              position: relative;
+              cursor: pointer;
+              span.cover{
+                position: absolute;
+                display: block;
+                top: 2px;
+                left: 2px;
+                right: 1px;
+                bottom: 1px;
+                background: rgba(0,0,0,.4);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+                font-size: 14px;
+                font-family: 'CircularAirPro Light';
+              }
+            }
+          }
+        }
+      }
+    }
+    .trip-load-mark{
+      padding: 10px 0 15px;
+      font-size: 14px;
+      color: #b2b2b2;
+      font-family: 'Circular Std Book';
+      text-align: center;
     }
   }
 
@@ -5187,6 +5391,30 @@ ul.top-avatar-list{
         &.selected{
           background: #4080ff;
           color: white;
+          position: relative;
+          &.dropdown{
+            .dropdown-menu{
+              min-width: 150px;
+              margin-left: -48px;
+              margin-top: 0;
+              padding: 10px;
+              .img-wrap{
+                border: 1px solid #e6e6e6;
+                img{
+                  max-width: 100%;
+                }
+              }
+              p{
+                margin-bottom: 0;
+                font-size: 14px;
+                color: #1a1a1a;
+                font-family: 'CircularAirPro Light';
+                text-transform: capitalize;
+                line-height: 1.5;
+                padding-top: 5px;
+              }
+            }
+          }
         }
       }
     }
@@ -5242,6 +5470,9 @@ ul.top-avatar-list{
     padding: 10px 18px 10px 0;
     display: flex;
     align-items: center;
+    &:active{
+      background-color: #f7f7f9;
+    }
     .icon-wrap{
       min-width: 54px;
       text-align: center;
@@ -5288,6 +5519,15 @@ ul.top-avatar-list{
     &.dropdown-arrow{
       &:after{
         right: 24px;
+      }
+    }
+  }
+  &.dropdown-menu-center{
+    right: 50%;
+    &.dropdown-arrow{
+      &:after{
+        right: 50%;
+        margin-left: -7px;
       }
     }
   }
@@ -7441,7 +7681,7 @@ ul.top-avatar-list{
         }
       }
       .story-content-block{
-        overflow: hidden;
+        // overflow: hidden;
       }
     }
     &.post-mode-map{
