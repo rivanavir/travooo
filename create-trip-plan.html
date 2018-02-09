@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Travooo - create trip plan</title>
+</head>
+
+<body>
+
+  <div class="main-wrapper">
+    <header class="main-header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="trav-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="./assets/image/main-circle-logo.png" alt="">
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="header-search-block">
+              <a class="search-btn" href="#">
+                <i class="trav-search-icon"></i>
+              </a>
+              <input type="text" class="" placeholder="Search...">
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Messages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-light-primary" href="#">Plan trip</a>
+              </li>
+              <li class="nav-item">
+                <a class="profile-link" href="#">
+                  <img src="http://placehold.it/36x36" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="create-trip-wrapper">
+      <div class="trip-side">
+        <div class="trip-side-content"></div>
+        <div class="trip-side-button-block">
+          <button class="btn btn-transp btn-bordered">
+            <i class="trav-add-place-icon"></i>
+            <span>Add a Place in Nagoya</span>
+          </button>
+          <button class="btn btn-transp btn-bordered">
+            <i class="trav-move-new-icon"></i>
+            <span>Move to a new Country or City</span>
+          </button>
+        </div>
+      </div>
+      <div class="trip-map-block">
+        <div class="trip-top-timeline">
+          <div class="timeline-layer">
+            <img src="http://placehold.it/800x50?text=timeline+place:https://timeline.knightlab.com" alt="timeline">
+          </div>
+          <div class="day-slider">
+            <ul class="calendar-slider" id="calendarSlider">
+              <li>
+                <div class="number-day">16</div>
+                <div class="month">jun</div>
+              </li>
+              <li>
+                <div class="number-day">17</div>
+                <div class="month">jun</div>
+              </li>
+              <li class="active">
+                <div class="number-day">18</div>
+                <div class="month">jun</div>
+              </li>
+              <li>
+                <div class="number-day">19</div>
+                <div class="month">jun</div>
+              </li>
+              <li>
+                <div class="number-day">20</div>
+                <div class="month">jun</div>
+              </li>
+              <li>
+                <div class="number-day">21</div>
+                <div class="month">jun</div>
+              </li>
+            </ul>
+            <ul class="calendar-link-list">
+              <li>
+                <a href="#" class="prevDay"><i class="trav-angle-left"></i></a>
+              </li>
+              <li>
+                <span class="dot"></span>
+              </li>
+              <li>
+                <a href="#" class="nextDay"><i class="trav-angle-right"></i></a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-transp btn-bordered">Next Day</button>
+        </div>
+        <div class="trip-map-layer">
+          <img src="./assets/image/create-trip-plan-map.jpg" alt="">
+          <div class="trip-map-filter-block">
+            <h5 class="filter-ttl">Filter by</h5>
+            <ul class="filter-list">
+              <li>
+                <a href="#">
+                  <i class="trav-building-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-heart-beat-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-library-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-hot-cup-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-cutlery-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-p-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-spruce-tree-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-movie-arrow-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-angle-plane-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-railway-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-credit-card-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-bus-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-shop-cart-icon"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="trav-break-building-icon"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

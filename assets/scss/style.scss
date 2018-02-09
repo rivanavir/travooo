@@ -5060,6 +5060,42 @@ aside.sidebar{
   }
 }
 
+/* create trip plan style */
+.create-trip-wrapper{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin-top: -70px;
+  padding-top: 70px;
+  display: flex;
+  align-items: stretch;
+  .trip-side{
+    min-width: 545px;
+    display: flex;
+    flex-direction: column;
+    .trip-side-content{
+      flex-grow: 1;
+    }
+    .trip-side-button-block{
+
+    }
+  }
+  .trip-map-block{
+    flex-grow: 1;
+    .trip-top-timeline{
+      background: #fff;
+      display: flex;
+    }
+    .trip-map-layer{
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
 /* flex image style */
 .flex-image-wrap{
   display: flex;

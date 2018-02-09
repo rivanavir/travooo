@@ -389,6 +389,29 @@ $(document).ready(function(){
     })
     
   });
+
+  if(!$("#calendarSlider").hasClass('lightSlider')){
+    $("#calendarSlider").lightSlider({
+      item:3,
+      pager: false,
+      controls: false,
+      loop:false,
+      slideMove:1,
+      slideMargin: 0,
+      centerSlider: true,
+      addClass: 'head-calendar-slider',
+      onSliderLoad: function(el){
+        $('.day-slider a.prevDay').on('click', function(e){
+          e.preventDefault();
+          el.goToPrevSlide();
+        });
+        $('.day-slider a.nextDay').on('click', function(e){
+          e.preventDefault();
+          el.goToNextSlide();
+        });
+      }
+    });
+  }
   $('#storyModePopup').on('hidden.bs.modal', function(){
     $('#storyModePopup .modal-close').css('top', '30px');
     $('#modalHeadTripPlan').removeClass('scrolled').hide();
