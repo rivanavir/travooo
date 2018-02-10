@@ -390,8 +390,8 @@ $(document).ready(function(){
     
   });
 
-  if(!$("#calendarSlider").hasClass('lightSlider')){
-    $("#calendarSlider").lightSlider({
+  if(!$("#createTripCalendarSlider").hasClass('lightSlider')){
+    $("#createTripCalendarSlider").lightSlider({
       item:3,
       pager: false,
       controls: false,
@@ -411,7 +411,7 @@ $(document).ready(function(){
         });
       }
     });
-  }
+  };
   $('#storyModePopup').on('hidden.bs.modal', function(){
     $('#storyModePopup .modal-close').css('top', '30px');
     $('#modalHeadTripPlan').removeClass('scrolled').hide();

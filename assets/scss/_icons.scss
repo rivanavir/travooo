@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-ellipsis-v-icon:before {
+  content: "\e963";
+}
+.trav-angle-plane-icon:before {
+  content: "\e962";
+}
+.trav-p-icon:before {
+  content: "\e961";
+}
 .trav-ellipsis-h:before {
   content: "\e94e";
 }
@@ -225,7 +234,7 @@
 .trav-QA-icon:before {
   content: "\e92f";
 }
-.trav-review-icon:before {
+.trav-review:before {
   content: "\e930";
 }
 .trav-safety-big-icon:before {
