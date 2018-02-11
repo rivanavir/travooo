@@ -300,6 +300,29 @@ $(document).ready(function(){
     });
   });
 
+  $('#addPlacePopup').on('shown.bs.modal', function(){
+    var inputFocusBlur = (id) => {
+      $(id).on('focus', function(){
+        $(this).parents('.search-block-wrap').addClass('show');
+        if(!$("#searchFilterList").hasClass('lightSlider')){
+          $("#searchFilterList").lightSlider({
+            autoWidth:true,
+            pager: false,
+            slideMargin: 0,
+            prevHtml: '<i class="trav-angle-left"></i>',
+            nextHtml: '<i class="trav-angle-right"></i>',
+            addClass: 'filter-slider-wrap'
+          });
+        };
+      });
+      $(id).on('blur', function(){
+        $(this).parents('.search-block-wrap').removeClass('show');
+      });
+    };
+    inputFocusBlur('#placeSearchInput');
+    inputFocusBlur('#placeSearchInput2');
+  });
+
   $('#storyModePopup').on('shown.bs.modal', function(){
     let placeNameList = $(this).find('.place-name-list');
     let currentItem = $(placeNameList).find('.current');
@@ -1458,5 +1481,8 @@ $(document).ready(function(){
       setWidth();
     });
   });
+
+  /* hours & minutes */
+  let minutes = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
   
 });

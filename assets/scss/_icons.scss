@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-cycle-icon:before {
+  content: "\e964";
+}
+.trav-ship-icon:before {
+  content: "\e965";
+}
+.trav-walk-icon-2:before {
+  content: "\e966";
+}
 .trav-ellipsis-v-icon:before {
   content: "\e963";
 }
