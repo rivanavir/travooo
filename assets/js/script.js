@@ -300,25 +300,26 @@ $(document).ready(function(){
     });
   });
 
-  $('#addPlacePopup').on('shown.bs.modal', function(){
-    var inputFocusBlur = (id) => {
-      $(id).on('focus', function(){
-        $(this).parents('.search-block-wrap').addClass('show');
-        if(!$("#searchFilterList").hasClass('lightSlider')){
-          $("#searchFilterList").lightSlider({
-            autoWidth:true,
-            pager: false,
-            slideMargin: 0,
-            prevHtml: '<i class="trav-angle-left"></i>',
-            nextHtml: '<i class="trav-angle-right"></i>',
-            addClass: 'filter-slider-wrap'
-          });
-        };
-      });
-      $(id).on('blur', function(){
-        $(this).parents('.search-block-wrap').removeClass('show');
-      });
-    };
+  var inputFocusBlur = (id) => {
+    $(id).on('focus', function(){
+      $(this).parents('.search-block-wrap, .header-search-block').addClass('show');
+      if(!$("#searchFilterList").hasClass('lightSlider')){
+        $("#searchFilterList").lightSlider({
+          autoWidth:true,
+          pager: false,
+          slideMargin: 0,
+          prevHtml: '<i class="trav-angle-left"></i>',
+          nextHtml: '<i class="trav-angle-right"></i>',
+          addClass: 'filter-slider-wrap'
+        });
+      };
+    });
+    $(id).on('blur', function(){
+      $(this).parents('.search-block-wrap, .header-search-block').removeClass('show');
+    });
+  };
+
+  $('#addPlacePopup, #wouldVisitPlacePopup').on('shown.bs.modal', function(){
     inputFocusBlur('#placeSearchInput');
     inputFocusBlur('#placeSearchInput2');
   });

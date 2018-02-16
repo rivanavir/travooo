@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-comment-dots-icon:before {
+  content: "\e968";
+}
+.trav-comment-question-icon:before {
+  content: "\e969";
+}
+.trav-message-edit-icon:before {
+  content: "\e96a";
+}
+.trav-trip-plan-loc-icon:before {
+  content: "\e96b";
+}
+.trav-check-circle-icon:before {
+  content: "\e967";
+}
 .trav-cycle-icon:before {
   content: "\e964";
 }
@@ -347,6 +362,9 @@
 }
 .trav-link:before {
   content: "\e9cb";
+}
+.trav-attachment:before {
+  content: "\e9cd";
 }
 .trav-radio-checked2:before {
   content: "\ea55";
