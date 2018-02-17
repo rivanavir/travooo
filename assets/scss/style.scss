@@ -359,11 +359,49 @@ header.main-header{
     z-index: 1100;
   }
   .header-search-block{
+    position: relative;
+    &.show{
+      .head-search-inner{
+        position: absolute;
+        border-radius: 3px;
+        box-shadow: 0 4px 20px rgba(0,0,0,.25);
+        width: 100%;
+        z-index: 500;
+        @media(min-width:992px){
+          width: 630px;
+        }
+        .search-block{
+          width: 100%;
+          border-radius: 3px 3px 0 0;
+          border-bottom: 1px solid #e6e6e6;
+        }
+        a.delete-search,
+        .search-box{
+          display: block;
+        }
+      }
+    }
+    .head-search-inner{
+      @media(min-width:992px){
+        width: 495px;
+      }
+    }
+  }
+  .search-block{
     background: #f0f0f0;
     border-radius: 4px;
     display: flex;
-    @media(min-width:992px){
-      width: 495px;
+
+    a.delete-search{
+      text-decoration: none;
+      position: absolute;
+      display: none;
+      top: 9px;
+      right: 9px;
+      i[class^=trav]{
+        color: #999999;
+        font-size: 22px;
+      }
     }
 
     a.search-btn{
@@ -388,6 +426,7 @@ header.main-header{
       font-family: 'CircularAirPro Light';
       font-weight: normal;
     }
+    
   }
   nav.navbar{
     background: transparent;
@@ -829,6 +868,271 @@ header.main-header{
                 font-family: 'CircularAirPro Light';
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+// search dropdown
+
+.search-box{
+  width: 100%;
+  display: none;
+  background: #fff;
+  .search-tabs{
+    display: flex;
+    padding-top: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    li.nav-item{
+      flex-grow: 1;
+      a.nav-link{
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #1a1a1a;
+        font-family: 'Circular Std Book';
+        padding: 12px 15px;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        span{
+          color: #b2b2b2;
+        }
+        &.active{
+          background: transparent;
+          border-bottom: 2px solid #4080ff;
+        }
+        &:hover{
+          border: 0;
+        }
+      }
+    }
+  }
+  .drop-wrap{
+    padding: 10px 0;
+    max-height: 580px;
+    overflow: auto;
+    .drop-row{
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      &:hover{
+        background: #f5f5f5;
+        .img-wrap{
+          a.hover-link{
+            display: flex;
+          }
+        }
+      }
+      .img-wrap{
+        position: relative;
+        img{
+          border: 1px solid #e6e6e6;
+          max-width: 100%;
+        }
+        &.rounded{
+          img{
+            @include avatarImgStyle(88px, #e5e5e5);
+          }
+          a.hover-link{
+            border-radius: 50%;
+          }
+          &.place-img{
+            img{
+              @include avatarImgStyle(60px, #e5e5e5);
+            }
+          }
+        }
+        a.hover-link{
+          display: none;
+          text-decoration: none;
+          top: 0;
+          left: 0;
+          width: 88px;
+          height: 88px;
+          position: absolute;
+          background: rgba(0,0,0,.5);
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          i[class^=trav]{
+            color: #ccc;
+            font-size: 18px;
+          }
+          span{
+            color: #ccc;
+            font-size: 12px;
+            line-height: 1.7;
+            font-family: 'CircularAirPro Light';
+          }
+        }
+      }
+      .drop-content{
+        flex-grow: 1;
+        padding: 0 15px 0 10px;
+        &.place-content{
+          h3.content-ttl{
+            color: #20060b;
+            span{
+              font-family: 'CircularAirPro Light';
+            }
+          }
+        }
+        h3.content-ttl{
+          font-size: 18px;
+          color: #4080ff;
+          text-transform: capitalize;
+          font-family: 'Circular Std Book';
+          margin-bottom: 5px;
+        }
+        p.place-name{
+          margin-bottom: 0;
+          span{
+            &.follow-tag{
+              display: inline-block;
+              border-radius: 2px;
+              background: #b3b3b3;
+              font-family: 'Circular Std Book';
+              color: white;
+              font-size: 12px;
+              line-height: 20px;
+              text-transform: uppercase;
+              padding: 0 10px
+            }
+          }
+        }
+        .drop-inner{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .drop-txt{
+            display: flex;
+            align-items: flex-end;
+            flex-grow: 1;
+            &.bordered{
+              padding-top: 10px;
+              .depart-col{
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                &:not(:last-child){
+                  border-right: 1px solid #e6e6e6;
+                }
+                &:first-child{
+                  justify-content: flex-start;
+                  .depart-inner{
+                    padding-left: 40px;
+                    position: relative;
+                    span.label{
+                      position: absolute;
+                      left: 0;
+                      top: 50%;
+                      margin-top: -15px;
+                      display: inline-block;
+                      width: 30px;
+                      height: 30px;
+                      border-radius: 2px;
+                      background: #4080ff;
+                      color: white;
+                      font-family: 'Circular Std Book';
+                      font-size: 14px;
+                      line-height: 30px;
+                      text-align: center;
+                    }
+                  }
+                }
+                .depart-inner{
+                  text-align: left;
+                }
+                p{
+                  margin-bottom: 0;
+                  font-family: 'CircularAirPro Light';
+                  font-size: 14px;
+                  color: #1a1a1a;
+                  line-height: 1.3;
+                  b{
+                    font-family: 'Circular Std Book';
+                  }
+                }
+              }
+            }
+            .depart-col{
+              &:first-child{
+                padding-right: 15px;
+              }
+              &:last-child{
+                padding-left: 15px;
+              }
+              h4{
+                font-size: 14px;
+                color: #1a1a1a;
+                font-family: 'CircularAirPro Light';
+                margin-bottom: 0;
+                line-height: 1.3;
+              }
+              .date{
+                p{
+                  font-size: 14px;
+                  color: #1a1a1a;
+                  margin-bottom: 0;
+                  line-height: 1.3;
+                  font-family: 'Circular Std Book';
+                }
+              }
+              &.shape-col{
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                flex-grow: 1;
+                .time-bordered{
+                  position: relative;
+                  padding: 5px;
+                  text-align: center;
+                  border-bottom: 2px solid #e6e6e6;
+                  &:before,
+                  &:after{
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    border-radius: 50%;
+                    border: 2px solid #e6e6e6;
+                    width: 10px;
+                    height: 10px;
+                    background: #fff;
+                    bottom: -6px;
+                  }
+                  &:before{
+                    left: 13px;
+                  }
+                  &:after{
+                    right: 13px;
+                  }
+                  span{
+                    font-size: 14px;
+                    color: #1a1a1a;
+                    font-family: 'CircularAirPro Light';
+                  }
+                }
+                .time-sub{
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .sub-cell{
+                    padding: 10px 5px 0;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    color: #cccccc;
+                    font-family: 'Circular Std Book';
+                  }
+                }
+              }
+            }
+          }
+          .drop-price{
+            padding-left: 55px;
+            font-size: 28px;
+            color: #1a1a1a;
+            font-family: 'Circular Std Book';
           }
         }
       }

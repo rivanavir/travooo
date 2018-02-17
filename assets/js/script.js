@@ -302,7 +302,7 @@ $(document).ready(function(){
 
   var inputFocusBlur = (id) => {
     $(id).on('focus', function(){
-      $(this).parents('.search-block-wrap, .header-search-block').addClass('show');
+      $(this).parents('.search-block-wrap').addClass('show');
       if(!$("#searchFilterList").hasClass('lightSlider')){
         $("#searchFilterList").lightSlider({
           autoWidth:true,
@@ -315,7 +315,7 @@ $(document).ready(function(){
       };
     });
     $(id).on('blur', function(){
-      $(this).parents('.search-block-wrap, .header-search-block').removeClass('show');
+      $(this).parents('.search-block-wrap').removeClass('show');
     });
   };
 
@@ -323,6 +323,20 @@ $(document).ready(function(){
     inputFocusBlur('#placeSearchInput');
     inputFocusBlur('#placeSearchInput2');
   });
+
+  // message input dropdown
+  $('#messageSearchInput').keyup(function(e){
+    let value = $(e.target).val();
+    if(value.length >= 3){
+      $(this).parents('.header-search-block').addClass('show');
+    } else{
+      $(this).parents('.header-search-block').removeClass('show');
+    }
+  });
+  $('.search-block .delete-search').on('click', function(e){
+    $(e.target).parents('.header-search-block').removeClass('show').find('input').val(null);
+    // $(e.target).parents('.search-block').find('input').val(null);
+  })
 
   $('#storyModePopup').on('shown.bs.modal', function(){
     let placeNameList = $(this).find('.place-name-list');

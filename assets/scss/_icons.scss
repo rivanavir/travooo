@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-link-out-icon:before {
+  content: "\e96c";
+}
+.trav-bell-icon:before {
+  content: "\e908";
+}
 .trav-comment-dots-icon:before {
   content: "\e968";
 }
@@ -137,9 +143,6 @@
 }
 .trav-bars:before {
   content: "\e907";
-}
-.trav-bell-icon:before {
-  content: "\e908";
 }
 .trav-bookmark-icon:before {
   content: "\e909";
