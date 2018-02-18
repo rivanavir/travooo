@@ -454,7 +454,7 @@ header.main-header{
       }
     }
     .navbar-nav{
-      li{
+      li.nav-item{
         padding: 0 15px;
         align-self: center;
         @media(max-width:991px){
@@ -536,13 +536,73 @@ header.main-header{
             }
           }
         }
+        &.dropdown{
+          .dropdown-menu{
+            border: 1px solid #e6e6e6;
+            box-shadow: 2px 0 10px rgba(0,0,0,.1);
+            min-width: 405px;
+            &:not(.dropdown-use-menu){
+              width: 405px;
+            }
+            &.dropdown-all-head{
+              padding: 0;
+              .drop-ttl{
+                font-size: 14px;
+                color: #1a1a1a;
+                font-family: 'Circular Std Book';
+                border-bottom: 1px solid #e6e6e6;
+                padding: 12px 20px;
+                text-transform: capitalize;
+              }
+              .drop-foot{
+                text-align: center;
+                border-top: 1px solid #e6e6e6;
+                padding: 7px;
+                a.see-all{
+                  color: #4080ff;
+                  font-size: 14px;
+                  font-family: 'Circular Std Book';
+                  text-decoration: none;
+                  text-transform: capitalize;
+                }
+              }
+            }
+            &.dropdown-menu-right{
+              right: 0px;
+            }
+            &.dropdown-arrow:after{
+              right: 28px;
+            }
+            &.dropdown-use-menu{
+              min-width: 195px;
+              padding: 8px 0;
+              a.dropdown-item{
+                padding: 0 20px;
+                font-size: 14px;
+                color: #333333;
+                font-family: 'CircularAirPro Light';
+                .drop-txt{
+                  padding: 8px 0;
+                }
+                &:not(:last-child){
+                  .drop-txt{
+                    border-bottom: 1px solid #e6e6e6;
+                  }
+                }
+              }
+              &.dropdown-arrow:after{
+                right: 74px;
+              }
+            }
+          }
+        }
       }
       &.create-menu{
-        li{
+        li.nav-item{
           &:first-child{
             border-right: 1px solid #e6e6e6;
           }
-          a{
+          a.nav-link{
             text-transform: uppercase;
             font-size: 12px;
             color: #b2b2b2;
@@ -893,7 +953,7 @@ header.main-header{
         font-size: 12px;
         color: #1a1a1a;
         font-family: 'Circular Std Book';
-        padding: 12px 15px;
+        padding: 12px 20px;
         border: 0;
         border-bottom: 2px solid transparent;
         span{
@@ -905,6 +965,7 @@ header.main-header{
         }
         &:hover{
           border: 0;
+          border-bottom: 2px solid #4080ff;
         }
       }
     }
@@ -5435,6 +5496,7 @@ aside.sidebar{
     border: 1px solid #e6e6e6;
     border-radius: 5px;
     background: #fff;
+    height: 100%;
     .message-conversation{
       min-width: 410px;
       max-width: 410px;
@@ -5442,6 +5504,12 @@ aside.sidebar{
     }
     .message-chat{
       flex-grow: 1;
+      .m-content-block {
+        padding: 0;
+        .chat-group-wrap{
+          padding: 20px 20px 145px;
+        }
+      }
       .m-top-block{
         h4.block-ttl{
           font-size: 16px;
@@ -5460,10 +5528,16 @@ aside.sidebar{
         color: #1a1a1a;
         font-family: 'Circular Std Book';
         margin-bottom: 0;
-        span.count{
+        span{
           font-family: 'CircularAirPro Light';
           font-size: 14px;
-          color: #999999;
+          &.count{
+            color: #999999;
+          }
+          &.friend-name{
+            font-size: 16px;
+            color: #cccccc;
+          }
         }
       }
       .icon-wrap{
@@ -5475,89 +5549,250 @@ aside.sidebar{
     }
     .m-content-block{
       padding: 10px 0;
-      .conv-block{
+      .chat-group-wrap{
         display: flex;
-        align-items: center;
-        padding: 15px 10px;
-        &.current,
-        &:hover{
-          background: #f7f7f7;
-          .conv-time{
-            a.setting-link{
-              display: block;
-            }
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+        overflow: auto;
+      }
+      .chat-group{
+        position: relative;
+        max-width: 70%;
+        min-width: 70%;
+        display: flex;
+        flex-direction: column;
+        &:not(.right){
+          padding-left: 30px;
+          align-self: flex-start;
+          align-items: flex-start;
+          .avatar-block{
+            left: 0;
+          }
+          .text-block{
+            background: #4080ff;
+            color: white;
           }
         }
-        .img-wrap{
-          padding: 0 10px;
+        &.right{
+          padding-right: 30px;
+          align-self: flex-end;
+          align-items: flex-end;
+          .avatar-block{
+            right: 0;
+          }
+          .text-block{
+            background: #f7f7f7;
+            color: #1a1a1a;
+          }
+        }
+        .avatar-block{
+          position: absolute;
+          top: 14px;
           img{
-            // max-width: 100%;
+            @include avatarImgStyle(20px, null);
           }
         }
-        .conv-txt{
-          flex-grow: 1;
-          padding: 0 4px;
-          min-width: 0;
-          .name{
+        .text-block{
+          font-family: 'CircularAirPro Light';
+          font-size: 16px;
+          border-radius: 25px;
+          padding: 15px 20px;
+          display: inline-block;
+          margin-bottom: 10px;
+          line-height: 1.2;
+          img.smile{
+            width: 16px;
+          }
+        }
+      }
+      .add-input-block{
+        padding: 20px;
+        border-top: 1px solid #e6e6e6;
+        background: #fafafa;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 3px 0;
+        .input-wrap{
+          border: 1px solid #e6e6e6;
+          border-radius: 3px;
+          background: #fff;
+          input{
+            border: 0;
+            background: transparent;
+            width: 100%;
+            padding: 15px;
+          }
+        }
+      }
+      .add-input-action{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        .smile-link-wrap{
+          display: flex;
+          align-items: center;
+        }
+        a.attachment{
+          padding-right: 20px;
+          border-right: 1px solid #e6e6e6;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          i[class^=trav]{
+            color: #cccccc;
+            font-size: 16px;
+            margin-right: 7px;
+          }
+          span{
             color: #4080ff;
             font-size: 14px;
-            line-height: 1.3;
-            font-family: 'Circular Std Book';
+            font-family: 'CircularAirPro Light';
           }
-          .msg-txt{
-            max-width: 100%;
-            p{
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              margin-bottom: 0;
-              line-height: 1.3;
-              font-size: 14px;
-              color: #1a1a1a;
-              font-family: 'CircularAirPro Light';
-              
-              b{
-                font-family: 'Circular Std Book';
-                font-weight: normal;
-              }
-              a.reply-link{
-                text-decoration: none;
-                i[class^=trav]{
-                  color: #b3b3b3;
-                  font-size: 12px;
-                }
-              }
+        }
+        ul.smile-list{
+          margin-bottom: 0;
+          display: flex;
+          align-items: center;
+          padding-left: 20px;
+          li{
+            &:not(:last-child){
+              padding-right: 8px;
             }
-            img.smile-icon{
-              width: 14px;
+            a{
+              img.smile{
+                height: 18px;
+              }
             }
           }
         }
-        .conv-time{
-          align-self: flex-start;
-          padding: 5px 10px 20px;
-          text-align: right;
+        .btn{
+          text-transform: capitalize;
+          padding: 13px 29px;
+        }
+      }
+    }
+  }
+}
+
+/* conversation style */
+.conversation-inner{
+  width: 100%;
+  &.bordered{
+    .conv-block{
+      position: relative;
+      &:not(:last-child){
+        &:after{
+          position: absolute;
+          content: '';
+          display: block;
+          height: 1px;
+          background: #e6e6e6;
+          bottom: 0;
+          left: 20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+  .conv-block{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    &.current,
+    &:hover{
+      background: #f7f7f7;
+      .conv-time{
+        a.setting-link{
+          display: block;
+        }
+      }
+    }
+    .img-wrap{
+      padding: 0 10px;
+      img{
+        // max-width: 100%;
+      }
+    }
+    .conv-txt{
+      flex-grow: 1;
+      padding: 0 4px;
+      min-width: 0;
+      .name{
+        font-size: 14px;
+        color: #1a1a1a;
+        line-height: 1.3;
+        font-family: 'CircularAirPro Light';
+        a.inner-link{
+          padding: 0;
+          color: #4080ff;
+          font-family: 'Circular Std Book';
+        }
+      }
+      .time{
+        p{
+          margin-bottom: 0;
+          font-size: 14px;
+          color: #999999;
+          font-family: 'Circular Std Book';
+        }
+      }
+      .msg-txt{
+        max-width: 100%;
+        p{
+          overflow: hidden;
+          text-overflow: ellipsis;
           white-space: nowrap;
-          position: relative;
-          span.time{
-            text-align: right;
-            color: #999999;
-            font-size: 12px;
-            font-family: 'CircularAirPro Light';
-            line-height: 1.5;
+          margin-bottom: 0;
+          line-height: 1.3;
+          font-size: 14px;
+          color: #1a1a1a;
+          font-family: 'CircularAirPro Light';
+          
+          b{
+            font-family: 'Circular Std Book';
+            font-weight: normal;
           }
-          a.setting-link{
+          a.reply-link{
             text-decoration: none;
-            padding: 3px 5px;
-            display: none;
-            position: absolute;
-            right: 8px;
-            bottom: 0;
+            padding: 0;
             i[class^=trav]{
-              color: #cccccc;
-              font-size: 12px;
+              color: #b3b3b3;
+              font-size: 10px;
             }
           }
+        }
+        img.smile-icon{
+          width: 14px;
+        }
+      }
+    }
+    .conv-time{
+      align-self: flex-start;
+      padding: 5px 10px 20px;
+      text-align: right;
+      white-space: nowrap;
+      position: relative;
+      span.time{
+        text-align: right;
+        color: #999999;
+        font-size: 12px;
+        font-family: 'CircularAirPro Light';
+        line-height: 1.5;
+      }
+      a.setting-link{
+        text-decoration: none;
+        padding: 3px 5px;
+        display: none;
+        position: absolute;
+        right: 8px;
+        bottom: 0;
+        i[class^=trav]{
+          color: #cccccc;
+          font-size: 12px;
         }
       }
     }
@@ -6681,6 +6916,11 @@ footer.footer{
     align-items: center;
     &:active{
       background-color: #f7f7f9;
+    }
+    &:hover{
+      &:first-child{
+        border-radius: 3px 3px 0 0;
+      }
     }
     .icon-wrap{
       min-width: 54px;
@@ -7981,6 +8221,9 @@ footer.footer{
   }
   &.modal-850{
     max-width: 850px;
+  }
+  &.modal-780{
+    max-width: 750px;
   }
   &.modal-750{
     max-width: 750px;
@@ -9733,7 +9976,80 @@ footer.footer{
         }
       }
     }
+    &.post-modal-all-notification{
+      .block-head{
+        border-bottom: 1px solid #e6e6e6;
+        padding: 19px 30px;
+        h4.ttl{
+          font-size: 20px;
+          color: #1a1a1a;
+          font-family: 'Circular Std Book';
+          margin-bottom: 0;
+        }
+      }
+      .notification-wrap{
+        .conversation-inner{
+          padding: 10px 0 0;
+          .conv-block{
+            padding: 10px 20px;
+            &:after{
+              position: absolute;
+              content: '';
+              display: block;
+              height: 1px;
+              background: #e6e6e6;
+              bottom: 0;
+              left: 20px;
+              right: 20px
+            }
+            .conv-txt{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+        .notification-loader{
+          text-align: center;
+          padding: 20px;
+          span.spinner{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            -webkit-animation: loader 2s infinite linear;
+            -moz-animation:    loader 2s infinite linear;
+            -o-animation:      loader 2s infinite linear;
+            animation:         loader 2s infinite linear;
+          }
+          i[class^=trav]{
+            font-size: 20px;
+            line-height: 20px;
+            color: #e6e6e6;
+          }
+        }
+      }
+    }
   }
+}
+@-webkit-keyframes loader {
+ 0%   { -webkit-transform: rotate(0deg) scale(1); }
+ 50%   { -webkit-transform: rotate(180deg) scale(1.5); }
+ 100% { -webkit-transform: rotate(360deg) scale(1); }
+}
+@-moz-keyframes loader {
+ 0%   { -moz-transform: rotate(0deg) scale(1); }
+ 50%   { -moz-transform: rotate(180deg) scale(1.5); }
+ 100% { -moz-transform: rotate(360deg) scale(1); }
+}
+@-o-keyframes loader {
+ 0%   { -o-transform: rotate(0deg) scale(1); }
+ 50%   { -o-transform: rotate(180deg) scale(1.5); }
+ 100% { -o-transform: rotate(360deg) scale(1); }
+}
+@keyframes loader {
+ 0%   { transform: rotate(0deg) scale(1); }
+ 50%   { transform: rotate(180deg) scale(1.5); }
+ 100% { transform: rotate(360deg) scale(1); }
 }
 
 .modal-outside-link-list{

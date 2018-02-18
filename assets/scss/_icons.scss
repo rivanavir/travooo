@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-reply-icon:before {
+  content: "\e96e";
+}
+.trav-loading-icon:before {
+  content: "\e96d";
+}
 .trav-link-out-icon:before {
   content: "\e96c";
 }
