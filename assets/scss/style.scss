@@ -881,6 +881,7 @@ header.main-header{
   width: 100%;
   display: none;
   background: #fff;
+  border-radius: 0 0 3px 3px;
   .search-tabs{
     display: flex;
     padding-top: 15px;
@@ -5423,6 +5424,143 @@ aside.sidebar{
     color: white;
     line-height: 47px;
     font-size: 24px;
+  }
+}
+
+/* message wrapper */
+.message-wrap{
+  padding: 40px 0;
+  .message-block{
+    display: flex;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    background: #fff;
+    .message-conversation{
+      min-width: 410px;
+      max-width: 410px;
+      border-right: 1px solid #e6e6e6;
+    }
+    .message-chat{
+      flex-grow: 1;
+      .m-top-block{
+        h4.block-ttl{
+          font-size: 16px;
+        }
+      }
+    }
+    .m-top-block{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+      border-bottom: 1px solid #e6e6e6;
+      padding: 10px 20px;
+      h4.block-ttl{
+        font-size: 18px;
+        color: #1a1a1a;
+        font-family: 'Circular Std Book';
+        margin-bottom: 0;
+        span.count{
+          font-family: 'CircularAirPro Light';
+          font-size: 14px;
+          color: #999999;
+        }
+      }
+      .icon-wrap{
+        i[class^=trav]{
+          color: #999999;
+          font-size: 20px;
+        }
+      }
+    }
+    .m-content-block{
+      padding: 10px 0;
+      .conv-block{
+        display: flex;
+        align-items: center;
+        padding: 15px 10px;
+        &.current,
+        &:hover{
+          background: #f7f7f7;
+          .conv-time{
+            a.setting-link{
+              display: block;
+            }
+          }
+        }
+        .img-wrap{
+          padding: 0 10px;
+          img{
+            // max-width: 100%;
+          }
+        }
+        .conv-txt{
+          flex-grow: 1;
+          padding: 0 4px;
+          min-width: 0;
+          .name{
+            color: #4080ff;
+            font-size: 14px;
+            line-height: 1.3;
+            font-family: 'Circular Std Book';
+          }
+          .msg-txt{
+            max-width: 100%;
+            p{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-bottom: 0;
+              line-height: 1.3;
+              font-size: 14px;
+              color: #1a1a1a;
+              font-family: 'CircularAirPro Light';
+              
+              b{
+                font-family: 'Circular Std Book';
+                font-weight: normal;
+              }
+              a.reply-link{
+                text-decoration: none;
+                i[class^=trav]{
+                  color: #b3b3b3;
+                  font-size: 12px;
+                }
+              }
+            }
+            img.smile-icon{
+              width: 14px;
+            }
+          }
+        }
+        .conv-time{
+          align-self: flex-start;
+          padding: 5px 10px 20px;
+          text-align: right;
+          white-space: nowrap;
+          position: relative;
+          span.time{
+            text-align: right;
+            color: #999999;
+            font-size: 12px;
+            font-family: 'CircularAirPro Light';
+            line-height: 1.5;
+          }
+          a.setting-link{
+            text-decoration: none;
+            padding: 3px 5px;
+            display: none;
+            position: absolute;
+            right: 8px;
+            bottom: 0;
+            i[class^=trav]{
+              color: #cccccc;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
