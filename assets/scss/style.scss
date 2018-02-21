@@ -5648,10 +5648,18 @@ aside.sidebar{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         padding-top: 10px;
         .smile-link-wrap{
           display: flex;
+          // flex-wrap: wrap;
           align-items: center;
+          padding: 10px 0;
+        }
+        .mobile-icon-wrap{
+          @media (max-width: 767px){
+            position: relative;
+          }
         }
         a.attachment{
           padding-right: 20px;
@@ -5659,6 +5667,9 @@ aside.sidebar{
           display: flex;
           align-items: center;
           text-decoration: none;
+          @media (max-width:767px){
+            padding-right: 5px;
+          }
           i[class^=trav]{
             color: #cccccc;
             font-size: 16px;
@@ -5668,17 +5679,39 @@ aside.sidebar{
             color: #4080ff;
             font-size: 14px;
             font-family: 'CircularAirPro Light';
+            @media (max-width:767px){
+              display: none;
+            }
+          }
+        }
+        a.mobile-icon-target{
+          display: none;
+          @media (max-width:767px){
+            display: inline-block;
           }
         }
         ul.smile-list{
           margin-bottom: 0;
+          flex-wrap: wrap;
           display: flex;
           align-items: center;
-          padding-left: 20px;
-          li{
-            &:not(:last-child){
-              padding-right: 8px;
+          padding-left: 16px;
+          @media (max-width:767px){
+            display: none;
+            padding-left: 0;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,.1);
+            border-radius: 10px;
+            &.show{
+              display: inline-block;
             }
+          }
+          li{
+            padding: 4px;
             a{
               img.smile{
                 height: 18px;

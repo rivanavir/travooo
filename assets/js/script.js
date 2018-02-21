@@ -490,6 +490,11 @@ $(document).ready(function(){
     });
   });
 
+  $("#mobileIconShow").on('click', function(e){
+    e.preventDefault();
+    let iconList = $(this).parents('.smile-link-wrap').find('.smile-list');
+    $(iconList).toggleClass('show');
+  });
 
   $('#lightGalleryTrigger').on('click', function(){
     
@@ -1417,66 +1422,6 @@ $(document).ready(function(){
       }, 500);
     }
 
-    var coverBlockTxt = `<div class='cover-block' style='display:none;'>
-          <div class='cover-block-inner'>
-            <div class="top-gallery-content">
-              <div class="top-info-layer">
-                <div class="top-avatar-wrap">
-                  <img src="http://placehold.it/50x50" alt="">
-                </div>
-                <div class="top-info-txt">
-                  <div class="preview-txt">
-                    <p class="dest-name" href="#">Rabat sale airport</p> 
-                    <p class="dest-place">Airport in <span>Rabat-sale, Morocco</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="sub-post-info">
-                <ul class="sub-list">
-                  <li>
-                    <div class="icon-wrap">
-                      <i class="trav-popularity-icon"></i>
-                    </div>
-                    <div class="ctxt">
-                      <div class="top-txt">#4</div>
-                      <div class="sub-txt">Popularity</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="icon-wrap">
-                      <i class="trav-safety-big-icon"></i>
-                    </div>
-                    <div class="ctxt">
-                      <div class="top-txt">9/10</div>
-                      <div class="sub-txt">Safety</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="icon-wrap">
-                      <i class="trav-user-rating-icon"></i>
-                    </div>
-                    <div class="ctxt">
-                      <div class="top-txt">4.8/5</div>
-                      <div class="sub-txt">User rating</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="map-preview">
-              <img src="./assets/image/map-preview.jpg" alt="map">
-            </div>
-
-            <div class='post-map-info-caption map-black'>
-              <div class='map-avatar'>
-                <img src='http://placehold.it/25x25'>
-              </div>
-              <div class='map-label-txt'><b>Suzanne</b> checked on <b>2 Sep</b> at <b>8:30 am</b> and stayed <b>30 min</b></div>
-            </div>
-          </div>
-        </div>`;
-    
     // $lg.on('onBeforeOpen.lg',function(e){
     //   let slide = $('.main-gallery-block .lg-thumb-item');
     //   slide.each(function(i, val){
