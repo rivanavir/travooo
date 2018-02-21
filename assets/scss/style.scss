@@ -459,6 +459,8 @@ header.main-header{
         align-self: center;
         @media(max-width:991px){
           padding: 10px;
+          align-self: stretch;
+          text-align: center;
         }
         &:last-child{
           @media(min-width:992px){
@@ -497,7 +499,7 @@ header.main-header{
           }
           &.profile-link{
             padding: 0;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             text-decoration: none;
             img{
@@ -528,7 +530,7 @@ header.main-header{
           }
           &.plan-trip-icon{
             color: #4080ff;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             i[class^=trav]{
               color: #4080ff;
@@ -541,11 +543,19 @@ header.main-header{
             border: 1px solid #e6e6e6;
             box-shadow: 2px 0 10px rgba(0,0,0,.1);
             min-width: 405px;
+            @media(max-width: 410px){
+              min-width: 0;
+              width: 100%;
+            }
             &:not(.dropdown-use-menu){
               width: 405px;
+              @media(max-width: 410px){
+                width: 100%;
+              }
             }
             &.dropdown-all-head{
               padding: 0;
+              position: absolute;
               .drop-ttl{
                 font-size: 14px;
                 color: #1a1a1a;
@@ -569,13 +579,23 @@ header.main-header{
             }
             &.dropdown-menu-right{
               right: 0px;
+              @media(max-width:991px){
+                right: 50%;
+                transform: translateX(50%);
+                margin-top: 0;
+              }
             }
             &.dropdown-arrow:after{
               right: 28px;
+              @media(max-width:991px){
+                right: 50%;
+                transform: translateX(50%) rotate(45deg);
+              }
             }
             &.dropdown-use-menu{
               min-width: 195px;
               padding: 8px 0;
+              position: absolute;
               a.dropdown-item{
                 padding: 0 20px;
                 font-size: 14px;
@@ -591,7 +611,9 @@ header.main-header{
                 }
               }
               &.dropdown-arrow:after{
-                right: 74px;
+                @media(min-width:992px){
+                  right: 74px;
+                }
               }
             }
           }
@@ -5514,17 +5536,139 @@ aside.sidebar{
     border-radius: 5px;
     background: #fff;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+    @media(max-width: 767px){
+      padding-left: 51px;
+    }
+    &.hide-side{
+      @media(max-width: 767px){
+        .message-conversation{
+          background: #fff;
+          z-index: 100;
+          width: 51px;
+          transition: width .15s ease-in-out;
+          .m-top-block{
+            justify-content: center;
+            padding: 10px;
+            h4.block-ttl{
+              font-size: 0;
+              transition:font-size .2s ease 0s;
+              opacity: 0;
+              span{
+                opacity: 0;
+                font-size: 0;
+                transition:font-size .2s ease 0s;
+              }
+            }
+          }
+          .m-content-block{
+            .conversation-inner{
+              .conv-block{
+                padding: 10px;
+                .img-wrap{
+                  padding: 0;
+                  transition:all .2s ease 0s;
+                  img{
+                    width: 30px;
+                    transition:all .2s ease 0s;
+                  }
+                }
+                .conv-txt{
+                  font-size: 0;
+                  transition:font-size .2s ease 0s;
+                  .name{
+                    font-size: 0;
+                    transition:font-size .2s ease 0s;
+                    opacity: 0;
+                  }
+                  .time{
+                    p{
+                      font-size: 0;
+                      transition:font-size .2s ease 0s;
+                      opacity: 0;
+                    }
+                  }
+                  .msg-txt{
+                    p{
+                      font-size: 0;
+                      transition:font-size .2s ease 0s;
+                      opacity: 0;
+                    }
+                  }
+                }
+                .conv-time{
+                  span.time{
+                    font-size: 0;
+                    transition:font-size .2s ease 0s;
+                    opacity: 0;
+                  }
+                  a.setting-link{
+                    font-size: 0;
+                    transition:font-size .2s ease 0s;
+                    opacity: 0;
+                    i[class^=trav]{
+                      font-size: 0;
+                      transition:font-size .2s ease 0s;
+                      opacity: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .message-chat{
+          &:after{
+            z-index: -1;
+            transition: all .3s ease-in-out;
+            background: rgba(0, 0, 0, 0);
+          }
+        }
+      }
+    }
     .message-conversation{
       min-width: 410px;
       max-width: 410px;
       border-right: 1px solid #e6e6e6;
+      @media(max-width: 767px){
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 410px;
+        max-width: 100%;
+        height: 100%;
+        z-index: 100;
+        min-width: 0;
+        background: #fff;
+        transition: width .3s ease-in-out;
+      }
     }
     .message-chat{
       flex-grow: 1;
+      @media(max-width: 767px){
+        position: relative;
+        &:after{
+          position: absolute;
+          content: '';
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 10;
+          transition: all .3s ease-in-out;
+          background: rgba(0, 0, 0, .2);
+        }
+      }
       .m-content-block {
         padding: 0;
         .chat-group-wrap{
           padding: 20px 20px 145px;
+          @media(max-width: 575px){
+            padding: 10px 10px 145px;
+          }
         }
       }
       .m-top-block{
@@ -5545,9 +5689,11 @@ aside.sidebar{
         color: #1a1a1a;
         font-family: 'Circular Std Book';
         margin-bottom: 0;
+        transition:font-size .2s ease .2s;
         span{
           font-family: 'CircularAirPro Light';
           font-size: 14px;
+          transition:font-size .2s ease .2s;
           &.count{
             color: #999999;
           }
@@ -5558,6 +5704,7 @@ aside.sidebar{
         }
       }
       .icon-wrap{
+        cursor: pointer;
         i[class^=trav]{
           color: #999999;
           font-size: 20px;
@@ -5566,6 +5713,42 @@ aside.sidebar{
     }
     .m-content-block{
       padding: 10px 0;
+      .img-wrap{
+        padding: 0 10px;
+        transition:all .2s ease .2s;
+        img{
+          width: 50px;
+          transition:all .2s ease 0s;
+        }
+      }
+      .conv-txt{
+        transition:font-size .2s ease .2s;
+        .name{
+          transition:font-size .2s ease .2s;
+        }
+        .time{
+          p{
+            transition:font-size .2s ease .2s;
+          }
+        }
+        .msg-txt{
+          p{
+            transition:font-size .2s ease .2s;
+            font-size: 14px;
+          }
+        }
+      }
+      .conv-time{
+        span.time{
+          transition:font-size .2s ease .2s;
+        }
+        a.setting-link{
+          transition:font-size .2s ease .2s;
+          i[class^=trav]{
+            transition:font-size .2s ease .2s;
+          }
+        }
+      }
       .chat-group-wrap{
         display: flex;
         justify-content: space-between;
@@ -5606,6 +5789,9 @@ aside.sidebar{
         .avatar-block{
           position: absolute;
           top: 14px;
+          @media(max-width: 575px){
+            top: 10px;
+          }
           img{
             @include avatarImgStyle(20px, null);
           }
@@ -5618,6 +5804,9 @@ aside.sidebar{
           display: inline-block;
           margin-bottom: 10px;
           line-height: 1.2;
+          @media(max-width: 575px){
+            padding: 10px;
+          }
           img.smile{
             width: 16px;
           }
@@ -5659,6 +5848,7 @@ aside.sidebar{
         .mobile-icon-wrap{
           @media (max-width: 767px){
             position: relative;
+            padding: 0 12px;
           }
         }
         a.attachment{
@@ -5689,6 +5879,10 @@ aside.sidebar{
           @media (max-width:767px){
             display: inline-block;
           }
+          i[class^=trav]{
+            color: #cccccc;
+            font-size: 16px;
+          }
         }
         ul.smile-list{
           margin-bottom: 0;
@@ -5701,11 +5895,14 @@ aside.sidebar{
             padding-left: 0;
             position: absolute;
             bottom: 100%;
-            left: 0;
+            left: 50%;
+            margin-left: -17px;
             border: 1px solid #e6e6e6;
             background: #fff;
             box-shadow: 2px 0 5px rgba(0,0,0,.1);
             border-radius: 10px;
+            padding: 3px;
+            margin-bottom: 5px;
             &.show{
               display: inline-block;
             }
@@ -7396,6 +7593,10 @@ footer.footer{
     z-index: 1100;
     transition: top .2s ease;
     cursor: pointer;
+    @media(max-width: 767px){
+      right: 5px;
+      top: 5px;
+    }
     i[class^=trav]{
       color: white;
       line-height: 37px;

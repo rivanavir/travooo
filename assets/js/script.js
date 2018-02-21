@@ -496,6 +496,15 @@ $(document).ready(function(){
     $(iconList).toggleClass('show');
   });
 
+  $('.message-chat').after().on('click', function(){
+    $(this).parents('.message-block').addClass('hide-side');
+
+  });
+  $("#mobileSideToggler").on('click', function(){
+    let messageBlock = $(this).parents('.message-block');
+    $(messageBlock).toggleClass('hide-side');
+  });
+
   $('#lightGalleryTrigger').on('click', function(){
     
     let $lg = $(this).lightGallery({
