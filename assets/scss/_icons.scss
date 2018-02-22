@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-ask-icon:before {
+  content: "\e970";
+}
+.trav-trip-plans-p-icon:before {
+  content: "\e971";
+}
+.trav-trip-plans-share-icon:before {
+  content: "\e972";
+}
 .trav-reply-icon:before {
   content: "\e96e";
 }
@@ -267,7 +276,7 @@
 .trav-QA-icon:before {
   content: "\e92f";
 }
-.trav-review:before {
+.trav-review-icon:before {
   content: "\e930";
 }
 .trav-safety-big-icon:before {
