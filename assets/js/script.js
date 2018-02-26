@@ -1431,14 +1431,6 @@ $(document).ready(function(){
       }, 500);
     }
 
-    // $lg.on('onBeforeOpen.lg',function(e){
-    //   let slide = $('.main-gallery-block .lg-thumb-item');
-    //   slide.each(function(i, val){
-    //     if(i%2 == 0){
-    //     }
-    //     // $(val).attr('data-sub-html', coverBlockTxt);
-    //   });
-    // });
     $lg.on('onSlideItemLoad.lg',function(e){
       
       setWidth();
@@ -1451,7 +1443,8 @@ $(document).ready(function(){
     });
   });
 
-  /* hours & minutes */
-  let minutes = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
-  
+  $('.side-trip-tab .trip-tab-block').on('click', function(e){
+    $('.side-trip-tab .trip-tab-block').removeClass('current-tab');
+    $(this).addClass('current-tab');
+  })
 });
