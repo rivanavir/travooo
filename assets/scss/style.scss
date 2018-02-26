@@ -6753,6 +6753,21 @@ ul.filter-list{
 // top banner style
 
 .top-banner-wrap{
+  position: relative;
+  img.banner{
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 3px rgba(178,178,178,.6);
+  }
+  .banner-ttl{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+    font-size: 28px;
+    text-transform: capitalize;
+    font-family: 'Circular Std Med';
+    padding: 0 0 25px 20px;
+  }
 }
 .top-banner-block{
   background-position: top center;
