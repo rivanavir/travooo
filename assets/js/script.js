@@ -488,7 +488,14 @@ $(document).ready(function(){
         $(headComment).removeAttr('style');
       }
     });
+    
+    $('#requestPopup .trip-plan-row .trip-check-layer').on('click', function(){
+      let tripPlan = $(this).parents('.trip-plan-inner').find('.trip-plan-row');
+      $(tripPlan).removeClass('checked-plan');
+      $(this).parents('.trip-plan-row').addClass('checked-plan');
+    });
   });
+
 
   $("#mobileIconShow").on('click', function(e){
     e.preventDefault();
