@@ -8769,6 +8769,9 @@ footer.footer{
   &.modal-750{
     max-width: 750px;
   }
+  &.modal-700{
+    max-width: 700px;
+  }
   &.modal-650{
     max-width: 650px;
   }
@@ -10566,6 +10569,124 @@ footer.footer{
             font-size: 20px;
             line-height: 20px;
             color: #e6e6e6;
+          }
+        }
+      }
+    }
+    &.post-going-block{
+      border: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      .post-top-layer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 20px 30px;
+        border-bottom: 1px solid #e6e6e6;
+        .post-top-info{
+          h3.info-title{
+            color: #4080ff;
+            font-family: 'Circular Std Book';
+            font-size: 20px;
+          }
+          ul.info-list{
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            li.info-inner{
+              display: flex;
+              align-items: center;
+              &:not(:last-child){
+                padding-right: 30px;
+              }
+              .icon-wrap{
+                padding-right: 5px;
+                i[class^=trav]{
+                  color: #ccc;
+                  font-size: 24px;
+                }
+              }
+              .info-txt{
+                p{
+                  color: #333333;
+                  margin-bottom: 0;
+                  line-height: 1.3;
+                  &.title{
+                    font-size: 14px;
+                    font-family: 'Circular Std Book';
+                  }
+                  &.sub-title{
+                    font-size: 12px;
+                    font-family: 'CircularAirPro Light';
+                  }
+                }
+              }
+            }
+          }
+        }
+        .post-photo-wrap{
+          ul.photo-list{
+            margin-bottom: 0;
+            li{
+              display: inline-block;
+              >img{}
+            }
+          }
+        }
+      }
+      .post-sub-layer{
+        padding: 17px 30px;
+        background: #f7f7f7;
+        color:#999999;
+        font-size: 16px;
+        font-family: 'CircularAirPro Light';
+        span{
+          font-family: 'Circular Std Book';
+        }
+      }
+      .post-people-block-wrap{
+        .people-row{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .main-info-layer{
+            display: flex;
+            align-items: center;
+          }
+          .img-wrap{
+            img.ava{
+              @include avatarImgStyle(50px, null);
+            }
+          }
+          .txt-block{
+            .name{
+              font-family: 'CircularAirPro Light';
+              font-size: 16px;
+              color: #1a1a1a;
+            }
+            .info-line{
+              display: flex;
+              align-items: center;
+              .info-part{
+                position: relative;
+                font-family: 'Circular Std Book';
+                font-size: 14px;
+                color: #808080;
+                padding: 0 10px 0 8px;
+                &:first-child{
+                  padding-left: 0;
+                }
+                &:last-child{
+                  padding-right: 0;
+                }
+                &:not(:last-child){
+                  &:after{
+                    content: '·';
+                    position: absolute;
+                    right: 0;
+                  }
+                }
+              }
+            }
           }
         }
       }

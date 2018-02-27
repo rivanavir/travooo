@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.6/css/lightgallery.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Travooo - travel mates</title>
 </head>
@@ -479,6 +480,10 @@
         <div class="custom-row">
           <!-- MAIN-CONTENT -->
           <div class="main-content-layer">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#goingPopup">
+              Launch going popup
+            </button>
+            
             <div class="post-block post-tab-block">
               <div class="post-tab-inner">
                 <div class="tab-item active-tab">
@@ -788,7 +793,7 @@
                     <div class="destination-point" style="top:80px;left: 480px;">
                       <img class="map-marker" src="./assets/image/marker.png" alt="marker">
                     </div>
-                    <button class="btn btn-light-grey success btn-check btn-bordered">Pending for Approval...</button>
+                    <button class="btn btn-light-grey btn-check btn-bordered">Pending for Approval...</button>
                     <div class="post-map-info-caption map-blue">
                       <div class="map-list-avatar">
                         <ul class="foot-avatar-list">
@@ -1023,6 +1028,125 @@
                 </div>
               </div>
             </div>
+
+            <div class="post-block post-travel-mate-block post-top-bordered">
+              <div class="post-travel-top">
+                <h3 class="block-ttl">From Morocco to Japan in 16 Days</h3>
+              </div>
+              <div class="post-content-inner">
+                <div class="post-travel-point">
+                  <div class="img-wrap">
+                    <img class="ava" src="http://placehold.it/45x45" alt="avatar">
+                  </div>
+                  <div class="point-layer">
+                    <span>by</span> <a href="#" class="post-name-link">Elijah Hughes</a>
+                  </div>
+                  <div class="dot">∙</div>
+                  <div class="point-layer">
+                    <img src="http://placehold.it/18x14" alt="flag" class="flag">
+                    <span>Morocco to</span>
+                    <img src="http://placehold.it/18x14" alt="flag" class="flag">
+                    <span>Japan</span>
+                  </div>
+                  <div class="dot">∙</div>
+                  <div class="point-layer">
+                    <span class="dropdown">
+                      <a href="#" class="post-drop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">12 Destinations</a>
+                      <div class="dropdown-menu dropdown-arrow dropdown-info-style dropdown-list">
+                        <ul class="drop-list">
+                          <li class="drop-row">
+                            <div class="avatar-wrap">
+                              <img src="http://placehold.it/45x45" alt="ava">
+                            </div>
+                            <div class="drop-txt">
+                              <div class="dest-name">Suites hotel mogammed v</div>
+                              <div class="location">Rabat, Morocco</div>
+                            </div>
+                          </li>
+                          <li class="drop-row">
+                            <div class="avatar-wrap">
+                              <img src="http://placehold.it/45x45" alt="ava">
+                            </div>
+                            <div class="drop-txt">
+                              <div class="dest-name">Rabat-sale airport</div>
+                              <div class="location">Rabat, Morocco</div>
+                            </div>
+                          </li>
+                          <li class="drop-row">
+                            <div class="avatar-wrap">
+                              <img src="http://placehold.it/45x45" alt="ava">
+                            </div>
+                            <div class="drop-txt">
+                              <div class="dest-name">Haneda airport</div>
+                              <div class="location">Tokyo, Japan</div>
+                            </div>
+                          </li>
+                          <li class="drop-row">
+                            <div class="avatar-wrap">
+                              <img src="http://placehold.it/45x45" alt="ava">
+                            </div>
+                            <div class="drop-txt">
+                              <div class="dest-name">Osaka marriott miyako</div>
+                              <div class="location">Tokyo, Japan</div>
+                            </div>
+                          </li>
+                          <li class="drop-row">
+                            <div class="avatar-wrap">
+                              <img src="http://placehold.it/45x45" alt="ava">
+                            </div>
+                            <div class="drop-txt">
+                              <div class="dest-name">The ritz-carlton</div>
+                              <div class="location">Okinawa, Japan</div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="post-map-block">
+                  <div class="post-map-inner">
+                    <img src="http://placehold.it/595x400" alt="map">
+                    <div class="post-top-map-info">
+                      <div class="post-map-date">
+                        <span><b>Apr 30</b> <br>Sun</span>
+                      </div>
+                    </div>
+                    <!-- destination point -->
+                    <div class="destination-point" style="top:80px;left: 480px;">
+                      <img class="map-marker" src="./assets/image/marker.png" alt="marker">
+                    </div>
+                    <button class="btn btn-light-primary btn-check btn-bordered">Ask to Join</button>
+                    <div class="post-map-info-caption map-blue">
+                      <div class="map-list-avatar">
+                        <ul class="foot-avatar-list">
+                          <li><img class="small-ava" src="http://placehold.it/25x25" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/25x25" alt="ava"></li><!--
+                          --><li><img class="small-ava" src="http://placehold.it/25x25" alt="ava"></li>
+                        </ul>
+                      </div>
+                      <div class="map-label-txt">
+                        +15 more going
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-footer-info">
+                  <div class="post-foot-block">
+                    <ul class="foot-avatar-list">
+                      <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                      --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                      --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                    </ul>
+                    <span>20 Comments</span>
+                  </div>
+                  <div class="post-foot-block">
+                    <span>Share</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- SIDEBAR -->
@@ -1167,11 +1291,99 @@
     </div>
   </div>
 
+  <!-- modal -->
+  <div class="modal fade white-style" data-backdrop="false" id="goingPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+    <div class="modal-dialog modal-custom-style modal-700" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-going-block">
+          <div class="post-top-layer">
+            <div class="post-top-info">
+              <h3 class="info-title">From Morocco to Japan in 7 Days</h3>
+              <ul class="info-list">
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-clock-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">7 Days</p>
+                    <p class="sub-title">Duration</p>
+                  </div>
+                </li>
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-budget-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">$ 5000</p>
+                    <p class="sub-title">Budget</p>
+                  </div>
+                </li>
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-distance-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">2.3 km</p>
+                    <p class="sub-title">Distance</p>
+                  </div>
+                </li>
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-map-marker-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">12</p>
+                    <p class="sub-title">Places</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="post-photo-wrap">
+              <ul class="photo-list">
+                <li><img src="http://placehold.it/60x60" alt="image" class="image"></li>
+                <li><img src="http://placehold.it/60x60" alt="image" class="image"></li>
+                <li><img src="http://placehold.it/60x60" alt="image" class="image"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="post-sub-layer">
+            People going with <span>Elijah</span>
+          </div>
+          <div class="post-people-block-wrap">
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Amy Green</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                    <div class="info-part">25 years</div>
+                    <div class="info-part">Japan</div>
+                    <div class="info-part">Male</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Unfriend</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.6/js/lightgallery-all.min.js"></script>
   <script src="./assets/js/script.js"></script>
 
 </body>
