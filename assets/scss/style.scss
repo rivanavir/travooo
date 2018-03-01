@@ -1384,7 +1384,7 @@ button.btn-mobile-side{
 
 .destination-point{
   position: absolute;
-  z-index: 900;
+  z-index: 250;
   transform: translate(-50%, -50%);
   cursor: pointer;
   img{
@@ -4456,6 +4456,10 @@ aside.sidebar{
       display: flex;
       flex-wrap: nowrap;
       padding: 15px 0;
+      @media (max-width:767px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     .trip-plan-inside-block{
       .trip-plan-map-img{
@@ -4514,6 +4518,9 @@ aside.sidebar{
       &.trip-plan-txt{
         flex-grow: 1;
         padding: 5px 25px;
+        @media(max-width:767px){
+          padding: 5px 0;
+        }
         .trip-plan-txt-inner{
           .trip-txt-ttl-layer{
             border-bottom: 1px solid #e6e6e6;
@@ -4525,6 +4532,9 @@ aside.sidebar{
               margin-bottom: 0;
               text-transform: capitalize;
               line-height: 2;
+              @media(max-width:575px){
+                line-height: 1.4;
+              }
             }
             p.trip-date{
               font-size: 14px;
@@ -4542,7 +4552,7 @@ aside.sidebar{
               align-items: center;
               min-width: 50%;
               .icon-wrap{
-                padding-right: 15px;
+                padding-right: 10px;
                 i[class^=trav]{
                   color: #cccccc;
                   font-size: 22px;
@@ -4566,7 +4576,9 @@ aside.sidebar{
         }
       }
       .dest-trip-plan{
-        max-width: 165px;
+        @media(min-width:768px){
+          max-width: 165px;
+        }
         h3.dest-ttl{
           color: #4c4c4c;
           font-size: 14px;
@@ -7027,6 +7039,8 @@ ul.filter-list{
     max-width: 100%;
     border-radius: 0 0 3px 3px;
     box-shadow: 0 1px 3px rgba(178,178,178,.6);
+    height: 100px;
+    object-fit: cover;
   }
   .banner-ttl{
     position: absolute;
@@ -7037,6 +7051,10 @@ ul.filter-list{
     text-transform: capitalize;
     font-family: 'Circular Std Med';
     padding: 0 0 25px 20px;
+    @media (max-width:767px){
+      font-size: 22px;
+      padding: 0 0 10px 10px;
+    }
   }
 }
 .top-banner-block{
@@ -7956,11 +7974,16 @@ footer.footer{
     @media(max-width: 767px){
       right: 5px;
       top: 5px;
+      width: 30px;
+      height: 30px;
     }
     i[class^=trav]{
       color: white;
       line-height: 37px;
       font-size: 22px;
+      @media(max-width: 767px){
+        line-height: 30px;
+      }
     }
   }
   &.modal-child{
@@ -10683,10 +10706,15 @@ footer.footer{
       .post-top-layer{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-between;
-        padding: 20px 20px 20px 30px;
+        padding: 20px 20px 10px 30px;
         border-bottom: 1px solid #e6e6e6;
+        @media(max-width:767px){
+          padding: 20px 10px 10px;
+        }
         .post-top-info{
+          margin-bottom: 10px;
           h3.info-title{
             color: #4080ff;
             font-family: 'Circular Std Book';
@@ -10695,10 +10723,12 @@ footer.footer{
           ul.info-list{
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             margin-bottom: 0;
             li.info-inner{
               display: flex;
               align-items: center;
+              padding-bottom: 10px;
               &:not(:last-child){
                 padding-right: 30px;
               }
@@ -10728,6 +10758,7 @@ footer.footer{
           }
         }
         .post-photo-wrap{
+          margin-bottom: 10px;
           ul.photo-list{
             margin-bottom: 0;
             display: flex;
@@ -10756,6 +10787,9 @@ footer.footer{
           align-items: center;
           justify-content: space-between;
           padding: 10px 30px;
+          @media(max-width: 767px){
+            padding: 10px;
+          }
           &:not(:last-child){
             border-bottom: 1px solid #f0f0f0;
           }
@@ -10779,6 +10813,10 @@ footer.footer{
             .info-line{
               display: flex;
               align-items: center;
+              @media(max-width: 767px){
+                flex-direction: column;
+                align-items: flex-start;
+              }
               .info-part{
                 position: relative;
                 font-size: 14px;
@@ -10786,6 +10824,9 @@ footer.footer{
                 line-height: 1.4;
                 color: #808080;
                 padding: 0 10px 0 8px;
+                @media(max-width: 767px){
+                  padding: 0;
+                }
                 &:first-child{
                   padding-left: 0;
                 }
@@ -10797,19 +10838,31 @@ footer.footer{
                     content: '·';
                     position: absolute;
                     right: 0;
+                    @media(max-width: 767px){
+                      display: none;
+                    }
                   }
                 }
               }
             }
           }
           .button-wrap{
+            padding-left: 15px;
+            @media(max-width: 767px){
+              display: flex;
+              flex-direction: column;
+            }
             .btn{
               text-transform: capitalize;
             }
             a.btn-link{
               font-size: 14px;
+              display: inline-block;
+              padding: 5px 0;
               &:not(:last-child){
-                padding-right: 30px;
+                @media(min-width: 768px){
+                  padding-right: 30px;
+                }
               }
               &.approve{
                 font-family: 'Circular Std Book';
