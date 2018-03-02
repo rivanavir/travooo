@@ -26,6 +26,10 @@ $(document).ready(function(){
     $(this).toggleClass('hidden');
     $('#sidebarLayer').toggleClass('sidebar-open');
   });
+  $('#commentToggler').on('click', function(e){
+    e.preventDefault();
+    $('#galleryCommentWrap').toggleClass('comment-open');
+  });
 
   // class changes binding
   (function( func ) {
@@ -52,7 +56,7 @@ $(document).ready(function(){
     }
   });
   
-  $('header.main-header, .main-content-layer').on('click', function(){
+  $('header.main-header, .main-content-layer, .top-banner-wrap').on('click', function(){
     if($('#leftOutsideMenu').hasClass('filter-open')){
       $('#leftOutsideMenu').removeClass('filter-open');
       setTimeout(function(){
@@ -231,6 +235,15 @@ $(document).ready(function(){
       $('#headerTripPlan .head-trip-plan_trip-line').hide();
     }
   });
+  // $("#postTabBlock").lightSlider({
+  //   autoWidth: true,
+  //   pager: false,
+  //   controls: false,
+  //   slideMargin: 0,
+  //   addClass: 'post-tab-slider-wrap'
+  //   // prevHtml: '<i class="trav-angle-left"></i>',
+  //   // nextHtml: '<i class="trav-angle-right"></i>'
+  // });
 
   $('.modal-child').on('hidden.bs.modal', function () {
     $('body').addClass('modal-open').css('padding-right', '15px');

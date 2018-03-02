@@ -164,6 +164,9 @@
     font-family: 'Circular Std Book';
     padding: 11px 16px;
     line-height: 1;
+    @media(max-width:575px){
+      padding: 8px 10px;
+    }
   }
   &.btn-icon-side{
     position: relative;
@@ -1244,7 +1247,7 @@ button.btn-mobile-side{
   border-radius: 3px;
   background-color: rgba(255,255,255,.7);
   box-shadow: 2px 2px 5px rgba(0,0,0,.3);
-  z-index: 250;
+  z-index: 300;
   @media (min-width:992px){
     display: none;
   }
@@ -3833,9 +3836,13 @@ aside.sidebar{
     align-items: center;
     border-radius:30px;
     max-width: calc(100% - 20px);
-    @media(max-width:575px){
+    @media(max-width:676px){
       left: 10px;
       bottom: 10px;
+    }
+    @media(max-width:575px){
+      left: 5px;
+      bottom: 5px;
     }
     &.map-black{
       background: rgba(0,0,0,.7);
@@ -4819,6 +4826,9 @@ aside.sidebar{
     .post-travel-top{
       border-bottom: 1px solid #e6e6e6;
       padding: 13px 30px;
+      @media(max-width:575px){
+        padding: 10px 15px;
+      }
       h3.block-ttl{
         color: #4080ff;
         font-family: 'Circular Std Book';
@@ -4828,7 +4838,9 @@ aside.sidebar{
     }
     .post-content-inner{
       padding: 0 30px 20px;
-
+      @media(max-width:575px){
+        padding: 0 15px 20px;
+      }
       .post-footer-info{
         padding: 20px 0;
         &:last-child{
@@ -4859,6 +4871,7 @@ aside.sidebar{
       padding: 10px 0;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       .img-wrap{
         padding-right: 5px;
         >img.ava{
@@ -5264,6 +5277,11 @@ aside.sidebar{
       box-shadow: 0 1px 5px rgba(0,0,0,.15);
       display: flex;
       align-items: center;
+      @media(max-width:575px){
+        padding: 2px 0;
+        top: 5px;
+        left: 5px;
+      }
       .info-block{
         padding: 0 15px;
         display: flex;
@@ -5294,12 +5312,19 @@ aside.sidebar{
       }
       .post-map-date{
         padding: 0 10px;
+        @media(max-width:575px){
+          padding: 0 5px;
+        }
         span{
           font-size: 14px;
           color: #1a1a1a;
           font-family: 'CircularAirPro Light';
           text-transform: uppercase;
           line-height: 1.4;
+          @media(max-width:575px){
+            font-size: 12px;
+            line-height: 1.1;
+          }
           b{
             font-weight: normal;
             font-family: 'Circular Std Book';
@@ -5340,6 +5365,10 @@ aside.sidebar{
       top: 20px;
       right: 20px;
       text-transform: none;
+      @media(max-width:575px){
+        top: 5px;
+        right: 5px;
+      }
     }
   }
 }
@@ -5789,8 +5818,12 @@ aside.sidebar{
   padding: 0;
   .post-tab-inner{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0 10px;
+    @media(max-width:575px){
+      overflow-y: visible;
+      overflow-x: auto;
+    }
     .tab-item{
       padding: 20px;
       border-bottom: 2px solid transparent;
@@ -5799,6 +5832,12 @@ aside.sidebar{
       color: #999999;
       font-family: 'CircularAirPro Light';
       cursor: pointer;
+      white-space: nowrap;
+      display: inline-block;
+      @media(max-width:575px){
+        padding: 10px;
+        margin-bottom: 0;
+      }
       &.active-tab{
         border-bottom-color: #4080ff;
         color: #1a1a1a;
@@ -8118,6 +8157,11 @@ footer.footer{
   height: 100%;
   position: relative;
   padding-bottom: 90px;
+  @media(max-width: 390px){
+    width: 96vw;
+    min-width: 0;
+    margin-right: 2vw;
+  }
   .gallery-comment-inner{
     height: 100%;
     overflow: auto;
@@ -8837,9 +8881,16 @@ footer.footer{
 }
 .modal-custom-style{
   margin: 30px auto;
+  @media(max-width:767px){
+    margin: 0 auto;
+  }
   &.full-height{
     height: 640px;
     max-height: calc(100vh - 60px);
+    @media(max-width:767px){
+      height: 100%;
+      max-height: 100vh;
+    }
   }
   &.bottom-slider-height{
     height: calc(100vh - 170px);
@@ -8885,6 +8936,13 @@ footer.footer{
   }
   .modal-custom-block{
     height: 100%;
+    .btn-mobile-side{
+      position: absolute;
+      top: 0;
+    }
+    .comment-toggler{
+      left: 0;
+    }
   }
   .post-block{
     border-color: #e5e5e5;
@@ -8893,7 +8951,9 @@ footer.footer{
       padding: 0;
     }
     &:not(:first-child){
-      margin-top: 60px;
+      @media(min-width:768px){
+        margin-top: 60px;
+      }
     }
 
     // modal custom scroll
@@ -8917,6 +8977,15 @@ footer.footer{
       }
     }
     
+    &.post-mobile-full{
+      @media(max-width:767px){
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+    }
     .post-map-breadcrumb{
       background: #fff;
       border-radius: 3px 3px 0 0;
@@ -8925,19 +8994,26 @@ footer.footer{
         margin-bottom: 0;
         display: inline-flex;
         align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        max-width:100%;
         li{
           color: #666666;
           font-family: 'CircularAirPro Light';
           position: relative;
           padding: 0 35px 0 20px;
           font-size: 14px;
+          white-space: nowrap;
+          @media(max-width:575px){
+            padding: 0 25px 0 10px;
+          }
           &:not(:last-child){
             &:after{
               position: absolute;
               right: 0;
               // top: 1px;
-              content: "\e926";
-              font-size: 16px;
+              content: "\e904";
+              font-size: 18px;
               color: #b3b3b3;
               display: inline-block;
               font-family: 'travooo' !important;
@@ -8972,7 +9048,7 @@ footer.footer{
       left: 20px;
       display: flex;
       align-items: center;
-      z-index: 500;
+      z-index: 200;
       li{
         display: inline-block;
         font-size: 14px;
@@ -10711,7 +10787,9 @@ footer.footer{
         padding: 20px 20px 10px 30px;
         border-bottom: 1px solid #e6e6e6;
         @media(max-width:767px){
+          display: block;
           padding: 20px 10px 10px;
+          flex: 0 1 auto;
         }
         .post-top-info{
           margin-bottom: 10px;
@@ -10782,6 +10860,9 @@ footer.footer{
       .post-people-block-wrap{
         max-height: 570px;
         overflow: auto;
+        @media(max-width:767px){
+          flex: 0 1 100%;
+        }
         .people-row{
           display: flex;
           align-items: center;
@@ -10887,9 +10968,15 @@ footer.footer{
         max-height: 730px;
         overflow: auto;
         padding: 0;
+        @media(max-width:767px){
+          flex-basis: 100%;
+        }
         .trip-plan-row{
           padding: 15px 30px 15px 70px;
           position: relative;
+          @media(max-width:767px){
+            padding: 15px 15px 0 50px;
+          }
           .trip-check-layer{
             cursor: pointer;
             position: absolute;
@@ -10898,6 +10985,9 @@ footer.footer{
             width: 70px;
             height: 100%;
             z-index: 100;
+            @media(max-width:767px){
+              width: 50px;
+            }
             &:after{
               position: absolute;
               content: '';
@@ -10911,6 +11001,9 @@ footer.footer{
               border: 3px solid white;
               background: white;
               box-shadow: 0 0 0 1px #cccccc;
+              @media(max-width:767px){
+                left: 17px;
+              }
             }
           }
           &.checked-plan{
@@ -10939,6 +11032,18 @@ footer.footer{
   }
   .gallery-comment-wrap{
     border-radius: 0 3px 3px 0;
+    @media(max-width:767px){
+      border-radius: 3px;
+      position: absolute;
+      right: -390px;
+      transition: all .3s ease-in;
+      z-index: 250;
+      &.comment-open{
+        left: auto;
+        right: 0;
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+      }
+    }
     .gallery-comment-top{
       border-radius: 0 3px 0 0;
     }
