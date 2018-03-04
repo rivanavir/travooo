@@ -91,6 +91,13 @@ $(document).ready(function(){
       $('#headerTripPlan').removeClass('scrolled');
       $('#headerTripPlan .head-trip-plan_trip-line').hide();
     }
+
+    // page of places follow scroll
+    if(scroll >= 80 && $('#followHeader')){
+      $('#followHeader').addClass('scrolled');
+    } else{
+      $('#followHeader').removeClass('scrolled');
+    }
   });
 
   // lightslider initialization
@@ -507,6 +514,19 @@ $(document).ready(function(){
       $(tripPlan).removeClass('checked-plan');
       $(this).parents('.trip-plan-row').addClass('checked-plan');
     });
+
+    $('#writeReviewLink').on('click', function(e){
+      e.preventDefault();
+      $(this).hide();
+      $("#reviewAddCommentBlock").show();
+    });
+
+    $("#reviewAddCommentBlock .btn-cancel").on('click', function(e){
+      e.preventDefault();
+      $(this).parents('#reviewAddCommentBlock').hide();
+      $("#writeReviewLink").show();
+    });
+
   });
 
 

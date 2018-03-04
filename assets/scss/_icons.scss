@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-cities-town-icon:before {
+  content: "\e974";
+}
+.trav-visa-embassy-icon:before {
+  content: "\e96f";
+}
+.trav-flights-icon:before {
+  content: "\e973";
+}
 .trav-ask-icon:before {
   content: "\e970";
 }
@@ -353,9 +362,6 @@
 }
 .trav-pencil:before {
   content: "\e94d";
-}
-.trav-file-text2:before {
-  content: "\e96f";
 }
 .trav-phone:before {
   content: "\e942";

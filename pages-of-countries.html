@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Travooo - pages of countries</title>
+</head>
+<body>
+
+  <div class="main-wrapper">
+    <header class="main-header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="trav-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="./assets/image/main-circle-logo.png" alt="">
+          </a>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="header-search-block">
+              <div class="head-search-inner">
+                <div class="search-block">
+                  <a class="search-btn" href="#"><i class="trav-search-icon"></i></a>
+                  <input type="text" class="" id="messageSearchInput" placeholder="Search...">
+                </div>
+              </div>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Messages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-light-primary" href="#">Plan trip</a>
+              </li>
+              <li class="nav-item">
+                <a class="profile-link" href="#">
+                  <img src="http://placehold.it/36x36" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="content-wrap">
+      
+      <button class="btn btn-mobile-side sidebar-toggler" id="sidebarToggler">
+        <i class="trav-cog"></i>
+      </button>
+      <button class="btn btn-mobile-side left-outside-btn" id="filterToggler">
+        <i class="trav-filter"></i>
+      </button>
+      
+      <div class="container-fluid">
+          <!-- left outside menu -->
+        <div class="left-outside-menu-wrap" id="leftOutsideMenu">
+          <ul class="left-outside-menu">
+            <li class="active"><a href="#">
+              <i class="trav-about-icon"></i>
+              <span>About</span>
+            </a></li>
+            <li><a href="#">
+              <i class="trav-visa-embassy-icon"></i>
+              <span>Visa & Embassy</span>
+            </a></li>
+            <li><a href="#">
+              <i class="trav-flights-icon"></i>
+              <span>Flights</span>
+            </a></li>
+            <li><a href="#">
+              <i class="trav-safety-big-icon"></i>
+              <span>Safety</span>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="top-banner-wrap">
+          <div class="post-block post-flage-detail">
+            <div class="post-event-block">
+              <div class="post-event-image">
+                <img class="event-cover" src="https://www.runnersworld.com/sites/runnersworld.com/files/styles/article_main_custom_user_phone_1x/public/articles/2016/09/nyc_marathon.jpg?itok=mrgDghrv&amp;timestamp=1473862824" alt="photo">
+              </div>
+              <div class="post-event-main">
+                <div class="flag-wrap">
+                  <img src="http://placehold.it/155x77" alt="flag">
+                </div>
+                <div class="post-placement-info">
+                  <span class="hash">#<b>2</b></span>
+                  <h2 class="place-name">United States of America</h2>
+                  <div class="event-info-layer">
+                    <span class="placement-place">Country in North America</span>
+                    <div class="event-foot-info">
+                      <ul class="foot-avatar-list">
+                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                      </ul>
+                    </div>
+                    <i class="trav-talk-icon icon-grey-comment"></i>
+                    <span class="talking">64K Talking about this</span>
+                  </div>
+                  <div class="event-main-content">
+                    <p>The U.S. is a country of 50 states covering a vast swath of North America, with Alaska in the northwest and Hawaii extending the nation’s presence into the Pacific Ocean...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="follow-bottom-link">
+                <button type="button" class="btn btn-light-grey btn-bordered btn-icon-side btn-icon-right">
+                    <i class="trav-comment-plus-icon"></i>
+                    <span>Follow</span>
+                    <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                  </button>
+                <a href="#" class="follow-link">28K Followers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-board-wrap">
+          <div class="post-block post-board">
+            <div class="post-side-top">
+              <h3 class="side-ttl">Photos</h3>
+              <div class="side-right-control">
+                <div class="side-count">45k</div>
+              </div>
+            </div>
+            <div class="post-side-inner">
+              <div class="board-photo-list">
+                <div class="board-image full-image">
+                  <img src="http://placehold.it/185x115" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-block post-board">
+            <div class="post-side-top">
+              <h3 class="side-ttl">Trip plans</h3>
+              <div class="side-right-control">
+                <div class="side-count">453</div>
+              </div>
+            </div>
+            <div class="post-side-inner">
+              <div class="board-photo-list">
+                <div class="board-image full-image">
+                  <img src="http://placehold.it/185x115" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-block post-board">
+            <div class="post-side-top">
+              <h3 class="side-ttl">places</h3>
+              <div class="side-right-control">
+                <div class="side-count">27</div>
+              </div>
+            </div>
+            <div class="post-side-inner">
+              <div class="board-photo-list">
+                <div class="board-image full-image">
+                  <img src="http://placehold.it/185x115" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-block post-board">
+            <div class="post-side-top">
+              <h3 class="side-ttl">events</h3>
+              <div class="side-right-control">
+                <div class="side-count">241</div>
+              </div>
+            </div>
+            <div class="post-side-inner">
+              <div class="board-photo-list">
+                <div class="board-image full-image">
+                  <img src="http://placehold.it/185x115" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-block post-board">
+            <div class="post-side-top">
+              <h3 class="side-ttl">Stories</h3>
+              <div class="side-right-control">
+                <div class="side-count">14</div>
+              </div>
+            </div>
+            <div class="post-side-inner">
+              <div class="board-photo-list">
+                <div class="board-image full-image">
+                  <img src="http://placehold.it/185x115" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+                <div class="board-image half-image">
+                  <img src="http://placehold.it/85x90" alt="photo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-row">
+          <!-- MAIN-CONTENT -->
+          <div class="main-content-layer">
+
+            <div class="post-block post-place-block">
+              <div class="post-place-top">
+                <h3 class="side-ttl">About this Place</h3>
+              </div>
+              <div class="post-content-inner">
+                <div class="post-footer-info">
+                  <div class="post-foot-block">
+                    <i class="trav-comment-icon"></i>
+                    <span class="blue-txt">Discussed</span>
+                    <span>by</span>
+                    <ul class="foot-avatar-list">
+                      <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                      --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                      --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                    </ul>
+                    <span>and 437 more</span>
+                  </div>
+                </div>
+                <div class="post-txt-wrap">
+                  <p class="post-txt">Disneyland Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot. Mostly in Wyoming lorem upsom dolor... <a class="more-link" href="#">More</a></p>
+                </div>
+                <div class="post-map-block">
+                  <div class="post-map-inner">
+                    <img src="http://placehold.it/595x360" alt="map">
+                    <div class="post-top-map-info">
+                      <div class="info-block">
+                        <div class="info-icon">
+                          <i class="trav-popularity-icon"></i>
+                        </div>
+                        <div class="info-txt">
+                          <div class="info-ttl">#4</div>
+                          <div class="info-smpl">Popularity</div>
+                        </div>
+                      </div>
+                      <div class="info-block">
+                        <div class="info-icon">
+                          <i class="trav-safety-big-icon"></i>
+                        </div>
+                        <div class="info-txt">
+                          <div class="info-ttl">9/10</div>
+                          <div class="info-smpl">Safety</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-map-flag">
+                      <img class="flag-image" src="http://placehold.it/50x50/3f3d72" alt="flag">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- SIDEBAR -->
+          <div class="sidebar-layer" id="sidebarLayer">
+            <aside class="sidebar">
+
+              <div class="post-block post-card-block">
+                <div class="post-place-info-card">
+                  <div class="image-wrap">
+                    <img src="http://placehold.it/400x210" alt="">
+                    <div class="post-place-image-info">
+                      <div class="place-flag-image">
+                        <img class="flag-image" src="http://placehold.it/105x53/e70c24?text=flag" alt="flag">
+                      </div>
+                      <div class="follow-btn-wrap">
+                        <button type="button" class="btn btn-light-grey btn-bordered btn-icon-side btn-icon-right">
+                          <i class="trav-comment-plus-icon"></i>
+                          <span>Follow</span>
+                          <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-slider-caption">
+                    <p class="post-place-name" href="#">Los Angeles</p> 
+                    <p class="post-card-placement">
+                      City in <a href="#">United States of America</a>
+                    </p>
+                    <ul class="post-footer-info-list">
+                      <li>
+                        <p class="info-count">26.581</p>
+                        <p class="info-label">Followers</p>
+                      </li>
+                      <li>
+                        <p class="info-count">34</p>
+                        <p class="info-label">Trip Plans</p>
+                      </li>
+                      <li>
+                        <p class="info-count">#7</p>
+                        <p class="info-label">Ranking</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="follow-block-info">
+                  <ul class="foot-avatar-list">
+                    <li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li><!--
+                    --><li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li><!--
+                    --><li><img class="small-ava" src="http://placehold.it/29x29" alt="ava"></li>
+                  </ul>
+                  <i class="trav-comment-plus-icon"></i>
+                  <span>64K Following this place</span>
+                </div>
+                <div class="book-btn-wrap">
+                  <a class="btn btn-light-red" href="#">Book a hotel/flight</a>
+                </div>
+              </div>
+
+              <div class="share-page-block">
+                <div class="share-page-inner">
+                  <div class="share-txt">Share this page</div>
+                  <ul class="share-list">
+                    <li>
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-code"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="aside-footer">
+                <ul class="aside-foot-menu">
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Advertising</a></li>
+                  <li><a href="#">Cookies</a></li>
+                  <li><a href="#">More</a></li>
+                </ul>
+                <p class="copyright">Travooo &copy; 2017</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+</html>

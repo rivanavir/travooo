@@ -210,6 +210,12 @@
     font-family: 'Circular Std Book';
     @include btnWithHoverIcon(#ff5a5f);
     color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px;
+    display: block;
+    border-radius: 4px;
   }
 }
 
@@ -963,6 +969,55 @@ header.main-header{
           }
         }
       }
+    }
+  }
+}
+
+// follow header
+.follow-header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -85px;
+  transition: all .3s ease;
+  z-index: 900;
+  background: #fff;
+  padding: 18px 0;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 3px rgba(0,0,0,.06);
+  &.scrolled{
+    top: 0;
+  }
+  .follow-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .place-name{
+      display: flex;
+      align-items: center;
+      span{
+        font-size: 24px;
+        color: #1a1a1a;
+        font-family: 'Circular Std Med';
+        &.place-tag{
+          margin-left: 10px;
+          font-size: 14px;
+          display: inline-block;
+          border-radius: 3px;
+          background: #e8e8e8;
+          padding: 3px 8px;
+          color: black;
+          margin-right: 5px;
+          font-family: 'CircularAirPro Light';
+        }
+      }
+    }
+  }
+  .follow-btn{
+    .btn{
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 12px 32px;
     }
   }
 }
@@ -3410,6 +3465,10 @@ aside.sidebar{
       text-transform: capitalize;
       margin-bottom: 0;
       font-weight: normal;
+      &.align-center{
+        flex-grow: 1;
+        text-align: center;
+      }
       i[class^=trav]{
         color: #4080ff;
         // font-size: 20px;
@@ -5754,7 +5813,42 @@ aside.sidebar{
 
 .post-card-block{
   padding: 0;
-  border: 0;
+  .post-place-info-card{
+    .image-wrap{
+      img{
+        border-radius: 3px 3px 0 0;
+      }
+    }
+  }
+  .post-slider-caption{
+    padding-bottom: 0;
+    p.post-place-name{
+      font-family: 'Circular Std Book';
+    }
+    p.post-card-placement{
+      font-size: 16px;
+    }
+    .post-footer-info-list{
+      margin-bottom: 0;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e6e6e6;
+      p{
+        &.info-count{
+          font-family: 'Circular Std Book';
+        }
+        &.info-label{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .follow-block-info{
+    justify-content: center;
+    padding: 20px 10px;
+  }
+  .book-btn-wrap{
+    padding: 0 20px 20px;
+  }
 }
 
 .top-board-wrap{
