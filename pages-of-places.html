@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.6/css/lightgallery.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Travooo - pages of places</title>
 </head>
@@ -270,6 +271,9 @@
             </button>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#writeReviewPopup">
               Write review popup
+            </button>
+            <button type="button" class="btn btn-primary" id="photoPopupTrigger">
+              Photo popup
             </button>
 
             <div class="post-block post-place-block">
@@ -2224,11 +2228,25 @@
     </div>
   </div>
 
+  <!-- gallery popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="photoPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-custom-style modal-full" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-gallery-mode-modal">
+          <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+            <i class="trav-close-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.6/js/lightgallery-all.min.js"></script>
   <script src="./assets/js/script.js"></script>
 
 </body>

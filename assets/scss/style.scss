@@ -3486,7 +3486,9 @@ aside.sidebar{
       }
     }
     .side-right-control{
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
       a.see-more-link{
         font-family: 'Circular Std Book';
         font-size: 14px;
@@ -11343,6 +11345,27 @@ footer.footer{
 }
 .main-gallery-block{
 
+  // modal custom scroll
+  .mCustomScrollbar {
+    .mCSB_container{
+      margin-right: 0;
+    }
+    .mCSB_scrollTools{
+      right: 2px;
+      .mCSB_dragger{
+        .mCSB_dragger_bar{
+          background: #cccccc;
+          border-radius: 3px;
+        }
+      }
+      .mCSB_draggerContainer {
+        .mCSB_draggerRail{
+          background: transparent;
+        }
+      }
+    }
+  }
+  
   .lg-toolbar{
     background-color: transparent;
     display: flex;
@@ -11584,6 +11607,7 @@ footer.footer{
                     color: #4080ff;
                     &.date{
                       color: #999999;
+                      text-transform: lowercase;
                     }
                   }
                 }
