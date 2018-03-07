@@ -2690,6 +2690,25 @@ $(document).ready(function(){
         'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg',
         'subHtml': `<div class='cover-block' style='display:none;'>
           <div class='cover-block-inner'>
+            <ul class="modal-outside-link-list white-bg">
+              <li class="outside-link">
+                <a href="#">
+                  <div class="round-icon">
+                    <i class="trav-comment-icon"></i>
+                    <span class="count">189</span>
+                  </div>
+                  <span>Comments</span>
+                </a>
+              </li>
+              <li class="outside-link">
+                <a href="#">
+                  <div class="round-icon">
+                    <i class="trav-flag-icon"></i>
+                  </div>
+                  <span>Report</span>
+                </a>
+              </li>
+            </ul>
             <div class="top-gallery-content">
               <div class="top-info-layer">
                 <div class="post-top-round-icon-wrap">
@@ -2747,12 +2766,6 @@ $(document).ready(function(){
             </div>
             <div class="map-preview">
               <img src="./assets/image/map-preview.jpg" alt="map">
-            </div>
-            <div class='post-map-info-caption map-black'>
-              <div class='map-avatar'>
-                <img src='http://placehold.it/25x25'>
-              </div>
-              <div class='map-label-txt'><b>Suzanne</b> checked on <b>2 Sep</b> at <b>8:30 am</b> and stayed <b>30 min</b></div>
             </div>
           </div>
         </div>`

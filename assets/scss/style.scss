@@ -11732,6 +11732,9 @@ footer.footer{
     }
     span{
       color: black;
+      &.count{
+        color: white;
+      }
     }
   }
 }
