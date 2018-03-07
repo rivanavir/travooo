@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-circle-phone-icon:before {
+  content: "\e977";
+}
+.trav-emergency-highway-icon:before {
+  content: "\e975";
+}
+.trav-emergency-number-light-icon:before {
+  content: "\e976";
+}
 .trav-cities-town-icon:before {
   content: "\e974";
 }
