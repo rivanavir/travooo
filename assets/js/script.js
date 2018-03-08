@@ -505,7 +505,7 @@ $(document).ready(function(){
     $('#modalHeadTripPlan').removeClass('scrolled').hide();
   });
 
-  $('#storiesModePopup, #placeOneDayPopup').on('show.bs.modal', function(){
+  $('#storiesModePopup, #placeOneDayPopup, #tripPlansPopup').on('show.bs.modal', function(){
     $(this).find("#storiesModeSlider").lightSlider({
       autoWidth: true,
       pager: false,
@@ -591,7 +591,7 @@ $(document).ready(function(){
                 </div>
                 <div class="top-info-txt">
                   <div class="preview-txt">
-                    <p class="dest-name" href="#">Rabat sale airport</p> 
+                    <p class="dest-name">Rabat sale airport</p> 
                     <p class="dest-place">Airport in <span>Rabat-sale, Morocco</span></p>
                   </div>
                 </div>
@@ -817,12 +817,12 @@ $(document).ready(function(){
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="follow-btn-wrap">
-                <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
-                  Interested
-                  <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
-                </button>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                    Interested
+                    <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="map-preview">
@@ -991,12 +991,12 @@ $(document).ready(function(){
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="follow-btn-wrap">
-                <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
-                  Interested
-                  <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
-                </button>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                    Interested
+                    <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="map-preview">
@@ -1174,12 +1174,12 @@ $(document).ready(function(){
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="follow-btn-wrap">
-                <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
-                  Interested
-                  <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
-                </button>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                    Interested
+                    <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="map-preview">
@@ -1842,12 +1842,12 @@ $(document).ready(function(){
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="follow-btn-wrap">
-                <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
-                  Interested
-                  <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
-                </button>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                    Interested
+                    <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="map-preview">
@@ -2016,12 +2016,12 @@ $(document).ready(function(){
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="follow-btn-wrap">
-                <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
-                  Interested
-                  <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
-                </button>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                    Interested
+                    <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="map-preview">
@@ -2523,7 +2523,78 @@ $(document).ready(function(){
         "src": 'https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg',
         'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
         'subHtml': `<div class='cover-block' style='display:none;'>
-          <div class='cover-block-inner comment-block'>
+          <div class='cover-block-inner'>
+            <ul class="modal-outside-link-list white-bg">
+              <li class="outside-link">
+                <a href="#">
+                  <div class="round-icon">
+                    <i class="trav-comment-icon"></i>
+                    <span class="count">189</span>
+                  </div>
+                  <span>Comments</span>
+                </a>
+              </li>
+            </ul>
+            <div class="top-gallery-content">
+              <div class="top-info-layer">
+                <div class="top-avatar-wrap">
+                  <img src="http://placehold.it/50x50" alt="">
+                </div>
+                <div class="top-info-txt">
+                  <div class="preview-txt">
+                    <p class="dest-name" href="#">U.S.Embassy in Morocco</p> 
+                    <p class="dest-place">Embassy</p>
+                  </div>
+                  <div class="follow-btn-wrap">
+                    <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                      Follow
+                      <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-post-info">
+                <ul class="sub-list">
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-popularity-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">#4</div>
+                      <div class="sub-txt">Popularity</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-safety-big-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">9/10</div>
+                      <div class="sub-txt">Safety</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-user-rating-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">4.8/5</div>
+                      <div class="sub-txt">User rating</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="map-preview">
+              <img src="./assets/image/map-preview.jpg" alt="map">
+            </div>
+          </div>
+        </div>`
+      },{
+        "src": './assets/image/event-map-image.jpg',
+        'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
+        'subHtml': `<div class='cover-block' style='display:none;'>
+          <div class='cover-block-inner comment-block map-layout'>
             <ul class="modal-outside-link-list white-bg">
               <li class="outside-link">
                 <a href="#">
@@ -2568,9 +2639,483 @@ $(document).ready(function(){
               </div>
               <div class="follow-btn-wrap">
                 <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
-                  Interested
+                  Follow
                   <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
                 </button>
+              </div>
+            </div>
+            <div class="map-preview">
+              <img src="./assets/image/event-image.jpg" alt="map">
+            </div>
+            <div class='gallery-comment-wrap'>
+              <div class='gallery-comment-inner mCustomScrollbar'>
+                <div class="top-gallery-content gallery-comment-top">
+                  <div class="top-info-layer">
+                    <div class="top-avatar-wrap">
+                      <img src="http://placehold.it/50x50" alt="" class="mCS_img_loaded">
+                    </div>
+                    <div class="top-info-txt">
+                      <div class="preview-txt">
+                        <p class="dest-name">U.S. Embassy in Morocco</p> 
+                        <p class="dest-place">Embassy</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gal-com-footer-info">
+                    <div class="post-foot-block post-reaction">
+                      <img src="./assets/image/reaction-icon-smile-only.png" alt="smile">
+                      <span><b>2</b> Reactions</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-comment-layer">
+                  <div class="post-comment-top-info">
+                    <div class="comm-count-info">
+                      5 Comments
+                    </div>
+                    <div class="comm-count-info">
+                      3 / 20
+                    </div>
+                  </div>
+                  <div class="post-comment-wrapper">
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Katherin</a>
+                          <a href="#" class="comment-nickname">@katherin</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-smile.png" alt="">
+                            <span>21</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Amine</a>
+                          <a href="#" class="comment-nickname">@ak0117</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-like.png" alt="">
+                            <span>19</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Katherin</a>
+                          <a href="#" class="comment-nickname">@katherin</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-smile.png" alt="">
+                            <span>15</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" class="load-more-link">Load more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="post-add-comment-block">
+                <div class="avatar-wrap">
+                  <img src="http://placehold.it/45x45" alt="">
+                </div>
+                <div class="post-add-com-input">
+                  <input type="text" placeholder="Write a comment">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`
+      },{
+        "src": 'https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg',
+        'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
+        'subHtml': `<div class='cover-block' style='display:none;'>
+          <div class='cover-block-inner'>
+            <ul class="modal-outside-link-list white-bg">
+              <li class="outside-link">
+                <a href="#">
+                  <div class="round-icon">
+                    <i class="trav-comment-icon"></i>
+                    <span class="count">189</span>
+                  </div>
+                  <span>Comments</span>
+                </a>
+              </li>
+            </ul>
+            <div class="top-gallery-content">
+              <div class="top-info-layer">
+                <div class="top-avatar-wrap">
+                  <img src="http://placehold.it/50x50" alt="">
+                </div>
+                <div class="top-info-txt">
+                  <div class="preview-txt">
+                    <p class="dest-name" href="#">New York City</p> 
+                    <p class="dest-place">City in New York, United States</p>
+                  </div>
+                  <div class="follow-btn-wrap">
+                    <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                      Interested
+                      <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-post-info">
+                <ul class="sub-list">
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-popularity-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">8.538 M</div>
+                      <div class="sub-txt">Population</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-safety-big-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">9/10</div>
+                      <div class="sub-txt">Safety</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-user-rating-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">4.8/5</div>
+                      <div class="sub-txt">User rating</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="map-preview">
+              <img src="./assets/image/map-preview.jpg" alt="map">
+            </div>
+          </div>
+        </div>`
+      },{
+        "src": './assets/image/event-map-image.jpg',
+        'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
+        'subHtml': `<div class='cover-block' style='display:none;'>
+          <div class='cover-block-inner comment-block map-layout'>
+            <ul class="modal-outside-link-list white-bg">
+              <li class="outside-link">
+                <a href="#">
+                  <div class="round-icon">
+                    <i class="trav-angle-left"></i>
+                  </div>
+                  <span>Back</span>
+                </a>
+              </li>
+            </ul>
+            <div class="top-gallery-content">
+              <div class="sub-post-info">
+                <ul class="sub-list">
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-popularity-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">8.538 M</div>
+                      <div class="sub-txt">Population</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-safety-big-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">9/10</div>
+                      <div class="sub-txt">Safety</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-user-rating-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">4.8/5</div>
+                      <div class="sub-txt">User rating</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="follow-btn-wrap">
+                <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                  Follow
+                  <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                </button>
+              </div>
+            </div>
+            <div class="map-preview">
+              <img src="./assets/image/event-image.jpg" alt="map">
+            </div>
+            <div class='gallery-comment-wrap'>
+              <div class='gallery-comment-inner mCustomScrollbar'>
+                <div class="top-gallery-content gallery-comment-top">
+                  <div class="top-info-layer">
+                    <div class="top-avatar-wrap">
+                      <img src="http://placehold.it/50x50" alt="" class="mCS_img_loaded">
+                    </div>
+                    <div class="top-info-txt">
+                      <div class="preview-txt">
+                        <p class="dest-name">New York City</p> 
+                        <p class="dest-place">City in New York, United States</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gal-com-footer-info">
+                    <div class="post-foot-block post-reaction">
+                      <img src="./assets/image/reaction-icon-smile-only.png" alt="smile">
+                      <span><b>2</b> Reactions</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-comment-layer">
+                  <div class="post-comment-top-info">
+                    <div class="comm-count-info">
+                      5 Comments
+                    </div>
+                    <div class="comm-count-info">
+                      3 / 20
+                    </div>
+                  </div>
+                  <div class="post-comment-wrapper">
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Katherin</a>
+                          <a href="#" class="comment-nickname">@katherin</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-smile.png" alt="">
+                            <span>21</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Amine</a>
+                          <a href="#" class="comment-nickname">@ak0117</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-like.png" alt="">
+                            <span>19</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post-comment-row">
+                      <div class="post-com-avatar-wrap">
+                        <img src="http://placehold.it/45x45" alt="">
+                      </div>
+                      <div class="post-comment-text">
+                        <div class="post-com-name-layer">
+                          <a href="#" class="comment-name">Katherin</a>
+                          <a href="#" class="comment-nickname">@katherin</a>
+                        </div>
+                        <div class="comment-txt">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
+                        </div>
+                        <div class="comment-bottom-info">
+                          <div class="com-reaction">
+                            <img src="./assets/image/icon-smile.png" alt="">
+                            <span>15</span>
+                          </div>
+                          <div class="com-time">6 hours ago</div>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" class="load-more-link">Load more...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="post-add-comment-block">
+                <div class="avatar-wrap">
+                  <img src="http://placehold.it/45x45" alt="">
+                </div>
+                <div class="post-add-com-input">
+                  <input type="text" placeholder="Write a comment">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`
+      },{
+        "src": 'https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg',
+        'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
+        'subHtml': `<div class='cover-block' style='display:none;'>
+          <div class='cover-block-inner'>
+            <ul class="modal-outside-link-list white-bg">
+              <li class="outside-link">
+                <a href="#">
+                  <div class="round-icon">
+                    <i class="trav-comment-icon"></i>
+                    <span class="count">189</span>
+                  </div>
+                  <span>Comments</span>
+                </a>
+              </li>
+            </ul>
+            <div class="top-gallery-content">
+              <div class="top-info-layer">
+                <div class="top-avatar-wrap">
+                  <img src="http://placehold.it/50x50" alt="">
+                </div>
+                <div class="top-info-txt">
+                  <div class="preview-txt">
+                    <p class="dest-name" href="#">Grand Legacy at the Park</p> 
+                    <p class="dest-place">Hotel &nbsp;<span class="dot">·</span>&nbsp; <span>6.27 km</span></p>
+                  </div>
+                  <div class="follow-btn-wrap">
+                    <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                      Interested
+                      <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-post-info">
+                <ul class="sub-list">
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-popularity-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">#4</div>
+                      <div class="sub-txt">Popularity</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-safety-big-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">9/10</div>
+                      <div class="sub-txt">Safety</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-user-rating-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">4.8/5</div>
+                      <div class="sub-txt">User rating</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="map-preview">
+              <img src="./assets/image/map-preview.jpg" alt="map">
+            </div>
+          </div>
+        </div>`
+      },{
+        "src": 'https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg',
+        'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
+        'subHtml': `<div class='cover-block' style='display:none;'>
+          <div class='cover-block-inner comment-block'>
+            <ul class="modal-outside-link-list white-bg">
+              <li class="outside-link">
+                <a href="#">
+                  <div class="round-icon">
+                    <i class="trav-angle-left"></i>
+                  </div>
+                  <span>Back</span>
+                </a>
+              </li>
+            </ul>
+            <div class="top-gallery-content">
+              <div class="sub-post-info">
+                <ul class="sub-list">
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-popularity-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">#4</div>
+                      <div class="sub-txt">Popularity</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-safety-big-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">9/10</div>
+                      <div class="sub-txt">Safety</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon-wrap">
+                      <i class="trav-user-rating-icon"></i>
+                    </div>
+                    <div class="ctxt">
+                      <div class="top-txt">4.8/5</div>
+                      <div class="sub-txt">User rating</div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="follow-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered btn-icon-side btn-icon-right">
+                    Follow
+                    <span class="icon-wrap"><i class="trav-view-plan-icon"></i></span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="map-preview">
@@ -2720,8 +3265,7 @@ $(document).ready(function(){
                     <p>
                       <span>By</span>
                       <a href="#" class="post-name-link">Donec Ultrices Nunc</a>
-                      <span class="dot">·</span>
-                      <span>8 Days left</span>
+                      <span>on 2 Nov 2017</span>
                     </p>
                   </div>
                   <div class="follow-btn-wrap">
@@ -2989,16 +3533,16 @@ $(document).ready(function(){
         // thumbArr.push(val);
         // let startCnt = `<div class="thumb-txt"><i class="trav-flag-icon"></i> start</div>`;
         // let startCntEmpty = `<div class="thumb-txt">&nbsp;</div>`;
-        // let placetxt = 'rabar-sale airport'
-        // let placeName = `<div class="thumb-txt">${placetxt}</div>`;
+        let cityName = 'new york city'
+        let cityThumb = `<div class="thumb-txt">${cityName}</div>`;
         // if(i == 0){
         //   $(val).addClass('place-thumb');
         //   $(val).append(placeName).prepend(startCnt);
         // }
-        // if(i == 2){
-        //   $(val).addClass('place-thumb');
-        //   $(val).append(placeName).prepend(startCntEmpty);
-        // }
+        if(i == 4 || i == 5){
+          $(val).addClass('city-thumb');
+          $(val).append(cityThumb);
+        }
       });
     });
     $lg.on('onBeforeClose.lg',function(){
