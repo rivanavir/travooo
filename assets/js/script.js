@@ -2242,17 +2242,18 @@ $(document).ready(function(){
     let $lg = $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
-        "src": 'https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg',
+        "src": 'https://placehold.it/750x500',
         'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
         'subHtml': `<div class='cover-block' style='display:none;'>
-          <div class='cover-block-inner comment-block'>
+          <div class='cover-block-inner'>
             <ul class="modal-outside-link-list white-bg">
               <li class="outside-link">
                 <a href="#">
                   <div class="round-icon">
-                    <i class="trav-angle-left"></i>
+                    <i class="trav-comment-icon"></i>
+                    <span class="count">189</span>
                   </div>
-                  <span>Back</span>
+                  <span>Comments</span>
                 </a>
               </li>
               <li class="outside-link">
@@ -2264,118 +2265,39 @@ $(document).ready(function(){
                 </a>
               </li>
             </ul>
-            <div class='gallery-comment-wrap'>
-              <div class='gallery-comment-inner mCustomScrollbar'>
-                <div class="top-gallery-content gallery-comment-top">
-                  <div class="top-info-layer">
-                    <div class="top-avatar-wrap">
-                      <img src="http://placehold.it/50x50" alt="">
-                    </div>
-                    <div class="top-info-txt">
-                      <div class="preview-txt">
-                        <a class="dest-name" href="#">Julie</a> 
-                        <p class="dest-place">uploaded a <b>photo</b> <span class="date">2 hours ago</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="gallery-comment-txt">
-                    <p>This is an amazing street to walk around and do some shopping</p>
-                  </div>
-                  <div class="gal-com-footer-info">
-                    <div class="post-foot-block post-reaction">
-                      <i class="trav-heart-fill-icon"></i>
-                      <span><b>185</b></span>
-                    </div>
-                    <div class="post-foot-block post-comment-place">
-                      <i class="trav-location"></i>
-                      <span class="place-name">510 LaGuardia Pl, Paris, France</span>
-                    </div>
-                  </div>
+            <div class="top-gallery-content">
+              <div class="top-info-layer photo-layer">
+                <div class="top-avatar-wrap">
+                  <img src="http://placehold.it/50x50" alt="">
                 </div>
-                <div class="post-comment-layer">
-                  <div class="post-comment-top-info">
-                    <div class="comm-count-info">
-                      5 Comments
-                    </div>
-                    <div class="comm-count-info">
-                      3 / 20
-                    </div>
+                <div class="top-info-txt">
+                  <div class="preview-txt">
+                    <p class="photo-name" href="#">Julie</p> 
+                    <p class="photo-txt">
+                      <span>uploaded a</span>&nbsp;
+                      <b>photo</b>&nbsp;
+                      <span>2 hours ago</span>
+                    </p>
                   </div>
-                  <div class="post-comment-wrapper">
-                    <div class="post-comment-row">
-                      <div class="post-com-avatar-wrap">
-                        <img src="http://placehold.it/45x45" alt="">
-                      </div>
-                      <div class="post-comment-text">
-                        <div class="post-com-name-layer">
-                          <a href="#" class="comment-name">Katherin</a>
-                          <a href="#" class="comment-nickname">@katherin</a>
-                        </div>
-                        <div class="comment-txt">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
-                        </div>
-                        <div class="comment-bottom-info">
-                          <div class="com-reaction">
-                            <img src="./assets/image/icon-smile.png" alt="">
-                            <span>21</span>
-                          </div>
-                          <div class="com-time">6 hours ago</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="post-comment-row happen-event">
-                      <div class="post-com-avatar-wrap">
-                        <img src="http://placehold.it/45x45" alt="">
-                      </div>
-                      <div class="post-comment-text">
-                        <div class="post-com-name-layer">
-                          <a href="#" class="comment-name">Amine</a>
-                          <a href="#" class="comment-nickname">@ak0117</a>
-                        </div>
-                        <div class="comment-txt">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus.</p>
-                        </div>
-                        <div class="comment-bottom-info">
-                          <div class="com-reaction">
-                            <img src="./assets/image/icon-like.png" alt="">
-                            <span>19</span>
-                          </div>
-                          <div class="com-time">6 hours ago</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="post-comment-row">
-                      <div class="post-com-avatar-wrap">
-                        <img src="http://placehold.it/45x45" alt="">
-                      </div>
-                      <div class="post-comment-text">
-                        <div class="post-com-name-layer">
-                          <a href="#" class="comment-name">Katherin</a>
-                          <a href="#" class="comment-nickname">@katherin</a>
-                        </div>
-                        <div class="comment-txt">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus labore tenetur vel. Neque molestiae repellat culpa qui odit delectus.</p>
-                        </div>
-                        <div class="comment-bottom-info">
-                          <div class="com-reaction">
-                            <img src="./assets/image/icon-smile.png" alt="">
-                            <span>15</span>
-                          </div>
-                          <div class="com-time">6 hours ago</div>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="#" class="load-more-link">Load more...</a>
+                  <div class="reaction-wrap">
+                    <img src="./assets/image/smile-heart.svg" alt="smile">
+                    <span>185</span>
                   </div>
                 </div>
               </div>
-              <div class="post-add-comment-block">
+            </div>
+            <div class="photo-bottom">
+              <div class="photo-caption">
                 <div class="avatar-wrap">
-                  <img src="http://placehold.it/45x45" alt="">
+                  <img src="http://placehold.it/25x25" alt="ava">
                 </div>
-                <div class="post-add-com-input">
-                  <input type="text" placeholder="Write a comment">
+                <div class="photo-label-txt">Where did you take this picture?</div>
+              </div>
+              <div class="photo-caption">
+                <div class="avatar-wrap">
+                  <img src="http://placehold.it/25x25" alt="ava">
                 </div>
+                <div class="photo-label-txt">I really love to walk in this beautiful street</div>
               </div>
             </div>
           </div>
@@ -3584,6 +3506,42 @@ $(document).ready(function(){
     });
     $lg.on('onAfterSlide.lg',function(){
       setWidth();
+    });
+  });
+
+    // country gallery popup
+  $('#visaPopupTrigger').on('click', function(){
+    
+    let $lg = $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        "src": './assets/image/visa-slide-image.jpg',
+        'thumb': './assets/image/visa-slide-image.jpg'
+      },{
+        "src": './assets/image/visa-slide-image.jpg',
+        'thumb': './assets/image/visa-slide-image.jpg'
+      }],
+      addClass: 'main-gallery-block',
+      pager: false,
+      hideControlOnEnd: true,
+      loop: false,
+      slideEndAnimatoin : false,
+      thumbnail:true,
+      toogleThumb: false,
+      thumbHeight: 100,
+      thumbMargin: 20,
+      thumbContHeight: 180,
+      actualSize: false,
+      zoom: false,
+      autoplayControls: false,
+      fullScreen: false,
+      download: false,
+      counter: false,
+      mousewheel: false,
+      appendSubHtmlTo: 'lg-item',
+      prevHtml: '<i class="trav-angle-left"></i>',
+      nextHtml: '<i class="trav-angle-right"></i>',
+      hideBarsDelay: 100000000
     });
   });
 
