@@ -363,7 +363,7 @@ body{
         }
       }
     }
-    .left-side-tab{
+    .left-side-tab-layer{
       @media(min-width:768px){
         padding-top: 35px;
         max-width: 21%;
@@ -397,9 +397,6 @@ body{
     }
 
     &.setting-layout{
-      .left-side-tab{
-
-      }
       .main-content-layer{
         padding-top: 35px;
         max-width: 79%;
@@ -1449,6 +1446,36 @@ button.btn-mobile-side{
       &.active{
         a{
           opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.left-side-tab-layer{
+  h3.left-side-ttl{
+    font-size: 18px;
+    color: #1a1a1a;
+    border-bottom: 1px solid #e6e6e6;
+    font-family: 'Circular Std Med';
+    padding: 15px 0;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  ul.left-side-list{
+    margin-bottom: 0;
+    padding: 7px 0;
+    li{
+      padding: 7px 0;
+      a{
+        color: #999999;
+        font-size: 16px;
+        font-family: 'CircularAirPro Light';
+      }
+      &.active{
+        a{
+          color: #1a1a1a;
+          font-family: 'Circular Std Book';
         }
       }
     }
@@ -6398,6 +6425,39 @@ aside.sidebar{
         color: #1a1a1a;
         font-family: 'Circular Std Book';
       }
+    }
+  }
+}
+
+.post-form-wrapper{
+  padding: 50px 40px;
+  label.col-form-label{
+    text-align: right;
+    font-size: 14px;
+    color: #4c4c4c;
+    font-family: 'Circular Std Book';
+    text-transform: capitalize;
+  }
+  .input-wrap{
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    padding: 10px 18px;
+    margin-bottom: 10px;
+    input{
+      font-family: 'Circular Std Book';
+      font-size: 16px;
+      color: #1a1a1a;
+      width: 100%;
+    }
+  }
+  .form-txt{
+    padding: 5px 0;
+    p{
+      font-size: 14px;
+      color: #4c4c4c;
+      font-family: 'CircularAirPro Light';
+      line-height: 1.4;
+      margin-bottom: 0;
     }
   }
 }
