@@ -1427,7 +1427,9 @@ button.btn-mobile-side{
         display: flex;
         flex-direction: column;
         text-decoration: none;
+        position: relative;
         opacity: 0.6;
+        text-transform: capitalize;
         @media (max-width: 991px){
           // text-shadow: 0 1px 3px rgba(0,0,0,.5);
         }
@@ -1436,10 +1438,28 @@ button.btn-mobile-side{
           font-size: 27px;
         }
         span{
-          line-height: 2;
-          white-space: nowrap;
-          @media(max-width:575px){
-            display: none;
+           &:not(.counter){
+            line-height: 2;
+            white-space: nowrap;
+            @media(max-width:575px){
+              display: none;
+            }
+          }
+          &.counter{
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fc2237;
+            font-family: 'CircularAirPro Light';
+            font-size: 12px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
         }
       }
@@ -3376,6 +3396,62 @@ aside.sidebar{
     }
     .post-calendar-inner{
       padding: 5px 20px 20px;
+      max-height: 440px;
+      &.mCustomScrollbar{
+        padding-right: 0;
+        .mCSB_container{
+          margin-right: 20px;
+        }
+        .mCSB_scrollTools{
+          right: 2px;
+        }
+      }
+    }
+  }
+
+  &.post-side-search{
+    padding: 20px;
+    .search-wrapper{
+      background: #f5f5f5;
+      border: 1px solid #e6e6e6;
+      border-radius: 4px;
+      display: flex;
+      a.search-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        text-align: center;
+        padding-left: 4px;
+        text-decoration: none;
+        i[class^=trav]{
+          font-size: 20px;
+          color: #999999;
+        }
+      }
+      input{
+        flex-grow: 1;
+        border:none;
+        padding: 13px 17px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-family: 'CircularAirPro Light';
+        font-weight: normal;
+        background: transparent;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #999999;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: #999999;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: #999999;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: #999999;
+        }
+      }
     }
   }
 
@@ -3401,6 +3477,25 @@ aside.sidebar{
     .post-side-top{
       padding: 10px 30px;
       border-bottom: 1px solid #e6e6e6;
+      &.top-arrow{
+        position: relative;
+        &:before,
+        &:after{
+          position: absolute;
+          content: '';
+          display: block;
+          border: 7px solid transparent;
+          left: 70px;
+        }
+        &:before{
+          border-bottom-color: #e6e6e6;
+          bottom: 0;
+        }
+        &:after{
+          bottom: -1px;
+          border-bottom-color: white;
+        }
+      }
     }
     .post-content-inner{
       padding: 27px 30px 30px;
@@ -4828,6 +4923,84 @@ aside.sidebar{
       color: #b2b2b2;
       font-family: 'Circular Std Book';
       text-align: center;
+    }
+  }
+
+  .activity-inner{
+    padding: 0 25px;
+    .activ-row{
+      padding: 20px 0 0;
+      &:not(:last-child){
+        border-bottom: 1px solid #e6e6e6;
+      }
+      .activ-inside-block{
+        display: flex;
+        align-items: flex-start;
+        .activ-img{
+          border: 1px solid #e6e6e6;
+        }
+      }
+      .activ-inside-txt{
+        padding-left: 20px;
+        .activ-txt-inner{
+          padding-top: 5px;
+          h2.act-ttl{
+            font-weight: normal;
+            font-size: 18px;
+            font-family: 'Circular Std Book';
+            display: flex;
+            align-items: center;
+            a{
+              color: #4080ff;
+            }
+            span{
+              font-size: 14px;
+              color: #666666;
+              font-family: 'CircularAirPro Light';
+            }
+            img.small-flag{
+              box-shadow: 0 1px 2px rgba(128,128,128,.6);
+            }
+          }
+          .txt-block{
+            p{
+              font-size: 16px;
+              color: #000000;
+              line-height: 1.4;
+              font-family: 'CircularAirPro Light';
+              margin-bottom: 5px;
+              a{
+                color: #4080ff;
+              }
+            }
+          }
+          .btn-block{
+            .btn{
+              text-transform: uppercase;
+              padding: 10px 16px;
+              i[class^=trav]{
+                font-size: 22px;
+              }
+              &.btn-light-grey{
+                padding: 5px 8px;
+              }
+            }
+          }
+        }
+      }
+      .activ-after-txt{
+        min-width: 100%;
+        padding: 20px 0 10px;
+        p{
+          font-family: 'CircularAirPro Light';
+          font-size: 14px;
+          color: #808080;
+          margin-bottom: 15px;
+          a{
+            color: #4080ff;
+          }
+        }
+      }
     }
   }
 
@@ -7848,9 +8021,9 @@ ul.filter-list{
     left: 0;
     bottom: 0;
     color: white;
-    font-size: 28px;
+    font-size: 24px;
     text-transform: capitalize;
-    font-family: 'Circular Std Med';
+    font-family: 'Circular Std Book';
     padding: 0 0 25px 20px;
     @media (max-width:767px){
       font-size: 22px;
@@ -8235,6 +8408,21 @@ footer.footer{
           background: #4080ff;
           color: white;
           position: relative;
+          .mark{
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'CircularAirPro Light';
+            font-size: 8px;
+            color: #4080ff;
+          }
           &.dropdown{
             .dropdown-menu{
               min-width: 150px;

@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-activity-icon:before {
+  content: "\e978";
+}
+.trav-photos-menu-icon:before {
+  content: "\e979";
+}
+.trav-videos-icon:before {
+  content: "\e97a";
+}
 .trav-circle-phone-icon:before {
   content: "\e977";
 }
