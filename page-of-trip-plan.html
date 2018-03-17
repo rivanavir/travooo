@@ -367,6 +367,9 @@
             <button type="button" class="btn btn-primary" id="lightGalleryTrigger">
               Gallery Mode popup
             </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chatPopup">
+              Chat popup
+            </button>
             
             <div class="imageGallaryWrap">
 
@@ -1009,20 +1012,239 @@
 
   <!-- modals -->
 
-  <!-- gallery popup -->
-  <!-- <div class="modal fade white-style" data-backdrop="false" id="galleryModePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-custom-style modal-full" role="document">
-      <div class="modal-custom-block">
-        <div class="post-block post-gallery-mode-modal">
-          <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
-            <i class="trav-close-icon"></i>
-          </button>
+  <!-- story mode popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="chatPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+      
+    <div class="modal-dialog modal-custom-style modal-1420" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block">
+          <div class="head-trip-plan scrolled" id="headerTripPlan">
+            <div class="head-trip-plan_wrapper">
+              <div class="head-trip-plan_inner">
+                <div class="plan-by-name">
+                  <div class="ava-by-wrap">
+                    <img src="http://placehold.it/36x36" alt="avatar">
+                  </div>
+                  <div class="plan-name">By <a href="#" class="name-link">Suzanne</a></div>
+                </div>
+                <div class="plan-title">
+                  From Morocco to Japan in 7 Days
+                </div>
+                <div class="plan-btn-wrap">
+                  <a class="nav-link btn btn-light-primary" href="#">Use plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-block post-top-bordered post-view-block">
+            <div class="post-top-info-layer">
+              <ul class="view-link">
+                <li class="active">
+                  <a href="#">Overview</a>
+                </li>
+                <li>
+                  <a href="#">Suggested Places 3</a>
+                </li>
+              </ul>
+            </div>
+            <div class="post-view-inner">
+              <div class="post-view-wrap">
+                <div class="story-date-layer">
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Day 1 / 7</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                  </div>
+                </div>
+                
+                <div class="view-img-layer airplane">
+                  <div class="view-img">
+                    <img src="http://placehold.it/50x50" alt="view">
+                    <span class="round-count">1</span>
+                  </div>
+                </div>
+                <div class="view-content">
+                  <div class="view-txt-line">
+                    <div class="line-txt place-info">
+                      <a href="#" class="dest-link">Rabat sale airport</a>
+                      <span class="block-tag">Airport</span>
+                      <i class="trav-set-location-icon"></i>
+                      <span class="place-name">Rabat</span>
+                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                      <span class="place-name">Morocco</span>
+                    </div>
+                    <div class="line-time">
+                      @ 10:00am
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      Will spend <b>$240</b>
+                      <span class="dot">·</span>
+                      Planning to stay <b>40 min</b>
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      <b>Have something to tell Suzanne?</b>
+                      Discussed by 
+                      <ul class="foot-avatar-list">
+                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                      </ul>
+                      128 users
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-view-wrap">
+                <div class="view-img-layer airplane">
+                  <div class="view-img">
+                    <img src="http://placehold.it/50x50" alt="view">
+                    <span class="round-count">2</span>
+                  </div>
+                </div>
+                <div class="view-content">
+                  <div class="view-txt-line">
+                    <div class="line-txt place-info">
+                      <a href="#" class="dest-link">Dubai international airport</a>
+                      <span class="block-tag">Airport</span>
+                      <i class="trav-set-location-icon"></i>
+                      <span class="place-name">Dubai</span>
+                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                      <span class="place-name">United arab emirates</span>
+                    </div>
+                    <div class="line-time">
+                      @ 3:00pm
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      Will spend <b>$510</b>
+                      <span class="dot">·</span>
+                      Planning to stay <b>2 hours</b>
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      <b>Have something to tell Suzanne?</b>
+                      Discussed by 
+                      <ul class="foot-avatar-list">
+                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                      </ul>
+                      128 users
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-view-wrap">
+                <div class="story-date-layer">
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Day 2 / 7</div>
+                  </div>
+                  <div class="s-date-line">
+                    <div class="s-date-badge">Mon, 19 Jun 2017</div>
+                  </div>
+                </div>
+                
+                <div class="view-img-layer overland-trip">
+                  <div class="view-img">
+                    <img src="http://placehold.it/50x50" alt="view">
+                    <span class="round-count">3</span>
+                  </div>
+                </div>
+                <div class="view-content">
+                  <div class="view-txt-line">
+                    <div class="line-txt place-info">
+                      <a href="#" class="dest-link">Haneda airport</a>
+                      <span class="block-tag">Airport</span>
+                      <i class="trav-set-location-icon"></i>
+                      <span class="place-name">Tokyo</span>
+                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                      <span class="place-name">Japan</span>
+                    </div>
+                    <div class="line-time">
+                      @ 12:00am
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      Will spend <b>$240</b>
+                      <span class="dot">·</span>
+                      Planning to stay <b>40 min</b>
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      <b>Have something to tell Suzanne?</b>
+                      Discussed by 
+                      <ul class="foot-avatar-list">
+                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                      </ul>
+                      128 users
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-view-wrap">
+                <div class="view-img-layer airplane">
+                  <div class="view-img">
+                    <img src="http://placehold.it/50x50" alt="view">
+                    <span class="round-count">4</span>
+                  </div>
+                </div>
+                <div class="view-content">
+                  <div class="view-txt-line">
+                    <div class="line-txt place-info">
+                      <a href="#" class="dest-link">Bunka</a>
+                      <span class="block-tag">Hotel</span>
+                      <i class="trav-set-location-icon"></i>
+                      <span class="place-name">Tokyo</span>
+                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                      <span class="place-name">Japan</span>
+                    </div>
+                    <div class="line-time">
+                      @ 10:00am
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      Will spend <b>$510</b>
+                      <span class="dot">·</span>
+                      Planning to stay <b>2 hours</b>
+                    </div>
+                  </div>
+                  <div class="view-txt-line">
+                    <div class="line-txt">
+                      <b>Have something to tell Suzanne?</b>
+                      Discussed by 
+                      <ul class="foot-avatar-list">
+                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                      </ul>
+                      128 users
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div> -->
-  
+  </div>
+
   <!-- story mode popup -->
   <div class="modal fade white-style" data-backdrop="false" id="storyModePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
