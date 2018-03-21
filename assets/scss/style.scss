@@ -1614,6 +1614,7 @@ button.btn-mobile-side{
     .trip-map-left{
       .trip-map-info{
         @extend .map-info-list;
+        flex-wrap: wrap;
         padding-left: 15px;
         .trip-map-info_block{
           padding-right: 20px;
@@ -1799,6 +1800,64 @@ button.btn-mobile-side{
     }
     img.small-ava{
       @include avatarImgStyle(29px, white);
+    }
+  }
+}
+
+// bottom fixed layer
+
+.bottom-fixed-layer{
+  position: fixed;
+  bottom: 0;
+  width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  .btn{
+    position: relative;
+    padding: 0;
+    display: flex;
+    box-shadow: 0 3px 4px rgba(0,0,0,.19);
+    border-radius:3px 3px 0 0;
+    background: #538cfd;
+    right: -100px;
+    i[class^=trav]{
+      font-size: 22px;
+      padding: 10px;
+      border-radius: 3px 0 0 0;
+      background: #3f7efb;
+    }
+    span{
+      padding: 15px 20px;
+      text-transform: none;
+      font-family: 'Circular Std Book';
+      font-size: 16px;
+    }
+  }
+  ul.bottom-ava-list{
+    position: relative;
+    right: -100px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 6px;
+    box-shadow: 0 3px 4px rgba(0,0,0,.19);
+    background: #3f7ffd;
+    border-radius:3px 3px 0 0;
+    li{
+      padding: 4px;
+      a{
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Circular Std Book';
+        img{
+          @include avatarImgStyle(26px, #ebebeb);
+        }
+      }
     }
   }
 }
@@ -12095,8 +12154,12 @@ footer.footer{
           textarea.people-txt{
             min-width: 100%;
             max-width: 100%;
+            padding: 18px;
             border: 1px solid #e6e6e6;
             border-radius: 4px;
+            font-size: 16px;
+            color: #1a1a1a;
+            font-family: 'CircularAirPro Light';
           }
         }
       }
@@ -12275,12 +12338,49 @@ footer.footer{
         }
         .head-trip-plan_inner{
           padding: 20px 25px;
+          &>*{
+            width: 33.33333%;
+          }
+          .plan-btn-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            ul.head-ava-list{
+              display: flex;
+              align-items: center;
+              margin: 0;
+              li{
+                padding: 4px;
+                a{
+                  color: #999999;
+                  font-size: 14px;
+                  font-family: 'Circular Std Book';
+                  img{
+                    @include avatarImgStyle(24px, #ebebeb);
+                  }
+                }
+              }
+            }
+            .btn{
+              text-transform: capitalize;
+              margin-left: 10px;
+              padding: 8px 15px;
+              &>*{
+                display: inline-block;
+                vertical-align: middle;
+              }
+              i[class^=trav]{
+                font-size: 20px;
+              }
+            }
+          }
         }
       }
       .chat-wrapper{
         display: flex;
         padding: 20px 20px 0;
         background: #f5f5f5;
+        max-height: calc(100vh - 139px);
         .view-layer{
           min-width: 60%;
           .post-block{

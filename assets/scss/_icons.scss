@@ -24,6 +24,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-input-video-icon:before {
+  content: "\e97b";
+}
+.trav-input-h-icon:before {
+  content: "\e97c";
+}
+.trav-input-image-icon:before {
+  content: "\e97d";
+}
+.trav-input-map-around-icon:before {
+  content: "\e97e";
+}
+.trav-input-cutlery-icon:before {
+  content: "\e97f";
+}
+.trav-input-map-star-icon:before {
+  content: "\e980";
+}
 .trav-activity-icon:before {
   content: "\e978";
 }
