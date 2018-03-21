@@ -370,6 +370,12 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chatPopup">
               Chat popup
             </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPlacePopup">
+              Add to chat popup
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#invitePopup">
+              Add to chat popup
+            </button>
             
             <div class="imageGallaryWrap">
 
@@ -1021,8 +1027,8 @@
       
     <div class="modal-dialog modal-custom-style modal-1420" role="document">
       <div class="modal-custom-block">
-        <div class="post-block">
-          <div class="head-trip-plan scrolled" id="headerTripPlan">
+        <div class="post-block post-invite-chat">
+          <div class="head-trip-plan">
             <div class="head-trip-plan_wrapper">
               <div class="head-trip-plan_inner">
                 <div class="plan-by-name">
@@ -1040,200 +1046,366 @@
               </div>
             </div>
           </div>
-          <div class="post-block post-top-bordered post-view-block">
-            <div class="post-top-info-layer">
-              <ul class="view-link">
-                <li class="active">
-                  <a href="#">Overview</a>
-                </li>
-                <li>
-                  <a href="#">Suggested Places 3</a>
-                </li>
-              </ul>
+          <div class="chat-wrapper">
+            <div class="view-layer mCustomScrollbar">
+              <div class="post-block post-top-bordered post-view-block">
+                <div class="post-top-info-layer">
+                  <ul class="view-link">
+                    <li class="active">
+                      <a href="#">Overview</a>
+                    </li>
+                    <li>
+                      <a href="#">Suggested Places 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="post-view-inner">
+                  <div class="post-view-wrap">
+                    <div class="story-date-layer">
+                      <div class="s-date-line">
+                        <div class="s-date-badge">Day 1 / 7</div>
+                      </div>
+                      <div class="s-date-line">
+                        <div class="s-date-badge">Mon, 18 Jun 2017</div>
+                      </div>
+                    </div>
+                    
+                    <div class="view-img-layer airplane">
+                      <div class="view-img">
+                        <img src="http://placehold.it/50x50" alt="view">
+                        <span class="round-count">1</span>
+                      </div>
+                    </div>
+                    <div class="view-content">
+                      <div class="view-txt-line">
+                        <div class="line-txt place-info">
+                          <a href="#" class="dest-link">Rabat sale airport</a>
+                          <span class="block-tag">Airport</span>
+                          <i class="trav-set-location-icon"></i>
+                          <span class="place-name">Rabat</span>
+                          <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                          <span class="place-name">Morocco</span>
+                        </div>
+                        <div class="line-time">
+                          @ 10:00am
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          Will spend <b>$240</b>
+                          <span class="dot">·</span>
+                          Planning to stay <b>40 min</b>
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          <b>Have something to tell Suzanne?</b>
+                          Discussed by 
+                          <ul class="foot-avatar-list">
+                            <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                            --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                            --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                          </ul>
+                          128 users
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-view-wrap">
+                    <div class="view-img-layer airplane">
+                      <div class="view-img">
+                        <img src="http://placehold.it/50x50" alt="view">
+                        <span class="round-count">2</span>
+                      </div>
+                    </div>
+                    <div class="view-content">
+                      <div class="view-txt-line">
+                        <div class="line-txt place-info">
+                          <a href="#" class="dest-link">Dubai international airport</a>
+                          <span class="block-tag">Airport</span>
+                          <i class="trav-set-location-icon"></i>
+                          <span class="place-name">Dubai</span>
+                          <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                          <span class="place-name">United arab emirates</span>
+                        </div>
+                        <div class="line-time">
+                          @ 3:00pm
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          Will spend <b>$510</b>
+                          <span class="dot">·</span>
+                          Planning to stay <b>2 hours</b>
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          <b>Have something to tell Suzanne?</b>
+                          Discussed by 
+                          <ul class="foot-avatar-list">
+                            <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                            --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                            --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                          </ul>
+                          128 users
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-view-wrap current">
+                    <div class="story-date-layer">
+                      <div class="s-date-line">
+                        <div class="s-date-badge">Day 2 / 7</div>
+                      </div>
+                      <div class="s-date-line">
+                        <div class="s-date-badge">Mon, 19 Jun 2017</div>
+                      </div>
+                    </div>
+                    
+                    <div class="view-img-layer overland-trip">
+                      <div class="view-img">
+                        <img src="http://placehold.it/50x50" alt="view">
+                        <span class="round-count">3</span>
+                      </div>
+                    </div>
+                    <div class="view-content">
+                      <div class="view-txt-line">
+                        <div class="line-txt place-info">
+                          <a href="#" class="dest-link">Haneda airport</a>
+                          <span class="block-tag">Airport</span>
+                          <i class="trav-set-location-icon"></i>
+                          <span class="place-name">Tokyo</span>
+                          <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                          <span class="place-name">Japan</span>
+                        </div>
+                        <div class="line-time">
+                          @ 12:00am
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          Will spend <b>$240</b>
+                          <span class="dot">·</span>
+                          Planning to stay <b>40 min</b>
+                        </div>
+                        <div class="btn-wrap">
+                          <button class="btn btn-success btn-bordered">Approve</button>
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          <b>Suggested by</b>&nbsp;
+                          <ul class="foot-avatar-list">
+                            <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                          </ul>&nbsp;
+                          <a href="#" class="name-link">Amine</a>
+                        </div>
+                        <div class="btn-wrap">
+                          <button class="btn btn-trip-red btn-bordered">Disapprove</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post-view-wrap">
+                    <div class="view-img-layer airplane">
+                      <div class="view-img">
+                        <img src="http://placehold.it/50x50" alt="view">
+                        <span class="round-count">4</span>
+                      </div>
+                    </div>
+                    <div class="view-content">
+                      <div class="view-txt-line">
+                        <div class="line-txt place-info">
+                          <a href="#" class="dest-link">Bunka</a>
+                          <span class="block-tag">Hotel</span>
+                          <i class="trav-set-location-icon"></i>
+                          <span class="place-name">Tokyo</span>
+                          <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
+                          <span class="place-name">Japan</span>
+                        </div>
+                        <div class="line-time">
+                          @ 10:00am
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          Will spend <b>$510</b>
+                          <span class="dot">·</span>
+                          Planning to stay <b>2 hours</b>
+                        </div>
+                      </div>
+                      <div class="view-txt-line">
+                        <div class="line-txt">
+                          <b>Have something to tell Suzanne?</b>
+                          Discussed by 
+                          <ul class="foot-avatar-list">
+                            <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                            --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
+                            --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                          </ul>
+                          128 users
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="post-view-inner">
-              <div class="post-view-wrap">
-                <div class="story-date-layer">
-                  <div class="s-date-line">
-                    <div class="s-date-badge">Day 1 / 7</div>
-                  </div>
-                  <div class="s-date-line">
-                    <div class="s-date-badge">Mon, 18 Jun 2017</div>
-                  </div>
+            <div class="chat-layer">
+              <div class="chat-inner">
+                <div class="chat-ttl-layer">
+                  <h4 class="chat-ttl-messages">Trip plan messages</h4>
                 </div>
-                
-                <div class="view-img-layer airplane">
-                  <div class="view-img">
-                    <img src="http://placehold.it/50x50" alt="view">
-                    <span class="round-count">1</span>
-                  </div>
-                </div>
-                <div class="view-content">
-                  <div class="view-txt-line">
-                    <div class="line-txt place-info">
-                      <a href="#" class="dest-link">Rabat sale airport</a>
-                      <span class="block-tag">Airport</span>
-                      <i class="trav-set-location-icon"></i>
-                      <span class="place-name">Rabat</span>
-                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
-                      <span class="place-name">Morocco</span>
+                <div class="chat-txt-block">
+                  <div class="chat-group-wrap mCustomScrollbar">
+                    <div class="chat-group">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="text-block">
+                        Hi, how are you going?
+                      </div>
                     </div>
-                    <div class="line-time">
-                      @ 10:00am
+                    <div class="chat-group right">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="text-block">
+                        I'm good and you?
+                      </div>
+                    </div>
+                    <div class="chat-group">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="text-block">
+                        Great! what should we talk about here?
+                      </div>
+                    </div>
+                    <div class="chat-group right">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="text-block">
+                        IDK, what do you think? <img class="smile" src="./assets/image/smile-eek.svg" alt="smile">
+                      </div>
+                    </div>
+                    <div class="chat-group">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="text-block">
+                        Great! what should we talk about here?
+                      </div>
+                    </div>
+                    <div class="chat-group right">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="text-block">
+                        IDK, what do you think? <img class="smile" src="./assets/image/smile-eek.svg" alt="smile">
+                      </div>
+                    </div>
+                    <div class="chat-group right">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="text-block">
+                        I'll be happy to know what is in your mind
+                      </div>
+                    </div>
+                    <div class="chat-group">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="card-block">
+                        <div class="img-wrap">
+                          <img src="http://placehold.it/82x82" alt="photo">
+                        </div>
+                        <div class="card-txt">
+                          <div class="card-ttl">
+                            <span class="name">Asakusa view hotel</span>
+                          </div>
+                          <div class="card-info-wrap">
+                            <div class="info-block">
+                              <span>Check-in</span>&nbsp;
+                              <b>19 october</b>&nbsp;
+                              <span>at</span>&nbsp;
+                              <b>9h20</b>
+                            </div>
+                          </div>
+                          <div class="card-info-wrap">
+                            <div class="info-block">
+                              <span>Will spend</span>&nbsp;
+                              <b>$1,200</b>
+                            </div>
+                            <div class="dot">·</div>
+                            <div class="info-block">
+                              <span>Planning to stay</span>&nbsp;
+                              <b>2 hours</b>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-group right">
+                      <div class="avatar-block">
+                        <img src="http://placehold.it/32x32" alt="avatar">
+                      </div>
+                      <div class="card-block">
+                        <div class="img-wrap">
+                          <img src="http://placehold.it/82x82" alt="photo">
+                        </div>
+                        <div class="card-txt">
+                          <div class="card-ttl">
+                            <span class="name">Asakusa view hotel</span>
+                          </div>
+                          <div class="card-info-wrap">
+                            <div class="info-block">
+                              <span>Check-in</span>&nbsp;
+                              <b>19 october</b>&nbsp;
+                              <span>at</span>&nbsp;
+                              <b>9h20</b>
+                            </div>
+                          </div>
+                          <div class="card-info-wrap">
+                            <div class="info-block">
+                              <span>Will spend</span>&nbsp;
+                              <b>$1,200</b>
+                            </div>
+                            <div class="dot">·</div>
+                            <div class="info-block">
+                              <span>Planning to stay</span>&nbsp;
+                              <b>2 hours</b>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      Will spend <b>$240</b>
-                      <span class="dot">·</span>
-                      Planning to stay <b>40 min</b>
+                  <div class="add-input-block">
+                    <div class="input-wrap">
+                      <input type="text" placeholder="Write a message...">
                     </div>
-                  </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      <b>Have something to tell Suzanne?</b>
-                      Discussed by 
-                      <ul class="foot-avatar-list">
-                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
+                    <div class="add-input-action">
+                      <ul class="action-list">
+                        <li>
+                          <a href="#">
+                            <i class="trav-bell-icon"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="trav-bell-icon"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="trav-bell-icon"></i>
+                          </a>
+                        </li>
                       </ul>
-                      128 users
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="post-view-wrap">
-                <div class="view-img-layer airplane">
-                  <div class="view-img">
-                    <img src="http://placehold.it/50x50" alt="view">
-                    <span class="round-count">2</span>
-                  </div>
-                </div>
-                <div class="view-content">
-                  <div class="view-txt-line">
-                    <div class="line-txt place-info">
-                      <a href="#" class="dest-link">Dubai international airport</a>
-                      <span class="block-tag">Airport</span>
-                      <i class="trav-set-location-icon"></i>
-                      <span class="place-name">Dubai</span>
-                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
-                      <span class="place-name">United arab emirates</span>
-                    </div>
-                    <div class="line-time">
-                      @ 3:00pm
-                    </div>
-                  </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      Will spend <b>$510</b>
-                      <span class="dot">·</span>
-                      Planning to stay <b>2 hours</b>
-                    </div>
-                  </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      <b>Have something to tell Suzanne?</b>
-                      Discussed by 
-                      <ul class="foot-avatar-list">
-                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
-                      </ul>
-                      128 users
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="post-view-wrap">
-                <div class="story-date-layer">
-                  <div class="s-date-line">
-                    <div class="s-date-badge">Day 2 / 7</div>
-                  </div>
-                  <div class="s-date-line">
-                    <div class="s-date-badge">Mon, 19 Jun 2017</div>
-                  </div>
-                </div>
-                
-                <div class="view-img-layer overland-trip">
-                  <div class="view-img">
-                    <img src="http://placehold.it/50x50" alt="view">
-                    <span class="round-count">3</span>
-                  </div>
-                </div>
-                <div class="view-content">
-                  <div class="view-txt-line">
-                    <div class="line-txt place-info">
-                      <a href="#" class="dest-link">Haneda airport</a>
-                      <span class="block-tag">Airport</span>
-                      <i class="trav-set-location-icon"></i>
-                      <span class="place-name">Tokyo</span>
-                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
-                      <span class="place-name">Japan</span>
-                    </div>
-                    <div class="line-time">
-                      @ 12:00am
-                    </div>
-                  </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      Will spend <b>$240</b>
-                      <span class="dot">·</span>
-                      Planning to stay <b>40 min</b>
-                    </div>
-                  </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      <b>Have something to tell Suzanne?</b>
-                      Discussed by 
-                      <ul class="foot-avatar-list">
-                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
-                      </ul>
-                      128 users
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="post-view-wrap">
-                <div class="view-img-layer airplane">
-                  <div class="view-img">
-                    <img src="http://placehold.it/50x50" alt="view">
-                    <span class="round-count">4</span>
-                  </div>
-                </div>
-                <div class="view-content">
-                  <div class="view-txt-line">
-                    <div class="line-txt place-info">
-                      <a href="#" class="dest-link">Bunka</a>
-                      <span class="block-tag">Hotel</span>
-                      <i class="trav-set-location-icon"></i>
-                      <span class="place-name">Tokyo</span>
-                      <img class="flag-img" src="http://placehold.it/24x17" alt="flag">
-                      <span class="place-name">Japan</span>
-                    </div>
-                    <div class="line-time">
-                      @ 10:00am
-                    </div>
-                  </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      Will spend <b>$510</b>
-                      <span class="dot">·</span>
-                      Planning to stay <b>2 hours</b>
-                    </div>
-                  </div>
-                  <div class="view-txt-line">
-                    <div class="line-txt">
-                      <b>Have something to tell Suzanne?</b>
-                      Discussed by 
-                      <ul class="foot-avatar-list">
-                        <li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li><!--
-                        --><li><img class="small-ava" src="http://placehold.it/20x20" alt="ava"></li>
-                      </ul>
-                      128 users
                     </div>
                   </div>
                 </div>
@@ -4322,6 +4494,635 @@
       </div>
     </div>
   </div>
+
+  <!-- add to the chat popup -->
+  <div class="modal fade white-style" data-backdrop="false" id="addPlacePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+    <div class="modal-dialog modal-custom-style modal-650" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-modal-add-place">
+          <h3 class="place-title">Add content to the chat</h3>
+          <!-- step 1 -->
+          <div class="search-block-wrap">
+            <div class="search-block-inner">
+              <div class="search-block">
+                <input type="text" class="" placeholder="Search places, hotels, cities..." id="placeSearchInput2">
+              </div>
+              <div class="search-drop-place">
+                <div class="results-block-wrap">
+                  <div class="sugg-inner">
+                    <div class="suggestion-block">
+                      <div class="img-wrap">
+                        <img src="http://placehold.it/60x60" alt="image">
+                      </div>
+                      <div class="sugg-content">
+                        <div class="sugg-place">Osaka</div>
+                        <div class="sugg-place-info">City in Japan</div>
+                        <div class="com-star-block">
+                          <ul class="com-star-list">
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                          </ul>
+                          <span class="count">
+                            <b>4.8</b>
+                          </span>
+                          <span>from 26 Reviews</span>
+                        </div>
+                      </div>
+                      <div class="sugg-btn-wrap">
+                        <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                      </div>
+                    </div>
+                    <div class="suggestion-block">
+                      <div class="img-wrap">
+                        <img src="http://placehold.it/60x60" alt="image">
+                      </div>
+                      <div class="sugg-content">
+                        <div class="sugg-place">Asakusa View hotel</div>
+                        <div class="sugg-place-info">Hotel in Tokyo, Japan</div>
+                        <div class="com-star-block">
+                          <ul class="com-star-list">
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                          </ul>
+                          <span class="count">
+                            <b>4.8</b>
+                          </span>
+                          <span>from 26 Reviews</span>
+                        </div>
+                      </div>
+                      <div class="sugg-btn-wrap">
+                        <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                      </div>
+                    </div>
+                    <div class="suggestion-block">
+                      <div class="img-wrap">
+                        <img src="http://placehold.it/60x60" alt="image">
+                      </div>
+                      <div class="sugg-content">
+                        <div class="sugg-place">Morocco</div>
+                        <div class="sugg-place-info">Country in North Africa</div>
+                        <div class="com-star-block">
+                          <ul class="com-star-list">
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                          </ul>
+                          <span class="count">
+                            <b>4.8</b>
+                          </span>
+                          <span>from 26 Reviews</span>
+                        </div>
+                      </div>
+                      <div class="sugg-btn-wrap">
+                        <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                      </div>
+                    </div>
+                    <div class="suggestion-block">
+                      <div class="img-wrap">
+                        <img src="http://placehold.it/60x60" alt="image">
+                      </div>
+                      <div class="sugg-content">
+                        <div class="sugg-place">Paris</div>
+                        <div class="sugg-place-info">Capital of France</div>
+                        <div class="com-star-block">
+                          <ul class="com-star-list">
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                          </ul>
+                          <span class="count">
+                            <b>4.8</b>
+                          </span>
+                          <span>from 26 Reviews</span>
+                        </div>
+                      </div>
+                      <div class="sugg-btn-wrap">
+                        <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                      </div>
+                    </div>
+                    <div class="suggestion-block">
+                      <div class="img-wrap">
+                        <img src="http://placehold.it/60x60" alt="image">
+                      </div>
+                      <div class="sugg-content">
+                        <div class="sugg-place">Nagoya city science museum</div>
+                        <div class="sugg-place-info">Museum</div>
+                        <div class="com-star-block">
+                          <ul class="com-star-list">
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                            <li><i class="trav-star-icon"></i></li>
+                          </ul>
+                          <span class="count">
+                            <b>4.8</b>
+                          </span>
+                          <span>from 26 Reviews</span>
+                        </div>
+                      </div>
+                      <div class="sugg-btn-wrap">
+                        <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="suggestion-wrapper">
+            <p class="sugg-ttl">Suggestions</p>
+            <div class="sugg-inner">
+              <div class="suggestion-block">
+                <div class="img-wrap">
+                  <img src="http://placehold.it/60x60" alt="image">
+                </div>
+                <div class="sugg-content">
+                  <div class="sugg-place">Nagoya castle</div>
+                  <div class="sugg-place-info">Monument</div>
+                  <div class="com-star-block">
+                    <ul class="com-star-list">
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                    </ul>
+                    <span class="count">
+                      <b>4.8</b>
+                    </span>
+                    <span>from 26 Reviews</span>
+                  </div>
+                </div>
+                <div class="sugg-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                </div>
+              </div>
+              <div class="suggestion-block">
+                <div class="img-wrap">
+                  <img src="http://placehold.it/60x60" alt="image">
+                </div>
+                <div class="sugg-content">
+                  <div class="sugg-place">Port of nagoya public aquarium</div>
+                  <div class="sugg-place-info">Aquarium</div>
+                  <div class="com-star-block">
+                    <ul class="com-star-list">
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                    </ul>
+                    <span class="count">
+                      <b>4.8</b>
+                    </span>
+                    <span>from 26 Reviews</span>
+                  </div>
+                </div>
+                <div class="sugg-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                </div>
+              </div>
+              <div class="suggestion-block">
+                <div class="img-wrap">
+                  <img src="http://placehold.it/60x60" alt="image">
+                </div>
+                <div class="sugg-content">
+                  <div class="sugg-place">Nagoya TV tower</div>
+                  <div class="sugg-place-info">Tower</div>
+                  <div class="com-star-block">
+                    <ul class="com-star-list">
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                    </ul>
+                    <span class="count">
+                      <b>4.8</b>
+                    </span>
+                    <span>from 26 Reviews</span>
+                  </div>
+                </div>
+                <div class="sugg-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                </div>
+              </div>
+              <div class="suggestion-block">
+                <div class="img-wrap">
+                  <img src="http://placehold.it/60x60" alt="image">
+                </div>
+                <div class="sugg-content">
+                  <div class="sugg-place">Nagoya city science museum</div>
+                  <div class="sugg-place-info">Museum</div>
+                  <div class="com-star-block">
+                    <ul class="com-star-list">
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                      <li><i class="trav-star-icon"></i></li>
+                    </ul>
+                    <span class="count">
+                      <b>4.8</b>
+                    </span>
+                    <span>from 26 Reviews</span>
+                  </div>
+                </div>
+                <div class="sugg-btn-wrap">
+                  <button type="button" class="btn btn-light-primary btn-bordered"><span>+</span> Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- step 2 -->
+          <div class="adding-place-block">
+            <div class="add-form">
+              <div class="form-row">
+                <div class="field-style flex-field">
+                  <div class="img-wrap">
+                    <img src="http://placehold.it/54x54" alt="photo">
+                  </div>
+                  <div class="field-txt">
+                    Nagoya TV Tower
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field-style">
+                  <div class="field-label">When you suggest to check-in?</div>
+                  <div class="flex-field">
+                    <div class="flex-item">
+                      <div class="field-ttl">Date</div>
+                      <div class="date-inner">
+                        19 October 2017
+                      </div>
+                    </div>
+                    <div class="flex-item">
+                      <div class="field-ttl">Time</div>
+                      <div class="date-inner">
+                        9:20 PM
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field-style">
+                  <div class="field-label">Planning to stay</div>
+                  <div class="flex-field">
+                    <div class="flex-item">
+                      <div class="field-ttl">Hours</div>
+                      <div class="time-count">
+                        <span class="click">-</span>
+                        <input type="text" name="hour" value="2">
+                        <span class="click">+</span>
+                      </div>
+                    </div>
+                    <div class="flex-item">
+                      <div class="field-ttl">Minutes</div>
+                      <div class="time-count">
+                        <span class="click">-</span>
+                        <input type="text" name="minute" value="30">
+                        <span class="click">+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field-style">
+                  <div class="field-label">How much you are expecting to spend</div>
+                  <div class="flex-field">
+                    <div class="flex-item amount-input">
+                      <input type="text" name="enter_amount" placeholder="Enter amount">
+                    </div>
+                    <div class="flex-item radio-field">
+                      <input type="radio" name="expect_spend" id="radio-1">
+                      <label class="check-field" for="radio-1">
+                        50$
+                      </label>
+                    </div>
+                    <div class="flex-item radio-field">
+                      <input type="radio" name="expect_spend" checked="checked" id="radio-2">
+                      <label class="check-field" for="radio-2">
+                        100$
+                      </label>
+                    </div>
+                    <div class="flex-item radio-field">
+                      <input type="radio" name="expect_spend" id="radio-3">
+                      <label class="check-field" for="radio-3">
+                        200$
+                      </label>
+                    </div>
+                  </div>
+                  <div class="field-subtext">
+                    Spending so far <b>$500</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="add-footer">
+              <button type="button" class="btn btn-transp btn-cancel">Cancel</button>
+              <button type="button" class="btn btn-light-primary btn-bordered">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade white-style" data-backdrop="false" id="invitePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+      <i class="trav-close-icon"></i>
+    </button>
+    <div class="modal-dialog modal-custom-style modal-700" role="document">
+      <div class="modal-custom-block">
+        <div class="post-block post-going-block post-mobile-full">
+          <div class="post-top-layer">
+            <div class="post-top-info">
+              <h3 class="info-title">From Morocco to Japan in 7 Days</h3>
+              <ul class="info-list">
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-clock-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">7 Days</p>
+                    <p class="sub-title">Duration</p>
+                  </div>
+                </li>
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-budget-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">$ 5000</p>
+                    <p class="sub-title">Budget</p>
+                  </div>
+                </li>
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-distance-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">2.3 km</p>
+                    <p class="sub-title">Distance</p>
+                  </div>
+                </li>
+                <li class="info-inner">
+                  <div class="icon-wrap">
+                    <i class="trav-map-marker-icon"></i>
+                  </div>
+                  <div class="info-txt">
+                    <p class="title">12</p>
+                    <p class="sub-title">Places</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="post-photo-wrap">
+              <ul class="photo-list">
+                <li><img src="http://placehold.it/60x60" alt="image" class="image"></li>
+                <li><img src="http://placehold.it/60x60" alt="image" class="image"></li>
+                <li><img src="http://placehold.it/60x60" alt="image" class="image"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="post-sub-layer">
+            Invite people to organize this trip plan together
+          </div>
+          <div class="post-people-block-wrap mCustomScrollbar">
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Amy Green</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Mark Poe</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Randall Burgess</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-primary btn-bordered">Unselect</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Andria Hinkle</div>
+                  <div class="info-line">
+                    <div class="info-part">Surfer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Calvin Ackerman</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Peter Hall</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Randall Burgess</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-primary btn-bordered">Unselect</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Andria Hinkle</div>
+                  <div class="info-line">
+                    <div class="info-part">Surfer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-primary btn-bordered">Unselect</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Amy Green</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Mark Poe</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Randall Burgess</div>
+                  <div class="info-line">
+                    <div class="info-part">Photographer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-primary btn-bordered">Unselect</button>
+              </div>
+            </div>
+            <div class="people-row">
+              <div class="main-info-layer">
+                <div class="img-wrap">
+                  <img class="ava" src="http://placehold.it/50x50" alt="ava">
+                </div>
+                <div class="txt-block">
+                  <div class="name">Andria Hinkle</div>
+                  <div class="info-line">
+                    <div class="info-part">Surfer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="btn btn-light-grey btn-bordered">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="post-people-txt">
+            <ul class="people-ava-list">
+              <li><a href="#"><img src="http://placehold.it/50X50" alt="avatar"></a></li>
+              <li><a href="#"><img src="http://placehold.it/50X50" alt="avatar"></a></li>
+              <li><a href="#"><img src="http://placehold.it/50X50" alt="avatar"></a></li>
+              <li><a href="#"><img src="http://placehold.it/50X50" alt="avatar"></a></li>
+              <li><a href="#"><img src="http://placehold.it/50X50" alt="avatar"></a></li>
+              <li><a href="#"><img src="http://placehold.it/50X50" alt="avatar"></a></li>
+              <li><a href="#"><img src="http://placehold.it/50X50" alt="avatar"></a></li>
+            </ul>
+            <div class="people-txt-wrap">
+              <textarea class="people-txt" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="post-btn-foot">
+            <button type="button" class="btn btn-transp btn-cancel">Cancel</button>
+            <button type="button" class="btn btn-light-primary btn-bordered">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
