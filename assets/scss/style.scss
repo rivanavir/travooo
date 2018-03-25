@@ -402,13 +402,27 @@ body{
         padding-left: 5px;
         padding-right: 5px;
       }
+      &.sidebar-open{
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 0 0 3px 0;
+        left: 0;
+        box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+        @media(max-width:414px){
+        }
+      }
     }
 
     &.setting-layout{
       .main-content-layer{
-        padding-top: 35px;
-        max-width: 79%;
-        flex: 0 0 79%;
+        @media(min-width:768px){
+          padding-top: 35px;
+          max-width: 79%;
+          flex: 0 0 79%;
+        }
+        @media(max-width:767px){
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
       }
     }
   }
@@ -1375,6 +1389,15 @@ button.btn-mobile-side{
   }
   &.sidebar-toggler{
     right: 0;
+    @media(max-width:414px){
+      z-index: 350;
+      &.hidden{
+        display: block;
+      }
+    }
+  }
+  &.setting-sidebar-toggler{
+    left: 0;
     @media(max-width:414px){
       z-index: 350;
       &.hidden{

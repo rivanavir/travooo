@@ -26,6 +26,11 @@ $(document).ready(function(){
     $(this).toggleClass('hidden');
     $('#sidebarLayer').toggleClass('sidebar-open');
   });
+  $('#leftSidebarToggler').on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('hidden');
+    $('#sidebarSetting').toggleClass('sidebar-open');
+  });
   $('#commentToggler').on('click', function(e){
     e.preventDefault();
     $('#galleryCommentWrap').toggleClass('comment-open');
@@ -48,8 +53,8 @@ $(document).ready(function(){
     }
   })($.fn.removeClass);
 
-  $('#sidebarLayer, #leftOutsideMenu').on('classChanged', function(){
-    if ($('#sidebarLayer').hasClass('sidebar-open') || $('#leftOutsideMenu').hasClass('filter-open')) {
+  $('#sidebarSetting, #sidebarLayer, #leftOutsideMenu').on('classChanged', function(){
+    if ($('#sidebarSetting').hasClass('sidebar-open') || $('#sidebarLayer').hasClass('sidebar-open') || $('#leftOutsideMenu').hasClass('filter-open')) {
       $('body').css('overflow','hidden');
     } else {
       $('body').removeAttr('style');
@@ -69,6 +74,12 @@ $(document).ready(function(){
         $('#sidebarToggler').removeClass('hidden');
       }, 500);
     }
+    if($('#sidebarSetting').hasClass('sidebar-open')){
+      $('#sidebarSetting').removeClass('sidebar-open');
+      setTimeout(function(){
+        $('#leftSidebarToggler').removeClass('hidden');
+      }, 500);
+    }
   });
   
   $(window).scroll(function() {    
@@ -78,11 +89,11 @@ $(document).ready(function(){
       scrollVar = 70;
     }
     if (scroll >= scrollVar && $(window).width() <= 991) {
-      $("#leftOutsideMenu, #sidebarLayer").addClass('scrolled');
-      $("#filterToggler, #sidebarToggler").css('top', 0);
+      $("#leftOutsideMenu, #sidebarLayer, #sidebarSetting").addClass('scrolled');
+      $("#filterToggler, #sidebarToggler, #leftSidebarToggler").css('top', 0);
     } else{
-      $("#leftOutsideMenu, #sidebarLayer").removeClass('scrolled');
-      $("#filterToggler, #sidebarToggler").removeAttr('style');
+      $("#leftOutsideMenu, #sidebarLayer, #sidebarSetting").removeClass('scrolled');
+      $("#filterToggler, #sidebarToggler, #leftSidebarToggler").removeAttr('style');
     }
     if (scroll >= scrollVar) {
       $('#headerTripPlan').addClass('scrolled');
