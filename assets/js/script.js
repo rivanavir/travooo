@@ -3581,5 +3581,27 @@ $(document).ready(function(){
   });
 
   // uinoslider
-  
+  var softSlider1 = document.getElementById('sliderPollution');
+  // let currentCount = document.getElementsByClassName('current');
+
+  noUiSlider.create(softSlider1, {
+    start: 50,
+    range: {
+      min: 0,
+      max: 100
+    },
+    pips: {
+      mode: 'values',
+      values: [20, 80],
+      density: 4
+    }
+  });
+
+  softSlider1.noUiSlider.on('change', function ( values, handle ) {
+    if ( values[handle] < 20 ) {
+      softSlider1.noUiSlider.set(20);
+    } else if ( values[handle] > 80 ) {
+      softSlider1.noUiSlider.set(80);
+    }
+  });
 });
