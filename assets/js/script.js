@@ -3566,5 +3566,20 @@ $(document).ready(function(){
   $('.side-trip-tab .trip-tab-block').on('click', function(e){
     $('.side-trip-tab .trip-tab-block').removeClass('current-tab');
     $(this).addClass('current-tab');
-  })
+  });
+
+  $('.post-top-map-tabs .map-tab').on('click', function(){
+    let tabWrap = $(this).parents('.post-top-map-tabs');
+    let mapAreaItem = $(this).parents('.post-map-block').find('.area-txt');
+    let getTxtName = $(this).data('tab');
+    
+    $(tabWrap).find('.map-tab').removeClass('current');
+    $(this).addClass('current');
+    
+    $(mapAreaItem).hide();
+    $('#'+getTxtName).show();
+  });
+
+  // uinoslider
+  
 });

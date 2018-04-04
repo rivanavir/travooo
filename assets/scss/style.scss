@@ -5673,6 +5673,15 @@ aside.sidebar{
 
   &.post-lang-curr-block{
     padding: 12px 30px;
+    .post-side-top{
+      margin-right: -30px;
+      margin-left: -30px;
+      border-bottom: 1px solid #e6e6e6;
+      padding: 4px 30px 16px;
+      .map-index-link{
+        color: #4080ff;
+      }
+    }
     .lang-curr-row{
       display: flex;
       justify-content: space-between;
@@ -5685,6 +5694,8 @@ aside.sidebar{
         font-size: 18px;
         color: #1a1a1a;
         font-family: 'Circular Std Book';
+        display: flex;
+        align-items: center;
       }
       .row-txt{
         display: flex;
@@ -5935,6 +5946,7 @@ aside.sidebar{
       }
       &.info-label{
         color: #808080;
+        text-transform: capitalize;
       }
       a{
         color: #4080ff;
@@ -6007,6 +6019,9 @@ aside.sidebar{
             color: #cccccc;
             font-size: 12px;
             margin-right: 7px;
+          }
+          a.place-link{
+            color: #4080ff;
           }
         }
         .event-main-content{
@@ -6101,11 +6116,87 @@ aside.sidebar{
         }
       }
     }
+    .post-top-map-tabs{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      .map-tab{
+        border-radius: 3px;
+        padding: 10px 5px;
+        background: #fff;
+        box-shadow: 0 1px 5px rgba(0,0,0,.15);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 115px;
+        cursor: pointer;
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+        .tab-icon{
+          min-width: 35px;
+          text-align: center;
+          i[class^=trav]{
+            color: #b2b2b2;
+            font-size: 18px;
+          }
+        }
+        .tab-txt{
+          font-size: 14px;
+          font-family: 'Circular Std Book';
+          color: #666666;
+        }
+        &.current{
+          background: #4986ff;
+          .tab-icon{
+            i[class^=trav]{
+              color: white;
+            }
+          }
+          .tab-txt{
+            color: white;
+          }
+        }
+      }
+    }
+    .post-map-area{
+      width: 268px;
+      height: 268px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border:3px solid #4080ff;
+      box-shadow: 0 0 15px rgba(#4080ff, .5);
+      background: rgba(#4080ff, .3);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      .area-txt{
+        text-align: center;
+        h5.ttl{
+          margin-bottom: 0;
+          color: #1a1a1a;
+          font-size: 20px;
+          font-family: 'Circular Std Med';
+          line-height: 1.4;
+        }
+        p{
+          color: #1a1a1a;
+          margin-bottom: 0;
+          font-size: 16px;
+          font-family: 'CircularAirPro Light';
+        }
+      }
+    }
     .post-top-map-info{
       position: absolute;
       top: 10px;
       left: 10px;
-      border-radius: 2px;
+      border-radius: 3px;
       padding: 7px 0;
       background: #fff;
       box-shadow: 0 1px 5px rgba(0,0,0,.15);
@@ -6679,6 +6770,18 @@ aside.sidebar{
         border-radius: 3px 3px 0 0;
       }
     }
+    .follow-btn-wrap{
+      .btn.btn-bordered{
+        padding: 8px 16px;
+      }
+    }
+    &:not(:last-child){
+      .post-slider-caption{
+        .post-footer-info-list{
+          border-bottom: 1px solid #e6e6e6;
+        }
+      }
+    }
   }
   .post-slider-caption{
     padding-bottom: 0;
@@ -6691,7 +6794,6 @@ aside.sidebar{
     .post-footer-info-list{
       margin-bottom: 0;
       padding-bottom: 25px;
-      border-bottom: 1px solid #e6e6e6;
       p{
         &.info-count{
           font-family: 'Circular Std Book';
