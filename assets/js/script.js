@@ -98,7 +98,7 @@ $(document).ready(function(){
     } else{
       $("#leftOutsideMenu, #sidebarLayer, #sidebarSetting").removeClass('scrolled');
       $(".btn-mobile-side").removeAttr('style');
-      $("#sidebarSetting, #sidebarLayer, #leftOutsideMenu").css('top', mainHeaderHeight);
+      // $("#sidebarSetting, #sidebarLayer, #leftOutsideMenu").css('top', mainHeaderHeight);
       // $("#filterToggler, #sidebarToggler, #leftSidebarToggler").removeAttr('style');
     }
     if (scroll >= scrollVar) {
@@ -3581,27 +3581,39 @@ $(document).ready(function(){
   });
 
   // uinoslider
-  var softSlider1 = document.getElementById('sliderPollution');
-  // let currentCount = document.getElementsByClassName('current');
 
-  noUiSlider.create(softSlider1, {
-    start: 50,
-    range: {
-      min: 0,
-      max: 100
-    },
-    pips: {
-      mode: 'values',
-      values: [20, 80],
-      density: 4
-    }
-  });
+  let uiSliderFn = function($id, $curCountId, $totalId, $totalCount, $startCount){
 
-  softSlider1.noUiSlider.on('change', function ( values, handle ) {
-    if ( values[handle] < 20 ) {
-      softSlider1.noUiSlider.set(20);
-    } else if ( values[handle] > 80 ) {
-      softSlider1.noUiSlider.set(80);
-    }
-  });
+    var softSlider1 = document.getElementById($id),
+        paddingMin = document.getElementById($curCountId),
+        paddingMax = document.getElementById($totalId);
+  
+    var totalCount = $totalCount;      
+        
+    noUiSlider.create(softSlider1, {
+      start: $startCount,
+      connect: true,
+      step: 10,
+      range: {
+        min: 0,
+        max: $totalCount
+      }
+    });
+  
+    softSlider1.noUiSlider.on('update', function ( values, handle ) {
+      var count = values[handle]/10;
+      if ( handle ) {
+        paddingMax.innerHTML = count;
+      } else {
+        paddingMax.innerHTML = $totalCount;
+        paddingMin.innerHTML = count;
+      }
+    });
+  };
+
+  uiSliderFn('sliderPollution', 'current', 'total', 150, 50);
+  uiSliderFn('costOfLiving', 'currentCost', 'totalCost', 150, 70);
+  uiSliderFn('crimeRate', 'currentRate', 'totalRate', 150, 60);
+  uiSliderFn('qualityOfLife', 'currentQuolity', 'totalQuolity', 150, 80);
+
 });

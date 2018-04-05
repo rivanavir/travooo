@@ -225,6 +225,20 @@
     display: block;
     border-radius: 4px;
   }
+  &.btn-full{
+    width: 100%;
+    text-transform: none;
+    padding: 16px 60px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i[class^=trav]{
+      opacity: .7;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .custom-check-label{
@@ -5719,6 +5733,75 @@ aside.sidebar{
         }
       }
     }
+    .index-slider-wrap{
+      display: flex;
+      align-items: center;
+      .counter{
+        padding-right: 10px;
+        span{
+          color: #999999;
+          font-family: 'CircularAirPro Light';
+          &:first-child{
+            color: #1a1a1a;
+            font-family: 'Circular Std Book';
+          }
+        }
+      }
+      .slider{
+        width: 124px;
+        &.noUi-target{
+          background: transparent;
+          border: 0;
+          border-radius: 0;
+          &.noUi-horizontal{
+            height: 10px;
+          }
+          .noUi-base{
+            .noUi-connects{
+              position: relative;
+              border-radius: 0;
+              background: #ffd8d8;
+              background: -moz-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+              background: -webkit-gradient(left top, right top, color-stop(0%, #ffd8d8), color-stop(100%, #4080ff));
+              background: -webkit-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+              background: -o-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+              background: -ms-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+              background: linear-gradient(to right, #ffd8d8 0%, #4080ff 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd8d8', endColorstr='#4080ff', GradientType=1 );
+              z-index: 2;
+              &:after{
+                position: absolute;
+                content:'';
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: repeating-linear-gradient(90deg,transparent,transparent 4px,#fff 4px,#fff 6px);
+                z-index: 3;
+              }
+            }
+            .noUi-origin{
+              position: relative;
+              .noUi-handle{
+                width: 4px;
+                height: 18px;
+                top: -14px;
+                right: -4px;
+                border: 1px solid #205fdc;
+                background: #4080ff;
+                box-shadow: none;
+                border-radius: 2px;
+                &:before,
+                &:after{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &.post-setting-block{
@@ -6880,10 +6963,17 @@ aside.sidebar{
       overflow-y: visible;
       overflow-x: auto;
     }
+    &:not(.post-tip-tab){
+      .tab-item{
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        &.active-tab{
+          border-bottom-color: #4080ff;
+        }
+      }
+    }
     .tab-item{
       padding: 20px;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
       font-size: 14px;
       color: #999999;
       font-family: 'CircularAirPro Light';
@@ -6895,9 +6985,12 @@ aside.sidebar{
         margin-bottom: 0;
       }
       &.active-tab{
-        border-bottom-color: #4080ff;
         color: #1a1a1a;
         font-family: 'Circular Std Book';
+        span{
+          color: #999999;
+          font-family: 'CircularAirPro Light';
+        }
       }
     }
   }
@@ -8332,12 +8425,17 @@ ul.filter-list{
 
 .top-banner-wrap{
   position: relative;
-  img.banner{
+  img{
     max-width: 100%;
     border-radius: 0 0 3px 3px;
     box-shadow: 0 1px 3px rgba(178,178,178,.6);
-    height: 100px;
     object-fit: cover;
+    &.banner{
+      height: 100px;
+    }
+    &.banner-city{
+      height: 215px;
+    }
   }
   .banner-ttl{
     position: absolute;
@@ -8351,6 +8449,27 @@ ul.filter-list{
     @media (max-width:767px){
       font-size: 22px;
       padding: 0 0 10px 10px;
+    }
+  }
+  .banner-cover-txt{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 30px 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .banner-ttl{
+      position: static;
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+    .sub-ttl{
+      color: white;
+      font-size: 16px;
+      font-family: 'CircularAirPro Light';
     }
   }
 }

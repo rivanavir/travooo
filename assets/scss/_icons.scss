@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.trav-add-trip-icon:before {
+  content: "\e989";
+}
 .trav-hotels-icon:before {
   content: "\e986";
 }
