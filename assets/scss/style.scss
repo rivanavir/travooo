@@ -5767,69 +5767,69 @@ aside.sidebar{
         }
       }
     }
-    .index-slider-wrap{
-      display: flex;
-      align-items: center;
-      .counter{
-        padding-right: 10px;
-        span{
-          color: #999999;
-          font-family: 'CircularAirPro Light';
-          &:first-child{
-            color: #1a1a1a;
-            font-family: 'Circular Std Book';
-          }
+  }
+  .index-slider-wrap{
+    display: flex;
+    align-items: center;
+    .counter{
+      padding-right: 10px;
+      span{
+        color: #999999;
+        font-family: 'CircularAirPro Light';
+        &:first-child{
+          color: #1a1a1a;
+          font-family: 'Circular Std Book';
         }
       }
-      .slider{
-        width: 124px;
-        &.noUi-target{
-          background: transparent;
-          border: 0;
-          border-radius: 0;
-          &.noUi-horizontal{
-            height: 10px;
-          }
-          .noUi-base{
-            .noUi-connects{
-              position: relative;
-              border-radius: 0;
-              background: #ffd8d8;
-              background: -moz-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
-              background: -webkit-gradient(left top, right top, color-stop(0%, #ffd8d8), color-stop(100%, #4080ff));
-              background: -webkit-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
-              background: -o-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
-              background: -ms-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
-              background: linear-gradient(to right, #ffd8d8 0%, #4080ff 100%);
-              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd8d8', endColorstr='#4080ff', GradientType=1 );
-              z-index: 2;
-              &:after{
-                position: absolute;
-                content:'';
-                display: block;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: repeating-linear-gradient(90deg,transparent,transparent 4px,#fff 4px,#fff 6px);
-                z-index: 3;
-              }
+    }
+    .slider{
+      width: 124px;
+      &.noUi-target{
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        &.noUi-horizontal{
+          height: 10px;
+        }
+        .noUi-base{
+          .noUi-connects{
+            position: relative;
+            border-radius: 0;
+            background: #ffd8d8;
+            background: -moz-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, #ffd8d8), color-stop(100%, #4080ff));
+            background: -webkit-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+            background: -o-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+            background: -ms-linear-gradient(left, #ffd8d8 0%, #4080ff 100%);
+            background: linear-gradient(to right, #ffd8d8 0%, #4080ff 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd8d8', endColorstr='#4080ff', GradientType=1 );
+            z-index: 2;
+            &:after{
+              position: absolute;
+              content:'';
+              display: block;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: repeating-linear-gradient(90deg,transparent,transparent 4px,#fff 4px,#fff 6px);
+              z-index: 3;
             }
-            .noUi-origin{
-              position: relative;
-              .noUi-handle{
-                width: 4px;
-                height: 18px;
-                top: -14px;
-                right: -4px;
-                border: 1px solid #205fdc;
-                background: #4080ff;
-                box-shadow: none;
-                border-radius: 2px;
-                &:before,
-                &:after{
-                  display: none;
-                }
+          }
+          .noUi-origin{
+            position: relative;
+            .noUi-handle{
+              width: 4px;
+              height: 18px;
+              top: -14px;
+              right: -4px;
+              border: 1px solid #205fdc;
+              background: #4080ff;
+              box-shadow: none;
+              border-radius: 2px;
+              &:before,
+              &:after{
+                display: none;
               }
             }
           }
@@ -5880,9 +5880,9 @@ aside.sidebar{
       .post-top-info-layer{
         padding-bottom: 0;
       }
-      &:not(:last-child){
-        border-bottom: 1px solid #e5e5e5;
-        margin-bottom: 20px;
+      &:not(:first-child){
+        border-top: 1px solid #e5e5e5;
+        padding-top: 20px;
       }
     }
     .post-tips{
@@ -6032,10 +6032,22 @@ aside.sidebar{
     }
   }
 
-  &.post-packing-tips{
-    .post-top-info-layer{
+  &.post-tips-list-block{
+    padding: 0;
+    .post-top-layer{
       padding: 15px 30px;
-      .post-top-info-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:not(:last-child){
+        border-bottom: 1px solid #e5e5e5;
+      }
+      & + .post-top-layer{
+        border-bottom: 0;
+      }
+      .top-left{
+        display: flex;
+        align-items: center;
         ul.foot-avatar-list{
           li{
             img.small-ava{
@@ -6044,50 +6056,512 @@ aside.sidebar{
             }
           }
         }
-        .post-top-info-txt{
-          span{
-            color: #b2b2b2;
-            font-size: 16px;
-            font-family: 'CircularAirPro Light';
-            &.name{
-              color: #333333;
-              font-family: 'Circular Std Book';
-            }
+        span{
+          color: #b2b2b2;
+          font-size: 16px;
+          font-family: 'CircularAirPro Light';
+          &.name{
+            color: #333333;
+            font-family: 'Circular Std Book';
           }
         }
       }
-      .post-top-comment-icon{
-        i[class^=trav]{
+      .top-right{
+        .top-comment-icon{
+          i[class^=trav]{
+            color: #4080ff;
+            font-size: 16px;
+          }
+        }
+        a.tip-link{
           color: #4080ff;
           font-size: 16px;
+          >i[class^=trav]{
+            font-size: 13px;
+          }
+        }
+      }
+      h3.post-tip-ttl{
+        font-family: 'Circular Std Book';
+        font-size: 18px;
+        color: #1a1a1a;
+        margin: 0;
+        &_lg{
+          color: #1a1a1a;
+          font-family: 'Circular Std Book';
+          font-size: 20px;
+          text-transform: capitalize;
+          margin: 0;
+          span.count{
+            font-family: 'CircularAirPro Light';
+            font-size: 14px;
+            color: #999999;
+          }
         }
       }
     }
-    .post-content-inner{
+    .post-list-inner{
       padding: 0 30px;
     }
-    .post-tip-list{
-      .post-tip-row{
+    .post-tip-row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      &:not(:last-child){
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .row-label{
+        font-family: 'CircularAirPro Light';
         display: flex;
-        // justify-content: space-between;
         align-items: center;
-        padding: 16px 0;
-        &:not(:last-child){
-          border-bottom: 1px solid #e5e5e5;
+        i[class^=trav]{
+          margin-right: 5px;
         }
-        .row-label{
-          font-family: 'CircularAirPro Light';
-          min-width: 30%;
-          b{
-            font-family: 'Circular Std Med';
-            font-weight: normal;
+        b{
+          font-family: 'Circular Std Med';
+          font-weight: normal;
+          line-height: 1.3;
+        }
+      }
+      .row-txt{
+        span{
+          font-size: 18px;
+          &.currency{
+            font-size: 14px;
+            color: #999999;
           }
+        }
+        a.more-link{
+          font-family: 'CircularAirPro Light';
+          font-size: 18px;
+          color: #4080ff;
+        }
+      }
+      &.tip-txt{
+        justify-content: flex-start;
+        .row-label{
+          min-width: 30%;
+          max-width: 30%;
         }
         .row-txt{
           span{
             font-size: 16px;
             color: #1a1a1a;
             font-family: 'CircularAirPro Light';
+            &.red{
+              color: #e51e2e;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .post-suggest-inner{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .suggest-icon-wrap{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #4080ff;
+      box-shadow: 0 0 34px rgba(#4080ff,.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      i[class^=trav]{
+        color: white;
+        font-size: 45px;
+      }
+    }
+    .suggest-txt{
+      text-align: center;
+      p{
+        padding: 0 10%;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #1a1a1a;
+      }
+    }
+    .btn{
+      width: 155px;
+    }
+  }
+
+  &.post-embassy-block{
+    padding: 0;
+    .post-image-wrap{
+      position: relative;
+      >img{
+        width: 100%;
+      }
+      .post-place-image{
+        position: absolute;
+        border: 4px solid white;
+        border-radius: 3px;
+        box-shadow: 0 5px 9px rgba(0, 0, 0, 0.4);
+        left: 20px;
+        bottom: 20px;
+        >img{
+          width: 100%;
+        }
+      }
+    }
+    .post-place-location-info{
+      .post-place-txt{
+        padding: 0 20px;
+        .post-place-row{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 0;
+          border-bottom: 1px solid #e6e6e6;
+          .place-label{
+            font-family: 'Circular Std Book';
+            color: #1a1a1a;
+            font-size: 18px;
+          }
+          .place-txt{
+            address,
+            span{
+              color: #1a1a1a;
+              font-size: 18px;
+              font-family: 'CircularAirPro Light';
+              margin-bottom: 0;
+            }
+            address{
+              line-height: 1.4;
+            }
+            a{
+              font-size: 16px;
+              font-family: 'CircularAirPro Light';
+              color: #4080ff;
+            }
+          }
+        }
+        h3.place-ttl{
+          font-size: 20px;
+          color: #1a1a1a;
+          font-family: 'Circular Std Book';
+          margin: 4px 0;
+        }
+      }
+      .post-place-info-foot{
+        padding: 19px 30px;
+        a.foot-link{
+          color: #4080ff;
+          font-size: 16px;
+          font-family: 'CircularAirPro Light';
+          display: inline-block;
+          padding: 11px 0;
+        }
+        .location-drop-wrap{
+          position: relative;
+          z-index: 200;
+          &.show-result{
+            .location-block-inner{
+              display: block;
+            }
+          }
+          .location-block-inner{
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            .loc-search-block{
+              background:#f0f0f0;
+              border-radius: 3px;
+              padding: 11px 20px;
+              input{
+                background:transparent;
+                border: 0;
+                box-shadow: none;
+                padding: 0;
+                line-height: 1.5;
+              }
+            }
+            .loc-result-block{
+              border-radius: 3px;
+              border: 1px solid #ebebeb;
+              background:white;
+              padding: 0 20px;
+              .res-row{
+                padding: 15px 0;
+                font-family: 'CircularAirPro Light';
+                font-size: 18px;
+                color: #4c4c4c;
+
+                &:not(:last-child){
+                  border-bottom: 1px solid #e6e6e6;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .post-flight-content{
+    padding: 0 30px;
+    .progress-block{
+      padding-top: 20px;
+      ul.color-list{
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        li{
+          padding-left: 22px;
+          font-size: 14px;
+          color:#1a1a1a;
+          font-family: 'CircularAirPro Light';
+          position: relative;
+          &:not(:last-child){
+            margin-right: 40px;
+          }
+          &:before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            margin-top: -6px;
+          }
+          &.low:before{background:#3fc701;}
+          &.mid:before{background:#ead100;}
+          &.high:before{background:#ff2e0d;}
+        }
+      }
+      .progress-inner{
+        padding: 20px 0;
+        .progress-row{
+          display: flex;
+          align-items: center;
+          padding: 12px 0;
+          .progress-label{
+            font-size: 16px;
+            color: #1a1a1a;
+            font-family: 'CircularAirPro Light';
+            min-width: 20%;
+            max-width: 20%;
+          }
+          .progress-wrapper{
+            flex-grow: 1;
+            padding: 8px;
+            background:#f5f5f5;
+            border-radius: 20px;
+            .progress{
+              height: 6px;
+              background:#f5f5f5;
+              .progress-bar{
+                height: 6px;
+                border-radius: 3px;
+              }
+              &.low{
+                .progress-bar{background:#3fc701;}
+              }
+              &.mid{
+                .progress-bar{background:#ead100;}
+              }
+              &.high{
+                .progress-bar{background:#ff2e0d;}
+              }
+            }
+          }
+        }
+      }
+    }
+    .flight-note{
+      border-top: 1px solid #e6e6e6;
+      padding: 20px 0;
+      h4.note-ttl{
+        font-size: 18px;
+        color: #1a1a1a;
+        font-family: 'Circular Std Book';
+      }
+      .note-txt{
+        p{
+          font-size: 16px;
+          color: #1a1a1a;
+          margin-bottom: 0;
+          line-height: 1.4;
+          font-family: 'CircularAirPro Light';
+        }
+      }
+    }
+  }
+
+  &.post-weather-block{
+    padding: 0;
+    .general-weather-view{
+      display: flex;
+      padding: 30px 35px 10px;
+      align-items: center;
+      margin-bottom: 40px;
+      .day-block-wrap{
+        min-width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .weather-info{
+          .temperature{
+            display: flex;
+            margin-bottom: 20px;
+            sup{
+              line-height: 70px;
+              font-size: 40px;
+            }
+            span{
+              font-size: 70px;
+              color: #333333;
+              font-family: 'CircularAirPro Light';
+              &.temp{
+                font-size: 14px;
+                white-space: nowrap;
+                padding: 10px 7px;
+                color: #999999;
+                b{
+                  color: #333333;
+                  font-family: 'Circular Std Book';
+                }
+              }
+            }
+          }
+          .weather-day{
+            font-size: 16px;
+            color: #333333;
+            font-family: 'Circular Std Book';
+            span.month{
+              font-family: 'CircularAirPro Light';
+            }
+          }
+        }
+        .icon-wrap{
+          text-align: right;
+          img.weather-icon{
+            width: 82px;
+          }
+          i[class^=trav]{
+            font-size: 100px;
+          }
+        }
+      }
+      .weather-txt-block{
+        flex-grow: 1;
+        padding-left: 25px;
+        .weather-title{
+          font-size: 22px;
+          color: #1a1a1a;
+          font-family: 'CircularAirPro Light';
+          margin-bottom: 15px;
+          span{
+            font-family: 'Circular Std Book';
+          }
+        }
+        p{
+          font-size: 14px;
+          color: #1a1a1a;
+          line-height: 1.5;
+          font-family: 'CircularAirPro Light';
+          margin-bottom: 0;
+        }
+      }
+    }
+    .weather-hour-carousel{
+      display: flex;
+      align-items: center;
+      // margin-bottom: 35px;
+      // width: 100%;
+      .hour-block{
+        width: 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #e5e5e5;
+        padding: 0 17px;
+        .time-block{
+          color: #999999;
+          font-size: 10px;
+          font-family: 'Circular Std Book';
+        }
+        .weather-image{
+          height: 50px;          
+          padding-top: 10px;
+          img.weather-icon{
+            width: 30px;
+          }
+        }
+        .temp-block{
+          font-size: 12px;
+          color: #1a1a1a;
+          font-family: 'Circular Std Book';
+        }
+      }
+    }
+    .day-weather-list{
+      padding: 0 20px;
+      .day-weather-block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #e6e6e6;
+        padding: 14px 0;
+        .day-block-wrap{
+          display: flex;
+          .weather-icon{
+            min-width: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 3px;
+            img.weather-icon{
+              width: 28px;
+              margin-bottom: 5px;
+            }
+            i[class^=trav]{}
+            span.temperature{
+              font-family: 'Circular Std Book';
+              font-size: 12px;
+              color: #1a1a1a;
+            }
+          }
+          .weather-day{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 30px;
+            .day-name{
+              font-family: 'Circular Std Book';
+              color: #000000;
+              font-size: 14px;
+              text-transform: uppercase;
+              margin-bottom: 10px;
+            }
+            .weather-desc{
+              font-family: 'CircularAirPro Light';
+              font-size: 14px;
+              color: #b2b2b2;
+            }
+          }
+        }
+        .btn-wrap{
+          .btn{
+            text-transform: none;
           }
         }
       }
@@ -7251,6 +7725,14 @@ aside.sidebar{
         span{
           color: #999999;
           font-family: 'CircularAirPro Light';
+        }
+      }
+    }
+    &.post-tip-tab{
+      .tab-item{
+        font-size: 16px;
+        span{
+          font-size: 14px;
         }
       }
     }
@@ -8677,6 +9159,32 @@ ul.filter-list{
       i[class^=trav]{
         color: #b3b3b3;
         font-size: 20px;
+      }
+    }
+  }
+}
+
+.dest-list{
+  padding-top: 10px;
+  .dest-item{
+    &:not(:last-child){
+      margin-bottom: 24px;
+    }
+    .dest-location{
+      font-size: 16px;
+      color: #333333;
+      font-family: 'Circular Std Book';
+      margin-bottom: 5px;
+      i[class^=trav]{
+        color: #b2b2b2;
+        font-size: 14px;
+      }
+    }
+    .dest-link-wrap{
+      a.dest-link{
+        font-size: 16px;
+        color: #4080ff;
+        font-family: 'CircularAirPro Light';
       }
     }
   }

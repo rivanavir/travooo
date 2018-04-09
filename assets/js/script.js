@@ -260,6 +260,13 @@ $(document).ready(function(){
     slideMargin: 0,
     addClass: 'trip-destination-slider-block'
   });
+  $("#weatherHourCarousel").lightSlider({
+    // pager: false,
+    // controls: true,
+    autoWidth:true,
+    // slideMargin: 0,
+    // addClass: 'weather-block-wrapper'
+  });
   $("#postFollowSlider").lightSlider({
     item:1,
     pager: false,
@@ -3615,5 +3622,32 @@ $(document).ready(function(){
   uiSliderFn('costOfLiving', 'currentCost', 'totalCost', 150, 70);
   uiSliderFn('crimeRate', 'currentRate', 'totalRate', 150, 60);
   uiSliderFn('qualityOfLife', 'currentQuolity', 'totalQuolity', 150, 80);
+  uiSliderFn('sliderPollution1', 'current1', 'total1', 150, 50);
+  uiSliderFn('costOfLiving1', 'currentCost1', 'totalCost1', 150, 70);
+  uiSliderFn('crimeRate1', 'currentRate1', 'totalRate1', 150, 60);
+  uiSliderFn('qualityOfLife1', 'currentQuolity1', 'totalQuolity1', 150, 80);
+
+  // location search layer
+
+  var iIsOpen = false;
+
+  $('body').bind('click',function (e) {
+    e.stopPropagation();
+    var $clicked = $(e.target); 
+    if(!($clicked.is('#locationDrop') || $clicked.is('.loc-search-block') || $clicked.parents().is('.loc-search-block'))){
+      if (iIsOpen == true) {
+        $('.location-drop-wrap').removeClass('show-result');
+        $('#locSearchInput').val('');
+        iIsOpen = false;
+      }
+    }
+  });
+
+  $('#locationDrop').click(function (e) {
+    e.preventDefault();
+    $('.location-drop-wrap').addClass('show-result');
+    $('#locSearchInput').focus();
+    iIsOpen = true;
+  });
 
 });
