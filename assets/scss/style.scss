@@ -187,6 +187,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @media(max-width:575px){
+        width: 30px;
+      }
       i[class^=trav]{
         color: #808080;
         font-size: 20px;
@@ -194,6 +197,9 @@
     }
     &.btn-icon-right{
       padding-right: 64px !important;
+      @media(max-width:575px){
+        padding-right: 38px !important;
+      }
       .icon-wrap{
         right: 0;
         border-left: 1px solid #cfcfcf;
@@ -383,6 +389,10 @@ body{
           @media(max-width:414px){
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
           }
+        }
+        &.scrolled{
+          // top: 0;
+          max-height: 100vh;
         }
       }
       &.trip-side{
@@ -3449,6 +3459,7 @@ aside.sidebar{
       .post-image-list{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         margin-bottom: 0;
         li{
           margin: 1px;
@@ -3480,7 +3491,9 @@ aside.sidebar{
     }
     .post-side-inner{
       padding: 25px 28px;
-      
+      @media(max-width:575px){
+        padding: 10px;
+      }
       .side-dest-block-wrap{
         margin-left: -6px;
         margin-right: -6px;
@@ -3829,6 +3842,10 @@ aside.sidebar{
     justify-content: space-between;
     align-items: center;
     padding: 3px 0 22px;
+    @media(max-width: 414px){
+      flex-direction: column;
+      align-items: inherit;
+    }
     .post-top-txt{
       display: flex;
       flex-direction: column;
@@ -3871,6 +3888,9 @@ aside.sidebar{
       display: flex;
       align-items: center;
       flex-wrap: nowrap;
+      @media(max-width: 414px){
+        align-self: flex-end;
+      }
       a.see-more-link{
         font-family: 'Circular Std Book';
         font-size: 14px;
@@ -5296,6 +5316,9 @@ aside.sidebar{
     .post-side-top{
       padding: 17px 30px 16px;
       border-bottom: 1px solid #e6e6e6;
+      @media(max-width:575px){
+        padding: 10px;
+      }
       h3.side-ttl{
         span{
           font-size: 16px;
@@ -5316,6 +5339,9 @@ aside.sidebar{
     }
     .post-country-inner{
       padding: 15px 30px 30px;
+      @media (max-width: 575px) {
+        padding: 10px;
+      }
       &.post-full-inner{
         padding: 0;
         .post-map-block{
@@ -5755,6 +5781,9 @@ aside.sidebar{
           font-size: 18px;
           color: #1a1a1a;
           font-family: 'CircularAirPro Light';
+          @media(max-width: 414px){
+            font-size: 16px;
+          }
           &.currency{
             font-size: 14px;
             color: #999999;
@@ -5764,6 +5793,9 @@ aside.sidebar{
           font-family: 'CircularAirPro Light';
           font-size: 18px;
           color: #4080ff;
+          @media(max-width: 414px){
+            font-size: 16px;
+          }
         }
       }
     }
@@ -5843,6 +5875,9 @@ aside.sidebar{
     .post-side-top{
       padding: 17px 30px 16px;
       border-bottom: 1px solid #e6e6e6;
+      @media(max-width:575px){
+        padding: 10px;
+      }
       h3.side-ttl{
         span{
           font-size: 16px;
@@ -5893,14 +5928,25 @@ aside.sidebar{
           color: #4c4c4c;
           font-size: 20px;
           font-style: italic;
+          @media(max-width:575px){
+            font-size: 18px;
+          }
         }
       }
       .tips-footer{
         justify-content: flex-start;
         .tips-foot-link{
-          margin-left: 15px;
-          padding-left: 15px;
-          border-left: 1px solid #cccccc;
+          @media(min-width:576px){
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 1px solid #cccccc;
+          }
+          @media(max-width:575px){
+            padding-top: 10px;
+            margin-top: 10px;
+            border-top: 1px solid #cccccc;
+            align-self: flex-end;
+          }
           a.tip-link{
             color:#4080ff;
           }
@@ -5967,6 +6013,10 @@ aside.sidebar{
       align-items: center;
       justify-content: space-between;
       padding: 10px 0 20px;
+      @media(max-width:575px){
+        flex-direction: column;
+        align-items: inherit;
+      }
       .tip-by-info{
         display: flex;
         align-items: center;
@@ -6039,6 +6089,12 @@ aside.sidebar{
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      @media(max-width: 575px){
+        align-items: inherit;
+        flex-direction: column;
+        padding: 15px;
+      }
       &:not(:last-child){
         border-bottom: 1px solid #e5e5e5;
       }
@@ -6048,6 +6104,12 @@ aside.sidebar{
       .top-left{
         display: flex;
         align-items: center;
+        @media(max-width: 575px){
+          align-items: flex-start;
+          &:not(:last-child){
+            margin-bottom: 5px;
+          }
+        }
         ul.foot-avatar-list{
           li{
             img.small-ava{
@@ -6067,7 +6129,13 @@ aside.sidebar{
         }
       }
       .top-right{
+        @media(max-width: 575px){
+          align-self: flex-end;
+        }
         .top-comment-icon{
+          @media(max-width: 575px){
+            display: none;
+          }
           i[class^=trav]{
             color: #4080ff;
             font-size: 16px;
@@ -6102,12 +6170,20 @@ aside.sidebar{
     }
     .post-list-inner{
       padding: 0 30px;
+      @media(max-width:575px){
+        padding: 0 15px;
+      }
     }
     .post-tip-row{
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 16px 0;
+      @media(max-width:575px){
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: inherit;
+      }
       &:not(:last-child){
         border-bottom: 1px solid #e5e5e5;
       }
@@ -6115,6 +6191,7 @@ aside.sidebar{
         font-family: 'CircularAirPro Light';
         display: flex;
         align-items: center;
+        line-height: 1.5;
         i[class^=trav]{
           margin-right: 5px;
         }
@@ -6125,24 +6202,36 @@ aside.sidebar{
         }
       }
       .row-txt{
+        @media(max-width:575px){
+          align-self: flex-end;
+          text-align: right;
+        }
         span{
           font-size: 18px;
           &.currency{
             font-size: 14px;
             color: #999999;
           }
+          @media(max-width: 414px){
+            font-size: 16px;
+          }
         }
         a.more-link{
           font-family: 'CircularAirPro Light';
           font-size: 18px;
           color: #4080ff;
+          @media(max-width: 414px){
+            font-size: 16px;
+          }
         }
       }
       &.tip-txt{
         justify-content: flex-start;
         .row-label{
-          min-width: 30%;
-          max-width: 30%;
+          @media(min-width: 576px){
+            min-width: 30%;
+            max-width: 30%;
+          }
         }
         .row-txt{
           span{
@@ -6209,6 +6298,12 @@ aside.sidebar{
         box-shadow: 0 5px 9px rgba(0, 0, 0, 0.4);
         left: 20px;
         bottom: 20px;
+        @media(max-width:575px){
+          left: 10px;
+          bottom: 10px;
+          width: 60px;
+          border-width: 2px;
+        }
         >img{
           width: 100%;
         }
@@ -6217,6 +6312,9 @@ aside.sidebar{
     .post-place-location-info{
       .post-place-txt{
         padding: 0 20px;
+        @media(max-width:575px){
+          padding: 0 10px;
+        }
         .post-place-row{
           display: flex;
           align-items: center;
@@ -6314,19 +6412,24 @@ aside.sidebar{
   .post-flight-content{
     padding: 0 30px;
     .progress-block{
-      padding-top: 20px;
+      padding-top: 10px;
+      @media(max-width:575px){
+        padding-top: 0;
+      }
       ul.color-list{
         display: flex;
         align-items: center;
-        margin-bottom: 0;
+        margin: 0 -20px;
+        flex-wrap: wrap;
         li{
           padding-left: 22px;
           font-size: 14px;
           color:#1a1a1a;
           font-family: 'CircularAirPro Light';
           position: relative;
+          margin: 10px 20px;
           &:not(:last-child){
-            margin-right: 40px;
+            // margin-right: 40px;
           }
           &:before{
             position: absolute;
@@ -6346,16 +6449,24 @@ aside.sidebar{
       }
       .progress-inner{
         padding: 20px 0;
+        @media(max-width: 575px){
+          padding: 0;
+        }
         .progress-row{
           display: flex;
           align-items: center;
           padding: 12px 0;
+          @media(max-width: 575px){
+            flex-direction: column;
+            align-items: stretch;
+          }
           .progress-label{
             font-size: 16px;
             color: #1a1a1a;
             font-family: 'CircularAirPro Light';
             min-width: 20%;
             max-width: 20%;
+            line-height: 1.5;
           }
           .progress-wrapper{
             flex-grow: 1;
@@ -6410,23 +6521,48 @@ aside.sidebar{
       padding: 30px 35px 10px;
       align-items: center;
       margin-bottom: 40px;
+      @media(max-width: 767px){
+        align-items: flex-start;
+      }
+      @media(max-width: 475px){
+        flex-direction: column;
+      }
+      @media(max-width: 375px){
+        padding: 15px 15px 0;
+      }
       .day-block-wrap{
         min-width: 40%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media(max-width: 767px){
+          min-width: 200px;
+        }
+        @media(max-width: 475px){
+          margin-bottom: 20px;
+        }
         .weather-info{
           .temperature{
             display: flex;
             margin-bottom: 20px;
+            @media(max-width: 767px){
+              margin-bottom: 10px;
+            }
             sup{
               line-height: 70px;
               font-size: 40px;
+              @media(max-width: 767px){
+                line-height: 60px;
+              font-size: 30px;
+              }
             }
             span{
               font-size: 70px;
               color: #333333;
               font-family: 'CircularAirPro Light';
+              @media(max-width: 767px){
+                font-size: 60px;
+              }
               &.temp{
                 font-size: 14px;
                 white-space: nowrap;
@@ -6452,6 +6588,9 @@ aside.sidebar{
           text-align: right;
           img.weather-icon{
             width: 82px;
+            @media(max-width: 767px){
+              width: 60px;
+            }
           }
           i[class^=trav]{
             font-size: 100px;
@@ -6461,11 +6600,17 @@ aside.sidebar{
       .weather-txt-block{
         flex-grow: 1;
         padding-left: 25px;
+        @media(max-width: 475px){
+          padding-left: 0;
+        }
         .weather-title{
           font-size: 22px;
           color: #1a1a1a;
           font-family: 'CircularAirPro Light';
           margin-bottom: 15px;
+          @media(max-width: 767px){
+            margin-bottom: 10px;
+          }
           span{
             font-family: 'Circular Std Book';
           }
@@ -6821,10 +6966,16 @@ aside.sidebar{
           font-family: 'CircularAirPro Light';
           font-size: 46px;
           padding: 0 10px;
+          @media(max-width:575px){
+            font-size: 30px;
+          }
           b{
             font-size: 55px;
             font-weight: normal;
             font-family: 'Circular Std Bold';
+            @media(max-width:575px){
+              font-size: 30px;
+            }
           }
         }
         .place-name{
@@ -6834,9 +6985,27 @@ aside.sidebar{
           font-weight: normal;
           margin-bottom: 10px;
           display: inline-block;
+          @media(max-width:767px){
+            font-size: 36px;
+          }
+          @media(max-width:414px){
+            font-size: 28px;
+          }
         }
         .event-info-layer{
           margin-bottom: 10px;
+          display: block;
+          &>*{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.3;
+          }
+          .event-foot-info{
+            .foot-avatar-list{
+              margin-right: 8px;
+              margin-bottom: 0;
+            }
+          }
           span.placement-place{
             padding-right: 20px;
             font-size: 16px;
@@ -6845,6 +7014,7 @@ aside.sidebar{
           }
           span.talking{
             font-family: 'Circular Std Book';
+            margin-bottom: 0;
           }
           i[class^=trav]{
             color: #cccccc;
@@ -6870,6 +7040,9 @@ aside.sidebar{
       align-items: center;
       border-top: 1px solid #e6e6e6;
       padding: 30px 0;
+      @media(max-width:575px){
+        padding: 10px;
+      }
       .btn{
         display: flex;
         align-items: center;
@@ -6893,6 +7066,9 @@ aside.sidebar{
         font-family: 'Circular Std Book';
         text-decoration: underline;
         padding: 0 20px;
+        @media(max-width:575px){
+          padding: 0 10px;
+        }
       }
     }
   }
@@ -6962,6 +7138,10 @@ aside.sidebar{
         justify-content: flex-start;
         width: 115px;
         cursor: pointer;
+        @media(max-width:575px){
+          width: 36px;
+          padding: 5px 0;
+        }
         &:not(:last-child){
           margin-bottom: 10px;
         }
@@ -6978,6 +7158,9 @@ aside.sidebar{
           font-family: 'Circular Std Book';
           color: #666666;
           white-space: nowrap;
+          @media(max-width:575px){
+            display: none;
+          }
         }
         &.current{
           background: #4986ff;
@@ -7019,6 +7202,10 @@ aside.sidebar{
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      @media(max-width:575px){
+        width: 150px;
+        height: 150px;
+      }
       .area-txt{
         text-align: center;
         h5.ttl{
@@ -7055,6 +7242,9 @@ aside.sidebar{
         padding: 0 15px;
         display: flex;
         align-items: center;
+        @media(max-width:575px){
+          padding: 0 5px;
+        }
         &:not(:last-child){
           border-right: 1px solid #e5e5e5;
         }
@@ -7063,6 +7253,9 @@ aside.sidebar{
             color: #808080;
             font-size: 26px;
             margin-right: 15px;
+            @media(max-width:575px){
+              margin-right: 5px;
+            }
           }
         }
         .info-txt{
@@ -7071,11 +7264,17 @@ aside.sidebar{
             color: black;
             font-family: 'Circular Std Book';
             line-height: 1.3;
+            @media(max-width:575px){
+              line-height: 1;
+            }
           }
           .info-smpl{
             color: #808080;
             font-family: 'CircularAirPro Light';
             line-height: 1.3;
+            @media(max-width:575px){
+              line-height: 1;
+            }
           }
         }
       }
@@ -7105,6 +7304,10 @@ aside.sidebar{
       position: absolute;
       bottom: 20px;
       left: 20px;
+      @media(max-width: 575px){
+        bottom: 10px;
+        left: 10px;
+      }
       img.flag-image{
         border-radius: 50%;
         box-shadow: 0 2px 4px rgba(0,0,0,.2);
@@ -7478,9 +7681,7 @@ aside.sidebar{
     }
   }
   .post-foot-block{
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
+    line-height: 1.3;
     &:not(:last-child){
       margin-right: 25px;
     }
@@ -7673,8 +7874,12 @@ aside.sidebar{
   display: inline-block;
   padding: 10px 10px 4px;
   width: 200px;
+  @media(max-width:375px){
+    width: auto;
+  }
   .post-side-top{
     padding: 7px 0 12px;
+    flex-direction: row;
     h3.side-ttl{
       font-size: 16px;
       text-transform: capitalize;
@@ -7683,6 +7888,10 @@ aside.sidebar{
       font-size: 14px;
       color: #666666;
       text-transform: uppercase;
+      align-items: center;
+    }
+    .side-right-control{
+      align-self: center;
     }
   }
   .board-photo-list{
@@ -9199,6 +9408,9 @@ ul.filter-list{
 
 .dest-list{
   padding-top: 10px;
+  @media(max-width:991px){
+    padding: 5px 0;
+  }
   .dest-item{
     &:not(:last-child){
       margin-bottom: 24px;
@@ -9262,16 +9474,25 @@ ul.filter-list{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    @media(max-width:575px){
+      padding: 0 10px 10px;
+    }
     .banner-ttl{
       position: static;
       padding: 0;
       margin-bottom: 10px;
       font-size: 30px;
+      @media(max-width:575px){
+        font-size: 20px;
+      }
     }
     .sub-ttl{
       color: white;
       font-size: 16px;
       font-family: 'CircularAirPro Light';
+      @media(max-width:575px){
+        font-size: 12px;
+      }
     }
   }
 }
@@ -10076,9 +10297,17 @@ footer.footer{
 
 .share-page-block{
   padding: 6px 15px 22px;
+  @media(max-width: 991px){
+    padding: 10px;
+    background:white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    border-radius: 3px;
+  }
   &:not(:last-child){
-    border-bottom: 1px solid #e5e5e5;
     margin-bottom: 15px;
+    @media(max-width: 991px){
+      border-bottom: 1px solid #e5e5e5;
+    }
   }
   .share-page-inner{
     display: flex;
@@ -11106,6 +11335,9 @@ footer.footer{
   }
   &.bottom-slider-height{
     height: calc(100vh - 170px);
+    @media(max-width:768px){
+      height: calc(100vh - 110px);
+    }
   }
   &.modal-bottom-slider{
     margin: 30px auto 138px;
@@ -11457,11 +11689,17 @@ footer.footer{
       .post-comment-main{
         padding: 0 30px;
         border-bottom: 1px solid #e6e6e6;
+        @media(max-width:414px){
+          padding: 0 10px;
+        }
         &+.post-comment-layer{
           border-top: 0;
         }
         .dest-pic{
           position: relative;
+          img{
+            max-width: 100%;
+          }
           .card-cover{
             position: absolute;
             width: 49px;
@@ -11623,6 +11861,9 @@ footer.footer{
       .post-comment-layer{
         padding: 15px 30px;
         margin-bottom: 0;
+        @media(max-width:414px){
+          padding: 15px 10px;
+        }
       }
     }
     &.post-modal-place{
@@ -13268,8 +13509,17 @@ footer.footer{
         align-items: center;
         padding: 25px 30px 20px;
         border-bottom: 1px solid #e6e6e6;
+        @media(max-width:414px){
+          padding: 15px 10px 10px;
+          flex-direction: column;
+        }
         .flag-wrap{
-          padding-right: 20px;
+          @media(min-width:415px){
+            padding-right: 20px;
+          }
+          @media(max-width:414px){
+            margin-bottom: 10px;
+          }
           img.flag-img{
             max-width: 100%;
           }
@@ -13294,6 +13544,9 @@ footer.footer{
       }
       .post-lang-inner{
         padding: 10px 30px 20px;
+        @media(max-width:414px){
+          padding: 10px;
+        }
         .lang-row{
           .lang-label{
             font-family: 'Circular Std Book';
@@ -13321,6 +13574,11 @@ footer.footer{
                 font-family: 'CircularAirPro Light';
                 padding: 8px 15px 8px 20px;
                 line-height: 1;
+                @media(max-width: 414px){
+                  padding: 6px 10px;
+                  font-size: 16px;
+                  flex-wrap: wrap;
+                }
                 &:not(:last-child){
                   margin-bottom: 7px;
                 }
@@ -13328,9 +13586,14 @@ footer.footer{
                   background: #f7f7f7;
                 }
                 .name{
+                  line-height: 1.5;
                 }
                 .info{
-
+                  line-height: 1.5;
+                  @media(max-width: 414px){
+                    flex-grow: 1;
+                    text-align: right;
+                  }
                 }
               }
             }
@@ -13565,11 +13828,14 @@ footer.footer{
           align-items: flex-start;
           .avatar-wrap{
             padding-right: 15px;
+            @media(max-width:375px){
+              padding-right: 5px;
+            }
             img{
               @include avatarImgStyle(40px, #e6e6e6);
             }
           }
-          .suggest-txt{
+          .suggest-txt-wrap{
             flex-grow: 1;
             textarea{
               border-radius: 4px;
@@ -13580,6 +13846,9 @@ footer.footer{
               min-width: 100%;
               max-width: 100%;
               @include inputPlacehoderColor(#cccccc);
+              @media(max-width:375px){
+                padding: 5px;
+              }
             }
           }
         }
