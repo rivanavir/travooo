@@ -261,11 +261,22 @@ $(document).ready(function(){
     addClass: 'trip-destination-slider-block'
   });
   $("#weatherHourCarousel").lightSlider({
-    // pager: false,
-    // controls: true,
+    pager: false,
+    controls: true,
     autoWidth:true,
-    // slideMargin: 0,
-    // addClass: 'weather-block-wrapper'
+    slideMargin: 0,
+    onSliderLoad: function(el) {
+      $('.weather-carousel-control>a').on('click', function(e){
+        e.preventDefault();
+        if($(this).hasClass('slide-prev')){
+          el.goToPrevSlide();
+        }
+        if($(this).hasClass('slide-next')){
+          el.goToNextSlide();
+        }
+      })
+    }
+
   });
   $("#postFollowSlider").lightSlider({
     item:1,
@@ -3012,7 +3023,7 @@ $(document).ready(function(){
           </div>
         </div>`
       },{
-        "src": 'https://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg',
+        "src": './assets/image/event-map-image.jpg',
         'thumb': 'https://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg',
         'subHtml': `<div class='cover-block' style='display:none;'>
           <div class='cover-block-inner comment-block'>
@@ -3066,7 +3077,7 @@ $(document).ready(function(){
               </div>
             </div>
             <div class="map-preview">
-              <img src="./assets/image/map-preview.jpg" alt="map">
+              <img src="./assets/image/event-image.jpg" alt="map">
             </div>
             <div class='gallery-comment-wrap'>
               <div class='gallery-comment-inner mCustomScrollbar'>
@@ -3618,14 +3629,16 @@ $(document).ready(function(){
     });
   };
 
-  uiSliderFn('sliderPollution', 'current', 'total', 150, 50);
-  uiSliderFn('costOfLiving', 'currentCost', 'totalCost', 150, 70);
-  uiSliderFn('crimeRate', 'currentRate', 'totalRate', 150, 60);
-  uiSliderFn('qualityOfLife', 'currentQuolity', 'totalQuolity', 150, 80);
-  uiSliderFn('sliderPollution1', 'current1', 'total1', 150, 50);
-  uiSliderFn('costOfLiving1', 'currentCost1', 'totalCost1', 150, 70);
-  uiSliderFn('crimeRate1', 'currentRate1', 'totalRate1', 150, 60);
-  uiSliderFn('qualityOfLife1', 'currentQuolity1', 'totalQuolity1', 150, 80);
+  if($("#sliderPollution, #costOfLiving, #crimeRate, #qualityOfLife, #sliderPollution1, #costOfLiving1, #crimeRate1, #qualityOfLife1").length){
+    uiSliderFn('sliderPollution', 'current', 'total', 150, 50);
+    uiSliderFn('costOfLiving', 'currentCost', 'totalCost', 150, 70);
+    uiSliderFn('crimeRate', 'currentRate', 'totalRate', 150, 60);
+    uiSliderFn('qualityOfLife', 'currentQuolity', 'totalQuolity', 150, 80);
+    uiSliderFn('sliderPollution1', 'current1', 'total1', 150, 50);
+    uiSliderFn('costOfLiving1', 'currentCost1', 'totalCost1', 150, 70);
+    uiSliderFn('crimeRate1', 'currentRate1', 'totalRate1', 150, 60);
+    uiSliderFn('qualityOfLife1', 'currentQuolity1', 'totalQuolity1', 150, 80);
+  }
 
   // location search layer
 
@@ -3649,5 +3662,17 @@ $(document).ready(function(){
     $('#locSearchInput').focus();
     iIsOpen = true;
   });
+
+  $('[data-toggle=modal]').on('click',function(e){
+    e.preventDefault();
+    let dataTarget = $(this).attr('data-target');
+    $(dataTarget).modal();
+  });
+
+  $('[data-toggle=collapse]').on('click',function(e){
+    e.preventDefault();
+    let dataTarget = $(this).attr('data-target');
+    $(dataTarget).collapse('toggle');
+  })
 
 });
